@@ -11,8 +11,10 @@ public class PokemonBase : ScriptableObject
     [TextArea]
     [SerializeField] string description;
 
+    [SerializeField] PokeSize pokeSize;
+
+    [SerializeField] int regionalDexNum;
     [SerializeField] int nationalDexNum;
-    [SerializeField] int pokedexNum;
 
     [SerializeField] Sprite frontSprite;
     [SerializeField] Sprite backSprite;
@@ -39,6 +41,11 @@ public class PokemonBase : ScriptableObject
     public string Description
     {
         get { return description; }
+    }
+
+    public PokeSize PokeSize
+    {
+        get { return pokeSize; }
     }
 
     public int MaxHP
@@ -70,14 +77,14 @@ public class PokemonBase : ScriptableObject
         get { return Speed; }
     }
 
+    public int RegionalDexNum
+    {
+        get { return regionalDexNum; }
+    }
+
     public int NationalDexNum
     {
         get { return nationalDexNum; }
-    }
-
-    public int PokedexNum
-    {
-        get { return pokedexNum; }
     }
 
     public Sprite BackSprite
@@ -113,7 +120,13 @@ public class LearnableMove
     }
 }
 
-
+public enum PokeSize
+{
+    S,
+    M,
+    L,
+    XL
+}
 public enum PokeType
 {
     None,

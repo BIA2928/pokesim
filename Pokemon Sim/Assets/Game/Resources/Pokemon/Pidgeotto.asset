@@ -15,8 +15,11 @@ MonoBehaviour:
   name: Pidgeotto
   description: It slowly flies in a circular pattern, all the while keeping a sharp
     lookout for prey.
-  frontSprite: {fileID: 21300000, guid: e2cb72552e13a81428039b8d39e1615d, type: 3}
-  backSprite: {fileID: 21300000, guid: 89493f527d99b574d8a771de8c9c4c5b, type: 3}
+  pokeSize: 0
+  nationalDexNum: 0
+  pokedexNum: 0
+  frontSprite: {fileID: 21300000, guid: d4c147f2deb326a449d9867bbbc40b0d, type: 3}
+  backSprite: {fileID: 21300000, guid: 7f8422d86a09858479d8f85c77fc3bac, type: 3}
   type1: 11
   type2: 5
   maxHP: 63

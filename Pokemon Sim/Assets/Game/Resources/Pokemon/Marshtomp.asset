@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Marshtomp
   description: Its toughened hind legs enable it to stand upright. Because it weakens
     if its skin dries out, it replenishes fluids by playing in mud.
+  pokeSize: 1
+  nationalDexNum: 0
+  pokedexNum: 0
   frontSprite: {fileID: 21300000, guid: f00409d7151b33a4d8c040c266267685, type: 3}
   backSprite: {fileID: 21300000, guid: 43d06d0d12aa5e045bce33f0b36b016b, type: 3}
   type1: 2

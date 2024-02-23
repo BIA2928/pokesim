@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Pidgeot
   description: It spreads its beautiful wings wide to frighten its enemies. It can
     fly at Mach 2 speed.
+  pokeSize: 2
+  nationalDexNum: 0
+  pokedexNum: 0
   frontSprite: {fileID: 21300000, guid: e2cb72552e13a81428039b8d39e1615d, type: 3}
   backSprite: {fileID: 21300000, guid: 89493f527d99b574d8a771de8c9c4c5b, type: 3}
   type1: 11

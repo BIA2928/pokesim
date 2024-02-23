@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Raichu
   description: "\t\t"
+  pokeSize: 1
   nationalDexNum: 0
   pokedexNum: 26
   frontSprite: {fileID: 21300000, guid: c9990bb5258aa0b479f7fe2201db150b, type: 3}
