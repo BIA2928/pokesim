@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pikachu
   description: "\t"
+  pokeSize: 0
+  regionalDexNum: 0
   nationalDexNum: 0
-  pokedexNum: 25
   frontSprite: {fileID: 21300000, guid: b629777f893798b46829f52ee56fbbe3, type: 3}
   backSprite: {fileID: 21300000, guid: 92f5a962b2577294c8ca4a5897314ef8, type: 3}
   type1: 4
@@ -26,4 +27,8 @@ MonoBehaviour:
   spAttack: 50
   spDefence: 50
   speed: 90
-  learnableMoves: []
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 5992798f378249f409848fbf7b9f5367, type: 2}
+    learnLevel: 1
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 5
