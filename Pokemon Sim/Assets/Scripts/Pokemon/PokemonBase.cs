@@ -80,6 +80,16 @@ public class PokemonBase : ScriptableObject
         get { return pokedexNum; }
     }
 
+    public Sprite BackSprite
+    {
+        get { return backSprite; }
+    }
+
+    public Sprite FrontSprite
+    {
+        get { return frontSprite; }
+    }
+
     public List<LearnableMove> LearnableMoves
     {
         get { return learnableMoves; }
