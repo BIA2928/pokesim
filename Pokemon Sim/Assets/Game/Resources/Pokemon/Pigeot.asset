@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Pigeot
+  m_EditorClassIdentifier: 
+  name: Pidgeot
+  description: It spreads its beautiful wings wide to frighten its enemies. It can
+    fly at Mach 2 speed.
+  frontSprite: {fileID: 21300000, guid: e2cb72552e13a81428039b8d39e1615d, type: 3}
+  backSprite: {fileID: 21300000, guid: 89493f527d99b574d8a771de8c9c4c5b, type: 3}
+  type1: 11
+  type2: 5
+  maxHP: 80
+  attack: 83
+  defence: 75
+  spAttack: 72
+  spDefence: 68
+  speed: 102
+  learnableMoves: []

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Marshtomp
+  m_EditorClassIdentifier: 
+  name: Marshtomp
+  description: Its toughened hind legs enable it to stand upright. Because it weakens
+    if its skin dries out, it replenishes fluids by playing in mud.
+  frontSprite: {fileID: 21300000, guid: f00409d7151b33a4d8c040c266267685, type: 3}
+  backSprite: {fileID: 21300000, guid: 43d06d0d12aa5e045bce33f0b36b016b, type: 3}
+  type1: 2
+  type2: 6
+  maxHP: 70
+  attack: 85
+  defence: 70
+  spAttack: 60
+  spDefence: 72
+  speed: 51
+  learnableMoves: []

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Pidgey
+  m_EditorClassIdentifier: 
+  name: Pidgey
+  description: Common in grassy areas and forests, it is very docile and will chase
+    off enemies by flapping up sand.
+  frontSprite: {fileID: 21300000, guid: 7f89cb23c2fb076439e5222c80d9bc94, type: 3}
+  backSprite: {fileID: 21300000, guid: 38c0dc1ce6eecfc41a03fd77655fa2a0, type: 3}
+  type1: 11
+  type2: 5
+  maxHP: 40
+  attack: 45
+  defence: 40
+  spAttack: 35
+  spDefence: 35
+  speed: 56
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
+    learnLevel: 1

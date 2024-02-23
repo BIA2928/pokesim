@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Bulbasaur
+  m_EditorClassIdentifier: 
+  name: Bulbasaur
+  description: For some time after its birth, it grows by gaining nourishment from
+    the seed on its back.
+  nationalDexNum: 1
+  pokedexNum: 1
+  frontSprite: {fileID: 21300000, guid: 6970b1b3162cc2e4eba2119daae7d0b5, type: 3}
+  backSprite: {fileID: 21300000, guid: 8e39e7eea66173e42a9e0895cb4b9c8f, type: 3}
+  type1: 1
+  type2: 0
+  maxHP: 45
+  attack: 49
+  defence: 49
+  spAttack: 65
+  spDefence: 65
+  speed: 45
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 1
+  - moveBase: {fileID: 11400000, guid: 6b54132578a6cc64eadd41d82ac5d5a1, type: 2}
+    learnLevel: 6

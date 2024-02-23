@@ -1,0 +1,636 @@
+fileFormatVersion: 2
+guid: f33cfb0ef7cdad144b4c02bd0fbea717
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -662560345634945222
+    second: DS DSi - Pokemon Platinum - Text Box Styles_0
+  - first:
+      213: -4254843976231351610
+    second: DS DSi - Pokemon Platinum - Text Box Styles_1
+  - first:
+      213: 2238242003444303232
+    second: DS DSi - Pokemon Platinum - Text Box Styles_2
+  - first:
+      213: -6560375566909104017
+    second: DS DSi - Pokemon Platinum - Text Box Styles_3
+  - first:
+      213: -6280778883096780619
+    second: DS DSi - Pokemon Platinum - Text Box Styles_4
+  - first:
+      213: -2909380848235039028
+    second: DS DSi - Pokemon Platinum - Text Box Styles_5
+  - first:
+      213: -4871081770046329114
+    second: DS DSi - Pokemon Platinum - Text Box Styles_6
+  - first:
+      213: -95797581613242928
+    second: DS DSi - Pokemon Platinum - Text Box Styles_7
+  - first:
+      213: 3707429766523503563
+    second: DS DSi - Pokemon Platinum - Text Box Styles_8
+  - first:
+      213: 4279215425934803486
+    second: DS DSi - Pokemon Platinum - Text Box Styles_9
+  - first:
+      213: -7015644332867472015
+    second: DS DSi - Pokemon Platinum - Text Box Styles_10
+  - first:
+      213: -9099476569392231981
+    second: DS DSi - Pokemon Platinum - Text Box Styles_11
+  - first:
+      213: -2933138753657069544
+    second: DS DSi - Pokemon Platinum - Text Box Styles_12
+  - first:
+      213: 6866588967739699191
+    second: DS DSi - Pokemon Platinum - Text Box Styles_13
+  - first:
+      213: -219569723869255203
+    second: DS DSi - Pokemon Platinum - Text Box Styles_14
+  - first:
+      213: -4874446465717166000
+    second: DS DSi - Pokemon Platinum - Text Box Styles_15
+  - first:
+      213: -4680513027154059276
+    second: DS DSi - Pokemon Platinum - Text Box Styles_16
+  - first:
+      213: 1649089677325427285
+    second: DS DSi - Pokemon Platinum - Text Box Styles_17
+  - first:
+      213: 2061740684936312021
+    second: DS DSi - Pokemon Platinum - Text Box Styles_18
+  - first:
+      213: 3624532651756816441
+    second: DS DSi - Pokemon Platinum - Text Box Styles_19
+  - first:
+      213: -4759854084759489730
+    second: DS DSi - Pokemon Platinum - Text Box Styles_20
+  - first:
+      213: -5000468849480673739
+    second: DS DSi - Pokemon Platinum - Text Box Styles_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 483
+        width: 247
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a374b2440ec1ec6f0800000000000000
+      internalID: -662560345634945222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 481
+        width: 249
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca050e52f1c3f4c0800000000000000
+      internalID: -4254843976231351610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 434
+        width: 248
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08508a05e35df0f10800000000000000
+      internalID: 2238242003444303232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 433
+        width: 249
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f602b352e2dd4f4a0800000000000000
+      internalID: -6560375566909104017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 389
+        width: 252
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0ed3002e036d8a0800000000000000
+      internalID: -6280778883096780619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_5
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 388
+        width: 250
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc630a8788dcf97d0800000000000000
+      internalID: -2909380848235039028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 339
+        width: 252
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eee18030f0766cb0800000000000000
+      internalID: -4871081770046329114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_7
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 337
+        width: 251
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5e9996b98abaef0800000000000000
+      internalID: -95797581613242928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 290
+        width: 252
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3c757dabf637330800000000000000
+      internalID: 3707429766523503563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_9
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 287
+        width: 251
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e124734f1c3d26b30800000000000000
+      internalID: 4279215425934803486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 241
+        width: 255
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175b3f456ac63ae90800000000000000
+      internalID: -7015644332867472015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_11
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 242
+        width: 249
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9c26f654a28b180800000000000000
+      internalID: -9099476569392231981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 253
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810a65f08d56b47d0800000000000000
+      internalID: -2933138753657069544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_13
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 194
+        width: 252
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ffadb019460b4f50800000000000000
+      internalID: 6866588967739699191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 253
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9a75ddf7ee3fcf0800000000000000
+      internalID: -219569723869255203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_15
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 147
+        width: 251
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050254ee3cc7a5cb0800000000000000
+      internalID: -4874446465717166000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 256
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffd4e1433a7b0fb0800000000000000
+      internalID: -4680513027154059276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_17
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 96
+        width: 250
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552eeb3035eb2e610800000000000000
+      internalID: 1649089677325427285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 49
+        width: 250
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d47998ba36cc9c10800000000000000
+      internalID: 2061740684936312021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_19
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 54.272728
+        width: 260.5
+        height: 47.727272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93805c04e3dec4230800000000000000
+      internalID: 3624532651756816441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 252
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33f73fbde991fdb0800000000000000
+      internalID: -4759854084759489730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon Platinum - Text Box Styles_21
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 7.272728
+        width: 260.5
+        height: 47.727272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5365c443314ca9ab0800000000000000
+      internalID: -5000468849480673739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
