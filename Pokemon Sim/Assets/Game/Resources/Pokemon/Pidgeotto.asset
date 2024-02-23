@@ -16,12 +16,12 @@ MonoBehaviour:
   description: It slowly flies in a circular pattern, all the while keeping a sharp
     lookout for prey.
   pokeSize: 0
+  regionalDexNum: 0
   nationalDexNum: 0
-  pokedexNum: 0
   frontSprite: {fileID: 21300000, guid: d4c147f2deb326a449d9867bbbc40b0d, type: 3}
   backSprite: {fileID: 21300000, guid: 7f8422d86a09858479d8f85c77fc3bac, type: 3}
-  type1: 11
-  type2: 5
+  type1: 13
+  type2: 8
   maxHP: 63
   attack: 60
   defence: 55

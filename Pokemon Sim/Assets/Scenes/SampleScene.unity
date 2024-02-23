@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110ebc1067a7a4e438b8f34a7cc7b5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _base: {fileID: 11400000, guid: b1859c2a73d6feb468718f0e8ffd156f, type: 2}
+  _base: {fileID: 11400000, guid: c38cac12cb5099e4c99eb4bdea0bc302, type: 2}
   level: 14
   isPlayerUnit: 0
 --- !u!114 &236000094
@@ -7955,6 +7955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 719622021}
+  currHpText: {fileID: 1115080708}
 --- !u!114 &719622024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8119,6 +8120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 757394690}
+  currHpText: {fileID: 455593436}
 --- !u!1 &866396771
 GameObject:
   m_ObjectHideFlags: 0

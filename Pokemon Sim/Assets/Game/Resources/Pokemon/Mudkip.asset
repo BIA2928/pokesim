@@ -15,9 +15,12 @@ MonoBehaviour:
   name: Mudkip
   description: To alert it, the fin on its head senses the flow of water. It has
     the strength to heft boulders.
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: 7fbbe29935e46794c844918eda20fb0d, type: 3}
   backSprite: {fileID: 21300000, guid: 46476b2bc09aee841a111241d3aa34eb, type: 3}
-  type1: 2
+  type1: 18
   type2: 0
   maxHP: 50
   attack: 68

@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Quilava
   description: 
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: d4cc312f11679674f92f6f211315b390, type: 3}
   backSprite: {fileID: 21300000, guid: 1e89228ebde2a6c41ad769badfa50571, type: 3}
-  type1: 3
+  type1: 7
   type2: 0
   maxHP: 58
   attack: 64
@@ -24,3 +27,4 @@ MonoBehaviour:
   spAttack: 80
   spDefence: 65
   speed: 80
+  learnableMoves: []

@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ivysaur
   description: 
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: 94e5d3ecde9c32a4f983a1bc0fab88f2, type: 3}
   backSprite: {fileID: 21300000, guid: 9cbdb5f92449a7d48a319c004865e167, type: 3}
-  type1: 1
+  type1: 15
   type2: 10
   maxHP: 60
   attack: 62
@@ -24,3 +27,4 @@ MonoBehaviour:
   spAttack: 80
   spDefence: 80
   speed: 58
+  learnableMoves: []

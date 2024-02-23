@@ -15,10 +15,13 @@ MonoBehaviour:
   name: Pidgey
   description: Common in grassy areas and forests, it is very docile and will chase
     off enemies by flapping up sand.
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: 7f89cb23c2fb076439e5222c80d9bc94, type: 3}
   backSprite: {fileID: 21300000, guid: 38c0dc1ce6eecfc41a03fd77655fa2a0, type: 3}
-  type1: 11
-  type2: 5
+  type1: 13
+  type2: 8
   maxHP: 40
   attack: 45
   defence: 40

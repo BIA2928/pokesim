@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Mawile
+  m_EditorClassIdentifier: 
+  name: Mawile
+  description: 
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 303
+  frontSprite: {fileID: 21300000, guid: c1b8fc54b5eaad54aa5a76a9ee7d2005, type: 3}
+  backSprite: {fileID: 21300000, guid: 2b4911bece1a1c94a9d048166685c237, type: 3}
+  type1: 17
+  type2: 5
+  maxHP: 50
+  attack: 885
+  defence: 85
+  spAttack: 55
+  spDefence: 55
+  speed: 55
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 4bcac37833de3c84e98b333589b4c33e, type: 2}
+    learnLevel: 1
+  - moveBase: {fileID: 11400000, guid: 57cd02eb784b0304ea5d315b91cb4080, type: 2}
+    learnLevel: 4

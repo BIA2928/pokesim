@@ -15,16 +15,18 @@ MonoBehaviour:
   name: Venusaur
   description: 
   pokeSize: 3
+  regionalDexNum: 0
   nationalDexNum: 0
-  pokedexNum: 0
   frontSprite: {fileID: 21300000, guid: f6ddf627fce0024478bb141cf505a616, type: 3}
   backSprite: {fileID: 21300000, guid: e751b5ab3bf7bab4f8b85e0016a69077, type: 3}
-  type1: 1
-  type2: 10
+  type1: 10
+  type2: 15
   maxHP: 82
   attack: 82
   defence: 85
   spAttack: 100
   spDefence: 100
   speed: 78
-  learnableMoves: []
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 6b54132578a6cc64eadd41d82ac5d5a1, type: 2}
+    learnLevel: 2

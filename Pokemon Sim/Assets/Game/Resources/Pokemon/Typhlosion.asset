@@ -15,11 +15,11 @@ MonoBehaviour:
   name: Typhlosion
   description: 
   pokeSize: 2
+  regionalDexNum: 0
   nationalDexNum: 0
-  pokedexNum: 0
   frontSprite: {fileID: 21300000, guid: 0c23524ca27a6a641a4a6c31effb7480, type: 3}
   backSprite: {fileID: 21300000, guid: 9c5d3a64dd903054c9ea63d303ef8d3a, type: 3}
-  type1: 3
+  type1: 7
   type2: 0
   maxHP: 78
   attack: 87

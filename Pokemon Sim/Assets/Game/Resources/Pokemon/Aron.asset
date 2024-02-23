@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Aron
+  m_EditorClassIdentifier: 
+  name: Aron
+  description: It usually lives deep in mountains. However, hunger may drive it to
+    eat railroad tracks and cars.
+  pokeSize: 2
+  regionalDexNum: 0
+  nationalDexNum: 304
+  frontSprite: {fileID: 21300000, guid: bc367d8b265b1994b8f34172d15dcc8b, type: 3}
+  backSprite: {fileID: 21300000, guid: 532b8ae78b525854faeb3a3f88b1e4f3, type: 3}
+  type1: 17
+  type2: 14
+  maxHP: 50
+  attack: 70
+  defence: 100
+  spAttack: 40
+  spDefence: 40
+  speed: 30
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 1

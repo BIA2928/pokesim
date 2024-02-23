@@ -16,12 +16,12 @@ MonoBehaviour:
   description: Its arms are rock-hard. With one swing, they can batter down its foe.
     It makes its nest on beautiful beaches.
   pokeSize: 3
+  regionalDexNum: 0
   nationalDexNum: 0
-  pokedexNum: 0
   frontSprite: {fileID: 21300000, guid: 8ba27bb3cf7f11a409461dd4de8c25d2, type: 3}
   backSprite: {fileID: 21300000, guid: e76bf44a7d1e051469768d289b1fadf1, type: 3}
-  type1: 2
-  type2: 6
+  type1: 18
+  type2: 11
   maxHP: 100
   attack: 110
   defence: 90

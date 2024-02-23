@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Aggron
+  m_EditorClassIdentifier: 
+  name: Aggron
+  description: "It claims an entire mountain as its own. The more wounds it has,
+    the more it has battled, so don\u2019t take it lightly."
+  pokeSize: 3
+  regionalDexNum: 0
+  nationalDexNum: 306
+  frontSprite: {fileID: 21300000, guid: 6483def650987cb41a905ed312a5aa0b, type: 3}
+  backSprite: {fileID: 21300000, guid: a76b33f2880d424489fb7cb6820626f9, type: 3}
+  type1: 17
+  type2: 14
+  maxHP: 70
+  attack: 110
+  defence: 180
+  spAttack: 60
+  spDefence: 60
+  speed: 50
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 4

@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cynadquil
   description: 
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: f2ebd2f9418942f48a81ff00c3337916, type: 3}
   backSprite: {fileID: 21300000, guid: 69f02c19286d33d48af5b588d04169e6, type: 3}
-  type1: 3
+  type1: 7
   type2: 0
   maxHP: 39
   attack: 52
