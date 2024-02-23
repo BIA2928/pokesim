@@ -3,6 +3,8 @@
 
 ### Resources (including sprites and statistics) from: ###
 
-https://pokemondb.net/\n
-https://bulbapedia.bulbagarden.net/\n
-https://www.spriters-resource.com/ds_dsi/pokemonplatinum/sheet/20099/
+https://pokemondb.net/  
+
+https://bulbapedia.bulbagarden.net/  
+
+https://www.spriters-resource.com/ds_dsi/pokemonplatinum/sheet/20099/  
