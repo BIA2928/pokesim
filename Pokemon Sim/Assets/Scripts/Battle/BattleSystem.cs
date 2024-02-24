@@ -54,6 +54,10 @@ public class BattleSystem : MonoBehaviour
         var move = playerPoke.Pokemon.Moves[currentMove];
         yield return dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} used {move.Base.Name}.");
 
+        playerPoke.PlayAttackAnimation();
+        yield return new WaitForSeconds(0.5f);
+        enemyPoke.PlayHitEffect();
+
         var damageDetails = enemyPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
         yield return enemyHUD.UpdateHP();
         yield return TypeDamageDetails(damageDetails, enemyPoke.Pokemon.Base.Name);
@@ -62,6 +66,7 @@ public class BattleSystem : MonoBehaviour
         if (damageDetails.DidFaint)
         {
             yield return dialogueBox.TypeDialogue($"The wild {enemyPoke.Pokemon.Base.Name} fainted.");
+            enemyPoke.PlayFaintAnimation();
         }
         else
         {
@@ -75,6 +80,10 @@ public class BattleSystem : MonoBehaviour
         var move = enemyPoke.Pokemon.GetRandomMove();
         yield return dialogueBox.TypeDialogue($"The wild {enemyPoke.Pokemon.Base.Name} used {move.Base.Name}.");
 
+        enemyPoke.PlayAttackAnimation();
+        yield return new WaitForSeconds(0.5f);
+        playerPoke.PlayHitEffect();
+
         var damageDetails = playerPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
         yield return playerHUD.UpdateHP();
         yield return TypeDamageDetails(damageDetails, playerPoke.Pokemon.Base.Name);
@@ -83,6 +92,7 @@ public class BattleSystem : MonoBehaviour
         if (damageDetails.DidFaint)
         {
             yield return dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} fainted.");
+            playerPoke.PlayFaintAnimation();
         }
         else
         {

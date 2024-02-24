@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b60f2e145c603458b04abe764392d3, type: 3}
   m_Name: Earthquake
   m_EditorClassIdentifier: 
-  moveName: Earthquale
+  moveName: Earthquake
   description: "The user sets off an earthquake that strikes every Pok\xE9mon around
     it."
   type: 11

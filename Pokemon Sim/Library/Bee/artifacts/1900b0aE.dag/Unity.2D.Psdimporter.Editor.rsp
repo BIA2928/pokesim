@@ -106,8 +106,11 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:DOTWEEN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 -r:"C:/Users/sebas/OneDrive/Desktop/PokeProject/Pokemon Sim/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll"
 -r:"C:/Users/sebas/OneDrive/Desktop/PokeProject/Pokemon Sim/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"C:/Users/sebas/OneDrive/Desktop/PokeProject/Pokemon Sim/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll"
