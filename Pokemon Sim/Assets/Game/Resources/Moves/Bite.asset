@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: Bite
   description: The user bites down with sharp teeth and fangs.
-  type: 14
+  type: 2
   power: 60
   accuracy: 100
   pp: 25

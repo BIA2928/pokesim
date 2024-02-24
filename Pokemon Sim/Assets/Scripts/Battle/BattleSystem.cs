@@ -29,7 +29,6 @@ public class BattleSystem : MonoBehaviour
         dialogueBox.SetMoveNames(playerPoke.Pokemon.Moves);
 
         yield return dialogueBox.TypeDialogue($"A wild {enemyPoke.Pokemon.Base.Name} appeared!");
-        yield return new WaitForSeconds(1.1f);
 
         PlayerAction();
     }
@@ -54,12 +53,13 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.Busy;
         var move = playerPoke.Pokemon.Moves[currentMove];
         yield return dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} used {move.Base.Name}.");
-        yield return new WaitForSeconds(0.8f);
 
-        bool hasFainted = enemyPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
+        var damageDetails = enemyPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
         yield return enemyHUD.UpdateHP();
+        yield return TypeDamageDetails(damageDetails, enemyPoke.Pokemon.Base.Name);
 
-        if (hasFainted)
+
+        if (damageDetails.DidFaint)
         {
             yield return dialogueBox.TypeDialogue($"The wild {enemyPoke.Pokemon.Base.Name} fainted.");
         }
@@ -74,12 +74,13 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.EnemyMove;
         var move = enemyPoke.Pokemon.GetRandomMove();
         yield return dialogueBox.TypeDialogue($"The wild {enemyPoke.Pokemon.Base.Name} used {move.Base.Name}.");
-        yield return new WaitForSeconds(0.75f);
 
-        bool hasFainted = playerPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
+        var damageDetails = playerPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
         yield return playerHUD.UpdateHP();
+        yield return TypeDamageDetails(damageDetails, playerPoke.Pokemon.Base.Name);
 
-        if (hasFainted)
+
+        if (damageDetails.DidFaint)
         {
             yield return dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} fainted.");
         }
@@ -88,6 +89,30 @@ public class BattleSystem : MonoBehaviour
             PlayerAction();
         }
 
+    }
+
+    IEnumerator TypeDamageDetails(Pokemon.DamageDetails damageDetails, string name) 
+    {
+        if (damageDetails.TypeEffectiveness > 1.0f)
+        {
+            // Super effective
+            yield return dialogueBox.TypeDialogue("It's super effective!");
+        }
+        else if (damageDetails.TypeEffectiveness < 1.0f && damageDetails.TypeEffectiveness > 0.0f)
+        {
+            // Not very effective
+            yield return dialogueBox.TypeDialogue("It's not very effective.");
+        }
+        else if (damageDetails.TypeEffectiveness == 0.0f) 
+        {
+            // No effect
+            yield return dialogueBox.TypeDialogue($"It doesn't effect {name}...");
+        }
+
+        if (damageDetails.Crit > 1.0f)
+        {
+            yield return dialogueBox.TypeDialogue("A critical hit!");
+        }
     }
 
     private void Update()

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: Razor Leaf
   description: 
-  type: 1
+  type: 10
   power: 55
   accuracy: 100
   pp: 25

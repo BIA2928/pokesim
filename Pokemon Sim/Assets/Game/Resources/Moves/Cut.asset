@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: Cut
   description: 
-  type: 11
+  type: 13
   power: 50
   accuracy: 95
   pp: 30

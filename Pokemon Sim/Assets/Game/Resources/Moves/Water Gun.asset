@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Water Gun
   m_EditorClassIdentifier: 
   moveName: Water Gun
-  description: 
-  type: 2
+  description: The user attacks the foe with a spray of pressurized water.
+  type: 18
   power: 60
   accuracy: 100
   pp: 15

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Move
   moveName: Vine Whip
   description: The foe is struck with hardened vines.
-  type: 1
+  type: 10
   power: 40
   accuracy: 100
   pp: 15

@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pokemon 
+public class Pokemon
 {
     public PokemonBase Base { get; set; }
     public int Level { get; set; }
 
     public int HP { get; set; }
-    
+
     public List<Move> Moves { get; set; }
     public Pokemon(PokemonBase _base, int level)
     {
@@ -31,7 +31,7 @@ public class Pokemon
         if (potentialMoves.Count <= 4)
         {
             Moves = potentialMoves;
-        } 
+        }
         else
         {
             for (int i = 0; i < 4; i++)
@@ -45,7 +45,7 @@ public class Pokemon
 
     public int MaxHP
     {
-        get { return Mathf.FloorToInt((Base.MaxHP * Level) / 100f) + 10;  }
+        get { return Mathf.FloorToInt((Base.MaxHP * Level) / 100f) + 10; }
     }
     public int Attack
     {
@@ -72,10 +72,26 @@ public class Pokemon
         get { return Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5; }
     }
 
-    public bool TakeDamage(Move move, Pokemon Attacker)
+    public DamageDetails TakeDamage(Move move, Pokemon Attacker)
     {
+        float crit = 1f;
+        if (Random.value * 100f <= 6.25f)
+        {
+            crit = 2f;
+        }
+
+        float typeModifier = TypeChart.GetTypeEffectiveness(move.Base.Type, this.Base.Type1);
+        typeModifier *= TypeChart.GetTypeEffectiveness(move.Base.Type, this.Base.Type2);
+
+        var damageDetails = new DamageDetails()
+        {
+            TypeEffectiveness = typeModifier,
+            Crit = crit,
+            DidFaint = false
+        };
+
         // Uses standard pokemon series damage calculator
-        float modifiers = Random.Range(0.85f, 1f);
+        float modifiers = Random.Range(0.85f, 1f) * typeModifier * crit;
         float a = (2 * Attacker.Level + 10) / 250f;
         float d = a * move.Base.Power * ((float)Attacker.Attack / Defence) + 2;
         int damage = Mathf.FloorToInt(modifiers * d);
@@ -84,17 +100,24 @@ public class Pokemon
         if (HP <= 0)
         {
             HP = 0;
-            return true;
+            damageDetails.DidFaint = true;
         }
-        else
-        {
-            return false;
-        }
+        return damageDetails;
     }
 
     public Move GetRandomMove()
     {
         int r = Random.Range(0, Moves.Count);
         return Moves[r];
+    }
+
+    public class DamageDetails
+    {
+
+        public float Crit { get; set; }
+        public bool DidFaint { get; set; }
+
+        public float TypeEffectiveness { get; set; }
+
     }
 }

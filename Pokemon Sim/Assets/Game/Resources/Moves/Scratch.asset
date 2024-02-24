@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Move
   moveName: Scratch
   description: The foe is struck with sharp fangs or claws
-  type: 11
+  type: 13
   power: 35
   accuracy: 100
   pp: 20

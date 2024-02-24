@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _base: {fileID: 11400000, guid: 570512a93f529a346a94dad105ee712f, type: 2}
-  level: 8
+  level: 13
   isPlayerUnit: 1
 --- !u!1 &236000091
 GameObject:
@@ -7955,7 +7955,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 719622021}
-  currHpText: {fileID: 1115080708}
 --- !u!114 &719622024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8120,7 +8119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 757394690}
-  currHpText: {fileID: 455593436}
 --- !u!1 &866396771
 GameObject:
   m_ObjectHideFlags: 0
