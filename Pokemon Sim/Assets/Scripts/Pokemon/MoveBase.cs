@@ -14,6 +14,8 @@ public class MoveBase : ScriptableObject
     [SerializeField] int accuracy;
     [SerializeField] int pp;
 
+    [SerializeField] MoveType moveType;
+
     
 
     public string Name
@@ -48,4 +50,17 @@ public class MoveBase : ScriptableObject
         get { return pp; }
     }
 
+    public MoveType MoveType
+    {
+        get { return moveType;  }
+    }
+
+
+}
+
+public enum MoveType
+{
+    Physical,
+    Special,
+    Other
 }

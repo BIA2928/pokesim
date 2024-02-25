@@ -34,6 +34,7 @@ public class BattleUnit : MonoBehaviour
             image.sprite = Pokemon.Base.FrontSprite;
             ScalePokemon(Pokemon.Base.PokeSize);         
         }
+        image.color = origColor;
         PlayEnterAnimation();
     }
 

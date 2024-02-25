@@ -90,10 +90,20 @@ public class Pokemon
             DidFaint = false
         };
 
+        float attackStat = (float)Attack;
+        int defenceStat = Defence;
+
+        if (move.Base.MoveType == MoveType.Special)
+        {
+            attackStat = (float)SpAttack;
+            defenceStat = SpDefence;
+        }
+
         // Uses standard pokemon series damage calculator
         float modifiers = Random.Range(0.85f, 1f) * typeModifier * crit;
+
         float a = (2 * Attacker.Level + 10) / 250f;
-        float d = a * move.Base.Power * ((float)Attacker.Attack / Defence) + 2;
+        float d = a * move.Base.Power * ((float)attackStat/ defenceStat) + 2;
         int damage = Mathf.FloorToInt(modifiers * d);
 
         HP -= damage;
