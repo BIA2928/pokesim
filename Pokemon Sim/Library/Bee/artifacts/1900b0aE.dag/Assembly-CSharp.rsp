@@ -350,11 +350,13 @@
 "Assets/Scripts/Battle/BattleUnit.cs"
 "Assets/Scripts/Battle/HPBar.cs"
 "Assets/Scripts/GameController.cs"
+"Assets/Scripts/Gameplay/MapArea.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/Pokemon/Move.cs"
 "Assets/Scripts/Pokemon/MoveBase.cs"
 "Assets/Scripts/Pokemon/Pokemon.cs"
 "Assets/Scripts/Pokemon/PokemonBase.cs"
+"Assets/Scripts/Pokemon/PokemonParty.cs"
 -langversion:8.0
 
 /deterministic

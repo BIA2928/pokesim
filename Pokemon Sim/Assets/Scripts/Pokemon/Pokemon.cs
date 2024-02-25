@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Pokemon
 {
-    public PokemonBase Base { get; set; }
-    public int Level { get; set; }
+
+    [SerializeField] PokemonBase _base;
+    [SerializeField] int _level;
+    public PokemonBase Base { get { return _base; }  }
+    public int Level { get { return _level; } }
 
     public int HP { get; set; }
 
     public List<Move> Moves { get; set; }
-    public Pokemon(PokemonBase _base, int level)
+    public void Init()
     {
-        this.Base = _base;
-        this.Level = level;
+
         HP = MaxHP;
 
 
@@ -22,7 +25,7 @@ public class Pokemon
         Moves = new List<Move>();
         foreach (var move in _base.LearnableMoves)
         {
-            if (move.LearnLevel <= level)
+            if (move.LearnLevel <= _level)
             {
                 potentialMoves.Add(new Move(move.Base));
             }
