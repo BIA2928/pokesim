@@ -18,8 +18,9 @@ MonoBehaviour:
   pokeSize: 1
   regionalDexNum: 0
   nationalDexNum: 305
-  frontSprite: {fileID: 21300000, guid: 6483def650987cb41a905ed312a5aa0b, type: 3}
-  backSprite: {fileID: 21300000, guid: a76b33f2880d424489fb7cb6820626f9, type: 3}
+  frontSprite: {fileID: 21300000, guid: 52d9ee6ab1b12a54f896a39900e126dc, type: 3}
+  backSprite: {fileID: 21300000, guid: 4fec0f509eeff6c468a7ea18f1ee1b59, type: 3}
+  boxSprite: {fileID: 21300000, guid: 849bf786481c8a9409d60453c0e58daf, type: 3}
   type1: 14
   type2: 17
   maxHP: 60

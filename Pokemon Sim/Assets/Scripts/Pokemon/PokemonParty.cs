@@ -8,6 +8,11 @@ public class PokemonParty : MonoBehaviour
 
     [SerializeField] List<Pokemon> mons;
     // Start is called before the first frame update
+
+    public List<Pokemon> PokemonList
+    {
+        get { return mons;  }
+    }
     void Start()
     {
         foreach (var pokemon in mons)

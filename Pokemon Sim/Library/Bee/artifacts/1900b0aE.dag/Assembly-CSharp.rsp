@@ -349,6 +349,8 @@
 "Assets/Scripts/Battle/BattleSystem.cs"
 "Assets/Scripts/Battle/BattleUnit.cs"
 "Assets/Scripts/Battle/HPBar.cs"
+"Assets/Scripts/Battle/PartyMemberUI.cs"
+"Assets/Scripts/Battle/PartyScreen.cs"
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Gameplay/MapArea.cs"
 "Assets/Scripts/Player/PlayerController.cs"
