@@ -10,6 +10,7 @@ public class PartyMemberUI : MonoBehaviour
     [SerializeField] HPBar hpBar;
     [SerializeField] Text currHpText;
     [SerializeField] Text maxHpText;
+    [SerializeField] Image spriteImage;
 
     Pokemon _pokemon;
 
@@ -23,6 +24,6 @@ public class PartyMemberUI : MonoBehaviour
         currHpText.text = pokemon.MaxHP.ToString() + " /";
         maxHpText.text = pokemon.MaxHP.ToString();
 
-         
+        spriteImage.sprite = pokemon.Base.BoxSprite;
     }
 }

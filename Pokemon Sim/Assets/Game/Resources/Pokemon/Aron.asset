@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Aron
   description: It usually lives deep in mountains. However, hunger may drive it to
     eat railroad tracks and cars.
-  pokeSize: 2
+  pokeSize: 0
   regionalDexNum: 0
   nationalDexNum: 304
   frontSprite: {fileID: 21300000, guid: bc367d8b265b1994b8f34172d15dcc8b, type: 3}
