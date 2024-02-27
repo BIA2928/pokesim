@@ -19,6 +19,7 @@ MonoBehaviour:
   nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: f2ebd2f9418942f48a81ff00c3337916, type: 3}
   backSprite: {fileID: 21300000, guid: 69f02c19286d33d48af5b588d04169e6, type: 3}
+  boxSprite: {fileID: 21300000, guid: 92acb13617795bf4ca604b103ae8d27c, type: 3}
   type1: 7
   type2: 0
   maxHP: 39
@@ -32,3 +33,5 @@ MonoBehaviour:
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 8d858a8eea03f684b9a2b7c4001e1cfd, type: 2}
     learnLevel: 7
+  - moveBase: {fileID: 11400000, guid: 4bcac37833de3c84e98b333589b4c33e, type: 2}
+    learnLevel: 10

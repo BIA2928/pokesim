@@ -9,7 +9,8 @@ public enum BattleState
     PlayerAction,
     PlayerMove,
     EnemyMove,
-    Busy
+    Busy,
+    OnPartyScreen
 }
 
 public class BattleDialogue : MonoBehaviour

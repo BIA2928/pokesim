@@ -113,8 +113,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: 10.3}
-  m_SizeDelta: {x: 110, y: 38}
+  m_AnchoredPosition: {x: 63.61, y: 10.3}
+  m_SizeDelta: {x: 115.22, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2183437245801611361
 CanvasRenderer:
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.94509804, g: 0.9372549, b: 0.94509804, a: 1}
+  m_Color: {r: 0.9811321, g: 0.3446622, b: 0.1064436, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -157,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Hitmonchan
+  m_Text: 'Corviknight
 
 '
 --- !u!1 &2183437246106904765
@@ -260,6 +260,7 @@ MonoBehaviour:
   currHpText: {fileID: 3650116931090347559}
   maxHpText: {fileID: 3063377561237221694}
   spriteImage: {fileID: 6434960441112213820}
+  highlightColor: {r: 0.9150943, g: 0.22465602, b: 0.07338022, a: 1}
 --- !u!1 &2183437246224513404
 GameObject:
   m_ObjectHideFlags: 0
