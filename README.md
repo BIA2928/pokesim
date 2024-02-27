@@ -7,4 +7,6 @@ https://pokemondb.net/
 
 https://bulbapedia.bulbagarden.net/  
 
-https://www.spriters-resource.com/ds_dsi/pokemonplatinum/sheet/20099/  
+https://www.spriters-resource.com/ds_dsi/pokemonplatinum/sheet/20099/     
+
+https://www.spriters-resource.com/game_boy_advance/pokemonemerald/
