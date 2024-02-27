@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Toxtricity
+  m_EditorClassIdentifier: 
+  name: Toxtricity
+  description: 
+  pokeSize: 2
+  regionalDexNum: 0
+  nationalDexNum: 849
+  frontSprite: {fileID: -8727539531079478456, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
+  backSprite: {fileID: 6378266725328471227, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
+  boxSprite: {fileID: 21300000, guid: 1c26e42e84213e048a7d167babd18d1f, type: 3}
+  type1: 15
+  type2: 4
+  maxHP: 75
+  attack: 98
+  defence: 70
+  spAttack: 114
+  spDefence: 70
+  speed: 75
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: de225de951ee5de43bd41923df75484f, type: 2}
+    learnLevel: 1

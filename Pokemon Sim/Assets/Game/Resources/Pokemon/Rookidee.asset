@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Rookidee
+  m_EditorClassIdentifier: 
+  name: Rookiedee
+  description: 
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 821
+  frontSprite: {fileID: 21300000, guid: 7b5618c66d9d64e48b741fff5ba25001, type: 3}
+  backSprite: {fileID: 21300000, guid: 83e2510180be58e4aadad5e4a77ca9ad, type: 3}
+  boxSprite: {fileID: 21300000, guid: 7b5618c66d9d64e48b741fff5ba25001, type: 3}
+  type1: 8
+  type2: 0
+  maxHP: 38
+  attack: 47
+  defence: 35
+  spAttack: 33
+  spDefence: 35
+  speed: 57
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
+    learnLevel: 1

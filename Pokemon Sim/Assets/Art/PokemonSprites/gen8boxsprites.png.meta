@@ -1,0 +1,3900 @@
+fileFormatVersion: 2
+guid: c8ff41c8e2a83764abb9292cb4a3cbdb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5183367469176988730
+    second: gen8boxsprites_0
+  - first:
+      213: 8463921278329458806
+    second: gen8boxsprites_1
+  - first:
+      213: 4154405087123411130
+    second: gen8boxsprites_2
+  - first:
+      213: 1000137335291454527
+    second: gen8boxsprites_3
+  - first:
+      213: -4266256273196507347
+    second: gen8boxsprites_4
+  - first:
+      213: 2475136119458171814
+    second: gen8boxsprites_5
+  - first:
+      213: -3633473523049290867
+    second: gen8boxsprites_6
+  - first:
+      213: -7377962123798814567
+    second: gen8boxsprites_7
+  - first:
+      213: 3766710223625009456
+    second: gen8boxsprites_8
+  - first:
+      213: 7223816971861396883
+    second: gen8boxsprites_9
+  - first:
+      213: -255226739154763816
+    second: gen8boxsprites_10
+  - first:
+      213: 5542808694535328717
+    second: gen8boxsprites_11
+  - first:
+      213: -4401572339134107840
+    second: gen8boxsprites_12
+  - first:
+      213: 5039793122464131192
+    second: gen8boxsprites_13
+  - first:
+      213: -6176373967638867313
+    second: gen8boxsprites_14
+  - first:
+      213: 3427093952008243958
+    second: gen8boxsprites_15
+  - first:
+      213: -6007333914862981962
+    second: gen8boxsprites_16
+  - first:
+      213: -3296634809191830665
+    second: gen8boxsprites_17
+  - first:
+      213: -3481343354742096518
+    second: gen8boxsprites_18
+  - first:
+      213: 5248714810904699551
+    second: gen8boxsprites_19
+  - first:
+      213: 7960930729936708095
+    second: gen8boxsprites_20
+  - first:
+      213: 8551898537841722745
+    second: gen8boxsprites_21
+  - first:
+      213: 267219477214081553
+    second: gen8boxsprites_22
+  - first:
+      213: 4874225488602936780
+    second: gen8boxsprites_23
+  - first:
+      213: -4245018395194649902
+    second: gen8boxsprites_24
+  - first:
+      213: 1284580091923802243
+    second: gen8boxsprites_25
+  - first:
+      213: -1490203012058339763
+    second: gen8boxsprites_26
+  - first:
+      213: -1292641788808169338
+    second: gen8boxsprites_27
+  - first:
+      213: -5776423910099482195
+    second: gen8boxsprites_28
+  - first:
+      213: -4773400435626587314
+    second: gen8boxsprites_29
+  - first:
+      213: -6790660968086593951
+    second: gen8boxsprites_30
+  - first:
+      213: 2650031916677071439
+    second: gen8boxsprites_31
+  - first:
+      213: 808429449628678404
+    second: gen8boxsprites_32
+  - first:
+      213: -5616613428866968018
+    second: gen8boxsprites_33
+  - first:
+      213: -3342133670718379129
+    second: gen8boxsprites_34
+  - first:
+      213: -3667694580642204409
+    second: gen8boxsprites_35
+  - first:
+      213: -7850523804739330195
+    second: gen8boxsprites_36
+  - first:
+      213: 2511789690271823288
+    second: gen8boxsprites_37
+  - first:
+      213: -3348646703828660255
+    second: gen8boxsprites_38
+  - first:
+      213: -2368109603054816070
+    second: gen8boxsprites_39
+  - first:
+      213: 4899755812871474522
+    second: gen8boxsprites_40
+  - first:
+      213: 2432426302692689533
+    second: gen8boxsprites_41
+  - first:
+      213: -987476767068991210
+    second: gen8boxsprites_42
+  - first:
+      213: 7804056173569866482
+    second: gen8boxsprites_43
+  - first:
+      213: -7208823743536714161
+    second: gen8boxsprites_44
+  - first:
+      213: -6078418525113082688
+    second: gen8boxsprites_45
+  - first:
+      213: 5603294841720653731
+    second: gen8boxsprites_46
+  - first:
+      213: 6283979422302396983
+    second: gen8boxsprites_47
+  - first:
+      213: -5801548435571898338
+    second: gen8boxsprites_48
+  - first:
+      213: -6858402932613404165
+    second: gen8boxsprites_49
+  - first:
+      213: 4321538209451571249
+    second: gen8boxsprites_50
+  - first:
+      213: -1757059598165398273
+    second: gen8boxsprites_51
+  - first:
+      213: -4366576636726848786
+    second: gen8boxsprites_52
+  - first:
+      213: -3733886668517821348
+    second: gen8boxsprites_53
+  - first:
+      213: -3779671552032271243
+    second: gen8boxsprites_54
+  - first:
+      213: 2730989133871602478
+    second: gen8boxsprites_55
+  - first:
+      213: 5049371863193298050
+    second: gen8boxsprites_56
+  - first:
+      213: -4973988650847621511
+    second: gen8boxsprites_57
+  - first:
+      213: -1244803205940686124
+    second: gen8boxsprites_58
+  - first:
+      213: 1136118389547532128
+    second: gen8boxsprites_59
+  - first:
+      213: 5819739504505799237
+    second: gen8boxsprites_60
+  - first:
+      213: 1938002967989201145
+    second: gen8boxsprites_61
+  - first:
+      213: 7953145713000409236
+    second: gen8boxsprites_62
+  - first:
+      213: -3369797424090541760
+    second: gen8boxsprites_63
+  - first:
+      213: 4921072312486071936
+    second: gen8boxsprites_64
+  - first:
+      213: -1442445431452482886
+    second: gen8boxsprites_65
+  - first:
+      213: -1827017300988301576
+    second: gen8boxsprites_66
+  - first:
+      213: 4238296365903199858
+    second: gen8boxsprites_67
+  - first:
+      213: 2540919731763229066
+    second: gen8boxsprites_68
+  - first:
+      213: -2424724886137941521
+    second: gen8boxsprites_69
+  - first:
+      213: 2483380575068766471
+    second: gen8boxsprites_70
+  - first:
+      213: 5574981129589197069
+    second: gen8boxsprites_71
+  - first:
+      213: -6265062359302396212
+    second: gen8boxsprites_72
+  - first:
+      213: -8675643709316992543
+    second: gen8boxsprites_73
+  - first:
+      213: -3635997564028015105
+    second: gen8boxsprites_74
+  - first:
+      213: 1880303366241177305
+    second: gen8boxsprites_75
+  - first:
+      213: 6544125667744786096
+    second: gen8boxsprites_76
+  - first:
+      213: -7338134036234803465
+    second: gen8boxsprites_77
+  - first:
+      213: 596883459665633599
+    second: gen8boxsprites_78
+  - first:
+      213: 556368360152423795
+    second: gen8boxsprites_79
+  - first:
+      213: 8359280572566371482
+    second: gen8boxsprites_80
+  - first:
+      213: -2144083894594416139
+    second: gen8boxsprites_81
+  - first:
+      213: -6917649371421708436
+    second: gen8boxsprites_82
+  - first:
+      213: 4555885504858752752
+    second: gen8boxsprites_83
+  - first:
+      213: 8502872847766576677
+    second: gen8boxsprites_84
+  - first:
+      213: -3064418913542053307
+    second: gen8boxsprites_85
+  - first:
+      213: -39897275214409966
+    second: gen8boxsprites_86
+  - first:
+      213: -7827323173535134866
+    second: gen8boxsprites_87
+  - first:
+      213: 6439154468947703256
+    second: gen8boxsprites_88
+  - first:
+      213: -8829467663621505643
+    second: gen8boxsprites_89
+  - first:
+      213: 8405363196554423789
+    second: gen8boxsprites_90
+  - first:
+      213: -7486715488616173084
+    second: gen8boxsprites_91
+  - first:
+      213: -7196075519881645082
+    second: gen8boxsprites_92
+  - first:
+      213: 3636800070847645620
+    second: gen8boxsprites_93
+  - first:
+      213: 6768835980398032933
+    second: gen8boxsprites_94
+  - first:
+      213: -7797860029255919837
+    second: gen8boxsprites_95
+  - first:
+      213: -7243326219165942158
+    second: gen8boxsprites_96
+  - first:
+      213: 5727096683766114765
+    second: gen8boxsprites_97
+  - first:
+      213: 6820486482070898668
+    second: gen8boxsprites_98
+  - first:
+      213: -5502981613901079022
+    second: gen8boxsprites_99
+  - first:
+      213: 4321593053148897194
+    second: gen8boxsprites_100
+  - first:
+      213: -4210971923335952011
+    second: gen8boxsprites_101
+  - first:
+      213: 7696437400872678773
+    second: gen8boxsprites_102
+  - first:
+      213: 9028544206313012318
+    second: gen8boxsprites_103
+  - first:
+      213: -4578735107239454035
+    second: gen8boxsprites_104
+  - first:
+      213: 6089856094077622497
+    second: gen8boxsprites_105
+  - first:
+      213: -4337743704115911944
+    second: gen8boxsprites_106
+  - first:
+      213: -2637710883104538912
+    second: gen8boxsprites_107
+  - first:
+      213: -1100709947702071767
+    second: gen8boxsprites_108
+  - first:
+      213: 8891313538049031880
+    second: gen8boxsprites_109
+  - first:
+      213: 5758474174236392083
+    second: gen8boxsprites_110
+  - first:
+      213: -2003875447836387375
+    second: gen8boxsprites_111
+  - first:
+      213: -1749017546855403169
+    second: gen8boxsprites_112
+  - first:
+      213: 3965193312770626885
+    second: gen8boxsprites_113
+  - first:
+      213: -3567304958310307601
+    second: gen8boxsprites_114
+  - first:
+      213: 1688029557541990724
+    second: gen8boxsprites_115
+  - first:
+      213: -7441314430133961673
+    second: gen8boxsprites_116
+  - first:
+      213: 1479074990358188767
+    second: gen8boxsprites_117
+  - first:
+      213: 5627854434059565009
+    second: gen8boxsprites_118
+  - first:
+      213: -844276828122744115
+    second: gen8boxsprites_119
+  - first:
+      213: -6269191684034246234
+    second: gen8boxsprites_120
+  - first:
+      213: -1859614905449321503
+    second: gen8boxsprites_121
+  - first:
+      213: 4764968702371616077
+    second: gen8boxsprites_122
+  - first:
+      213: -3241746741010339823
+    second: gen8boxsprites_123
+  - first:
+      213: 3669025936151313426
+    second: gen8boxsprites_124
+  - first:
+      213: 3685892427128050854
+    second: gen8boxsprites_125
+  - first:
+      213: 6566305272485197262
+    second: gen8boxsprites_126
+  - first:
+      213: -2192810926577331758
+    second: gen8boxsprites_127
+  - first:
+      213: -2840032459135150342
+    second: gen8boxsprites_128
+  - first:
+      213: 2685902912149643493
+    second: gen8boxsprites_129
+  - first:
+      213: 84923068576237445
+    second: gen8boxsprites_130
+  - first:
+      213: -5184842317643132939
+    second: gen8boxsprites_131
+  - first:
+      213: 2776344707401158905
+    second: gen8boxsprites_132
+  - first:
+      213: 6370877751051540457
+    second: gen8boxsprites_133
+  - first:
+      213: -7932365946522071452
+    second: gen8boxsprites_134
+  - first:
+      213: -6273246040065907945
+    second: gen8boxsprites_135
+  - first:
+      213: -3315935650479585485
+    second: gen8boxsprites_136
+  - first:
+      213: -5945293669434788686
+    second: gen8boxsprites_137
+  - first:
+      213: 4797050206934963633
+    second: gen8boxsprites_138
+  - first:
+      213: -558508520640303766
+    second: gen8boxsprites_139
+  - first:
+      213: 1477619592150393766
+    second: gen8boxsprites_140
+  - first:
+      213: -6056479271794804240
+    second: gen8boxsprites_141
+  - first:
+      213: 1098926379051534890
+    second: gen8boxsprites_142
+  - first:
+      213: 6959103812655467858
+    second: gen8boxsprites_143
+  - first:
+      213: -4066797083370113683
+    second: gen8boxsprites_144
+  - first:
+      213: -7540743236392358641
+    second: gen8boxsprites_145
+  - first:
+      213: 6478097830006805037
+    second: gen8boxsprites_146
+  - first:
+      213: -4379089004559491652
+    second: gen8boxsprites_147
+  - first:
+      213: 43623158904127554
+    second: gen8boxsprites_148
+  - first:
+      213: 4024593613582612776
+    second: gen8boxsprites_149
+  - first:
+      213: -6488702151705499375
+    second: gen8boxsprites_150
+  - first:
+      213: -7272770935978634870
+    second: gen8boxsprites_151
+  - first:
+      213: -373741227648518780
+    second: gen8boxsprites_152
+  - first:
+      213: 9045369684584709711
+    second: gen8boxsprites_153
+  - first:
+      213: -856866182502405235
+    second: gen8boxsprites_154
+  - first:
+      213: -2230583982934198124
+    second: gen8boxsprites_155
+  - first:
+      213: 4313875116845617364
+    second: gen8boxsprites_156
+  - first:
+      213: 6934138837491832679
+    second: gen8boxsprites_157
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gen8boxsprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a342c9420450fe740800000000000000
+      internalID: 5183367469176988730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67092b11f83e57570800000000000000
+      internalID: 8463921278329458806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0111f6a6967a930800000000000000
+      internalID: 4154405087123411130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3427a48b9331ed00800000000000000
+      internalID: 1000137335291454527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f175be5863bc4c0800000000000000
+      internalID: -4266256273196507347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab0b03df23795220800000000000000
+      internalID: 2475136119458171814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d832cdde41f439dc0800000000000000
+      internalID: -3633473523049290867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9906facd9863c9990800000000000000
+      internalID: -7377962123798814567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0393003ddfa064430800000000000000
+      internalID: 3766710223625009456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d8c323347204460800000000000000
+      internalID: 7223816971861396883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfbf7b02a0457cf0800000000000000
+      internalID: -255226739154763816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc399bff3230cec40800000000000000
+      internalID: 5542808694535328717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fe9b037497ae2c0800000000000000
+      internalID: -4401572339134107840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8786ee59421f0f540800000000000000
+      internalID: 5039793122464131192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f825aeaa99c194aa0800000000000000
+      internalID: -6176373967638867313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa4755bacb7f8f20800000000000000
+      internalID: 3427093952008243958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc6f65f1a9a1aca0800000000000000
+      internalID: -6007333914862981962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77beeeb7b100042d0800000000000000
+      internalID: -3296634809191830665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_18
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d3e6fe9a8cfafc0800000000000000
+      internalID: -3481343354742096518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_19
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f926e47cf4e27d840800000000000000
+      internalID: 5248714810904699551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_20
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff16e5fe158ea7e60800000000000000
+      internalID: 7960930729936708095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_21
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 359
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9750d3709627ea670800000000000000
+      internalID: 8551898537841722745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1123960e2ba55b300800000000000000
+      internalID: 267219477214081553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_23
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc53553d14ab4a340800000000000000
+      internalID: 4874225488602936780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_24
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d29c69b24aa615c0800000000000000
+      internalID: -4245018395194649902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38828a0a9ceb3d110800000000000000
+      internalID: 1284580091923802243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46ab07814cb15be0800000000000000
+      internalID: -1490203012058339763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_27
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688734c442d9f0ee0800000000000000
+      internalID: -1292641788808169338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_28
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9827efe0506dfa0800000000000000
+      internalID: -5776423910099482195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_29
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b48c7289971cdb0800000000000000
+      internalID: -4773400435626587314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_30
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e9617f3d9b2c1a0800000000000000
+      internalID: -6790660968086593951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_31
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f420cfcdcfdc6c420800000000000000
+      internalID: 2650031916677071439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409f41b1d4e183b00800000000000000
+      internalID: 808429449628678404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2612b338d7cd02b0800000000000000
+      internalID: -5616613428866968018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_34
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b65f4422b5e91d0800000000000000
+      internalID: -3342133670718379129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7053230163bb91dc0800000000000000
+      internalID: -3667694580642204409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_36
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f93c581365d0390800000000000000
+      internalID: -7850523804739330195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5f32f4a6babd220800000000000000
+      internalID: 2511789690271823288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_38
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef820490973781d0800000000000000
+      internalID: -3348646703828660255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_39
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4f9b0ecd8c22fd0800000000000000
+      internalID: -2368109603054816070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_40
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d0c58a3fd6ff340800000000000000
+      internalID: 4899755812871474522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d768052b5d6b1c120800000000000000
+      internalID: 2432426302692689533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_42
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611d6eabc17cb42f0800000000000000
+      internalID: -987476767068991210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_43
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 299
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa73d00eb39d4c60800000000000000
+      internalID: 7804056173569866482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ea71ecffc15fb90800000000000000
+      internalID: -7208823743536714161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_45
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc1b766e8e15aba0800000000000000
+      internalID: -6078418525113082688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_46
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7c98498f6e2cd40800000000000000
+      internalID: 5603294841720653731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_47
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732e23a9dfd253750800000000000000
+      internalID: 6283979422302396983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_48
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18838e8f62cc7fa0800000000000000
+      internalID: -5801548435571898338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_49
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9a413cede02d0a0800000000000000
+      internalID: -6858402932613404165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_50
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13873a1ea1039fb30800000000000000
+      internalID: 4321538209451571249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_51
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc2922da9bad97e0800000000000000
+      internalID: -1757059598165398273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_52
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2506b1fadc663c0800000000000000
+      internalID: -4366576636726848786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_53
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54bd63abd19e2cc0800000000000000
+      internalID: -3733886668517821348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_54
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574977dbfb8eb8bc0800000000000000
+      internalID: -3779671552032271243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b5ed9d52c66e520800000000000000
+      internalID: 2730989133871602478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_56
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2842d74f4f8f21640800000000000000
+      internalID: 5049371863193298050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_57
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e2765eca7d8fab0800000000000000
+      internalID: -4973988650847621511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_58
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d253a6541299bee0800000000000000
+      internalID: -1244803205940686124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_59
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ff4c7e7ad44cf00800000000000000
+      internalID: 1136118389547532128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_60
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542406bbe3ed3c050800000000000000
+      internalID: 5819739504505799237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_61
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f826a07e6b25ea10800000000000000
+      internalID: 1938002967989201145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_62
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4986f4e63ef3f5e60800000000000000
+      internalID: 7953145713000409236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_63
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0419e04c8131c31d0800000000000000
+      internalID: -3369797424090541760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_64
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e0ebbf1392b4440800000000000000
+      internalID: 4921072312486071936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_65
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2c362c5876bfbe0800000000000000
+      internalID: -1442445431452482886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe6918d17125a6e0800000000000000
+      internalID: -1827017300988301576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_67
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e3d7ed61471da30800000000000000
+      internalID: 4238296365903199858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_68
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81378e9809234320800000000000000
+      internalID: 2540919731763229066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_69
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1d2b31095a95ed0800000000000000
+      internalID: -2424724886137941521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_70
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701441bb97db67220800000000000000
+      internalID: 2483380575068766471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_71
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d098ba2cccf4e5d40800000000000000
+      internalID: 5574981129589197069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_72
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc62c1a5af60e09a0800000000000000
+      internalID: -6265062359302396212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_73
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1fe4c030ce99780800000000000000
+      internalID: -8675643709316992543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_74
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdace7da775a8dc0800000000000000
+      internalID: -3635997564028015105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_75
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dec6c603fd281a10800000000000000
+      internalID: 1880303366241177305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_76
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 209
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6a17f5f9761da50800000000000000
+      internalID: 6544125667744786096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6650029f5b92a90800000000000000
+      internalID: -7338134036234803465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_78
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f312da9185e884800800000000000000
+      internalID: 596883459665633599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_79
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37dd627631e98b700800000000000000
+      internalID: 556368360152423795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_80
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c74a13461220470800000000000000
+      internalID: 8359280572566371482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f15016ce0fae32e0800000000000000
+      internalID: -2144083894594416139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_82
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f64b74c829fff90800000000000000
+      internalID: -6917649371421708436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_83
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f605728ab1c93f30800000000000000
+      internalID: 4555885504858752752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_84
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ed07d0ec5400670800000000000000
+      internalID: 8502872847766576677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_85
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542665feb3ff875d0800000000000000
+      internalID: -3064418913542053307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_86
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fc65bb3a1427ff0800000000000000
+      internalID: -39897275214409966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_87
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 179
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b414b6b03cf5390800000000000000
+      internalID: -7827323173535134866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d53f779fd87c5950800000000000000
+      internalID: 6439154468947703256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_89
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59dba02c0fd677580800000000000000
+      internalID: -8829467663621505643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_90
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deda4c23b49d5a470800000000000000
+      internalID: 8405363196554423789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_91
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e13e9eede7d91890800000000000000
+      internalID: -7486715488616173084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_92
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3f19ce077622c90800000000000000
+      internalID: -7196075519881645082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_93
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b74df55562887230800000000000000
+      internalID: 3636800070847645620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_94
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528f18a167cbfed50800000000000000
+      internalID: 6768835980398032933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_95
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327dbf34e9f68c390800000000000000
+      internalID: -7797860029255919837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_96
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e37523e298a7b90800000000000000
+      internalID: -7243326219165942158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_97
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc96236271cba7f40800000000000000
+      internalID: 5727096683766114765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_98
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce78037a15c37ae50800000000000000
+      internalID: 6820486482070898668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e9be1d06b71a3b0800000000000000
+      internalID: -5502981613901079022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_100
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf5cbc2cf169fb30800000000000000
+      internalID: 4321593053148897194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_101
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579ca6ea85f9f85c0800000000000000
+      internalID: -4210971923335952011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_102
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575fb03e90d3fca60800000000000000
+      internalID: 7696437400872678773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_103
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cb230de15db4d70800000000000000
+      internalID: 9028544206313012318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_104
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daad16cdda01570c0800000000000000
+      internalID: -4578735107239454035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_105
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e89eb42ad3838450800000000000000
+      internalID: 6089856094077622497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_106
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2eb7d551d3dc3c0800000000000000
+      internalID: -4337743704115911944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_107
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee3f505de7f46bd0800000000000000
+      internalID: -2637710883104538912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_108
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92eaa76622e79b0f0800000000000000
+      internalID: -1100709947702071767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_109
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ceb80efd8a446b70800000000000000
+      internalID: 8891313538049031880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39afe9370c53aef40800000000000000
+      internalID: 5758474174236392083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_111
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7d59da5edc034e0800000000000000
+      internalID: -2003875447836387375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_112
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5132cdcecd3ab7e0800000000000000
+      internalID: -1749017546855403169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_113
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54592793f42370730800000000000000
+      internalID: 3965193312770626885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_114
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8ac627a036e7ec0800000000000000
+      internalID: -3567304958310307601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_115
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44176a360f51d6710800000000000000
+      internalID: 1688029557541990724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_116
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c70e993f32bb890800000000000000
+      internalID: -7441314430133961673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_117
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2d6740edab68410800000000000000
+      internalID: 1479074990358188767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_118
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d73ab54ac72a1e40800000000000000
+      internalID: 5627854434059565009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_119
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca76afa2b68844f0800000000000000
+      internalID: -844276828122744115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_120
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a94e44016b5ff8a0800000000000000
+      internalID: -6269191684034246234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_121
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebebad98125136e0800000000000000
+      internalID: -1859614905449321503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_122
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45d6b6f9c1902240800000000000000
+      internalID: 4764968702371616077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_123
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1186c4ab3800303d0800000000000000
+      internalID: -3241746741010339823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_124
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c7efb46affae230800000000000000
+      internalID: 3669025936151313426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_125
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4154f32abe62330800000000000000
+      internalID: 3685892427128050854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_126
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec531450bd3302b50800000000000000
+      internalID: 6566305272485197262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_127
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d153cd84129191e0800000000000000
+      internalID: -2192810926577331758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_128
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af69baa868d2698d0800000000000000
+      internalID: -2840032459135150342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_129
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0edd3d77e364520800000000000000
+      internalID: 2685902912149643493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_130
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58709b7b415bd2100800000000000000
+      internalID: 84923068576237445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_131
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 59
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffc770f16dbb08b0800000000000000
+      internalID: -5184842317643132939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f09eaa3dce878620800000000000000
+      internalID: 2776344707401158905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_133
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7ddda6f87e96850800000000000000
+      internalID: 6370877751051540457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_134
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e8529f2339ae190800000000000000
+      internalID: -7932365946522071452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_135
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713ee31b6f3f0f8a0800000000000000
+      internalID: -6273246040065907945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_136
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3374c1f281e6bf1d0800000000000000
+      internalID: -3315935650479585485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_137
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4f5fb38e21e7da0800000000000000
+      internalID: -5945293669434788686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_138
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b592125fbb829240800000000000000
+      internalID: 4797050206934963633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_139
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6da437a577cf38f0800000000000000
+      internalID: -558508520640303766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_140
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a32847b03f818410800000000000000
+      internalID: 1477619592150393766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_141
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9772fd03013fba0800000000000000
+      internalID: -6056479271794804240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_142
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 29
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a4ca928bb204f00800000000000000
+      internalID: 1098926379051534890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_143
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 389
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d4564fb04b39060800000000000000
+      internalID: 6959103812655467858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_144
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 358
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6531287995df87c0800000000000000
+      internalID: -4066797083370113683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_145
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 329
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d6764aaf5e95790800000000000000
+      internalID: -7540743236392358641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_146
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 298
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22d8c967a3d6e950800000000000000
+      internalID: 6478097830006805037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_147
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 269
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd996370c95a33c0800000000000000
+      internalID: -4379089004559491652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_148
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 239
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240067a280bfa9000800000000000000
+      internalID: 43623158904127554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_149
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 210
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829b5ee719a3ad730800000000000000
+      internalID: 4024593613582612776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_150
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 177
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119e74a85cf73f5a0800000000000000
+      internalID: -6488702151705499375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_151
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a815534dd5de11b90800000000000000
+      internalID: -7272770935978634870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_152
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 119
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4857718655430daf0800000000000000
+      internalID: -373741227648518780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_153
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 90
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e32cfbdcb978d70800000000000000
+      internalID: 9045369684584709711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_154
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 61
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b26e33fbccb14f0800000000000000
+      internalID: -856866182502405235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_155
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 30
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498f7878faf5b01e0800000000000000
+      internalID: -2230583982934198124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_156
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 30
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0daf81096fddb30800000000000000
+      internalID: 4313875116845617364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8boxsprites_157
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767d0f7b8820b3060800000000000000
+      internalID: 6934138837491832679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
