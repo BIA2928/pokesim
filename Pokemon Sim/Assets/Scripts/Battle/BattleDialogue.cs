@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public enum BattleState
 {
     Start,
-    PlayerAction,
-    PlayerMove,
-    EnemyMove,
+    ActionSelection,
+    MoveSelection,
+    PerformMove,
     Busy,
-    OnPartyScreen
+    OnPartyScreen,
+    BattleOver
 }
 
 public class BattleDialogue : MonoBehaviour
@@ -46,6 +47,8 @@ public class BattleDialogue : MonoBehaviour
         // add buffer
         yield return new WaitForSeconds(1f/ (textSpeed * 0.04f));
     }
+
+    
 
     public void EnableDialogueText(bool enabled)
     {
@@ -110,6 +113,11 @@ public class BattleDialogue : MonoBehaviour
                 moveTexts[i].text = "-";
             }
         }
+    }
+
+    public void HideActions(bool hide)
+    {
+        actionSelector.SetActive(!hide);
     }
 
     

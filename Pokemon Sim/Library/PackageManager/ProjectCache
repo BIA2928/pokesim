@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638441653783480190
-    m_Hash: 3578706231
+      ticks: 638446360408965819
+    m_Hash: 3039604402
   m_LockFileStatus:
     m_FilePath: C:/Users/sebas/OneDrive/Desktop/PokeProject/Pokemon Sim/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638441654186519917
-    m_Hash: 1641269152
+      ticks: 638446360409305843
+    m_Hash: 527637129
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -164,6 +164,7 @@ m_ResolvedPackages:
     - 10.0.2
     - 10.0.3
     - 10.1.0
+    - 10.1.1
     compatible:
     - 6.0.4
     - 6.0.5
@@ -405,6 +406,7 @@ m_ResolvedPackages:
     - 9.0.0-pre.2
     - 9.0.0
     - 9.0.1
+    - 9.0.2
     compatible:
     - 5.0.4
     - 5.0.6
@@ -622,6 +624,7 @@ m_ResolvedPackages:
     - 10.0.0
     - 10.0.1
     - 10.0.2
+    - 10.0.3
     compatible:
     - 6.0.1
     - 6.0.2
@@ -1156,12 +1159,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.7
     nextVersion: 
-- packageId: com.unity.ide.visualstudio@2.0.9
+- packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 1
-  version: 2.0.9
+  version: 2.0.22
   source: 1
-  resolvedPath: C:\Users\sebas\OneDrive\Desktop\PokeProject\Pokemon Sim\Library\PackageCache\com.unity.ide.visualstudio@2.0.9
+  resolvedPath: C:\Users\sebas\OneDrive\Desktop\PokeProject\Pokemon Sim\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -1170,7 +1173,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: assets
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -1240,13 +1243,13 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637580705480000000
-  documentationUrl: 
+  datePublishedTicks: 638326061910000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: c7cd4c6319806423b3d918b3e9599244e3993d41
+    revision: 700b44077345e97d37d464ff25507638983aed64
     path: 
   unityLifecycle:
     version: 2.0.9
@@ -1265,7 +1268,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: Code editor integration for supporting Visual Studio Code as code
     editor for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -1302,7 +1305,7 @@ m_ResolvedPackages:
     isDefault: 1
     capabilities: 7
   hasRegistry: 1
-  hideInEditor: 1
+  hideInEditor: 0
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
@@ -3853,7 +3856,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Libraries
-  type: 
+  type: asset
   description: Custom version of the nunit package build to work with Unity. Used
     by the Unity Test Framework.
   status: 4
@@ -3866,8 +3869,16 @@ m_ResolvedPackages:
     - 1.0.0
     - 1.0.5
     - 1.0.6
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
     compatible:
     - 1.0.6
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
     verified: 1.0.6
   dependencies: []
   resolvedDependencies: []
@@ -3883,7 +3894,7 @@ m_ResolvedPackages:
     isDefault: 1
     capabilities: 7
   hasRegistry: 1
-  hideInEditor: 1
+  hideInEditor: 0
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
@@ -3912,7 +3923,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: library
   description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
     synced to version 12.0.2.
 
@@ -3938,10 +3949,20 @@ m_ResolvedPackages:
     - 2.0.0
     - 2.0.1-preview.1
     - 2.0.2
+    - 3.0.1
+    - 3.0.2
+    - 3.1.0
+    - 3.2.0
+    - 3.2.1
     compatible:
     - 2.0.0
     - 2.0.1-preview.1
     - 2.0.2
+    - 3.0.1
+    - 3.0.2
+    - 3.1.0
+    - 3.2.0
+    - 3.2.1
     verified: 2.0.2
   dependencies: []
   resolvedDependencies: []
@@ -3983,7 +4004,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: Unity's C# SIMD math library providing vector types and math functions
     with a shader like syntax.
   status: 4
@@ -4004,9 +4025,18 @@ m_ResolvedPackages:
     - 1.1.0-preview.1
     - 1.1.0
     - 1.2.1
+    - 1.2.4
+    - 1.2.5
+    - 1.2.6
+    - 1.3.1
+    - 1.3.2
     compatible:
     - 1.2.1
-    verified: 1.2.1
+    - 1.2.4
+    - 1.2.5
+    - 1.2.6
+    - 1.3.1
+    verified: 1.2.6
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -4019,7 +4049,7 @@ m_ResolvedPackages:
     isDefault: 1
     capabilities: 7
   hasRegistry: 1
-  hideInEditor: 1
+  hideInEditor: 0
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
@@ -4048,7 +4078,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: 2D Common is a package that contains shared functionalities that are
     used by most of the other 2D packages.
   status: 4
@@ -4065,12 +4095,18 @@ m_ResolvedPackages:
     - 2.0.1
     - 2.0.2
     - 2.1.0
+    - 2.1.1
+    - 2.1.2
     - 3.0.0
     - 3.0.1
     - 4.0.0
     - 4.0.1
     - 4.0.2
     - 4.0.3
+    - 4.0.4
+    - 4.1.0
+    - 4.2.0
+    - 4.2.1
     - 5.0.0-pre.1
     - 5.0.0-pre.2
     - 5.0.0
@@ -4078,6 +4114,31 @@ m_ResolvedPackages:
     - 6.0.0-pre.3
     - 6.0.0-pre.4
     - 6.0.0
+    - 6.0.1
+    - 6.0.2
+    - 6.0.3
+    - 6.0.4
+    - 6.0.5
+    - 6.0.6
+    - 6.0.7
+    - 7.0.0-pre.3
+    - 7.0.0-pre.4
+    - 7.0.0
+    - 7.0.1
+    - 7.0.2
+    - 7.0.3
+    - 8.0.0-pre.1
+    - 8.0.0-pre.2
+    - 8.0.0
+    - 8.0.1
+    - 8.0.2
+    - 9.0.0-pre.1
+    - 9.0.0-pre.2
+    - 9.0.0
+    - 9.0.1
+    - 9.0.2
+    - 9.0.3
+    - 9.0.4
     compatible:
     - 5.0.0
     verified: 5.0.0
@@ -4109,7 +4170,7 @@ m_ResolvedPackages:
     isDefault: 1
     capabilities: 7
   hasRegistry: 1
-  hideInEditor: 1
+  hideInEditor: 0
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
@@ -4138,7 +4199,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: "2D Path provides tooling to edit shapes (polygons and B\xE9zier splines)
     in EditorWindows and the SceneView."
   status: 4
@@ -4165,10 +4226,12 @@ m_ResolvedPackages:
     - 5.0.0-pre.2
     - 5.0.0
     - 5.0.1
+    - 5.0.2
     compatible:
     - 5.0.0
     - 5.0.1
-    verified: 5.0.1
+    - 5.0.2
+    verified: 5.0.2
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -4182,7 +4245,7 @@ m_ResolvedPackages:
     isDefault: 1
     capabilities: 7
   hasRegistry: 1
-  hideInEditor: 1
+  hideInEditor: 0
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
