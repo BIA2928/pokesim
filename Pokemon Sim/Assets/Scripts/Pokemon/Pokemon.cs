@@ -168,6 +168,14 @@ public class Pokemon
         return Moves[r];
     }
 
+    public void ApplyBoost(List<StatBoost> boosts)
+    {
+        foreach(var statboost in boosts)
+        {
+            StatBoosts[statboost.stat] = Mathf.Clamp(StatBoosts[statboost.stat] + statboost.boost, -6, 6);
+        }
+    }
+
     public class DamageDetails
     {
 
@@ -177,4 +185,6 @@ public class Pokemon
         public float TypeEffectiveness { get; set; }
 
     }
+
+    
 }

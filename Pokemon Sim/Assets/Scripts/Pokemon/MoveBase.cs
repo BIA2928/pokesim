@@ -13,6 +13,8 @@ public class MoveBase : ScriptableObject
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] int pp;
+    [SerializeField] MoveEffects effects;
+    [SerializeField] MoveTarget target;
 
     [SerializeField] MoveType moveType;
 
@@ -55,6 +57,16 @@ public class MoveBase : ScriptableObject
         get { return moveType;  }
     }
 
+    public MoveEffects Effects
+    {
+        get { return effects; }
+    }
+
+    public MoveTarget Target
+    {
+        get { return target; }
+    }
+
 
 }
 
@@ -62,5 +74,28 @@ public enum MoveType
 {
     Physical,
     Special,
+    Status,
     Other
+}
+public enum MoveTarget
+{
+    Foe, Self
+}
+
+[System.Serializable]
+public class MoveEffects
+{
+    [SerializeField] List<StatBoost> boosts;
+
+    public List<StatBoost> Boosts
+    {
+        get { return boosts;  }
+    }
+}
+
+[System.Serializable]
+public class StatBoost
+{
+    public Stat stat;
+    public int boost;
 }

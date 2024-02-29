@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Charmeleon
+  m_EditorClassIdentifier: 
+  name: Charmeleon
+  description: 
+  pokeSize: 0
+  regionalDexNum: 0
+  nationalDexNum: 5
+  frontSprite: {fileID: 21300000, guid: ba84f14dadfc0ae439ff2983403041d4, type: 3}
+  backSprite: {fileID: 21300000, guid: d9f711f41e9e6bc4b86db9a6743b16da, type: 3}
+  boxSprite: {fileID: 21300000, guid: 1752b1f27022d734092c3d4a2b0a395f, type: 3}
+  type1: 7
+  type2: 0
+  maxHP: 58
+  attack: 64
+  defence: 58
+  spAttack: 80
+  spDefence: 65
+  speed: 80
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 1
