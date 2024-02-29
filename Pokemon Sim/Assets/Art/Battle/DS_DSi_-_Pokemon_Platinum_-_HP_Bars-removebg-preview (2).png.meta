@@ -22,10 +22,19 @@ TextureImporter:
     second: low hp
   - first:
       213: -5922882721616047729
-    second: DS_DSi_-_Pokemon_Platinum_-_HP_Bars-removebg-preview (2)_6
+    second: burn_icon
   - first:
       213: 2348028194966821508
-    second: DS_DSi_-_Pokemon_Platinum_-_HP_Bars-removebg-preview (2)_7
+    second: freeze_icon
+  - first:
+      213: 9207294377493672263
+    second: psn_icon
+  - first:
+      213: -3375929481116580453
+    second: paralyze_icon
+  - first:
+      213: 5091332431584280688
+    second: sleep_icon
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -241,13 +250,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DS_DSi_-_Pokemon_Platinum_-_HP_Bars-removebg-preview (2)_6
+      name: burn_icon
       rect:
         serializedVersion: 2
-        x: 0
-        y: 71.27273
-        width: 260.5
-        height: 47.727272
+        x: 8
+        y: 191
+        width: 20
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,13 +271,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DS_DSi_-_Pokemon_Platinum_-_HP_Bars-removebg-preview (2)_7
+      name: freeze_icon
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24.272728
-        width: 260.5
-        height: 47.727272
+        x: 8
+        y: 180
+        width: 20
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,6 +287,69 @@ TextureImporter:
       bones: []
       spriteID: 48a5993f33fd59020800000000000000
       internalID: 2348028194966821508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: psn_icon
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 169
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74136f83471e6cf70800000000000000
+      internalID: 9207294377493672263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paralyze_icon
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 157
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95074bf50a4621d0800000000000000
+      internalID: -3375929481116580453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sleep_icon
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 147
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070c10a1fdb08a640800000000000000
+      internalID: 5091332431584280688
       vertices: []
       indices: 
       edges: []

@@ -38,7 +38,15 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogueBox.TypeDialogue($"A wild {enemyPoke.Pokemon.Base.Name} appeared!");
 
-        ActionSelection();
+        DetermineFirstTurn();
+    }
+
+    void DetermineFirstTurn()
+    {
+        if (playerPoke.Pokemon.Speed >= enemyPoke.Pokemon.Speed)
+            ActionSelection();
+        else
+            StartCoroutine(EnemyMove());
     }
 
     void ActionSelection()
@@ -66,6 +74,7 @@ public class BattleSystem : MonoBehaviour
     void BattleOver(bool playerWin)
     {
         state = BattleState.BattleOver;
+        playerParty.PokemonList.ForEach(p => p.OnBattleOver());
         OnBattleOver(playerWin);
 
     }
@@ -94,21 +103,45 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator RunMove(BattleUnit sourcePoke, BattleUnit targetPoke, Move move)
     {
+        // Dialogue updated and action area hidden
+        dialogueBox.HideActions(true);
         --move.PP;
+
+        // Check for conditions preventing a move
+        bool canRunMove = sourcePoke.Pokemon.OnStartOfTurn();
+        if (!canRunMove)
+        {
+            yield return ShowStatusChanges(sourcePoke.Pokemon);
+            dialogueBox.HideActions(false);
+            
+            yield break;
+        }
+        yield return ShowStatusChanges(sourcePoke.Pokemon);
+
         yield return dialogueBox.TypeDialogue($"{sourcePoke.Pokemon.Base.Name} used {move.Base.Name}.");
 
+        // Play move animation
         sourcePoke.PlayAttackAnimation();
         yield return new WaitForSeconds(0.5f);
         targetPoke.PlayHitEffect();
 
-        var damageDetails = targetPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
+        // Apply move
+        if(move.Base.MoveType == MoveType.Status)
+        {
+            yield return RunMoveEffects(move, sourcePoke.Pokemon, targetPoke.Pokemon);
+        }
+        else
+        {
+            var damageDetails = targetPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
 
-        yield return targetPoke.BattleHUD.UpdateHP();
+            yield return targetPoke.BattleHUD.UpdateHP();
 
-        yield return TypeDamageDetails(damageDetails, targetPoke.Pokemon.Base.Name);
+            yield return TypeDamageDetails(damageDetails, targetPoke.Pokemon.Base.Name);
+        }
+        
 
-
-        if (damageDetails.DidFaint)
+        // Check for faint after attack
+        if (targetPoke.Pokemon.HP <= 0)
         {
             yield return dialogueBox.TypeDialogue($"The wild {targetPoke.Pokemon.Base.Name} fainted.");
             targetPoke.PlayFaintAnimation();
@@ -119,6 +152,55 @@ public class BattleSystem : MonoBehaviour
             
         }
         
+        // Apply after-turn conditions to pokemon
+        sourcePoke.Pokemon.OnEndOfTurn();
+        yield return ShowStatusChanges(sourcePoke.Pokemon);
+        yield return sourcePoke.BattleHUD.UpdateHP();
+
+        // Check for source poke faint
+        if (sourcePoke.Pokemon.HP <= 0)
+        {
+            yield return dialogueBox.TypeDialogue($"The wild {targetPoke.Pokemon.Base.Name} fainted.");
+            targetPoke.PlayFaintAnimation();
+
+            yield return new WaitForSeconds(1f);
+
+            CheckForBattleOver(targetPoke);
+        }
+
+        dialogueBox.HideActions(false);
+    }
+
+    IEnumerator ShowStatusChanges(Pokemon poke)
+    {
+
+        while (poke.StatusChanges.Count > 0)
+        {
+            var msg = poke.StatusChanges.Dequeue();
+            yield return dialogueBox.TypeDialogue(msg);
+        }
+    }
+
+    IEnumerator RunMoveEffects(Move move, Pokemon source, Pokemon target)
+    {
+        // Stat Boosting Effects
+        var effects = move.Base.Effects;
+        if (move.Base.Effects != null)
+        {
+            if (move.Base.Target == MoveTarget.Self)
+                source.ApplyBoost(effects.Boosts);
+            else
+                target.ApplyBoost(effects.Boosts);
+
+        }
+
+        // Status Conditions
+        if (effects.Cnd != ConditionType.none)
+        {
+            target.SetCondition(effects.Cnd);
+        }
+        yield return ShowStatusChanges(source);
+        yield return ShowStatusChanges(target);
     }
 
     void CheckForBattleOver(BattleUnit fainted)
@@ -296,9 +378,9 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SwitchPokemon(Pokemon newPokemon)
     {
-        bool stillEnemyMove = playerPoke.Pokemon.HP > 0;
+        bool pokemonFainted = !(playerPoke.Pokemon.HP > 0);
         dialogueBox.HideActions(true);
-        if (stillEnemyMove)
+        if (!pokemonFainted)
         {
             yield return dialogueBox.TypeDialogue(
                 $"That's enough for now {playerPoke.Pokemon.Base.Name}, come back!");
@@ -311,10 +393,10 @@ public class BattleSystem : MonoBehaviour
         dialogueBox.SetMoveNames(newPokemon.Moves);
         yield return dialogueBox.TypeDialogue($"Go {newPokemon.Base.Name}!");
 
-        if (stillEnemyMove)
-            StartCoroutine(EnemyMove());
+        if (pokemonFainted)
+            DetermineFirstTurn();   
         else
-            ActionSelection();
+            StartCoroutine(EnemyMove());
         dialogueBox.HideActions(false);
     }
 }

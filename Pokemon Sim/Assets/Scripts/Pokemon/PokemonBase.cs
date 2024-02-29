@@ -77,7 +77,7 @@ public class PokemonBase : ScriptableObject
     }
     public int Speed
     {
-        get { return Speed; }
+        get { return speed; }
     }
 
     public int RegionalDexNum

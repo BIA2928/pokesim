@@ -86,10 +86,16 @@ public enum MoveTarget
 public class MoveEffects
 {
     [SerializeField] List<StatBoost> boosts;
+    [SerializeField] ConditionType cnd;
 
     public List<StatBoost> Boosts
     {
         get { return boosts;  }
+    }
+
+    public ConditionType Cnd
+    {
+        get { return cnd;  }
     }
 }
 
