@@ -3,16 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState
-{
-    Start,
-    ActionSelection,
-    MoveSelection,
-    PerformMove,
-    Busy,
-    OnPartyScreen,
-    BattleOver
-}
+
 
 public class BattleDialogue : MonoBehaviour
 {
@@ -98,6 +89,14 @@ public class BattleDialogue : MonoBehaviour
 
         ppText.text = $"PP {move.PP}/{move.Base.Pp}";
         typeText.text = move.Base.Type.ToString();
+
+        if (move.PP == 0){
+            ppText.color = Color.red;
+        }
+        else
+        {
+            ppText.color = Color.black;
+        }
     }
 
     public void SetMoveNames(List<Move> moves)

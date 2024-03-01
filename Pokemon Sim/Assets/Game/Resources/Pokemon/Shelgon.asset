@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Shelgon
+  m_EditorClassIdentifier: 
+  name: Shelgon
+  description: "Covering Shelgon\u2019s body are outgrowths much like bones. The
+    shell is very hard and bounces off enemy attacks. When awaiting evolution, this
+    Pok\xE9mon hides away in a cavern."
+  pokeSize: 1
+  regionalDexNum: 84
+  nationalDexNum: 372
+  frontSprite: {fileID: 21300000, guid: 0f724e2d9228bdd48a8bdfb5672b04d8, type: 3}
+  backSprite: {fileID: 21300000, guid: 7300baca7568e704eacc21eda9ad4861, type: 3}
+  boxSprite: {fileID: 21300000, guid: 310d0a2d040474344a01326d733f241a, type: 3}
+  type1: 3
+  type2: 0
+  maxHP: 65
+  attack: 95
+  defence: 100
+  spAttack: 60
+  spDefence: 50
+  speed: 50
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 1

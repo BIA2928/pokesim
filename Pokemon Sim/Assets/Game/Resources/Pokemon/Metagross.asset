@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Metagross
+  m_EditorClassIdentifier: 
+  name: Metagross
+  description: It firmly pins its prey using its four claws and large body. Then
+    the teeth in the mouth on its stomach chew the prey to bits.
+  pokeSize: 2
+  regionalDexNum: 88
+  nationalDexNum: 376
+  frontSprite: {fileID: 21300000, guid: df46dd9e077960845bcc22f749ec095c, type: 3}
+  backSprite: {fileID: 21300000, guid: 4e4aa6dfaa43d6d4ea22f363f722f641, type: 3}
+  boxSprite: {fileID: 21300000, guid: 803b1ec3c2358164485bffdb17bb9074, type: 3}
+  type1: 17
+  type2: 16
+  maxHP: 80
+  attack: 135
+  defence: 130
+  spAttack: 95
+  spDefence: 90
+  speed: 70
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 9a20e16d08bb96c4daa042b248afe0e4, type: 2}
+    learnLevel: 1

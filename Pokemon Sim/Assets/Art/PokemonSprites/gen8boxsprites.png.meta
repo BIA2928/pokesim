@@ -1156,9 +1156,9 @@ TextureImporter:
       name: 840box
       rect:
         serializedVersion: 2
-        x: 240
+        x: 244
         y: 329
-        width: 40
+        width: 30
         height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

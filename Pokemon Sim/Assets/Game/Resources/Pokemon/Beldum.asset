@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Beldum
+  m_EditorClassIdentifier: 
+  name: Beldum
+  description: "Instead of blood, a powerful magnetic force courses throughout Beldum\u2019s
+    body. This Pok\xE9mon communicates with others by sending controlled pulses of
+    magnetism."
+  pokeSize: 0
+  regionalDexNum: 86
+  nationalDexNum: 374
+  frontSprite: {fileID: 21300000, guid: 1bfbc9978f01da5459a429b67a40e458, type: 3}
+  backSprite: {fileID: 21300000, guid: f4ae87a353175a44db72b90eeb8dadb9, type: 3}
+  boxSprite: {fileID: 21300000, guid: 0834820693157294eb30a29a1347ca37, type: 3}
+  type1: 17
+  type2: 16
+  maxHP: 40
+  attack: 55
+  defence: 80
+  spAttack: 35
+  spDefence: 60
+  speed: 30
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: cebd07bbda1c8bc4b90f675c9875dfee, type: 2}
+    learnLevel: 1

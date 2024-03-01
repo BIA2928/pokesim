@@ -145,7 +145,10 @@ public enum Stat
     Defence,
     SpAttack,
     SpDefence,
-    Speed
+    Speed,
+    
+    Evasiveness,
+    Accuracy
 }
 
 public enum PokeSize

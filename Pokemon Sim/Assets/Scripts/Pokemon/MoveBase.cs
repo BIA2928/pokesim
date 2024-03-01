@@ -12,13 +12,28 @@ public class MoveBase : ScriptableObject
     [SerializeField] PokeType type;
     [SerializeField] int power;
     [SerializeField] int accuracy;
+    [SerializeField] bool neverMiss;
     [SerializeField] int pp;
+    [SerializeField] int movePriority;
+    [SerializeField] MoveType moveType;
     [SerializeField] MoveEffects effects;
+    [SerializeField] List<SecondaryEffects> secondaryEffects;
     [SerializeField] MoveTarget target;
 
-    [SerializeField] MoveType moveType;
+    
 
     
+    public bool NeverMiss
+    {
+        get { return neverMiss; }
+    }
+
+    public int Priority
+    {
+        get { return movePriority; }
+    }
+
+    public List<SecondaryEffects> SecondEffects {  get { return secondaryEffects; } }
 
     public string Name
     {
@@ -103,6 +118,16 @@ public class MoveEffects
     {
         get { return volatileCnd; }
     }
+}
+
+[System.Serializable]
+public class SecondaryEffects : MoveEffects
+{
+    [SerializeField] int chance;
+    [SerializeField] MoveTarget target;
+
+    public int Chance {  get { return chance; } }
+    public MoveTarget Target { get { return target; } }
 }
 
 [System.Serializable]
