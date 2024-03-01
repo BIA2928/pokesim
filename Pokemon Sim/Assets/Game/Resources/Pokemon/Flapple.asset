@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Flapple
+  m_EditorClassIdentifier: 
+  name: Flapple
+  description: It ate a sour apple, and that induced its evolution. In its cheeks,
+    it stores an acid capable of causing chemical burns.
+  pokeSize: 1
+  regionalDexNum: 54
+  nationalDexNum: 841
+  frontSprite: {fileID: 7278769581294798803, guid: 93c42a672e049a549b933e9afc541000, type: 3}
+  backSprite: {fileID: 0}
+  boxSprite: {fileID: -4773400435626587314, guid: c8ff41c8e2a83764abb9292cb4a3cbdb, type: 3}
+  type1: 10
+  type2: 3
+  maxHP: 70
+  attack: 110
+  defence: 80
+  spAttack: 95
+  spDefence: 60
+  speed: 70
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 4bcac37833de3c84e98b333589b4c33e, type: 2}
+    learnLevel: 1

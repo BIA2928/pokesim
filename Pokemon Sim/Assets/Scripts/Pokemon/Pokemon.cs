@@ -18,9 +18,12 @@ public class Pokemon
     public Dictionary<Stat, int> StatBoosts { get; private set; }
 
     public Condition Cnd { get; private set; }
+    public Condition VolatileCnd { get; private set; }
     public int StatusCndTime { get; set; }
+    public int VolatileCndTime { get; set; }
 
     public bool HpChanged { get; set; }
+    public event System.Action OnStatusCndChange;
 
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
     public void Init()
@@ -53,6 +56,7 @@ public class Pokemon
         CalculateStats();
         HP = MaxHP;
         ResetStats();
+        Cnd = null;
     }
 
     void CalculateStats()
@@ -64,7 +68,7 @@ public class Pokemon
         Stats.Add(Stat.SpDefence, Mathf.FloorToInt((Base.SpDefence * Level) / 100f) + 5);
         Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
 
-        MaxHP = Mathf.FloorToInt((Base.MaxHP * Level) / 100f) + 10;
+        MaxHP = Mathf.FloorToInt((Base.MaxHP * Level) / 100f) + 10 + Level;
 
     }
 
@@ -155,14 +159,34 @@ public class Pokemon
 
     public void SetCondition(ConditionType cndType)
     {
+        if (Cnd != null)
+            return;
+
         Cnd = ConditionsDB.Conditions[cndType];
         Cnd?.OnCndStart?.Invoke(this);
         StatusChanges.Enqueue($"{Base.Name} {Cnd.StartMessage}.");
+        OnStatusCndChange?.Invoke();
     }
 
     public void CureCondition()
     {
         Cnd = null;
+        OnStatusCndChange?.Invoke();
+    }
+
+    public void SetVolatileCondition(ConditionType cndType)
+    {
+        if (VolatileCnd != null)
+            return;
+
+        VolatileCnd = ConditionsDB.Conditions[cndType];
+        VolatileCnd?.OnCndStart?.Invoke(this);
+        StatusChanges.Enqueue($"{Base.Name} {VolatileCnd.StartMessage}.");
+    }
+
+    public void CureVolatileCondition()
+    {
+        VolatileCnd = null;
     }
 
     void ResetStats()
@@ -189,19 +213,31 @@ public class Pokemon
         return Moves[r];
     }
 
+    public bool OnStartOfTurn()
+    {
+        bool canPerformMove = true;
+        if (Cnd?.OnStartOfTurn != null)
+        {
+            if (!Cnd.OnStartOfTurn(this))
+                canPerformMove = false;
+        }
+
+        if (VolatileCnd?.OnStartOfTurn != null)
+        {
+            if (!VolatileCnd.OnStartOfTurn(this))
+                canPerformMove = false;
+        }
+
+
+        return canPerformMove;
+    }
+
     public void OnEndOfTurn()
     {
         Cnd?.OnEndOfTurn?.Invoke(this);
+        VolatileCnd?.OnEndOfTurn?.Invoke(this);
     }
 
-    public bool OnStartOfTurn()
-    {
-        if (Cnd?.OnStartOfTurn != null)
-        {
-            return Cnd.OnStartOfTurn(this);
-        }
-        return true;
-    }
 
     public void ApplyBoost(List<StatBoost> boosts)
     {
@@ -235,6 +271,7 @@ public class Pokemon
     }
     public void OnBattleOver()
     {
+        VolatileCnd = null;
         ResetStats();
     }
 

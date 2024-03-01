@@ -16,6 +16,10 @@ public class GameController : MonoBehaviour
     [SerializeField] BattleSystem bS;
     [SerializeField] Camera worldCam;
 
+    private void Awake()
+    {
+        ConditionsDB.Init();
+    }
     private void Start()
     {
         pC.OnWildEncounter += StartBattle;

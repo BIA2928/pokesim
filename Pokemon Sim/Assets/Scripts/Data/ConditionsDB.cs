@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ConditionsDB 
 {
-
-    static void PoisonEffect(Pokemon poke)
+    public static void Init()
     {
-
+        foreach (var kvp in Conditions)
+        {
+            var conditionId = kvp.Key;
+            var condition = kvp.Value;
+            condition.CndType = conditionId;
+        }
     }
-
-    static void BurnEffect(Pokemon poke)
-    {
-
-    }
+   
 
     public static Dictionary<ConditionType, Condition> Conditions { get; set; } = 
         new Dictionary<ConditionType, Condition>
@@ -57,6 +57,7 @@ public class ConditionsDB
                         {
                             poke.CureCondition();
                             poke.StatusChanges.Enqueue($"{poke.Base.Name} woke up!");
+                            return true;
                         }
                         poke.StatusCndTime--;
                         poke.StatusChanges.Enqueue($"{poke.Base.Name} is fast asleep.");
@@ -99,6 +100,42 @@ public class ConditionsDB
                         return true;
                     }
                 }
+            },
+            // Volatile Statuses
+            {
+                ConditionType.confusion, new Condition()
+                {
+                    Name = "Confusion",
+                    StartMessage = "is confused",
+                    OnCndStart = (Pokemon poke) =>
+                    {
+                        poke.VolatileCndTime = Random.Range(1,4);
+                        Debug.Log($"{poke.Base.Name} will be confused for {poke.VolatileCndTime} moves");
+                    },
+                    OnStartOfTurn = (Pokemon poke) =>
+                    {
+                        if (poke.VolatileCndTime <= 0)
+                        {
+                            poke.CureVolatileCondition();
+                            poke.StatusChanges.Enqueue($"{poke.Base.Name} snapped out of confusion!");
+                            return true;
+                        }
+                        poke.VolatileCndTime--;
+
+                        // 50% of move completion, otherwise self damage
+                        poke.StatusChanges.Enqueue($"{poke.Base.Name} is confused...");
+                        if (Random.Range(1,3) == 2)
+                        {
+                            return true;
+                        }
+
+                        // Self damage
+                        poke.UpdateHP(-(poke.MaxHP / 9));
+                        poke.StatusChanges.Enqueue($"It hurt itself in its confusion!");
+                        return false;
+                    }
+
+                }
             }
         };
 }
@@ -110,5 +147,6 @@ public enum ConditionType
     brn,
     slp,
     par,
-    frz
+    frz,
+    confusion
 }

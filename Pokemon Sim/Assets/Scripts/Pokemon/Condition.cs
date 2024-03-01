@@ -16,6 +16,7 @@ public class Condition
 
     public Action<Pokemon> OnCndStart { get; set; }
 
+    public ConditionType CndType { get; set; }
     
 
 }

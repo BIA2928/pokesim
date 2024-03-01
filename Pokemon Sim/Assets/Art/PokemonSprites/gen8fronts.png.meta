@@ -94,13 +94,13 @@ TextureImporter:
     second: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_29
   - first:
       213: -3905636849035484413
-    second: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_30
+    second: 840f
   - first:
       213: 7278769581294798803
-    second: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_31
+    second: 841f
   - first:
       213: -4676007985934273454
-    second: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_32
+    second: 842f
   - first:
       213: -6576915962323621888
     second: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_33
@@ -1216,7 +1216,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_30
+      name: 840f
       rect:
         serializedVersion: 2
         x: 1344
@@ -1237,7 +1237,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_31
+      name: 841f
       rect:
         serializedVersion: 2
         x: 1440
@@ -1258,7 +1258,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gen_8_pokemon_sprites_by_leparagon_dd8o3yy_32
+      name: 842f
       rect:
         serializedVersion: 2
         x: 0

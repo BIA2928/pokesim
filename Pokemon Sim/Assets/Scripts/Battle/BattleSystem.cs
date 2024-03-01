@@ -112,6 +112,7 @@ public class BattleSystem : MonoBehaviour
         if (!canRunMove)
         {
             yield return ShowStatusChanges(sourcePoke.Pokemon);
+            yield return sourcePoke.BattleHUD.UpdateHP();
             dialogueBox.HideActions(false);
             
             yield break;
@@ -199,6 +200,14 @@ public class BattleSystem : MonoBehaviour
         {
             target.SetCondition(effects.Cnd);
         }
+        
+
+        // Volatile Conditions
+        if (effects.VolatileCnd != ConditionType.none)
+        {
+            target.SetVolatileCondition(effects.VolatileCnd);
+        }
+
         yield return ShowStatusChanges(source);
         yield return ShowStatusChanges(target);
     }
@@ -378,6 +387,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SwitchPokemon(Pokemon newPokemon)
     {
+        playerPoke.Pokemon.CureVolatileCondition();
         bool pokemonFainted = !(playerPoke.Pokemon.HP > 0);
         dialogueBox.HideActions(true);
         if (!pokemonFainted)

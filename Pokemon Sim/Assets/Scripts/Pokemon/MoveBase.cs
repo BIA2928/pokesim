@@ -87,6 +87,7 @@ public class MoveEffects
 {
     [SerializeField] List<StatBoost> boosts;
     [SerializeField] ConditionType cnd;
+    [SerializeField] ConditionType volatileCnd;
 
     public List<StatBoost> Boosts
     {
@@ -96,6 +97,11 @@ public class MoveEffects
     public ConditionType Cnd
     {
         get { return cnd;  }
+    }
+
+    public ConditionType VolatileCnd
+    {
+        get { return volatileCnd; }
     }
 }
 

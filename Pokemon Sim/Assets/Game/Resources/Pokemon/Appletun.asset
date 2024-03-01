@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Appletun
+  m_EditorClassIdentifier: 
+  name: Appletun
+  description: "Eating a sweet apple caused its evolution. A nectarous scent wafts
+    from its body, luring in the bug Pok\xE9mon it preys on."
+  pokeSize: 2
+  regionalDexNum: 55
+  nationalDexNum: 842
+  frontSprite: {fileID: -4676007985934273454, guid: 93c42a672e049a549b933e9afc541000, type: 3}
+  backSprite: {fileID: 0}
+  boxSprite: {fileID: -6790660968086593951, guid: c8ff41c8e2a83764abb9292cb4a3cbdb, type: 3}
+  type1: 10
+  type2: 3
+  maxHP: 110
+  attack: 85
+  defence: 80
+  spAttack: 100
+  spDefence: 80
+  speed: 32
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 1
