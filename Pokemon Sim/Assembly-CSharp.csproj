@@ -69,7 +69,9 @@
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Move.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleSystem.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />

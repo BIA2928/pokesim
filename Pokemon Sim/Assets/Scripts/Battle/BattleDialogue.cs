@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class BattleDialogue : MonoBehaviour
 {
     [SerializeField] Text dialogueText;
-    [SerializeField] int textSpeed;
+    [SerializeField] [Range(5, 50)] int textSpeed;
     [SerializeField] Color highlightedColor;
 
     [SerializeField] GameObject actionSelector;
