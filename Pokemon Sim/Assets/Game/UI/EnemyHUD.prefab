@@ -164,8 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 5904947682865325443}
-  medHpImage: {fileID: 0}
-  lowHpImage: {fileID: 0}
+  highHpImage: {fileID: 819782870098626526, guid: 87d90fad85e5b2747bcf483b18721456, type: 3}
+  medHpImage: {fileID: -3086937855260255943, guid: 87d90fad85e5b2747bcf483b18721456, type: 3}
+  lowHpImage: {fileID: -4144922633832911371, guid: 87d90fad85e5b2747bcf483b18721456, type: 3}
 --- !u!1 &5904947683233480347
 GameObject:
   m_ObjectHideFlags: 0

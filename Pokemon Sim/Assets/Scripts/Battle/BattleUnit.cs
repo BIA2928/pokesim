@@ -92,6 +92,11 @@ public class BattleUnit : MonoBehaviour
         sequence.Join(image.DOFade(0f, 0.3f));
     }
 
+    public void ResetPosition()
+    {
+        image.transform.localPosition = originalPos;
+    }
+
     private void ScalePokemon(PokeSize size)
     {
         Transform rT = image.transform;

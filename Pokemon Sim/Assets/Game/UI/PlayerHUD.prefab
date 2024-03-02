@@ -482,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 8115081937893542891}
+  highHpImage: {fileID: 819782870098626526, guid: 87d90fad85e5b2747bcf483b18721456, type: 3}
   medHpImage: {fileID: -3086937855260255943, guid: 87d90fad85e5b2747bcf483b18721456, type: 3}
   lowHpImage: {fileID: -4144922633832911371, guid: 87d90fad85e5b2747bcf483b18721456, type: 3}
 --- !u!1 &8115081937964050441

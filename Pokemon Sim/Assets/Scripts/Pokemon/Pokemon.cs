@@ -139,6 +139,8 @@ public class Pokemon
             DidFaint = false
         };
 
+        Debug.Log($"Move effectiveness is {typeModifier}, crit is {crit}");
+
         float attackStat = (float)Attack;
         int defenceStat = Defence;
 
@@ -162,7 +164,11 @@ public class Pokemon
     public void SetCondition(ConditionType cndType)
     {
         if (Cnd != null)
+        {
+            StatusChanges.Enqueue($"{Base.Name} is already affected by {Cnd.Name.ToLowerInvariant()}.");
             return;
+        }
+            
 
         Cnd = ConditionsDB.Conditions[cndType];
         Cnd?.OnCndStart?.Invoke(this);

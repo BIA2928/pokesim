@@ -85,6 +85,7 @@ public class BattleSystem : MonoBehaviour
     void BattleOver(bool playerWin)
     {
         state = BattleState.BattleOver;
+        enemyPoke.ResetPosition();
         playerParty.PokemonList.ForEach(p => p.OnBattleOver());
         OnBattleOver(playerWin);
 
