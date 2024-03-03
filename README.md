@@ -9,4 +9,8 @@ https://bulbapedia.bulbagarden.net/
 
 https://www.spriters-resource.com/ds_dsi/pokemonplatinum/sheet/20099/     
 
-https://www.spriters-resource.com/game_boy_advance/pokemonemerald/
+https://www.spriters-resource.com/game_boy_advance/pokemonemerald/      
+
+https://www.spriters-resource.com/ds_dsi/pokemonheartgoldsoulsilver/
+
+https://www.deviantart.com/leparagon/art/GenVIII-DS-style-GBA-sprites-852873278
