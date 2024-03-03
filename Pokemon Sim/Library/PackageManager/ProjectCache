@@ -953,6 +953,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.6
     - 2.1.0
     - 2.2.0
+    - 2.3.1
     compatible:
     - 1.5.7
     - 1.6.0
@@ -1006,6 +1007,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.6
     - 2.1.0
     - 2.2.0
+    - 2.3.1
     verified: 1.5.7
   dependencies:
   - name: com.unity.nuget.newtonsoft-json
@@ -1110,6 +1112,7 @@ m_ResolvedPackages:
     - 3.0.25
     - 3.0.26
     - 3.0.27
+    - 3.0.28
     compatible:
     - 3.0.7
     - 3.0.9
@@ -1128,7 +1131,8 @@ m_ResolvedPackages:
     - 3.0.25
     - 3.0.26
     - 3.0.27
-    verified: 3.0.27
+    - 3.0.28
+    verified: 3.0.28
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6

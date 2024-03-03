@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 80999788}
   - component: {fileID: 80999787}
   - component: {fileID: 80999789}
-  - component: {fileID: 80999790}
   - component: {fileID: 80999791}
+  - component: {fileID: 80999790}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -184,12 +184,12 @@ SpriteRenderer:
   m_SortingLayerID: -480938365
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7152930139536384079, guid: 1bef28b89041b8844b8308fed98cd2dc, type: 3}
+  m_Sprite: {fileID: -1042038247396554037, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.2580645, y: 0.2580645}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -203,8 +203,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80999786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.75, y: 1, z: 0}
+  m_LocalScale: {x: 6.6, y: 6.6, z: 1}
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
@@ -233,25 +233,38 @@ MonoBehaviour:
     m_Bits: 1024
   ms: 4
   isMoving: 0
---- !u!95 &80999790
-Animator:
-  serializedVersion: 3
+--- !u!114 &80999790
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80999786}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9a229ef4fde98b9409534686ce3e768e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a948cae0e5193b748a2516aad9dfbb58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkDownSprites:
+  - {fileID: -1042038247396554037, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -1850363733428201762, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -8476001918808431274, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -8317159268839455448, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  walkUpSprites:
+  - {fileID: -3810559206067239292, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -6038969061149365368, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -3701816734048366607, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: 180261537161359813, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  walkLeftSprites:
+  - {fileID: 8104316368533534348, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: 991717436615643851, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: 5235243898877690490, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -9033063289740846144, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  walkRightSprites:
+  - {fileID: -7188827139793418798, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -404700894726824541, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -8682972939839007333, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: 2438714492205642725, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
 --- !u!114 &80999791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,6 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 364132847}
   dialogueText: {fileID: 502790484}
+  textSpeed: 44
 --- !u!1 &231735015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &364132848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11687,8 +11701,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089416420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -1.75, z: 922.84717}
-  m_LocalScale: {x: 8.031319, y: 8.031319, z: 1}
+  m_LocalPosition: {x: -4.625, y: -1.25, z: 922.84717}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -11706,7 +11720,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: -0.004513897, y: 0.017585944}
+  m_Offset: {x: -0.006460756, y: 0.016612522}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11717,7 +11731,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.08120403, y: 0.107817836}
+  m_Size: {x: 0.106512845, y: 0.10976468}
   m_EdgeRadius: 0
 --- !u!50 &2089416424
 Rigidbody2D:
@@ -11752,6 +11766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feec75efe6cebea44b241f7cd84b4c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Have you tried walking through the long grass?
+    - You can find wild pokemon inside!
 --- !u!1001 &2183437245588529837
 PrefabInstance:
   m_ObjectHideFlags: 0
