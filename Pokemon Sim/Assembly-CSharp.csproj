@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Battle\BattleHUD.cs" />
+    <Compile Include="Assets\Scripts\Util\GameLayers.cs" />
+    <Compile Include="Assets\Scripts\Util\SpriteAnimator.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MapArea.cs" />
     <Compile Include="Assets\Scripts\Character\NPCController.cs" />
@@ -72,7 +74,9 @@
     <Compile Include="Assets\Scripts\Gameplay\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleSystem.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
+    <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonParty.cs" />
@@ -80,8 +84,10 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Util\SpriteAnimator.cs" />
-    <Compile Include="Assets\Scripts\Character\CharacterAnimator.cs" />
+    <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Art\gfx\npcs\Gen 4 OWs v1.5 - Vanilla Sunshine\CREDITS.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

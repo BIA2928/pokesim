@@ -16,8 +16,8 @@ TagManager:
   - SolidObjects
   - LongGrass
   - 'Interactable '
-  - 
-  - 
+  - Player
+  - FOVLayer
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 480735171
+    locked: 0
+  - name: Foreground
+    uniqueID: 1031330743
     locked: 0
   - name: SolidObjects
     uniqueID: 1743571703

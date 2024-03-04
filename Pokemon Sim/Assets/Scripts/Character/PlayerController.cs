@@ -5,20 +5,16 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public LayerMask solidObjectsLayer;
-    public LayerMask grassLayer;
-    public LayerMask interactableLayer;
-    public float ms; //movement speed
-    public bool isMoving;
     private Vector2 input;
 
-    private CharacterAnimator animator;
+    private Character character;
 
     public event Action OnWildEncounter;
+    public event Action<Collider2D> OnTrainerEncounter;
 
-    private void Awake()
+    void Awake()
     {
-        animator = GetComponent<CharacterAnimator>();
+        character = this.GetComponent<Character>();
     }
 
     // Start is called before the first frame update
@@ -31,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public void HandleUpdate()
     {
 
-        if (!isMoving)
+        if (!character.IsMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
@@ -40,70 +36,56 @@ public class PlayerController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                animator.MoveX = input.x;
-                animator.MoveY = input.y;
-
-                var targetPos = transform.position;
-                targetPos.x += input.x;
-                targetPos.y += input.y;
-
-                if (IsWalkable(targetPos))
-                {
-                    StartCoroutine(Move(targetPos));
-                }
+                StartCoroutine(character.Move(input, OnMoveOver));
                 
             }
         }
 
-        animator.IsMoving = isMoving;
-
+        character.HandleUpdate();
         if (Input.GetKeyDown(KeyCode.Z))
             Interact();
     }
 
-    IEnumerator Move(Vector3 targetPos)
+    private void OnMoveOver()
     {
-
-        isMoving = true;
-
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon) 
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, ms * Time.deltaTime);
-            yield return null;
-        }
-        transform.position = targetPos;
-        isMoving = false;
-
         CheckForEncounters();
-    }
-
-    private bool IsWalkable(Vector3 targetPos)
-    {
-        return !(Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer | interactableLayer) != null);
+        CheckSeenByTrainer();
     }
 
     private void CheckForEncounters()
     {
-        if(Physics2D.OverlapCircle(transform.position, 0.1f, grassLayer) != null)
+        if(Physics2D.OverlapCircle(transform.position, 0.1f, GameLayers.i.GrassLayer) != null)
         {
             if(UnityEngine.Random.Range(1,10) == 9)
             {
-                animator.IsMoving = false;
+                character.Animator.IsMoving = false;
+                //character.HandleUpdate();
                 OnWildEncounter();
             }
         }
     }
 
+    private void CheckSeenByTrainer()
+    {
+        var collider = Physics2D.OverlapCircle(transform.position, 0.15f, GameLayers.i.FovLayer);
+        if (collider != null)
+        {
+            character.Animator.IsMoving = false;
+            OnTrainerEncounter?.Invoke(collider);
+        }
+    }
+
     void Interact()
     {
-        var facingDir = new Vector3(animator.MoveX, animator.MoveY);
+        var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
         var interactingPos = transform.position + facingDir;
 
 
-        var collider = Physics2D.OverlapCircle(interactingPos, 0.5f, interactableLayer);
+        var collider = Physics2D.OverlapCircle(interactingPos, 0.5f, GameLayers.i.InteractableLayer);
         if (collider != null)
         {
-            collider.GetComponent<Interactive>()?.Interact();
+            collider.GetComponent<Interactive>()?.Interact(transform);
+            character.Stop();
         }
     }
 }

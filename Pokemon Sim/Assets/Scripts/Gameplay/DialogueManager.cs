@@ -17,21 +17,27 @@ public class DialogueManager : MonoBehaviour
     private int currentLine = 0;
     Dialogue currDialogue;
     bool isTyping;
+
+    private Action onDialogueFinished;
+
+    public bool IsShowing { get; private set; }
     public static DialogueManager Instance { get; private set; }
     private void Awake()
     {
         Instance = this;
     }
 
-    public IEnumerator ShowDialogue(Dialogue dialogue)
+    public IEnumerator ShowDialogue(Dialogue dialogue, Action onFinished=null)
     {
         yield return new WaitForEndOfFrame();
-
+        IsShowing = true;
         OnShowDialogue?.Invoke();
-        this.currDialogue = dialogue;
+        currDialogue = dialogue;
+
+        onDialogueFinished = onFinished;
+
         dialogueBox.SetActive(true);
         StartCoroutine(TypeDialogue(dialogue.Lines[0]));
-
     }
 
     public IEnumerator TypeDialogue(string dialogue)
@@ -59,7 +65,9 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 currentLine = 0;
+                IsShowing = false;
                 dialogueBox.SetActive(false);
+                onDialogueFinished?.Invoke();
                 OnCloseDialogue?.Invoke();
             }
         }

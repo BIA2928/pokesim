@@ -9,7 +9,7 @@ public class CharacterAnimator : MonoBehaviour
     [SerializeField] List<Sprite> walkUpSprites;
     [SerializeField] List<Sprite> walkLeftSprites;
     [SerializeField] List<Sprite> walkRightSprites;
-
+    [SerializeField] FacingDirection defaultDirection = FacingDirection.Down;
     public float MoveX { get; set; }
     public float MoveY { get; set; }
 
@@ -35,7 +35,12 @@ public class CharacterAnimator : MonoBehaviour
         walkUpAnim = new SpriteAnimator(walkUpSprites, spriteRenderer);
         walkLeftAnim = new SpriteAnimator(walkLeftSprites, spriteRenderer);
 
-        currAnim = walkDownAnim;
+        SetFacingDirection(defaultDirection);
+    }
+
+    public FacingDirection DefaultDirection
+    {
+        get { return defaultDirection; }
     }
 
     private void Update()
@@ -71,4 +76,29 @@ public class CharacterAnimator : MonoBehaviour
 
         wasPrevMoving = IsMoving;
     }
+
+    public void SetFacingDirection(FacingDirection dir)
+    {
+        if (dir == FacingDirection.Left)
+        {
+            MoveX = -1;
+        }
+        else if (dir == FacingDirection.Right)
+        {
+            MoveX = 1;
+        }
+        else if (dir == FacingDirection.Up)
+        {
+            MoveY = 1;
+        }
+        else
+        {
+            MoveY = -1;
+        }
+    }
+}
+
+public enum FacingDirection
+{
+    Up, Down, Left, Right
 }

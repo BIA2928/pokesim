@@ -6,6 +6,7 @@ using UnityEngine;
 public enum GameState
 {
     FreeRoam,
+    Cutscene,
     InBattle,
     InDialogue
 }
@@ -25,6 +26,17 @@ public class GameController : MonoBehaviour
     {
         pC.OnWildEncounter += StartBattle;
         bS.OnBattleOver += EndBattle;
+        pC.OnTrainerEncounter += (Collider2D trainerColl) =>
+        {
+            var trainer = trainerColl.GetComponentInParent<TrainerController>();
+            if (trainer != null)
+            {
+                state = GameState.Cutscene;
+                StartCoroutine(trainer.TriggerBattle(pC));
+            }
+                
+        };
+
         DialogueManager.Instance.OnShowDialogue += () =>
         {
             state = GameState.InDialogue;
