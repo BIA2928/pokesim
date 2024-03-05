@@ -24,11 +24,13 @@ public class BattleUnit : MonoBehaviour
     private void Awake()
     {
         image = GetComponent<Image>();
-        originalPos = image.transform.localPosition;
+        originalPos = transform.localPosition;
         origColor = image.color;
     }
     public void Setup(Pokemon poke)
     {
+        transform.localPosition = originalPos;
+        ResetAfterFaint();
         Pokemon = poke;
         if (isPlayerUnit)
         {
@@ -36,14 +38,19 @@ public class BattleUnit : MonoBehaviour
         } 
         else
         {
+            Debug.Log($"Original position is {originalPos}");
             image.sprite = Pokemon.Base.FrontSprite;
             ScalePokemon(Pokemon.Base.PokeSize);         
         }
 
         battleHUD.SetData(poke);
-
-        image.color = origColor;
+        battleHUD.gameObject.SetActive(true);
         PlayEnterAnimation();
+    }
+
+    public void Clear()
+    {
+        battleHUD.gameObject.SetActive(false);
     }
 
     public void PlayEnterAnimation()
@@ -87,15 +94,20 @@ public class BattleUnit : MonoBehaviour
 
     public void PlayFaintAnimation() 
     {
+        Vector3 startPos = transform.localPosition;
         var sequence = DOTween.Sequence();
         sequence.Append(image.transform.DOLocalMoveY(originalPos.y - 120f, 0.3f));
         sequence.Join(image.DOFade(0f, 0.3f));
+
+        transform.localPosition = startPos;
     }
 
-    public void ResetPosition()
+    public void ResetAfterFaint()
     {
-        image.transform.localPosition = originalPos;
+        //transform.localPosition = originalPos;
+        image.color = origColor;
     }
+
 
     private void ScalePokemon(PokeSize size)
     {

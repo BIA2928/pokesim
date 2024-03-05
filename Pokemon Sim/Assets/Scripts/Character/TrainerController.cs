@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrainerController : MonoBehaviour
 {
+    [SerializeField] string name;
     [SerializeField] Dialogue dialogue;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
+    [SerializeField] Sprite battleSprite;
     Character character;
 
     public void Awake()
@@ -18,6 +21,8 @@ public class TrainerController : MonoBehaviour
     {
         SetFovRotation(character.Animator.DefaultDirection);
     }
+
+   
 
     public IEnumerator TriggerBattle(PlayerController player)
     {
@@ -34,9 +39,11 @@ public class TrainerController : MonoBehaviour
         Debug.Log($"Trying to reach {diff}");
         yield return character.Move(diff);
 
+        player.GetComponent<Character>().LookTowards(transform.position);
         StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, () =>
         {
             Debug.Log("Trainer battle started!");
+            GameController.i.StartTrainerBattle(this);
         }));
     }
 
@@ -51,5 +58,15 @@ public class TrainerController : MonoBehaviour
             angle = 180f;
 
         fov.transform.eulerAngles = new Vector3(0, 0, angle);
+    }
+
+    public string Name
+    {
+        get { return name; }
+    }
+
+    public Sprite BattleSprite
+    {
+        get { return battleSprite; }
     }
 }

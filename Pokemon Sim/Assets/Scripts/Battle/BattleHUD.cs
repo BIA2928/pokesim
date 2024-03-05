@@ -34,6 +34,7 @@ public class BattleHUD : MonoBehaviour
         currHpText.text = pokemon.MaxHP.ToString();
         maxHpText.text = pokemon.MaxHP.ToString();
 
+        
         SetCndImage();
         _pokemon.OnStatusCndChange += SetCndImage;
     }
@@ -77,7 +78,7 @@ public class BattleHUD : MonoBehaviour
             yield return hpBar.SmoothHPBarDescend(((float)_pokemon.HP) / _pokemon.MaxHP);
             currHpText.text = _pokemon.HP.ToString();
             _pokemon.HpChanged = false;
-            yield return hpBar.SetHPBarColour(((float)_pokemon.HP) / _pokemon.MaxHP);
+            hpBar.SetHPBarColour(((float)_pokemon.HP) / _pokemon.MaxHP);
         }
         
     }

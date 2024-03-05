@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] Sprite battleSprite;
+    [SerializeField] string name;
+
     private Vector2 input;
 
     private Character character;
@@ -88,4 +92,14 @@ public class PlayerController : MonoBehaviour
             character.Stop();
         }
     }
+    public string Name
+    {
+        get { return name; }
+    }
+
+    public Sprite BattleSprite
+    {
+        get { return battleSprite; }
+    }
+
 }

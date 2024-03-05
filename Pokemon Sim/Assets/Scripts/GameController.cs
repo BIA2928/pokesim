@@ -18,8 +18,12 @@ public class GameController : MonoBehaviour
     [SerializeField] BattleSystem bS;
     [SerializeField] Camera worldCam;
 
+    public static GameController i;
+
+
     private void Awake()
     {
+        i = this;
         ConditionsDB.Init();
     }
     private void Start()
@@ -49,7 +53,18 @@ public class GameController : MonoBehaviour
         };
     }
 
-    void StartBattle()
+    public void StartTrainerBattle(TrainerController trainer)
+    {
+        state = GameState.InBattle;
+        bS.gameObject.SetActive(true);
+        worldCam.gameObject.SetActive(false);
+
+        var playerParty = pC.GetComponent<PokemonParty>();
+        bS.StartTrainerBattle(playerParty, trainer.GetComponent<PokemonParty>());
+
+    }
+
+    public void StartBattle()
     {
         state = GameState.InBattle;
         bS.gameObject.SetActive(true);

@@ -21,7 +21,8 @@ public class HPBar : MonoBehaviour
     }
     public void SetHP(float hpNormalized)
     {
-        health.transform.localScale = new Vector3(hpNormalized, 1f); 
+        health.transform.localScale = new Vector3(hpNormalized, 1f);
+        SetHPBarColour(hpNormalized);
     }
     
 
@@ -41,7 +42,7 @@ public class HPBar : MonoBehaviour
        
     }
 
-    public IEnumerator SetHPBarColour(float newHp) 
+    public void SetHPBarColour(float newHp) 
     {
         Debug.Log($"New hp is MaxHp * {newHp}");
         if (newHp > 0.5f)
@@ -57,7 +58,7 @@ public class HPBar : MonoBehaviour
             hpBarImage.sprite = lowHpImage;
         }
 
-        yield break;
+        
     }
  
 }
