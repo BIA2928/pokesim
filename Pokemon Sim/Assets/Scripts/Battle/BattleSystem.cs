@@ -147,10 +147,18 @@ public class BattleSystem : MonoBehaviour
     void BattleOver(bool playerWin)
     {
         state = BattleState.BattleOver;
-        enemyPoke.ResetAfterFaint();
+        
         playerParty.PokemonList.ForEach(p => p.OnBattleOver());
-        OnBattleOver(playerWin);
-
+        if (playerWin)
+        {
+            enemyPoke.ResetAfterFaint();
+            OnBattleOver(playerWin);
+        }
+        else
+        {
+            playerPoke.ResetAfterFaint();
+            OnBattleOver(!playerWin);
+        }
     }
 
     IEnumerator RunTurns(BattleAction playerAction)
@@ -319,6 +327,7 @@ public class BattleSystem : MonoBehaviour
             yield return new WaitForSeconds(1f);
 
             CheckForBattleOver(source);
+            yield return new WaitUntil(() => state == BattleState.RunningTurn);
         }
     }
 

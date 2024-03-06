@@ -29,8 +29,6 @@ public class BattleUnit : MonoBehaviour
     }
     public void Setup(Pokemon poke)
     {
-        transform.localPosition = originalPos;
-        ResetAfterFaint();
         Pokemon = poke;
         if (isPlayerUnit)
         {
@@ -53,62 +51,19 @@ public class BattleUnit : MonoBehaviour
         battleHUD.gameObject.SetActive(false);
     }
 
-    public void PlayEnterAnimation()
-    {
-        if (isPlayerUnit)
-        {
-            image.transform.localPosition = new Vector3(-500f, originalPos.y);
-        }
-        else
-        {
-            image.transform.localPosition = new Vector3(500f, originalPos.y);
-        }
-        image.transform.DOLocalMoveX(originalPos.x, 0.8f);
-    }
-
-    public void PlayAttackAnimation()
-    {
-        float animationDistance = 45f;
-        // Animationtime = total time / 2
-        float animationTime = 0.15f;
-        var sequence = DOTween.Sequence();
-        if (isPlayerUnit)
-        {
-            sequence.Append(image.transform.DOLocalMoveX(originalPos.x + animationDistance, animationTime));
-        } 
-        else
-        {
-            sequence.Append(image.transform.DOLocalMoveX(originalPos.x - animationDistance, animationTime));
-        }
-
-        sequence.Append(image.transform.DOLocalMoveX(originalPos.x, animationTime));
-
-    }
-
-    public void PlayHitEffect()
-    {
-        var sequence = DOTween.Sequence();
-        sequence.Append(image.DOColor(Color.gray, 0.05f));
-        sequence.Append(image.DOColor(origColor, 0.05f));
-    }
-
-    public void PlayFaintAnimation() 
-    {
-        Vector3 startPos = transform.localPosition;
-        var sequence = DOTween.Sequence();
-        sequence.Append(image.transform.DOLocalMoveY(originalPos.y - 120f, 0.3f));
-        sequence.Join(image.DOFade(0f, 0.3f));
-
-        transform.localPosition = startPos;
-    }
-
+    /// <summary>
+    /// Resets the pokeImage after the pokemon has fainted.
+    /// </summary>
     public void ResetAfterFaint()
     {
-        //transform.localPosition = originalPos;
+        image.transform.localPosition = originalPos;
         image.color = origColor;
     }
 
-
+    /// <summary>
+    /// Scales the pokemon to ensure larger pokemon sprites actually appear larger than smaller counterparts
+    /// </summary>
+    /// <param name="size">The PokeSize enum of the qualitative size of the pokemon.</param>
     private void ScalePokemon(PokeSize size)
     {
         Transform rT = image.transform;
@@ -131,9 +86,73 @@ public class BattleUnit : MonoBehaviour
             default:
                 break;
         }
-        originalPos = rT.localPosition;
     }
+
+    // Animations here
+
+    public void PlayAttackAnimation()
+    {
+        float animationDistance = 45f;
+        // Animationtime = total time / 2
+        float animationTime = 0.15f;
+        var sequence = DOTween.Sequence();
+        if (isPlayerUnit)
+        {
+            sequence.Append(image.transform.DOLocalMoveX(originalPos.x + animationDistance, animationTime));
+        } 
+        else
+        {
+            sequence.Append(image.transform.DOLocalMoveX(originalPos.x - animationDistance, animationTime));
+        }
+
+        sequence.Append(image.transform.DOLocalMoveX(originalPos.x, animationTime));
+
+    }
+
+    
+
+    public void PlayHitEffect()
+    {
+        var sequence = DOTween.Sequence();
+        sequence.Append(image.DOColor(Color.gray, 0.05f));
+        sequence.Append(image.DOColor(origColor, 0.05f));
+    }
+
+    public void PlayFaintAnimation() 
+    {
+        Vector3 startPos = transform.localPosition;
+        var sequence = DOTween.Sequence();
+        sequence.Append(image.transform.DOLocalMoveY(originalPos.y - 120f, 0.3f));
+        sequence.Join(image.DOFade(0f, 0.3f));
+
+        transform.localPosition = startPos;
+    }
+
+    public void PlayEnterAnimation()
+    {
+        // Ensure in the correct position
+
+        image.transform.localPosition = originalPos;
+        var sequence = DOTween.Sequence();
+        if (isPlayerUnit)
+        {
+            image.transform.localPosition = new Vector3(-500f, originalPos.y);
+        }
+        else
+        {
+            image.transform.localPosition = new Vector3(500f, originalPos.y);
+        }
+        sequence.Append(image.transform.DOLocalMoveX(originalPos.x, 0.8f));
+        sequence.Join(image.DOFade(origColor.a, 0.1f));
+    } 
+
+    
 }
+
+
+
+
+
 
 static class SizeScales
 {

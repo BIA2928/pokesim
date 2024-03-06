@@ -47,11 +47,18 @@ public class Character : MonoBehaviour
             yield return null;
         }
         transform.position = targetPos;
+
+        Debug.Log($"Checkpoint 4");
         IsMoving = false;
-        HandleUpdate();
+        if (OnMoveOver == null)
+        {
+            HandleUpdate();
+        }
+        //HandleUpdate();
 
         OnMoveOver?.Invoke();
     }
+
 
     public void HandleUpdate()
     {

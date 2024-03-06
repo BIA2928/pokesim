@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TrainerController : MonoBehaviour
+public class TrainerController : MonoBehaviour, Interactive
 {
     [SerializeField] string name;
     [SerializeField] Dialogue dialogue;
+    [SerializeField] Dialogue beatenDialogue;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
     [SerializeField] Sprite battleSprite;
     Character character;
+
+    bool hasBeenBeaten = false;
 
     public void Awake()
     {
@@ -22,7 +25,34 @@ public class TrainerController : MonoBehaviour
         SetFovRotation(character.Animator.DefaultDirection);
     }
 
-   
+    public void Interact(Transform initiator)
+    {
+
+        // Look towards player
+        character.LookTowards(initiator.position);
+
+        // Play dialogue
+        if (!hasBeenBeaten)
+        {
+            StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, () =>
+            {
+                GameController.i.StartTrainerBattle(this);
+            }));
+        }
+        else
+        {
+            StartCoroutine(DialogueManager.Instance.ShowDialogue(beatenDialogue));
+        }
+        
+       
+    }
+
+    public void Beat()
+    {
+        fov.gameObject.SetActive(false);
+        hasBeenBeaten = true;
+    }
+
 
     public IEnumerator TriggerBattle(PlayerController player)
     {
@@ -59,6 +89,8 @@ public class TrainerController : MonoBehaviour
 
         fov.transform.eulerAngles = new Vector3(0, 0, angle);
     }
+
+    
 
     public string Name
     {
