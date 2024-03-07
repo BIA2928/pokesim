@@ -31,4 +31,18 @@ public class PokemonParty : MonoBehaviour
     {
         
     }
+
+    public bool AddPokemon(Pokemon pokemon)
+    {
+        if (mons.Count >= 6)
+        {
+            //AddPokemonToBox(pokemon);
+            return false;
+        }
+        else
+        {
+            mons.Add(pokemon);
+            return true;
+        }
+    }
 }

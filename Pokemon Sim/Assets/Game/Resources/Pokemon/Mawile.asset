@@ -19,6 +19,7 @@ MonoBehaviour:
   nationalDexNum: 303
   frontSprite: {fileID: 21300000, guid: c1b8fc54b5eaad54aa5a76a9ee7d2005, type: 3}
   backSprite: {fileID: 21300000, guid: 2b4911bece1a1c94a9d048166685c237, type: 3}
+  boxSprite: {fileID: 21300000, guid: 6f3e0fe926ae7614bb99f275e35c2208, type: 3}
   type1: 17
   type2: 5
   maxHP: 50
@@ -27,6 +28,7 @@ MonoBehaviour:
   spAttack: 55
   spDefence: 55
   speed: 55
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 4bcac37833de3c84e98b333589b4c33e, type: 2}
     learnLevel: 1

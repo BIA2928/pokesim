@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] Image playerImage;
     [SerializeField] Image enemyImage;
+    [SerializeField] GameObject pokeballSprite;
 
     BattleState state;
     BattleState? prevState;
@@ -47,8 +49,11 @@ public class BattleSystem : MonoBehaviour
 
     public void StartBattle(PokemonParty party, Pokemon wildPokemon)
     {
+        
         playerParty = party;
+        player = playerParty.GetComponent<PlayerController>();
         this.wildPokemon = wildPokemon;
+        partyScreen.Init();
         StartCoroutine(SetupBattle());
     }
 
@@ -66,6 +71,7 @@ public class BattleSystem : MonoBehaviour
 
     public IEnumerator SetupBattle()
     {
+        
         playerPoke.Clear();
         enemyPoke.Clear();
         if (!isTrainerBattle)
@@ -115,7 +121,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         dialogueBox.HideActions(false);
-        partyScreen.Init();
+        //partyScreen.Init();
         ActionSelection();
     }
 
@@ -201,17 +207,19 @@ public class BattleSystem : MonoBehaviour
                 yield return RunAfterTurn(second);
                 if (state == BattleState.BattleOver) yield break;
             }
-            
-
 
         }
         else
         {
-            if(playerAction == BattleAction.SwitchPoke)
+            if (playerAction == BattleAction.SwitchPoke)
             {
                 var selected = playerParty.PokemonList[currPartyPoke];
                 state = BattleState.Busy;
                 yield return SwitchPokemon(selected);
+            }
+            else if (playerAction == BattleAction.UseItem)
+            {
+                yield return ThrowPokeball();
             }
 
             // Is now enemy turn
@@ -456,6 +464,11 @@ public class BattleSystem : MonoBehaviour
         {
             HandlePartySelection();
         }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            StartCoroutine(ThrowPokeball());
+        }
     }
 
     void HandleActionSelection()
@@ -483,6 +496,7 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 1)
             {
                 // Bag
+                StartCoroutine(RunTurns(BattleAction.UseItem));
             }
             else if (currentAction == 2)
             {
@@ -604,7 +618,6 @@ public class BattleSystem : MonoBehaviour
         yield return dialogueBox.TypeDialogue($"Go {newPokemon.Base.Name}!");
 
         state = BattleState.RunningTurn;
-        dialogueBox.HideActions(false);
     }
 
     IEnumerator SendNextTrainerPokemon(Pokemon nextPoke)
@@ -617,4 +630,109 @@ public class BattleSystem : MonoBehaviour
 
         state = BattleState.RunningTurn;
     }
+
+    IEnumerator ThrowPokeball() 
+    {
+        state = BattleState.Busy;
+
+        if (isTrainerBattle) 
+        {
+            yield return dialogueBox.TypeDialogue($"Cannot capture pokemon in a trainer battle!");
+            state = BattleState.RunningTurn;
+            yield break;
+        }
+            
+
+        dialogueBox.HideActions(true);
+        yield return dialogueBox.TypeDialogue($"{player.Name} used a {pokeballSprite.name}!");
+
+        var pokeballObj = Instantiate(pokeballSprite, playerPoke.transform.position - new Vector3(2, 0), Quaternion.identity);
+        var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
+
+        // Animations
+        // Throw
+        Vector3 buffer = new Vector3(0, 1f);
+        yield return pokeball.transform.DOJump(enemyPoke.transform.position + buffer, 2f, 1, 1.2f).WaitForCompletion();
+        // Shrink into ball
+        yield return enemyPoke.PlayCaptureAnimation();
+        // Drop to floor
+        yield return pokeball.transform.DOMoveY(enemyPoke.transform.position.y - 1.25f, 0.4f).WaitForCompletion();
+        //Shake
+
+        int shakeCount = TryCatchPokemon(enemyPoke.Pokemon);
+        for (int i = 0; i < Mathf.Min(shakeCount, 3); i++)
+        {
+            yield return new WaitForSeconds(.5f);
+            yield return pokeball.transform.DOPunchRotation(new Vector3(0, 0, 8f), 0.8f).WaitForCompletion();
+        }
+
+        if (shakeCount == 4)
+        {
+            yield return dialogueBox.TypeDialogue($"{enemyPoke.Pokemon.Base.Name} was successfully caught!");
+            yield return pokeball.DOFade(0, 1.2f).WaitForCompletion();
+
+            var inParty = playerParty.AddPokemon(enemyPoke.Pokemon);
+            if (inParty)
+                yield return dialogueBox.TypeDialogue($"{enemyPoke.Pokemon.Base.Name} was added to the party.");
+            else
+                yield return dialogueBox.TypeDialogue($"{enemyPoke.Pokemon.Base.Name} was sent to the PC.");
+
+            Destroy(pokeball);
+            BattleOver(true);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+            pokeball.DOFade(0, 0.3f);
+            yield return enemyPoke.PlayBreakOutAnimation();
+            if (shakeCount == 3)
+            {
+                yield return dialogueBox.TypeDialogue($"The wild {enemyPoke.Pokemon.Base.Name} broke free.");
+                yield return dialogueBox.TypeDialogue($"It was so close too!");
+            }
+            else
+            {
+                yield return dialogueBox.TypeDialogue($"The wild {enemyPoke.Pokemon.Base.Name} broke out!");
+            }
+
+            Destroy(pokeball);
+            state = BattleState.RunningTurn;
+               
+        }
+        
+        //dialogueBox.HideActions(false);
+    }
+
+    /// <summary>
+    /// Returns shake count. ShakeCount = 4 means caught
+    /// </summary>
+    /// <param name="pokemon">Pokemon attempting to be caught</param>
+    /// <returns></returns>
+    int TryCatchPokemon(Pokemon pokemon)
+    {
+
+        float statusBonus;
+
+        float a = (3 * pokemon.MaxHP - 2 * pokemon.HP) * pokemon.Base.CatchRate * ConditionsDB.GetStatusBonus(pokemon.Cnd) / (3 * pokemon.MaxHP);
+
+        if (a >= 255)
+            return 4;
+
+        float b = 1048560 / Mathf.Sqrt(Mathf.Sqrt(16711680 / a));
+
+        int shakeCount = 0;
+        while (shakeCount < 4)
+        {
+            if (UnityEngine.Random.Range(0, 65535) >= b)
+            {
+                break;
+            }
+
+            shakeCount++;
+        }
+
+        return shakeCount;
+   
+    }
+
 }

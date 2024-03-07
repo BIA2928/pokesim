@@ -138,6 +138,19 @@ public class ConditionsDB
                 }
             }
         };
+
+    public static float GetStatusBonus(Condition cnd)
+    {
+        if (cnd == null)
+            return 1f;
+        else if (cnd.CndType == ConditionType.slp || cnd.CndType == ConditionType.frz)
+            return 2f;
+        else if (cnd.CndType == ConditionType.par)
+            return 1.75f;
+        else if (cnd.CndType == ConditionType.psn || cnd.CndType == ConditionType.brn)
+            return 1.5f;
+        return 1f;
+    }
 }
 
 public enum ConditionType

@@ -17,6 +17,7 @@ public class PartyScreen : MonoBehaviour
     public void Init()
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>();
+        Debug.Log($"{memberSlots.Length} slots in the partyUI");
     }
 
     public void SetPartyData(List<Pokemon> pokemon)

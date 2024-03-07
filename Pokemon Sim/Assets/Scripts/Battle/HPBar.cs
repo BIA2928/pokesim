@@ -10,14 +10,15 @@ public class HPBar : MonoBehaviour
     [SerializeField] Sprite highHpImage;
     [SerializeField] Sprite medHpImage;
     [SerializeField] Sprite lowHpImage;
-    private Image hpBarImage;
+    private Sprite hpBarImage;
 
-    public static Color lowHpBar = new Color(255, 70, 52);
-    public static Color medHpBar = new Color(255, 182, 16);
+    //public static Color lowHpBar = new Color(255, 70, 52);
+    //public static Color medHpBar = new Color(255, 182, 16);
 
     public void Awake()
     {
-        hpBarImage = this.GetComponent<Image>();
+        hpBarImage = GetComponent<Image>().sprite;
+        Debug.Log("used getcomponent");
     }
     public void SetHP(float hpNormalized)
     {
@@ -44,18 +45,18 @@ public class HPBar : MonoBehaviour
 
     public void SetHPBarColour(float newHp) 
     {
-        Debug.Log($"New hp is MaxHp * {newHp}");
+        Debug.Log($"sprite is null: {hpBarImage == null}");
         if (newHp > 0.5f)
         {
-            hpBarImage.sprite = highHpImage;
+            hpBarImage = highHpImage;
         }
         else if (newHp <= 0.5f && newHp > 0.22f) 
         {
-            hpBarImage.sprite = medHpImage;
+            hpBarImage = medHpImage;
         }
         else
         {
-            hpBarImage.sprite = lowHpImage;
+            hpBarImage = lowHpImage;
         }
 
         

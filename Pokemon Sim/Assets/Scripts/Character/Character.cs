@@ -47,8 +47,6 @@ public class Character : MonoBehaviour
             yield return null;
         }
         transform.position = targetPos;
-
-        Debug.Log($"Checkpoint 4");
         IsMoving = false;
         if (OnMoveOver == null)
         {

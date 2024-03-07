@@ -19,6 +19,7 @@ public class BattleUnit : MonoBehaviour
 
     Image image;
     Vector3 originalPos;
+    Vector3 origScale = new Vector3(1f, 1f, 1f);
     Color origColor;
 
     private void Awake()
@@ -29,6 +30,7 @@ public class BattleUnit : MonoBehaviour
     }
     public void Setup(Pokemon poke)
     {
+        transform.localScale = origScale; 
         Pokemon = poke;
         if (isPlayerUnit)
         {
@@ -36,7 +38,6 @@ public class BattleUnit : MonoBehaviour
         } 
         else
         {
-            Debug.Log($"Original position is {originalPos}");
             image.sprite = Pokemon.Base.FrontSprite;
             ScalePokemon(Pokemon.Base.PokeSize);         
         }
@@ -146,7 +147,29 @@ public class BattleUnit : MonoBehaviour
         sequence.Join(image.DOFade(origColor.a, 0.1f));
     } 
 
-    
+    public IEnumerator PlayCaptureAnimation()
+    {
+        var sequence = DOTween.Sequence();
+        sequence.Append(image.DOFade(0f, 0.4f));
+        sequence.Join(transform.DOLocalMoveY(originalPos.y + 40f, 0.5f));
+        sequence.Join(transform.DOScale(new Vector3(0.4f, 0.4f ,1f), 0.5f));
+
+        yield return sequence.WaitForCompletion();
+
+    }
+
+    public IEnumerator PlayBreakOutAnimation()
+    {
+        var sequence = DOTween.Sequence();
+        sequence.Append(image.DOFade(1f, 0.3f));
+        sequence.Join(transform.DOLocalMoveY(originalPos.y, 0.4f));
+        sequence.Join(transform.DOScale(new Vector3(1f, 1f, 1f), 0.4f));
+
+        yield return sequence.WaitForCompletion();
+
+    }
+
+
 }
 
 

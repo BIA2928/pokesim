@@ -27,7 +27,14 @@ public class Pokemon
     public bool HpChanged { get; set; }
     public event System.Action OnStatusCndChange;
 
-    public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+    public Queue<string> StatusChanges { get; private set; }
+
+    public Pokemon(PokemonBase _base, int level)
+    {
+        this._base = _base;
+        _level = level;
+        Init();
+    }
     public void Init()
     {
         // Generate moves from potential moves at the given level
@@ -55,6 +62,7 @@ public class Pokemon
             }
         }
 
+        StatusChanges = new Queue<string>();
         CalculateStats();
         HP = MaxHP;
         ResetStats();
@@ -63,12 +71,14 @@ public class Pokemon
 
     void CalculateStats()
     {
-        Stats = new Dictionary<Stat, int>();
-        Stats.Add(Stat.Attack, Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5);
-        Stats.Add(Stat.Defence, Mathf.FloorToInt((Base.Defence * Level) / 100f) + 5);
-        Stats.Add(Stat.SpAttack, Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5);
-        Stats.Add(Stat.SpDefence, Mathf.FloorToInt((Base.SpDefence * Level) / 100f) + 5);
-        Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
+        Stats = new Dictionary<Stat, int>
+        {
+            { Stat.Attack, Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5 },
+            { Stat.Defence, Mathf.FloorToInt((Base.Defence * Level) / 100f) + 5 },
+            { Stat.SpAttack, Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5 },
+            { Stat.SpDefence, Mathf.FloorToInt((Base.SpDefence * Level) / 100f) + 5 },
+            { Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5 }
+        };
 
         MaxHP = Mathf.FloorToInt((Base.MaxHP * Level) / 100f) + 10 + Level;
 

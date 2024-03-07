@@ -53,3 +53,6 @@ TagManager:
   - name: Characters
     uniqueID: 3814028931
     locked: 0
+  - name: Battle
+    uniqueID: 3449731805
+    locked: 0

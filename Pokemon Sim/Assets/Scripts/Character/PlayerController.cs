@@ -62,7 +62,6 @@ public class PlayerController : MonoBehaviour
         {
             if(UnityEngine.Random.Range(1,10) == 9)
             {
-                Debug.Log($"Checkpoint 3");
                 character.Animator.IsMoving = false;
                 //character.HandleUpdate();
                 OnWildEncounter();
@@ -75,7 +74,6 @@ public class PlayerController : MonoBehaviour
         var collider = Physics2D.OverlapCircle(transform.position, 0.15f, GameLayers.i.FovLayer);
         if (collider != null)
         {
-            Debug.Log($"Checkpoint 1");
             character.Animator.IsMoving = false;
             OnTrainerEncounter?.Invoke(collider);
         }

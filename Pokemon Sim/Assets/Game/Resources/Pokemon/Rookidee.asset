@@ -17,7 +17,7 @@ MonoBehaviour:
   pokeSize: 0
   regionalDexNum: 20
   nationalDexNum: 821
-  frontSprite: {fileID: 21300000, guid: 7b5618c66d9d64e48b741fff5ba25001, type: 3}
+  frontSprite: {fileID: -5808964947233862287, guid: 93c42a672e049a549b933e9afc541000, type: 3}
   backSprite: {fileID: -1570068588904623581, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
   boxSprite: {fileID: 21300000, guid: a366ed813d2e96d49bcb6f103a22bad0, type: 3}
   type1: 8
@@ -28,6 +28,7 @@ MonoBehaviour:
   spAttack: 33
   spDefence: 35
   speed: 57
+  catchRate: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
     learnLevel: 1
