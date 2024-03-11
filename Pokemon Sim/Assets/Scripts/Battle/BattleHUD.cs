@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,24 +18,24 @@ public class BattleHUD : MonoBehaviour
     [SerializeField] Sprite slpSprite;
     [SerializeField] Sprite frzSprite;
     [SerializeField] Image statusCndImage;
-
-
+    [SerializeField] Image expBar;
 
     Pokemon _pokemon;
     
-
 
     public void SetData(Pokemon pokemon)
     {
         _pokemon = pokemon;
 
         pokemonNameText.text = pokemon.Base.Name;
-        levelText.text = pokemon.Level.ToString();
-        hpBar.SetHP((float)(pokemon.HP / pokemon.MaxHP));
-        currHpText.text = pokemon.MaxHP.ToString();
+        SetLevel();
+        float currHp = (float)pokemon.HP; 
+        float maxHp = (float)pokemon.MaxHP;
+        hpBar.SetHP(currHp / maxHp);
+        currHpText.text = pokemon.HP.ToString();
         maxHpText.text = pokemon.MaxHP.ToString();
 
-        
+        SetExp();
         SetCndImage();
         _pokemon.OnStatusCndChange += SetCndImage;
     }
@@ -81,5 +82,48 @@ public class BattleHUD : MonoBehaviour
             hpBar.SetHPBarColour(((float)_pokemon.HP) / _pokemon.MaxHP);
         }
         
+    }
+
+    float GetXpNomalised()
+    {
+        int currLevelXp = _pokemon.Base.GetExpForLevel(_pokemon.Level);
+        int nextLevelXp = _pokemon.Base.GetExpForLevel(_pokemon.Level + 1);
+
+        float xpNorm = (float)(_pokemon.Exp - currLevelXp) / (nextLevelXp - currLevelXp);
+
+        return Mathf.Clamp(xpNorm, 0, 1);
+    }
+
+    public void SetExp()
+    {
+        if (expBar == null) return;
+
+        float xpNorm = GetXpNomalised();
+
+        expBar.transform.localScale = new Vector3(xpNorm, 1, 1);
+    }
+
+    public IEnumerator SetExpAnimation(bool overflow=false)
+    {
+        if (expBar == null) yield break;
+
+        if (overflow)
+        {
+            expBar.transform.localScale = new Vector3(0, 1, 1);
+        }
+        float normXp = GetXpNomalised();
+
+        yield return expBar.transform.DOScaleX(normXp, 1f).WaitForCompletion();
+    }
+
+    public void SetLevel()
+    {
+        levelText.text = _pokemon.Level.ToString();
+    }
+
+    public void UpdateHpOnLevelUp()
+    {
+        maxHpText.text = _pokemon.MaxHP.ToString();
+        currHpText.text = _pokemon.HP.ToString();
     }
 }

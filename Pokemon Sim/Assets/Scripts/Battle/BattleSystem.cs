@@ -16,6 +16,7 @@ public enum BattleState
     MoveSelection,
     RunningTurn,
     Busy,
+    AboutToUseNewPoke,
     OnPartyScreen,
     BattleOver
 }
@@ -36,6 +37,7 @@ public class BattleSystem : MonoBehaviour
     int currentAction;
     int currentMove;
     int currPartyPoke;
+    bool aboutToUseChoice = true;
 
     PokemonParty playerParty;
     PokemonParty enemyParty;
@@ -47,9 +49,11 @@ public class BattleSystem : MonoBehaviour
 
     public event Action<bool> OnBattleOver;
 
+    int nEscapeAttempts;
+
     public void StartBattle(PokemonParty party, Pokemon wildPokemon)
     {
-        
+        isTrainerBattle = false;
         playerParty = party;
         player = playerParty.GetComponent<PlayerController>();
         this.wildPokemon = wildPokemon;
@@ -71,7 +75,8 @@ public class BattleSystem : MonoBehaviour
 
     public IEnumerator SetupBattle()
     {
-        
+        partyScreen.Init();
+        nEscapeAttempts = 0;
         playerPoke.Clear();
         enemyPoke.Clear();
         if (!isTrainerBattle)
@@ -121,7 +126,6 @@ public class BattleSystem : MonoBehaviour
         }
 
         dialogueBox.HideActions(false);
-        //partyScreen.Init();
         ActionSelection();
     }
 
@@ -148,6 +152,14 @@ public class BattleSystem : MonoBehaviour
         dialogueBox.EnableActionSelector(false);
         dialogueBox.EnableDialogueText(false);
         dialogueBox.EnableMoveSelector(true);
+    }
+
+    IEnumerator AboutToUse(Pokemon pokemon)
+    {
+        state = BattleState.Busy;
+        yield return dialogueBox.TypeDialogue($"{enemyTrainer.Name} is about to use {pokemon.Base.Name}. Do you want to switch?");
+        state = BattleState.AboutToUseNewPoke;
+        dialogueBox.EnableChoiceSelector(true);
     }
 
     void BattleOver(bool playerWin)
@@ -220,6 +232,10 @@ public class BattleSystem : MonoBehaviour
             else if (playerAction == BattleAction.UseItem)
             {
                 yield return ThrowPokeball();
+            }
+            else if (playerAction == BattleAction.Run)
+            {
+                yield return TryToEscape();
             }
 
             // Is now enemy turn
@@ -294,17 +310,13 @@ public class BattleSystem : MonoBehaviour
         // Check for faint after attack
         if (targetPoke.Pokemon.HP <= 0)
         {
-            yield return dialogueBox.TypeDialogue($"The wild {targetPoke.Pokemon.Base.Name} fainted.");
-            targetPoke.PlayFaintAnimation();
-
-            yield return new WaitForSeconds(1f);
-
-            CheckForBattleOver(targetPoke);
-            
+            yield return HandlePokemonFainted(targetPoke);
         }
         
         //dialogueBox.HideActions(false);
     }
+
+
 
     IEnumerator ShowStatusChanges(Pokemon poke)
     {
@@ -329,12 +341,8 @@ public class BattleSystem : MonoBehaviour
         // Check for source poke faint
         if (source.Pokemon.HP <= 0)
         {
-            yield return dialogueBox.TypeDialogue($"{source.Pokemon.Base.Name} fainted.");
-            source.PlayFaintAnimation();
-
-            yield return new WaitForSeconds(1f);
-
-            CheckForBattleOver(source);
+            yield return HandlePokemonFainted(source);
+            
             yield return new WaitUntil(() => state == BattleState.RunningTurn);
         }
     }
@@ -392,7 +400,8 @@ public class BattleSystem : MonoBehaviour
                 var nextPoke = enemyParty.GetFirstHealthy();
                 if (nextPoke != null)
                 {
-                    StartCoroutine(SendNextTrainerPokemon(nextPoke));
+                    StartCoroutine(AboutToUse(nextPoke));
+                    //StartCoroutine(SendNextTrainerPokemon(nextPoke));
                 }
                 else
                     BattleOver(true);
@@ -450,6 +459,52 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    IEnumerator HandlePokemonFainted(BattleUnit faintedUnit)
+    {
+        if (faintedUnit == playerPoke)
+        {
+            yield return dialogueBox.TypeDialogue($"{faintedUnit.Pokemon.Base.Name} fainted.");
+        }
+        else
+        {
+            float trainerBonus = 1f;
+            if (isTrainerBattle)
+            {
+                yield return dialogueBox.TypeDialogue($"The opponent's {faintedUnit.Pokemon.Base.Name} fainted.");
+                trainerBonus = 1.5f;
+            }
+            else
+                yield return dialogueBox.TypeDialogue($"The wild {faintedUnit.Pokemon.Base.Name} fainted.");
+
+            int expYield = faintedUnit.Pokemon.Base.ExpYield;
+            int enemyLvl = faintedUnit.Pokemon.Level;
+
+            int expGain = Mathf.FloorToInt((expYield * enemyLvl * trainerBonus) / 7);
+
+            playerPoke.Pokemon.Exp += expGain;
+
+            yield return dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} gained {expGain} EXP.");
+            yield return playerPoke.BattleHUD.SetExpAnimation();
+
+            // Check for level up(s)
+            while (playerPoke.Pokemon.LevelUp())
+            {
+                playerPoke.BattleHUD.SetLevel();
+                playerPoke.BattleHUD.UpdateHpOnLevelUp();
+                yield return dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} grew to level {playerPoke.Pokemon.Level}!");
+                yield return playerPoke.BattleHUD.SetExpAnimation(true);
+            }
+
+
+            yield return new WaitForSeconds(0.8f);
+        }
+
+        faintedUnit.PlayFaintAnimation();
+
+        yield return new WaitForSeconds(1f);
+
+        CheckForBattleOver(faintedUnit);
+    }
     public void HandleUpdate()
     {
         if (state == BattleState.ActionSelection)
@@ -463,6 +518,10 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.OnPartyScreen)
         {
             HandlePartySelection();
+        } 
+        else if (state == BattleState.AboutToUseNewPoke)
+        {
+            HandleAboutToUse();
         }
 
         if (Input.GetKeyDown(KeyCode.T))
@@ -507,6 +566,16 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 3)
             {
                 // Run
+                if (isTrainerBattle)
+                {
+                    StartCoroutine(dialogueBox.TypeDialogue($"There's no running from\n a trainer battle!"));
+
+                }
+                else
+                {
+                    StartCoroutine(RunTurns(BattleAction.Run));
+                }
+                
             }
         }
     }
@@ -542,7 +611,7 @@ public class BattleSystem : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.X))
         {
-            dialogueBox.EnableMoveSelector(true);
+            dialogueBox.EnableMoveSelector(false);
             dialogueBox.EnableDialogueText(true);
             ActionSelection();
         }
@@ -592,9 +661,55 @@ public class BattleSystem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
+            if (playerPoke.Pokemon.HP <= 0)
+            {
+                partyScreen.SetMessageText("You must select a pokemon to continue.");
+                return;
+            }
+
             partyScreen.gameObject.SetActive(false);
-            ActionSelection();
-            state = BattleState.ActionSelection;
+            if (prevState == BattleState.AboutToUseNewPoke)
+            {
+                prevState = null;
+                StartCoroutine(SendNextTrainerPokemon());
+            }
+            else
+            {
+                ActionSelection();
+                state = BattleState.ActionSelection;
+            }
+            
+        }
+
+    }
+
+    void HandleAboutToUse()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            aboutToUseChoice = !aboutToUseChoice;
+            dialogueBox.UpdateChoiceSelection(aboutToUseChoice);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            dialogueBox.EnableChoiceSelector(false);
+            if (aboutToUseChoice)
+            {
+                // Switch
+                prevState = BattleState.AboutToUseNewPoke;
+                OpenPartyScreen();
+            }
+            else
+            {
+                // Continue
+                StartCoroutine(SendNextTrainerPokemon());
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            dialogueBox.EnableChoiceSelector(false);
+            StartCoroutine(SendNextTrainerPokemon());
         }
 
     }
@@ -617,12 +732,23 @@ public class BattleSystem : MonoBehaviour
         dialogueBox.SetMoveNames(newPokemon.Moves);
         yield return dialogueBox.TypeDialogue($"Go {newPokemon.Base.Name}!");
 
-        state = BattleState.RunningTurn;
+        if (prevState == BattleState.AboutToUseNewPoke)
+        {
+            prevState = null;
+            StartCoroutine(SendNextTrainerPokemon());
+        }
+        else
+        {
+            state = BattleState.RunningTurn;
+        }
+        
     }
 
-    IEnumerator SendNextTrainerPokemon(Pokemon nextPoke)
+    IEnumerator SendNextTrainerPokemon()
     {
         state = BattleState.Busy;
+
+        var nextPoke = enemyParty.GetFirstHealthy();
 
         enemyPoke.Setup(nextPoke);
 
@@ -668,8 +794,9 @@ public class BattleSystem : MonoBehaviour
 
         if (shakeCount == 4)
         {
+            yield return pokeball.DOColor(Color.gray, 0.1f).WaitForCompletion();
             yield return dialogueBox.TypeDialogue($"{enemyPoke.Pokemon.Base.Name} was successfully caught!");
-            yield return pokeball.DOFade(0, 1.2f).WaitForCompletion();
+            yield return pokeball.DOFade(0, 1f).WaitForCompletion();
 
             var inParty = playerParty.AddPokemon(enemyPoke.Pokemon);
             if (inParty)
@@ -711,9 +838,9 @@ public class BattleSystem : MonoBehaviour
     int TryCatchPokemon(Pokemon pokemon)
     {
 
-        float statusBonus;
+        float statusBonus = ConditionsDB.GetStatusBonus(pokemon.Cnd);
 
-        float a = (3 * pokemon.MaxHP - 2 * pokemon.HP) * pokemon.Base.CatchRate * ConditionsDB.GetStatusBonus(pokemon.Cnd) / (3 * pokemon.MaxHP);
+        float a = (3 * pokemon.MaxHP - 2 * pokemon.HP) * pokemon.Base.CatchRate * statusBonus / (3 * pokemon.MaxHP);
 
         if (a >= 255)
             return 4;
@@ -733,6 +860,44 @@ public class BattleSystem : MonoBehaviour
 
         return shakeCount;
    
+    }
+
+    IEnumerator TryToEscape()
+    {
+        state = BattleState.Busy;
+
+        if (isTrainerBattle)
+        {
+            yield return dialogueBox.TypeDialogue($"There's no runnning from a trainer battle!");
+            state = BattleState.ActionSelection;
+            yield break;
+        }
+
+        int playerPokeSpeed = playerPoke.Pokemon.Speed;
+        int enemySpeed = enemyPoke.Pokemon.Speed;
+
+        if (enemySpeed < playerPokeSpeed)
+        {
+            yield return dialogueBox.TypeDialogue($"Got away safely!");
+            BattleOver(true);
+        }
+        else
+        {
+            float f = (playerPokeSpeed * 128) / enemySpeed + 30 * ++nEscapeAttempts;
+            f %= 256;
+
+            if (UnityEngine.Random.Range(0, 266) < f)
+            {
+                yield return dialogueBox.TypeDialogue($"Got away safely!");
+                BattleOver(true);
+            }
+            else
+            {
+                yield return dialogueBox.TypeDialogue("Couldn't get away!");
+                state = BattleState.RunningTurn;
+            }
+        }
+
     }
 
 }

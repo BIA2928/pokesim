@@ -27,6 +27,7 @@ public class Pokemon
     public bool HpChanged { get; set; }
     public event System.Action OnStatusCndChange;
 
+    public int Exp { get; set; }
     public Queue<string> StatusChanges { get; private set; }
 
     public Pokemon(PokemonBase _base, int level)
@@ -61,6 +62,8 @@ public class Pokemon
                 potentialMoves.RemoveAt(randomInt);
             }
         }
+
+        Exp = Base.GetExpForLevel(_level);
 
         StatusChanges = new Queue<string>();
         CalculateStats();
@@ -296,5 +299,28 @@ public class Pokemon
         ResetStats();
     }
 
+    public bool LevelUp()
+    {
+        if (Exp > Base.GetExpForLevel(_level + 1))
+        {
+            // Level up
+            _level++;
+            UpdateStatsOnLevelUp();
+            return true;
+        }
+        return false;
+    }
+
+    void UpdateStatsOnLevelUp()
+    {
+        var prevMaxHp = MaxHP;
+        CalculateStats();
+        var diff = MaxHP - prevMaxHp;
+
+        UpdateHP(diff);
+    }
+
 
 }
+
+

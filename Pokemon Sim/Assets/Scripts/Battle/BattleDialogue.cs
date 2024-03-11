@@ -14,12 +14,15 @@ public class BattleDialogue : MonoBehaviour
     [SerializeField] GameObject actionSelector;
     [SerializeField] GameObject moveSelector;
     [SerializeField] GameObject moveDetails;
+    [SerializeField] GameObject switchBox;
 
     [SerializeField] List<Text> actionTexts;
     [SerializeField] List<Text> moveTexts;
 
     [SerializeField] Text ppText;
     [SerializeField] Text typeText;
+    [SerializeField] Text switchText;
+    [SerializeField] Text continueText;
 
 
     public void SetDialogue(string dialogue)
@@ -57,6 +60,11 @@ public class BattleDialogue : MonoBehaviour
         moveDetails.SetActive(enabled);
     }
 
+    public void EnableChoiceSelector(bool enabled)
+    {
+        switchBox.SetActive(enabled);
+
+    }
     public void UpdateActionSelection(int selectedAction)
     {
         for (int i = 0; i < actionTexts.Count; i++)
@@ -99,6 +107,21 @@ public class BattleDialogue : MonoBehaviour
         }
     }
 
+    public void UpdateChoiceSelection(bool switchIsSelected)
+    {
+        if (switchIsSelected)
+        {
+            switchText.color = highlightedColor;
+            continueText.color = Color.black;
+        }
+        else
+        {
+            continueText.color = highlightedColor;
+            switchText.color = Color.black;
+        }
+    }
+    
+
     public void SetMoveNames(List<Move> moves)
     {
         for (int i = 0; i < moveTexts.Count; i++)
@@ -117,6 +140,11 @@ public class BattleDialogue : MonoBehaviour
     public void HideActions(bool hide)
     {
         actionSelector.SetActive(!hide);
+    }
+
+    public void ClearDialogue()
+    {
+        dialogueText.text = "";
     }
 
     
