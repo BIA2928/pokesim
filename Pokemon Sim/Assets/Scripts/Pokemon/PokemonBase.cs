@@ -36,7 +36,28 @@ public class PokemonBase : ScriptableObject
     [SerializeField] [Range(0, 255)] int catchRate;
 
     [SerializeField] List<LearnableMove> learnableMoves;
+    [SerializeField] int expYield;
+    [SerializeField] GrowthRate growthRate;
 
+    public int GetExpForLevel(int level)
+    {
+        float nCubed = Mathf.Pow(level, 3);
+        if (growthRate == GrowthRate.Fast)
+        {
+            // 4n^3/5
+            return Mathf.FloorToInt(0.8f * nCubed);
+        } 
+        else if (growthRate == GrowthRate.Medium)
+        {
+            // 4^3
+            return Mathf.FloorToInt(nCubed);
+        }
+        else
+        {
+            //5/4 * n^3
+            return Mathf.FloorToInt(nCubed * 1.2f);
+        }
+    }
 
     public string Name
     {
@@ -125,6 +146,17 @@ public class PokemonBase : ScriptableObject
     public int CatchRate
     {
         get { return catchRate; }
+    }
+
+    public int ExpYield
+    {
+        get { return expYield; }
+    }
+
+    public GrowthRate GrowthRate
+    {
+        get { return growthRate; }
+
     }
 }
 
@@ -225,4 +257,11 @@ public class TypeChart
         int column = (int)defenceType - 1;
         return typeChart[row][column];
     }
+}
+
+public enum GrowthRate
+{
+    Fast,
+    Medium,
+    Slow
 }
