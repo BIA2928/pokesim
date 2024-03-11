@@ -7,9 +7,9 @@ using UnityEngine;
 public class PokemonBase : ScriptableObject
 {
 
-    
+
     [SerializeField] string name;
-    
+
     [TextArea]
     [SerializeField] string description;
 
@@ -46,7 +46,7 @@ public class PokemonBase : ScriptableObject
         {
             // 4n^3/5
             return Mathf.FloorToInt(0.8f * nCubed);
-        } 
+        }
         else if (growthRate == GrowthRate.Medium)
         {
             // 4^3
@@ -59,6 +59,7 @@ public class PokemonBase : ScriptableObject
         }
     }
 
+    public static int MaxNMoves { get; set; } = 4;
     public string Name
     {
         get { return name; }
@@ -135,12 +136,12 @@ public class PokemonBase : ScriptableObject
 
     public PokeType Type1
     {
-        get { return type1;  }
+        get { return type1; }
     }
 
     public PokeType Type2
     {
-        get { return type2;  }
+        get { return type2; }
     }
 
     public int CatchRate
@@ -185,7 +186,7 @@ public enum Stat
     SpAttack,
     SpDefence,
     Speed,
-    
+
     Evasiveness,
     Accuracy
 }
@@ -214,8 +215,8 @@ public enum PokeType
     Ice,
     Normal,
     Rock,
-    Poison,    
-    Psychic, 
+    Poison,
+    Psychic,
     Steel,
     Water
 }

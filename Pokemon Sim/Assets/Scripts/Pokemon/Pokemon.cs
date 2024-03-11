@@ -9,7 +9,7 @@ public class Pokemon
 
     [SerializeField] PokemonBase _base;
     [SerializeField] int _level;
-    public PokemonBase Base { get { return _base; }  }
+    public PokemonBase Base { get { return _base; } }
     public int Level { get { return _level; } }
 
     public int HP { get; set; }
@@ -55,7 +55,7 @@ public class Pokemon
         }
         else
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < PokemonBase.MaxNMoves; i++)
             {
                 int randomInt = Random.Range(0, potentialMoves.Count);
                 Moves.Add(potentialMoves[randomInt]);
@@ -167,11 +167,21 @@ public class Pokemon
         float modifiers = Random.Range(0.85f, 1f) * typeModifier * crit;
 
         float a = (2 * Attacker.Level + 10) / 250f;
-        float d = a * move.Base.Power * ((float)attackStat/ defenceStat) + 2;
+        float d = a * move.Base.Power * ((float)attackStat / defenceStat) + 2;
         int damage = Mathf.FloorToInt(modifiers * d);
 
         UpdateHP(-damage);
         return damageDetails;
+    }
+
+    public LearnableMove GetMoveAtCurrLevel()
+    {
+        return Base.LearnableMoves.Where(x => x.LearnLevel == _level).FirstOrDefault();
+    }
+
+    public void LearnMove(LearnableMove move)
+    {
+        Moves.Add(new Move(move.Base));
     }
 
     public void SetCondition(ConditionType cndType)
@@ -181,7 +191,7 @@ public class Pokemon
             StatusChanges.Enqueue($"{Base.Name} is already affected by {Cnd.Name.ToLowerInvariant()}.");
             return;
         }
-            
+
 
         Cnd = ConditionsDB.Conditions[cndType];
         Cnd?.OnCndStart?.Invoke(this);
@@ -229,7 +239,7 @@ public class Pokemon
         HP = Mathf.Clamp(HP + hpChange, 0, MaxHP);
         HpChanged = true;
     }
-    
+
     public Move GetRandomMove()
     {
         var movesWithPP = Moves.Where(x => x.PP > 0).ToList();
@@ -265,7 +275,7 @@ public class Pokemon
 
     public void ApplyBoost(List<StatBoost> boosts)
     {
-        foreach(var statboost in boosts)
+        foreach (var statboost in boosts)
         {
             var stat = statboost.stat;
             var boost = statboost.boost;
@@ -281,7 +291,7 @@ public class Pokemon
             }
         }
 
-        
+
     }
 
     public class DamageDetails
