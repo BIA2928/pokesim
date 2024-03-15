@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Sprite battleSprite;
     [SerializeField] string name;
 
+    const float offsetY = 0.3f;
+
     private Vector2 input;
 
     private Character character;
@@ -86,6 +88,11 @@ public class PlayerController : MonoBehaviour
     public Sprite BattleSprite
     {
         get { return battleSprite; }
+    }
+
+    public Character Character
+    {
+        get => character;
     }
 
 }

@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\LongGrass.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
+    <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Move.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetUI.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DialogueManager.cs" />
@@ -90,7 +91,7 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
+    <Compile Include="Assets\Scripts\Core\EssentialObjects.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\gfx\npcs\Gen 4 OWs v1.5 - Vanilla Sunshine\CREDITS.txt" />

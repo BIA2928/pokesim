@@ -360,6 +360,7 @@
 "Assets/Scripts/Character/PlayerController.cs"
 "Assets/Scripts/Character/TrainerController.cs"
 "Assets/Scripts/Character/TrainerFOV.cs"
+"Assets/Scripts/Core/EssentialObjects.cs"
 "Assets/Scripts/Data/ConditionsDB.cs"
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Gameplay/Dialogue.cs"
