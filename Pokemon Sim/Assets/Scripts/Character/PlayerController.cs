@@ -13,9 +13,6 @@ public class PlayerController : MonoBehaviour
 
     private Character character;
 
-    public event Action OnWildEncounter;
-    public event Action<Collider2D> OnTrainerEncounter;
-
     void Awake()
     {
         character = this.GetComponent<Character>();
@@ -52,31 +49,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnMoveOver()
     {
-        CheckForEncounters();
-        CheckSeenByTrainer();
-    }
+        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f, GameLayers.i.TriggerableLayers);
 
-    private void CheckForEncounters()
-    {
-        if(Physics2D.OverlapCircle(transform.position, 0.1f, GameLayers.i.GrassLayer) != null)
+        foreach (var collider in colliders)
         {
-            if(UnityEngine.Random.Range(1,10) == 9)
+            var trigger = collider.GetComponent<IPlayerTriggerable>();
+            if (trigger != null)
             {
                 character.Animator.IsMoving = false;
-                //character.HandleUpdate();
-                OnWildEncounter();
+                trigger.OnPlayerTrigger(this);
+                break;
             }
         }
-    }
 
-    private void CheckSeenByTrainer()
-    {
-        var collider = Physics2D.OverlapCircle(transform.position, 0.15f, GameLayers.i.FovLayer);
-        if (collider != null)
-        {
-            character.Animator.IsMoving = false;
-            OnTrainerEncounter?.Invoke(collider);
-        }
     }
 
     void Interact()

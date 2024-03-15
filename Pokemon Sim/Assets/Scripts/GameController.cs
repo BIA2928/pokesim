@@ -30,18 +30,8 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
-        pC.OnWildEncounter += StartBattle;
         bS.OnBattleOver += EndBattle;
-        pC.OnTrainerEncounter += (Collider2D trainerColl) =>
-        {
-            var trainer = trainerColl.GetComponentInParent<TrainerController>();
-            if (trainer != null)
-            {
-                state = GameState.Cutscene;
-                StartCoroutine(trainer.TriggerBattle(pC));
-            }
-                
-        };
+        
 
         DialogueManager.Instance.OnShowDialogue += () =>
         {
@@ -65,6 +55,12 @@ public class GameController : MonoBehaviour
         var playerParty = pC.GetComponent<PokemonParty>();
         bS.StartTrainerBattle(playerParty, trainer.GetComponent<PokemonParty>());
 
+    }
+
+    public void OnEnterTrainerFOV(TrainerController trainer)
+    {
+        state = GameState.Cutscene;
+        StartCoroutine(trainer.TriggerBattle(pC));
     }
 
     public void StartBattle()
