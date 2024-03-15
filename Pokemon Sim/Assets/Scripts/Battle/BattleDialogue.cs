@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class BattleDialogue : MonoBehaviour
 {
     [SerializeField] Text dialogueText;
-    [SerializeField] [Range(5, 50)] int textSpeed;
+    [SerializeField] [Range(20, 70)] int textSpeed;
     [SerializeField] Color highlightedColor;
 
     [SerializeField] GameObject actionSelector;
@@ -63,6 +63,7 @@ public class BattleDialogue : MonoBehaviour
     public void EnableChoiceSelector(bool enabled)
     {
         switchBox.SetActive(enabled);
+        UpdateChoiceSelection(true);
 
     }
     public void UpdateActionSelection(int selectedAction)

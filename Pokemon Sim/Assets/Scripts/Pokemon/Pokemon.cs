@@ -330,6 +330,24 @@ public class Pokemon
         UpdateHP(diff);
     }
 
+    void ForgetMove(Move move)
+    {
+        Moves.Remove(move);
+    }
+
+    public void ReplaceMove(Move toBeReplaced, Move newMove)
+    {
+        int i;
+        for (i = 0; i < Moves.Count; i++)
+        {
+            if (Moves[i] == toBeReplaced)
+                break;
+        }
+
+        Moves[i] = newMove;
+
+    }
+
 
 }
 

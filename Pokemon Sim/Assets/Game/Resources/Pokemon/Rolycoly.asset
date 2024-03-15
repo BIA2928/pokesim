@@ -33,8 +33,12 @@ MonoBehaviour:
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
+  - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
+    learnLevel: 2
   - moveBase: {fileID: 11400000, guid: a457faedb915153498703dcad251943c, type: 2}
     learnLevel: 3
+  - moveBase: {fileID: 11400000, guid: 3e0bf198f260d1147bc9e009b3bf87f2, type: 2}
+    learnLevel: 4
   - moveBase: {fileID: 11400000, guid: 22e9b1a58e8dbdd41b7d3ac90fd50ec1, type: 2}
     learnLevel: 7
   expYield: 0

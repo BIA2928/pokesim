@@ -350,6 +350,8 @@
 "Assets/Scripts/Battle/BattleSystem.cs"
 "Assets/Scripts/Battle/BattleUnit.cs"
 "Assets/Scripts/Battle/HPBar.cs"
+"Assets/Scripts/Battle/MoveForgetScreen.cs"
+"Assets/Scripts/Battle/MoveForgetUI.cs"
 "Assets/Scripts/Battle/PartyMemberUI.cs"
 "Assets/Scripts/Battle/PartyScreen.cs"
 "Assets/Scripts/Character/Character.cs"

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Move.cs" />
+    <Compile Include="Assets\Scripts\Battle\MoveForgetUI.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleSystem.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Dialogue.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
+    <Compile Include="Assets\Scripts\Battle\MoveForgetScreen.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonParty.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Interactive.cs" />

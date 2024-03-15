@@ -18,10 +18,15 @@ MonoBehaviour:
   type: 13
   power: 0
   accuracy: 100
+  neverMiss: 0
   pp: 25
+  movePriority: 0
+  moveType: 2
   effects:
     boosts:
     - stat: 0
       boost: -1
+    cnd: 0
+    volatileCnd: 0
+  secondaryEffects: []
   target: 0
-  moveType: 1

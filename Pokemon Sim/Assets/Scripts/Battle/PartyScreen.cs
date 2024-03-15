@@ -35,6 +35,7 @@ public class PartyScreen : MonoBehaviour
         }
 
         messageText.text = "Choose a pokemon.";
+        UpdatePokemonSelection(0);
     }
 
     public void UpdatePokemonSelection(int selectedPokeIndex)
