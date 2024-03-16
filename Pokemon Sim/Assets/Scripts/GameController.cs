@@ -8,11 +8,13 @@ public enum GameState
     FreeRoam,
     Cutscene,
     InBattle,
-    InDialogue
+    InDialogue,
+    Paused
 }
 public class GameController : MonoBehaviour
 {
     GameState state;
+    GameState prevState;
 
     [SerializeField] PlayerController pC;
     [SerializeField] BattleSystem bS;
@@ -43,6 +45,18 @@ public class GameController : MonoBehaviour
             if (state == GameState.InDialogue)
                 state = GameState.FreeRoam;
         };
+    }
+
+    public void PauseGame(bool pause)
+    {
+        if (pause)
+        {
+            prevState = state;
+            state = GameState.Paused;
+        }
+
+        else
+            state = prevState;
     }
 
     public void StartTrainerBattle(TrainerController trainer)

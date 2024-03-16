@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\IPlayerTriggerable.cs" />
+    <Compile Include="Assets\Scripts\Core\EssentialObjects.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
@@ -91,7 +92,7 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Core\EssentialObjects.cs" />
+    <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\gfx\npcs\Gen 4 OWs v1.5 - Vanilla Sunshine\CREDITS.txt" />
