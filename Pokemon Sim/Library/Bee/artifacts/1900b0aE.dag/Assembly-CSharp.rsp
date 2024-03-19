@@ -362,6 +362,8 @@
 "Assets/Scripts/Character/TrainerFOV.cs"
 "Assets/Scripts/Core/EssentialObjects.cs"
 "Assets/Scripts/Core/EssentialObjectsSpawner.cs"
+"Assets/Scripts/Core/Fader.cs"
+"Assets/Scripts/Core/InvisbleTiles.cs"
 "Assets/Scripts/Data/ConditionsDB.cs"
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Gameplay/Dialogue.cs"
@@ -376,7 +378,9 @@
 "Assets/Scripts/Pokemon/Pokemon.cs"
 "Assets/Scripts/Pokemon/PokemonBase.cs"
 "Assets/Scripts/Pokemon/PokemonParty.cs"
+"Assets/Scripts/SceneManagement/LocationPortal.cs"
 "Assets/Scripts/SceneManagement/Portal.cs"
+"Assets/Scripts/SceneManagement/SceneDetails.cs"
 "Assets/Scripts/Util/GameLayers.cs"
 "Assets/Scripts/Util/SpriteAnimator.cs"
 -langversion:8.0
