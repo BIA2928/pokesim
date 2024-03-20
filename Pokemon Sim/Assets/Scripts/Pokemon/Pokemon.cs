@@ -69,6 +69,7 @@ public class Pokemon
         CalculateStats();
         HP = MaxHP;
         ResetStats();
+        VolatileCnd = null;
         Cnd = null;
     }
 
@@ -132,6 +133,41 @@ public class Pokemon
     public int Speed
     {
         get { return Stats[Stat.Speed]; }
+    }
+
+    public PokemonSaveData GetSaveData()
+    {
+        PokemonSaveData sD = new PokemonSaveData()
+        {
+            level = _level,
+            baseName = Base.Name,
+            hp = this.HP,
+            exp = Exp,
+            condition = Cnd?.CndType,
+            moveSaveDatas = Moves.Select(m => m.GetSaveData()).ToList()
+        };
+
+        
+        return sD;
+    }
+    
+    public Pokemon(PokemonSaveData sD)
+    {
+        _base = PokemonDB.LookUpByName(sD.baseName);
+        HP = sD.hp;
+        _level = sD.level;
+        Exp = sD.exp;
+
+        if (sD.condition != null)
+            Cnd = ConditionsDB.Conditions[sD.condition.Value];
+        else
+            Cnd = null;
+
+        Moves = sD.moveSaveDatas.Select(m => new Move(m)).ToList();
+        CalculateStats();
+        StatusChanges = new Queue<string>();
+        ResetStats();
+        VolatileCnd = null;
     }
 
     public DamageDetails TakeDamage(Move move, Pokemon Attacker)
@@ -349,6 +385,17 @@ public class Pokemon
     }
 
 
+}
+
+[System.Serializable]
+public class PokemonSaveData
+{
+    public int hp;
+    public int level;
+    public int exp;
+    public ConditionType? condition;
+    public string baseName;
+    public List<MoveSaveData> moveSaveDatas;
 }
 
 

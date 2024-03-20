@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/HomeTown.unity
+- path: Assets/Scenes/GameplayTest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

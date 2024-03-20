@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Linq;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISavable
 {
     [SerializeField] Sprite battleSprite;
     [SerializeField] string name;
@@ -79,6 +80,29 @@ public class PlayerController : MonoBehaviour
             character.Stop();
         }
     }
+
+    public object CaptureState()
+    {
+        var saveData = new PlayerSaveData()
+        {
+            pos = new float[] { transform.position.x, transform.position.y },
+            pokemonSaveDatas = GetComponent<PokemonParty>().PokemonList.Select(p => p.GetSaveData()).ToList()
+        };
+    
+        
+
+        return saveData;
+    }
+
+    public void RestoreState(object state)
+    {
+        var saveData = (PlayerSaveData)state;
+        var pos = saveData.pos;
+        transform.position = new Vector3(pos[0], pos[1], 0);
+
+        GetComponent<PokemonParty>().PokemonList = saveData.pokemonSaveDatas.Select(s => new Pokemon(s)).ToList();
+    }
+
     public string Name
     {
         get { return name; }
@@ -93,5 +117,14 @@ public class PlayerController : MonoBehaviour
     {
         get => character;
     }
+
+}
+
+[Serializable]
+public class PlayerSaveData
+{
+    public float[] pos;
+
+    public List<PokemonSaveData> pokemonSaveDatas; 
 
 }

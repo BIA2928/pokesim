@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TrainerController : MonoBehaviour, Interactive
+public class TrainerController : MonoBehaviour, Interactive, ISavable
 {
     [SerializeField] string name;
     [SerializeField] Dialogue dialogue;
@@ -95,7 +95,17 @@ public class TrainerController : MonoBehaviour, Interactive
         fov.transform.eulerAngles = new Vector3(0, 0, angle);
     }
 
-    
+    public object CaptureState()
+    {
+        return hasBeenBeaten;
+    }
+
+    public void RestoreState(object state)
+    {
+        hasBeenBeaten = (bool)state;
+        if (hasBeenBeaten)
+            fov.gameObject.SetActive(false);
+    }
 
     public string Name
     {

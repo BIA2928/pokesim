@@ -32,6 +32,8 @@ public class GameController : MonoBehaviour
     {
         i = this;
         ConditionsDB.Init();
+        PokemonDB.Init();
+        MoveDB.Init();
     }
     private void Start()
     {
@@ -119,6 +121,15 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             pC.HandleUpdate();
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                // Save game
+                SavingSystem.i.Save("testSave1");
+            }
+            else if (Input.GetKeyDown(KeyCode.L))
+            {
+                SavingSystem.i.Load("testSave1");
+            }
         } 
         else if (state == GameState.InBattle)
         {
@@ -128,6 +139,8 @@ public class GameController : MonoBehaviour
         {
             DialogueManager.Instance.HandleUpdate();
         }
+
+        
     }
 
     public void SetCurrentScene(SceneDetails scene)

@@ -1,0 +1,2100 @@
+fileFormatVersion: 2
+guid: 988740b2ed3c6b24ab646c994f382d64
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8848221758904864728
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_0
+  - first:
+      213: -4350529234405345130
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_1
+  - first:
+      213: 1175321346269971454
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_2
+  - first:
+      213: 2493680932902872007
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_3
+  - first:
+      213: 3583630247132037817
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_4
+  - first:
+      213: 5861231401896800992
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_5
+  - first:
+      213: 8817526398647543917
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_6
+  - first:
+      213: 4029703151323834062
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_7
+  - first:
+      213: 4892359310732931555
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_8
+  - first:
+      213: -7923168477244507985
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_9
+  - first:
+      213: 5574225789406816237
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_10
+  - first:
+      213: -2119212213345610209
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_11
+  - first:
+      213: 4653500188930293756
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_12
+  - first:
+      213: -7468391237913094302
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_13
+  - first:
+      213: -4682286365481357270
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_14
+  - first:
+      213: -5482640032431641797
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_15
+  - first:
+      213: 7407086042751206635
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_16
+  - first:
+      213: -5170804536187954790
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_17
+  - first:
+      213: -9134017672333474254
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_18
+  - first:
+      213: 228386941481172500
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_19
+  - first:
+      213: 6885333741606474722
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_20
+  - first:
+      213: 2464826710636877840
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_21
+  - first:
+      213: -2401074020442072565
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_22
+  - first:
+      213: 4500922664821173400
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_23
+  - first:
+      213: -6211191243677417649
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_24
+  - first:
+      213: 3984542079924898623
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_25
+  - first:
+      213: 4804026752758772952
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_26
+  - first:
+      213: 4261103029013997989
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_27
+  - first:
+      213: 486880684922159880
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_28
+  - first:
+      213: 9085233053326211468
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_29
+  - first:
+      213: 8137722444078250554
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_30
+  - first:
+      213: -1352137636986159941
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_31
+  - first:
+      213: -284085905912052641
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_32
+  - first:
+      213: 8501820999730705385
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_33
+  - first:
+      213: -8849452139242996226
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_34
+  - first:
+      213: 2724013712328383842
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_35
+  - first:
+      213: 2056453343431690684
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_36
+  - first:
+      213: 6106256381842326614
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_37
+  - first:
+      213: 7565308298415889850
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_38
+  - first:
+      213: -7831213297230890932
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_39
+  - first:
+      213: 6746655297346986871
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_40
+  - first:
+      213: 5161130261970323894
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_41
+  - first:
+      213: 8512818045907778871
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_42
+  - first:
+      213: 1559974591930952111
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_43
+  - first:
+      213: 5405256001354320678
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_44
+  - first:
+      213: 3113845866354395615
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_45
+  - first:
+      213: -924918839538439621
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_46
+  - first:
+      213: -4021521488126633855
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_47
+  - first:
+      213: 2106826591880186611
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_48
+  - first:
+      213: 2927567607678138823
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_49
+  - first:
+      213: -6887511755587272546
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_50
+  - first:
+      213: 5788568267563640461
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_51
+  - first:
+      213: -1932759003615511904
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_52
+  - first:
+      213: 4756473716410482224
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_53
+  - first:
+      213: 5226764443498837873
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_54
+  - first:
+      213: -1827136886811016290
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_55
+  - first:
+      213: 8465998776840294058
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_56
+  - first:
+      213: -4160754604996347977
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_57
+  - first:
+      213: -4980203909473005541
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_58
+  - first:
+      213: -5685448342619757989
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_59
+  - first:
+      213: 6784511925724820869
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_60
+  - first:
+      213: -4462942607061085735
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_61
+  - first:
+      213: 2762752404010354490
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_62
+  - first:
+      213: -2160907288870752538
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_63
+  - first:
+      213: 6784720024988485688
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_64
+  - first:
+      213: 7871081504841539984
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_65
+  - first:
+      213: -5558450610876006372
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_66
+  - first:
+      213: -9046909384639492153
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_67
+  - first:
+      213: 4718680660642145512
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_68
+  - first:
+      213: -6144833424673832696
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_69
+  - first:
+      213: -6601793347264702884
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_70
+  - first:
+      213: 2479029629100353070
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_71
+  - first:
+      213: -7668731528628394738
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_72
+  - first:
+      213: -4387293487106933433
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_73
+  - first:
+      213: 5569603807419068443
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_74
+  - first:
+      213: 6802679778851276759
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_75
+  - first:
+      213: -131021486140303761
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_76
+  - first:
+      213: 8049724720308898817
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_77
+  - first:
+      213: -6896568401108964288
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_78
+  - first:
+      213: 4946012021293121949
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_79
+  - first:
+      213: 8915864535684232280
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_80
+  - first:
+      213: -4833121663703838327
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_81
+  - first:
+      213: 8530051680346939688
+    second: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_82
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df08615fc23bca70800000000000000
+      internalID: 8848221758904864728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698315e16b0df93c0800000000000000
+      internalID: -4350529234405345130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef30b5d89849f4010800000000000000
+      internalID: 1175321346269971454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c327dca8955b9220800000000000000
+      internalID: 2493680932902872007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b286ae09bc9bb130800000000000000
+      internalID: 3583630247132037817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e27c68e7e6475150800000000000000
+      internalID: 5861231401896800992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d682405da852e5a70800000000000000
+      internalID: 8817526398647543917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6ede47aa16ce730800000000000000
+      internalID: 4029703151323834062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1bfcd4fd625e340800000000000000
+      internalID: 4892359310732931555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8b44aaf304b0290800000000000000
+      internalID: -7923168477244507985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de72a6b62d0ab5d40800000000000000
+      internalID: 5574225789406816237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f169dd358bb0792e0800000000000000
+      internalID: -2119212213345610209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff376b34cd849040800000000000000
+      internalID: 4653500188930293756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267dc840db1fa5890800000000000000
+      internalID: -7468391237913094302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2034d0cb5d250fb0800000000000000
+      internalID: -4682286365481357270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b639350ffb9e3b0800000000000000
+      internalID: -5482640032431641797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be480fee2814bc660800000000000000
+      internalID: 7407086042751206635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99d981abac9d38b0800000000000000
+      internalID: -5170804536187954790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2364c6432537d3180800000000000000
+      internalID: -9134017672333474254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41eb25696b46b2300800000000000000
+      internalID: 228386941481172500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e31774de8e9d8f50800000000000000
+      internalID: 6885333741606474722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018d76885d2d43220800000000000000
+      internalID: 2464826710636877840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a912c56ebadaed0800000000000000
+      internalID: -2401074020442072565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cab26115d767e30800000000000000
+      internalID: 4500922664821173400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f3790e87a6dc9a0800000000000000
+      internalID: -6211191243677417649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_25
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b058229efeb4730800000000000000
+      internalID: 3984542079924898623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4f8a9f0e45ba240800000000000000
+      internalID: 4804026752758772952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a968bbe0aa722b30800000000000000
+      internalID: 4261103029013997989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803c8c0476fb1c600800000000000000
+      internalID: 486880684922159880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89752d835b351e70800000000000000
+      internalID: 9085233053326211468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3af108827ffee070800000000000000
+      internalID: 8137722444078250554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcf00cabfd3c3de0800000000000000
+      internalID: -1352137636986159941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54ca6caf59be0cf0800000000000000
+      internalID: -284085905912052641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3b7e897298cf570800000000000000
+      internalID: 8501820999730705385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_34
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdb99f6a2e603580800000000000000
+      internalID: -8849452139242996226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d50a6f904adc520800000000000000
+      internalID: 2724013712328383842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_36
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb909689b6df98c10800000000000000
+      internalID: 2056453343431690684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6548c23b3d7cdb450800000000000000
+      internalID: 6106256381842326614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdd46f80df5df860800000000000000
+      internalID: 7565308298415889850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48bc3a6ff0f15390800000000000000
+      internalID: -7831213297230890932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_40
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773ef546f3fe0ad50800000000000000
+      internalID: 6746655297346986871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b98240e0a400a740800000000000000
+      internalID: 5161130261970323894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d3edfe8ea932670800000000000000
+      internalID: 8512818045907778871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9eda250a426a510800000000000000
+      internalID: 1559974591930952111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_44
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bc5c8e1b3530b40800000000000000
+      internalID: 5405256001354320678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_45
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd94f5d415a963b20800000000000000
+      internalID: 3113845866354395615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3aae3347370a23f0800000000000000
+      internalID: -924918839538439621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_47
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1889c93738fa038c0800000000000000
+      internalID: -4021521488126633855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_48
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa8d547f93fc3d10800000000000000
+      internalID: 2106826591880186611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_49
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9789f6a3fc0a820800000000000000
+      internalID: 2927567607678138823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90c4e5cc84aa60a0800000000000000
+      internalID: -6887511755587272546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_51
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86aa329b20255050800000000000000
+      internalID: 5788568267563640461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_52
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa3f092de57d25e0800000000000000
+      internalID: -1932759003615511904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_53
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ef02ae4a3620240800000000000000
+      internalID: 4756473716410482224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_54
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177f36b9192398840800000000000000
+      internalID: 5226764443498837873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_55
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93cd999ea4b4a6e0800000000000000
+      internalID: -1827136886811016290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae057268054d7570800000000000000
+      internalID: 8465998776840294058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_57
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b73f9b3bb70246c0800000000000000
+      internalID: -4160754604996347977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_58
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1099da3ee2c2eab0800000000000000
+      internalID: -4980203909473005541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52e05deada3911b0800000000000000
+      internalID: -5685448342619757989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_60
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585ba3b86ad672e50800000000000000
+      internalID: 6784511925724820869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d11b2538517012c0800000000000000
+      internalID: -4462942607061085735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37c46b7ca4475620800000000000000
+      internalID: 2762752404010354490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_63
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee6e4e054ae202e0800000000000000
+      internalID: -2160907288870752538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_64
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8380bed6aea282e50800000000000000
+      internalID: 6784720024988485688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0912a360de2bb3d60800000000000000
+      internalID: 7871081504841539984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_66
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10ce2d8e9a6cd2b0800000000000000
+      internalID: -5558450610876006372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_67
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf4a65e8dbe27280800000000000000
+      internalID: -9046909384639492153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_68
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4a41a6f0f1c7140800000000000000
+      internalID: 4718680660642145512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_69
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8018e569e8a29baa0800000000000000
+      internalID: -6144833424673832696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_70
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5610cfade7b164a0800000000000000
+      internalID: -6601793347264702884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_71
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26e13e2058476220800000000000000
+      internalID: 2479029629100353070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_72
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05244e2e41339590800000000000000
+      internalID: -7668731528628394738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_73
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d3b9f71d33d13c0800000000000000
+      internalID: -4387293487106933433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1070e067253b4d40800000000000000
+      internalID: 5569603807419068443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_75
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7c92b7739f76e50800000000000000
+      internalID: 6802679778851276759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_76
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66d9ac07a48e2ef0800000000000000
+      internalID: -131021486140303761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_77
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c41bddbfd56bf60800000000000000
+      internalID: 8049724720308898817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_78
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c67ba24977a40a0800000000000000
+      internalID: -6896568401108964288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d910dff6ab3c3a440800000000000000
+      internalID: 4946012021293121949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_80
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85436f29e838bbb70800000000000000
+      internalID: 8915864535684232280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98110be247d4decb0800000000000000
+      internalID: -4833121663703838327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tons_of_tileset_3_10___gaia_trees_by_phyromatical_d81epok_82
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821adc22fc4d06670800000000000000
+      internalID: 8530051680346939688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
