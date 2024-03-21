@@ -370,6 +370,7 @@
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Gameplay/Dialogue.cs"
 "Assets/Scripts/Gameplay/DialogueManager.cs"
+"Assets/Scripts/Gameplay/GlobalSettings.cs"
 "Assets/Scripts/Gameplay/Interactive.cs"
 "Assets/Scripts/Gameplay/IPlayerTriggerable.cs"
 "Assets/Scripts/Gameplay/LongGrass.cs"
@@ -386,6 +387,8 @@
 "Assets/Scripts/SceneManagement/LocationPortal.cs"
 "Assets/Scripts/SceneManagement/Portal.cs"
 "Assets/Scripts/SceneManagement/SceneDetails.cs"
+"Assets/Scripts/UI/MenuController.cs"
+"Assets/Scripts/UI/MenuSlot.cs"
 "Assets/Scripts/Util/GameLayers.cs"
 "Assets/Scripts/Util/SpriteAnimator.cs"
 -langversion:8.0

@@ -9,7 +9,8 @@ public enum GameState
     Cutscene,
     InBattle,
     InDialogue,
-    Paused
+    Paused,
+    InMenu
 }
 public class GameController : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour
     public static GameController i;
 
     TrainerController currentTrainer;
+    MenuController menuController;
 
     public SceneDetails CurrentScene { get; private set; }
     public SceneDetails PrevScene { get; private set; }
@@ -31,6 +33,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         i = this;
+        menuController = GetComponent<MenuController>();
         ConditionsDB.Init();
         PokemonDB.Init();
         MoveDB.Init();
@@ -38,7 +41,11 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         bS.OnBattleOver += EndBattle;
-        
+        menuController.onBack += () =>
+        {
+            state = GameState.FreeRoam;
+        };
+        menuController.onMenuSlotSelected += OnMenuSelection;
 
         DialogueManager.Instance.OnShowDialogue += () =>
         {
@@ -121,11 +128,12 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             pC.HandleUpdate();
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                // Save game
-                SavingSystem.i.Save("testSave1");
+                menuController.OpenMenu();
+                state = GameState.InMenu;
             }
+            // Only for testing purposes, to be remvoed later
             else if (Input.GetKeyDown(KeyCode.L))
             {
                 SavingSystem.i.Load("testSave1");
@@ -139,6 +147,10 @@ public class GameController : MonoBehaviour
         {
             DialogueManager.Instance.HandleUpdate();
         }
+        else if (state == GameState.InMenu)
+        {
+            menuController.HandleUpdate();
+        }
 
         
     }
@@ -147,5 +159,37 @@ public class GameController : MonoBehaviour
     {
         PrevScene = CurrentScene;
         CurrentScene = scene;
+    }
+
+    void OnMenuSelection(int selectedIndex)
+    {
+        if (selectedIndex == 0)
+        {
+            // Open Party
+        }
+        else if (selectedIndex == 1)
+        {
+            //Open pokedex 
+        }
+        else if (selectedIndex == 2)
+        {
+            // Open bag
+        }
+        else if (selectedIndex == 3)
+        {
+            // Open badges
+        }
+        else if (selectedIndex == 4)
+        {
+            // Save
+            SavingSystem.i.Save("testSave1");
+        }
+        else if (selectedIndex == 5)
+        {
+            // Open options
+            
+        }
+
+        state = GameState.FreeRoam;
     }
 }

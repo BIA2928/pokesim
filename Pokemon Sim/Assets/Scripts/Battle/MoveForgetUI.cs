@@ -5,13 +5,18 @@ using UnityEngine.UI;
 
 public class MoveForgetUI : MonoBehaviour
 {
-    [SerializeField] Color highlightColor;
+    Color highlightColor;
     [SerializeField] Text moveNameText;
     [SerializeField] Text ppText;
     [SerializeField] Text moveTypeText;
     [SerializeField] Text moveCategoryText;
 
     Move _move;
+
+    private void Start()
+    {
+        highlightColor = GlobalSettings.i.HighlightedColorRed;
+    }
 
 
     public void SetData(Move move)

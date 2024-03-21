@@ -9,7 +9,7 @@ public class BattleDialogue : MonoBehaviour
 {
     [SerializeField] Text dialogueText;
     [SerializeField] [Range(20, 70)] int textSpeed;
-    [SerializeField] Color highlightedColor;
+
 
     [SerializeField] GameObject actionSelector;
     [SerializeField] GameObject moveSelector;
@@ -24,7 +24,12 @@ public class BattleDialogue : MonoBehaviour
     [SerializeField] Text switchText;
     [SerializeField] Text continueText;
 
+    Color highlightedColor;
 
+    private void Start()
+    {
+        highlightedColor = GlobalSettings.i.HighlightedColorBlue;
+    }
     public void SetDialogue(string dialogue)
     {
         dialogueText.text = dialogue;

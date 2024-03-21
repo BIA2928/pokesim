@@ -40,7 +40,6 @@ public class NPCController : MonoBehaviour, Interactive
     {
         if (state == NPCState.Idle)
         {
-            Debug.Log("Incrementing time");
             idleTimer += Time.deltaTime;
             if (idleTimer > timeBetweenPatterns)
             {
