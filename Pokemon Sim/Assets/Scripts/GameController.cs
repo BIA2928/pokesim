@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,8 @@ public enum GameState
     InBattle,
     InDialogue,
     Paused,
-    InMenu
+    InMenu,
+    InPartyScreen
 }
 public class GameController : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerController pC;
     [SerializeField] BattleSystem bS;
     [SerializeField] Camera worldCam;
+    [SerializeField] PartyScreen pS;
 
     public static GameController i;
 
@@ -40,6 +43,7 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
+        pS.Init();
         bS.OnBattleOver += EndBattle;
         menuController.onBack += () =>
         {
@@ -151,6 +155,19 @@ public class GameController : MonoBehaviour
         {
             menuController.HandleUpdate();
         }
+        else if (state == GameState.InPartyScreen)
+        {
+            Action onSelected = () => 
+            {
+                // Open summary screen
+            };
+            Action onBack = () => 
+            {
+                pS.gameObject.SetActive(false);
+                state = GameState.FreeRoam;
+            };
+            pS.HandleUpdate(onSelected, onBack);
+        }
 
         
     }
@@ -166,6 +183,9 @@ public class GameController : MonoBehaviour
         if (selectedIndex == 0)
         {
             // Open Party
+            pS.gameObject.SetActive(true);
+            pS.SetPartyData(pC.GetComponent<PokemonParty>().PokemonList);
+            state = GameState.InPartyScreen;
         }
         else if (selectedIndex == 1)
         {
@@ -183,6 +203,7 @@ public class GameController : MonoBehaviour
         {
             // Save
             SavingSystem.i.Save("testSave1");
+            state = GameState.FreeRoam;
         }
         else if (selectedIndex == 5)
         {
@@ -190,6 +211,6 @@ public class GameController : MonoBehaviour
             
         }
 
-        state = GameState.FreeRoam;
+        
     }
 }

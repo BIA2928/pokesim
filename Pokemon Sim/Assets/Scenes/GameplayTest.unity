@@ -527,6 +527,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: EssentialObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: mons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: mons.Array.data[1]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d08666f77b59164ab021cb2fc2294b5, type: 2}
+    - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: mons.Array.data[1]._level
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5280483200590597650, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_Name
       value: UICanvas

@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Battle\BattleHUD.cs" />
     <Compile Include="Assets\Scripts\Util\GameLayers.cs" />
     <Compile Include="Assets\Scripts\Saving\SavableEntity.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuSlot.cs" />
     <Compile Include="Assets\Scripts\Util\SpriteAnimator.cs" />
     <Compile Include="Assets\Scripts\Data\MoveDB.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\SceneDetails.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\GlobalSettings.cs" />
     <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Move.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetUI.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Assets\Scripts\Core\InvisbleTiles.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjects.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuController.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetScreen.cs" />
@@ -102,9 +105,6 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\UI\MenuController.cs" />
-    <Compile Include="Assets\Scripts\UI\MenuSlot.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\GlobalSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\gfx\npcs\Gen 4 OWs v1.5 - Vanilla Sunshine\CREDITS.txt" />

@@ -12,7 +12,6 @@ public class PartyMemberUI : MonoBehaviour
     [SerializeField] Text maxHpText;
     [SerializeField] Image spriteImage;
 
-    [SerializeField] Color highlightColor;
 
     Pokemon _pokemon;
 
@@ -21,7 +20,7 @@ public class PartyMemberUI : MonoBehaviour
         _pokemon = pokemon;
 
         pokemonNameText.text = pokemon.Base.Name;
-        levelText.text = pokemon.Level.ToString();
+        levelText.text = "Lv." + pokemon.Level.ToString();
         hpBar.SetHP((float)(pokemon.HP / pokemon.MaxHP));
         currHpText.text = pokemon.MaxHP.ToString() + " /";
         maxHpText.text = pokemon.MaxHP.ToString();
@@ -32,7 +31,7 @@ public class PartyMemberUI : MonoBehaviour
     public void SetSelected(bool selected)
     {
         if (selected)
-            pokemonNameText.color = highlightColor;
+            pokemonNameText.color = GlobalSettings.i.HighlightedColorRed;
         else
             pokemonNameText.color = Color.white;
     }
