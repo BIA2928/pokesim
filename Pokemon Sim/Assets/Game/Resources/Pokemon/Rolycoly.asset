@@ -20,7 +20,7 @@ MonoBehaviour:
   nationalDexNum: 837
   frontSprite: {fileID: 4625960824659868687, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
   backSprite: {fileID: 900281814770628165, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 1284580091923802243, guid: c8ff41c8e2a83764abb9292cb4a3cbdb, type: 3}
+  boxSprite: {fileID: 21300000, guid: 3240b4dfb2793e845979d1147671f0a0, type: 3}
   type1: 14
   type2: 0
   maxHP: 30

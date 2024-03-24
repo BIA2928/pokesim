@@ -9,9 +9,12 @@ public class ItemSlotUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] TextMeshProUGUI countText;
     Image selectedHighlighter;
+
+    RectTransform rectTransform;
     private void Awake()
     {
         selectedHighlighter = GetComponent<Image>();
+        rectTransform = GetComponent<RectTransform>();
     }
 
     public void SetData(ItemSlot itemSlot)
@@ -29,4 +32,6 @@ public class ItemSlotUI : MonoBehaviour
     {
         selectedHighlighter.enabled = false;
     }
+
+    public float Height => rectTransform.rect.height;
 }

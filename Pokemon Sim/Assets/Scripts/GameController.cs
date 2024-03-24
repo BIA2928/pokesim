@@ -42,6 +42,10 @@ public class GameController : MonoBehaviour
         ConditionsDB.Init();
         PokemonDB.Init();
         MoveDB.Init();
+
+        // Mouse not needed, turn off
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
     private void Start()
     {
@@ -195,7 +199,6 @@ public class GameController : MonoBehaviour
         {
             // Open Party
             pS.gameObject.SetActive(true);
-            pS.SetPartyData(pC.GetComponent<PokemonParty>().PokemonList);
             state = GameState.InPartyScreen;
         }
         else if (selectedIndex == 1)

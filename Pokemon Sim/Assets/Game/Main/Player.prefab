@@ -204,6 +204,8 @@ MonoBehaviour:
   mons:
   - _base: {fileID: 11400000, guid: 0f4a7deabde30414abdc704734e4746b, type: 2}
     _level: 6
+  - _base: {fileID: 11400000, guid: 2b138852cf9d43343b425dd53e9a3a26, type: 2}
+    _level: 4
 --- !u!114 &4131531866761559230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,4 +336,12 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: c4ae4418675e5084db7ee9c9cfaa5de7, type: 2}
     count: 2
   - item: {fileID: 11400000, guid: ded19e75c7bbb1e43bcda82ab0738562, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 569cd3c46d227a3439bae567b2184cae, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 1c508a8854768c34181f381881f44975, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 9532e3c10836f2343b5ee6823a33a182, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 16e21c346bff9e8458598f212a696fcd, type: 2}
     count: 4

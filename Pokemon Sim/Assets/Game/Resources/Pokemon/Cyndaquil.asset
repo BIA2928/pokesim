@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Cyndaquil
   m_EditorClassIdentifier: 
   name: Cynadquil
-  description: 
+  description: "Cyndaquil protects itself by flaring up the flames on its back. The
+    flames are vigorous if the Pok\xE9mon is angry. However, if it is tired, the
+    flames sputter fitfully with incomplete combustion."
   pokeSize: 0
   regionalDexNum: 0
   nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: f2ebd2f9418942f48a81ff00c3337916, type: 3}
   backSprite: {fileID: 21300000, guid: 69f02c19286d33d48af5b588d04169e6, type: 3}
-  boxSprite: {fileID: 21300000, guid: 92acb13617795bf4ca604b103ae8d27c, type: 3}
+  boxSprite: {fileID: 21300000, guid: 0c6c65df49d2419428c56ab78aa7be4a, type: 3}
   type1: 7
   type2: 0
   maxHP: 39
@@ -28,6 +30,7 @@ MonoBehaviour:
   spAttack: 39
   spDefence: 39
   speed: 43
+  catchRate: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
     learnLevel: 1
@@ -35,3 +38,5 @@ MonoBehaviour:
     learnLevel: 7
   - moveBase: {fileID: 11400000, guid: 4bcac37833de3c84e98b333589b4c33e, type: 2}
     learnLevel: 10
+  expYield: 0
+  growthRate: 0

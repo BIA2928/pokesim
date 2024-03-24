@@ -47,7 +47,6 @@ public class HPBar : MonoBehaviour
 
     public void SetHPBarColour(float newHp) 
     {
-        Debug.Log($"Setting HPBar color with hpNormalized = {newHp}");
         if (newHp > 0.5f)
         {
             if (hpBarImage != null)

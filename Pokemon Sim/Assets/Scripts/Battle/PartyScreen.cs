@@ -9,7 +9,8 @@ public class PartyScreen : MonoBehaviour
     [SerializeField] Text messageText;
     PartyMemberUI[] memberSlots;
     List<Pokemon> pokemonList;
-
+    PokemonParty playerParty;
+    
     int currPartyPoke = 0;
 
     public BattleState? CalledFromState { get; set; }
@@ -29,17 +30,22 @@ public class PartyScreen : MonoBehaviour
     public void Init()
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>(true);
+        playerParty = PokemonParty.GetPlayerParty();
+        Debug.Log($"{playerParty}");
+        SetPartyData();
+
+        playerParty.OnPartyUpdate += SetPartyData;
     }
 
-    public void SetPartyData(List<Pokemon> pokemon)
+    public void SetPartyData()
     {
-        this.pokemonList = pokemon;
+        pokemonList = playerParty.PokemonList;
         for (int i = 0; i < memberSlots.Length; i++)
         {
-            if (i < pokemon.Count)
+            if (i < pokemonList.Count)
             {
                 memberSlots[i].gameObject.SetActive(true);
-                memberSlots[i].SetData(pokemon[i]);
+                memberSlots[i].SetData(pokemonList[i]);
             }
                 
             else

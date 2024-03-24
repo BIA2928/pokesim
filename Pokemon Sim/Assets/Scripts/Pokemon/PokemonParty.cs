@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,14 @@ public class PokemonParty : MonoBehaviour
     [SerializeField] List<Pokemon> mons;
     // Start is called before the first frame update
 
+    public event Action OnPartyUpdate;
+
     public List<Pokemon> PokemonList
     {
         get { return mons;  }
         set { mons = value; }
     }
-    void Start()
+    void Awake()
     {
         foreach (var pokemon in mons)
         {
@@ -43,7 +46,13 @@ public class PokemonParty : MonoBehaviour
         else
         {
             mons.Add(pokemon);
+            OnPartyUpdate?.Invoke();
             return true;
         }
+    }
+
+    public static PokemonParty GetPlayerParty()
+    {
+        return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();
     }
 }
