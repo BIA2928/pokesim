@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TrainerController : MonoBehaviour, Interactive, ISavable
 {
-    [SerializeField] string name;
+    [SerializeField] new string name;
     [SerializeField] Dialogue dialogue;
     [SerializeField] Dialogue beatenDialogue;
     [SerializeField] GameObject exclamation;

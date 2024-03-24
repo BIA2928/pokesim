@@ -8,7 +8,7 @@ using System.Linq;
 public class PlayerController : MonoBehaviour, ISavable
 {
     [SerializeField] Sprite battleSprite;
-    [SerializeField] string name;
+    [SerializeField] new string name;
 
     const float offsetY = 0.3f;
 

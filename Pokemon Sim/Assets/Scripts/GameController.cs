@@ -12,7 +12,8 @@ public enum GameState
     InDialogue,
     Paused,
     InMenu,
-    InPartyScreen
+    InPartyScreen,
+    InBag
 }
 public class GameController : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour
     [SerializeField] BattleSystem bS;
     [SerializeField] Camera worldCam;
     [SerializeField] PartyScreen pS;
+    [SerializeField] InventoryUI iUI;
 
     public static GameController i;
 
@@ -168,6 +170,15 @@ public class GameController : MonoBehaviour
             };
             pS.HandleUpdate(onSelected, onBack);
         }
+        else if (state == GameState.InBag)
+        {
+            Action onBack = () =>
+            {
+                iUI.gameObject.SetActive(false);
+                state = GameState.FreeRoam;
+            };
+            iUI.HandleUpdate(onBack);
+        }
 
         
     }
@@ -194,6 +205,8 @@ public class GameController : MonoBehaviour
         else if (selectedIndex == 2)
         {
             // Open bag
+            iUI.gameObject.SetActive(true);
+            state = GameState.InBag;
         }
         else if (selectedIndex == 3)
         {
