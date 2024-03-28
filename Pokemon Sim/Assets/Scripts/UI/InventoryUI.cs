@@ -13,13 +13,21 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] ItemDescriptionBarUI itemDescriptionBar;
     [SerializeField] PartyScreen partyScreen;
 
+    [SerializeField] PocketSelectorUI pocketUI;
+
+    Action OnItemUsed;
     Inventory inventory;
     List<ItemSlotUI> slotUIList;
     RectTransform itemListRect;
+
     int selectedItem = 0;
+    int selectedPocket = 0;
+    
     InventoryUIState state;
 
     const int itemsInViewPort = 7;
+    
+    const int nPockets = 8;
 
     private void Awake()
     {
@@ -31,6 +39,7 @@ public class InventoryUI : MonoBehaviour
     {
         UpdateItemList();
         UpdateItemSelection();
+        inventory.OnUpdated += UpdateItemList;
     }
 
     void UpdateItemList()
@@ -42,33 +51,48 @@ public class InventoryUI : MonoBehaviour
         }
 
         slotUIList = new List<ItemSlotUI>();
-        foreach (var itemSlot in inventory.Items)
+        foreach (var itemSlot in inventory.GetItemsByCategory(selectedPocket))
         {
             var newSlotUI = Instantiate(itemSlotUI, itemList.transform);
             newSlotUI.SetData(itemSlot);
             slotUIList.Add(newSlotUI);
         }
     }
-    public void HandleUpdate(Action onBack)
+    public void HandleUpdate(Action onBack, Action onItemUsed=null)
     {
+        OnItemUsed = onItemUsed;
+        
         if (state == InventoryUIState.ItemSelection)
         {
             int prevSelection = selectedItem;
+            int prevPocket = selectedPocket;
             if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
                 ++selectedItem;
-            }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
                 --selectedItem;
-            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                --selectedPocket;
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+                ++selectedPocket;
 
-            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Items.Count - 1);
+            if (selectedPocket >= nPockets)
+                selectedPocket = 0;
+            else if (selectedPocket < 0)
+                selectedPocket = nPockets - 1;
+            selectedItem = MyClamp(selectedItem, 0, inventory.GetItemsByCategory(selectedPocket).Count - 1);
 
             if (selectedItem != prevSelection)
             {
                 UpdateItemSelection();
             }
+            else if (selectedPocket != prevPocket)
+            {
+                ResetOnPocketChange();
+                UpdateItemList();
+                pocketUI.UpdatePocket(selectedPocket);
+                UpdateItemSelection();
+            }
+                
 
             if (Input.GetKeyDown(KeyCode.Z))
             {
@@ -89,7 +113,8 @@ public class InventoryUI : MonoBehaviour
 
             Action onSelected = () =>
             {
-                // Use item on selected poke
+                StartCoroutine(UseItem());
+                
             };
             partyScreen.HandleUpdate(onSelected, OnBack);
         }
@@ -98,6 +123,7 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateItemSelection()
     {
+        var items = inventory.GetItemsByCategory(selectedPocket);
         for (int i = 0; i < slotUIList.Count; i++)
         {
             if (i == selectedItem)
@@ -108,15 +134,26 @@ public class InventoryUI : MonoBehaviour
                 slotUIList[i].DeselectItem();
         }
 
-        itemDescriptionBar.SetData(inventory.Items[selectedItem].ItemBase);
+        selectedItem = MyClamp(selectedItem, 0, items.Count - 1);
+        if (items.Count > 0)
+        {
+            itemDescriptionBar.SetData(items[selectedItem].ItemBase);
+            HandleScrolling();
+        }
 
-        HandleScrolling();
     }
 
     void HandleScrolling()
     {
+        if (slotUIList.Count <= itemsInViewPort) return;
         float scrollPos = Mathf.Clamp(selectedItem - (itemsInViewPort / 2), 0, selectedItem) * slotUIList[0].Height;
         itemListRect.localPosition = new Vector2(itemListRect.localPosition.x, scrollPos);
+    }
+
+    void ResetOnPocketChange()
+    {
+        itemDescriptionBar.ClearFields();
+        selectedItem = 0;
     }
 
     void OpenPartyScreen()
@@ -134,4 +171,35 @@ public class InventoryUI : MonoBehaviour
 
         partyScreen.gameObject.SetActive(false);
     }
+
+    IEnumerator UseItem() 
+    {
+        state = InventoryUIState.Busy;
+        // Use item on selected poke
+        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember);
+        if (usedItem == null)
+        {
+            yield return DialogueManager.Instance.ShowDialogue($"It won't have any effect.");
+        }
+        else
+        {
+            //if (usedItem.GetType().Equals(typeof(MedicineItem)))
+            yield return DialogueManager.Instance.ShowDialogue($"One {usedItem.Name} was used.");
+            OnItemUsed?.Invoke();
+        }
+
+        ClosePartyScreen();
+    }
+
+    public static int MyClamp(int n, int min, int max)
+    {
+        if (max < min || n < min)
+            return min;
+        if (n > max)
+            return max;
+
+        return n;
+    }
 }
+
+

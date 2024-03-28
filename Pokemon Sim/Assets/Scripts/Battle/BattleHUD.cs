@@ -25,6 +25,11 @@ public class BattleHUD : MonoBehaviour
 
     public void SetData(Pokemon pokemon)
     {
+        if (_pokemon != null)
+        {
+            _pokemon.OnStatusCndChange -= SetCndImage;
+            _pokemon.OnHPChanged -= UpdateHp;
+        }
         _pokemon = pokemon;
 
         pokemonNameText.text = pokemon.Base.Name;
@@ -38,6 +43,7 @@ public class BattleHUD : MonoBehaviour
         SetExp();
         SetCndImage();
         _pokemon.OnStatusCndChange += SetCndImage;
+        _pokemon.OnHPChanged += UpdateHp;
     }
 
     void SetCndImage()
@@ -71,18 +77,23 @@ public class BattleHUD : MonoBehaviour
         }
     }
 
-    public IEnumerator UpdateHP()
+    public void UpdateHp()
     {
-        //Debug.Log($"Pokemon has taken damage.\n It is now on {_pokemon.HP.ToString()}HP and has {((float)_pokemon.HP) / _pokemon.MaxHP} times its original HP");
-        if (_pokemon.HpChanged)
-        {
-            yield return hpBar.SmoothHPBarDescend(((float)_pokemon.HP) / _pokemon.MaxHP);
-            currHpText.text = _pokemon.HP.ToString();
-            _pokemon.HpChanged = false;
-            hpBar.SetHPBarColour(((float)_pokemon.HP) / _pokemon.MaxHP);
-        }
-        
+        StartCoroutine(UpdateHPAsync());
     }
+
+    public IEnumerator UpdateHPAsync()
+    {
+        yield return hpBar.SmoothHPBarDescend(((float)_pokemon.HP) / _pokemon.MaxHP);
+        currHpText.text = _pokemon.HP.ToString();
+        hpBar.SetHPBarColour(((float)_pokemon.HP) / _pokemon.MaxHP);
+    }
+
+    public IEnumerator WaitForHPUpdate()
+    {
+        yield return new WaitUntil(() => hpBar.IsUpdating == false);
+    }
+        
 
     float GetXpNomalised()
     {
@@ -126,4 +137,5 @@ public class BattleHUD : MonoBehaviour
         maxHpText.text = _pokemon.MaxHP.ToString();
         currHpText.text = _pokemon.HP.ToString();
     }
+
 }

@@ -12,6 +12,8 @@ public class HPBar : MonoBehaviour
     [SerializeField] Sprite lowHpImage;
     [SerializeField] Image hpBarImage;
 
+    public bool IsUpdating = false;
+
     //public static Color lowHpBar = new Color(255, 70, 52);
     //public static Color medHpBar = new Color(255, 182, 16);
 
@@ -31,6 +33,7 @@ public class HPBar : MonoBehaviour
 
     public IEnumerator SmoothHPBarDescend(float newHp)
     {
+        IsUpdating = true;
         float currHp = health.transform.localScale.x;
         float delta = currHp - newHp;
         while (currHp - newHp > Mathf.Epsilon)
@@ -39,10 +42,8 @@ public class HPBar : MonoBehaviour
             health.transform.localScale = new Vector3(currHp, 1f);
             yield return null;
         }
-
-
         health.transform.localScale = new Vector3(newHp, 1f);
-       
+        IsUpdating = false;   
     }
 
     public void SetHPBarColour(float newHp) 

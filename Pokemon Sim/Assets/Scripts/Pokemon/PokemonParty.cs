@@ -15,7 +15,11 @@ public class PokemonParty : MonoBehaviour
     public List<Pokemon> PokemonList
     {
         get { return mons;  }
-        set { mons = value; }
+        set 
+        { 
+            mons = value;
+            OnPartyUpdate?.Invoke();
+        }
     }
     void Awake()
     {

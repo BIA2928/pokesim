@@ -82,7 +82,7 @@
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Inventory\KeyItem.cs" />
     <Compile Include="Assets\Scripts\Gameplay\LongGrass.cs" />
-    <Compile Include="Assets\ItemDescriptionBarUI.cs" />
+    <Compile Include="Assets\Scripts\UI\ItemDescriptionBarUI.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\SceneDetails.cs" />
@@ -112,6 +112,9 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PokeballItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\TM.cs" />
+    <Compile Include="Assets\Scripts\UI\PocketSelectorUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

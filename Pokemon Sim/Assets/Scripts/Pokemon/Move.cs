@@ -13,6 +13,12 @@ public class Move
         PP = pBase.Pp;
     }
 
+    public void RestorePP(int restoreAmount)
+    {
+        int newPP = PP + restoreAmount;
+        PP = Mathf.FloorToInt(Mathf.Clamp(newPP, 0, Base.Pp));
+    }
+
     public Move(MoveSaveData sD)
     {
         PP = sD.currPP;

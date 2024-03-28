@@ -12,5 +12,13 @@ public class ItemDescriptionBarUI : MonoBehaviour
     {
         selectedItemDescription.text = itemBase.Description;
         selectedItemImage.sprite = itemBase.BagIcon;
+        selectedItemImage.color = Color.white;
+    }
+
+    public void ClearFields()
+    {
+        selectedItemDescription.text = "";
+        selectedItemImage.sprite = null;
+        selectedItemImage.color = Color.clear;
     }
 }

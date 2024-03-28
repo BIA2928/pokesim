@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc0c3766d1d2f742bd2ca5799db0dfc, type: 3}
+  m_Name: Pokeball
+  m_EditorClassIdentifier: 
+  name: Pokeball
+  description: A pokemon capturing device. It has a normal chance of capturing a
+    pokemon.
+  bagIcon: {fileID: 21300000, guid: fb4390fe410e43b4a9147d5816c0ec86, type: 3}

@@ -142,7 +142,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 819782870098626526, guid: 87d90fad85e5b2747bcf483b18721456, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -512,6 +512,7 @@ MonoBehaviour:
   slpSprite: {fileID: -7750362068991926472, guid: db2364ece0f998d40bc3ca98727f7fee, type: 3}
   frzSprite: {fileID: 3919806489583458985, guid: db2364ece0f998d40bc3ca98727f7fee, type: 3}
   statusCndImage: {fileID: 7998777908397589812}
+  expBar: {fileID: 0}
 --- !u!1 &5904947683941603959
 GameObject:
   m_ObjectHideFlags: 0

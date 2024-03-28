@@ -74,6 +74,12 @@ TextureImporter:
   - first:
       213: 2353538851511897727
     second: bagBG
+  - first:
+      213: -477657356296344905
+    second: leftArrowBag
+  - first:
+      213: -8947423173192127300
+    second: rightArrowBag
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -654,7 +660,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -662,6 +668,48 @@ TextureImporter:
       bones: []
       spriteID: f7e8279ad1379a020800000000000000
       internalID: 2353538851511897727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leftArrowBag
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 337
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7baaa994a250f59f0800000000000000
+      internalID: -477657356296344905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rightArrowBag
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 337
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbce8ca870e54d380800000000000000
+      internalID: -8947423173192127300
       vertices: []
       indices: 
       edges: []

@@ -40,6 +40,23 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeDialogue(dialogue.Lines[0]));
     }
 
+    public IEnumerator ShowDialogue(string text, bool waitForInput=true)
+    {
+        //yield return new WaitForEndOfFrame();
+        IsShowing = true;
+
+        dialogueBox.SetActive(true);
+        yield return TypeDialogue(text);
+
+        if (waitForInput)
+        {
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+        }
+
+        dialogueBox.SetActive(false);
+        IsShowing = false;
+    }
+
     public IEnumerator TypeDialogue(string dialogue)
     {
         isTyping = true;

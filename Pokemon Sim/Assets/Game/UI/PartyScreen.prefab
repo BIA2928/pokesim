@@ -478,6 +478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PartyMemberHUDTL
       objectReference: {fileID: 0}
+    - target: {fileID: 2183437246224513401, guid: fdf92ab86a7af444f9461edc905dc299, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2298721971803368679, guid: fdf92ab86a7af444f9461edc905dc299, type: 3}
       propertyPath: m_IsActive
       value: 1

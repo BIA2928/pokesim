@@ -24,8 +24,8 @@ public class Pokemon
     public int StatusCndTime { get; set; }
     public int VolatileCndTime { get; set; }
 
-    public bool HpChanged { get; set; }
     public event System.Action OnStatusCndChange;
+    public event System.Action OnHPChanged;
 
     public int Exp { get; set; }
     public Queue<string> StatusChanges { get; private set; }
@@ -270,10 +270,14 @@ public class Pokemon
         };
     }
 
+    /// <summary>
+    /// Updates the hp of the pokemon given an integer, damage values are negative, heals positive.
+    /// </summary>
+    /// <param name="hpChange">The amount of hp to change.</param>
     public void UpdateHP(int hpChange)
     {
         HP = Mathf.Clamp(HP + hpChange, 0, MaxHP);
-        HpChanged = true;
+        OnHPChanged?.Invoke();
     }
 
     public Move GetRandomMove()
@@ -369,6 +373,16 @@ public class Pokemon
     void ForgetMove(Move move)
     {
         Moves.Remove(move);
+    }
+
+    public bool AllMovesFullPP()
+    {
+        foreach (Move move in Moves)
+        {
+            if (move.PP != move.Base.Pp)
+                return false;
+        }
+        return true;
     }
 
     public void ReplaceMove(Move toBeReplaced, Move newMove)
