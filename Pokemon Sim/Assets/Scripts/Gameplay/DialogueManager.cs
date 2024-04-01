@@ -14,11 +14,9 @@ public class DialogueManager : MonoBehaviour
     public event Action OnShowDialogue;
     public event Action OnCloseDialogue;
 
-    private int currentLine = 0;
-    Dialogue currDialogue;
+
     bool isTyping;
 
-    private Action onDialogueFinished;
 
     public bool IsShowing { get; private set; }
     public static DialogueManager Instance { get; private set; }
@@ -27,20 +25,24 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
-    public IEnumerator ShowDialogue(Dialogue dialogue, Action onFinished=null)
+    public IEnumerator ShowDialogue(Dialogue dialogue)
     {
         yield return new WaitForEndOfFrame();
         IsShowing = true;
         OnShowDialogue?.Invoke();
-        currDialogue = dialogue;
-
-        onDialogueFinished = onFinished;
-
         dialogueBox.SetActive(true);
-        StartCoroutine(TypeDialogue(dialogue.Lines[0]));
+
+        foreach (var line in dialogue.Lines)
+        {
+            yield return TypeDialogue(line);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+        }
+        dialogueBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialogue?.Invoke();
     }
 
-    public IEnumerator ShowDialogue(string text, bool waitForInput=true)
+    public IEnumerator ShowDialogue(string text, bool waitForInput = true)
     {
         //yield return new WaitForEndOfFrame();
         IsShowing = true;
@@ -55,7 +57,38 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.SetActive(false);
         IsShowing = false;
+        OnCloseDialogue?.Invoke();
     }
+
+    /// <summary>
+    /// Shows multi-line dialogue, but will wait until final line before waiting for input
+    /// </summary>
+    /// <param name="dialogue"></param>
+    /// <param name="onFinished"></param>
+    /// <returns></returns>
+    public IEnumerator ShowDialogueContinuous(Dialogue dialogue, Action onFinished = null)
+    {
+        yield return new WaitForEndOfFrame();
+        IsShowing = true;
+        OnShowDialogue?.Invoke();
+
+
+        dialogueBox.SetActive(true);
+
+        for (int i = 0;  i < dialogue.Lines.Count; i++)
+        {
+            yield return TypeDialogue(dialogue.Lines[i]);
+            if (i == dialogue.Lines.Count - 1)
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+            else
+                yield return new WaitUntil(() => isTyping == false);
+        }
+        dialogueBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialogue?.Invoke();
+    }
+
+    
 
     public IEnumerator TypeDialogue(string dialogue)
     {
@@ -72,21 +105,6 @@ public class DialogueManager : MonoBehaviour
 
     public void HandleUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !isTyping)
-        {
-            ++currentLine;
-            if (currentLine < currDialogue.Lines.Count)
-            {
-                StartCoroutine(TypeDialogue(currDialogue.Lines[currentLine]));
-            }
-            else
-            {
-                currentLine = 0;
-                IsShowing = false;
-                dialogueBox.SetActive(false);
-                onDialogueFinished?.Invoke();
-                OnCloseDialogue?.Invoke();
-            }
-        }
+        
     }
 }

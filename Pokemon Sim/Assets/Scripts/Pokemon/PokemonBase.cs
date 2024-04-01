@@ -36,6 +36,7 @@ public class PokemonBase : ScriptableObject
     [SerializeField] [Range(0, 255)] int catchRate;
 
     [SerializeField] List<LearnableMove> learnableMoves;
+    [SerializeField] List<MoveBase> tmMoves;
     [SerializeField] int expYield;
     [SerializeField] GrowthRate growthRate;
 
@@ -158,6 +159,13 @@ public class PokemonBase : ScriptableObject
     {
         get { return growthRate; }
 
+    }
+
+    public List<MoveBase> TmMoves => tmMoves;
+
+    public bool CanLearnByTm(MoveBase attemptedToLearn)
+    {
+        return tmMoves.Contains(attemptedToLearn);
     }
 }
 

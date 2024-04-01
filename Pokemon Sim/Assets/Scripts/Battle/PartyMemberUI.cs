@@ -11,6 +11,7 @@ public class PartyMemberUI : MonoBehaviour
     [SerializeField] Text currHpText;
     [SerializeField] Text maxHpText;
     [SerializeField] Image spriteImage;
+    [SerializeField] Text messageText;
 
 
     Pokemon _pokemon;
@@ -20,6 +21,7 @@ public class PartyMemberUI : MonoBehaviour
         _pokemon = pokemon;
         UpdateData();
         _pokemon.OnHPChanged += UpdateData;
+        SetMesage("");
     }
 
     void UpdateData()
@@ -40,5 +42,10 @@ public class PartyMemberUI : MonoBehaviour
             pokemonNameText.color = GlobalSettings.i.HighlightedColorRed;
         else
             pokemonNameText.color = Color.white;
+    }
+
+    public void SetMesage(string input)
+    {
+        messageText.text = input;
     }
 }

@@ -20,7 +20,6 @@ public class PocketSelectorUI : MonoBehaviour
     }
     public void UpdatePocket(int selectedPocket)
     {
-        Debug.Log($"Updating pocket with selection = {selectedPocket}");
         pocketText.text = ItemCategories[selectedPocket];
         selectorPosition.anchoredPosition = new Vector2(originalXPosition + pocketDistance * selectedPocket, originalYPosition);
     }

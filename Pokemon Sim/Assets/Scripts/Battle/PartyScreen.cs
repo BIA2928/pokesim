@@ -104,4 +104,21 @@ public class PartyScreen : MonoBehaviour
     {
         messageText.text = text;
     }
+
+    public void ClearMemberSlotMessages()
+    {
+        foreach (var item in memberSlots)
+        {
+            item.SetMesage("");
+        }
+    }
+
+    public void ShowIfTMUsable(TmItem tm)
+    {
+        for (int i = 0; i < pokemonList.Count; i++)
+        {
+            string message = pokemonList[i].Base.CanLearnByTm(tm.Move) ? "ABLE!" : "NOT ABLE.";
+            memberSlots[i].SetMesage(message);
+        }
+    }
 }

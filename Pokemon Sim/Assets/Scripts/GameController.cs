@@ -59,13 +59,14 @@ public class GameController : MonoBehaviour
 
         DialogueManager.Instance.OnShowDialogue += () =>
         {
+            prevState = state;
             state = GameState.InDialogue;
         };
 
         DialogueManager.Instance.OnCloseDialogue += () =>
         {
             if (state == GameState.InDialogue)
-                state = GameState.FreeRoam;
+                state = prevState;
         };
     }
 
@@ -224,9 +225,9 @@ public class GameController : MonoBehaviour
         else if (selectedIndex == 5)
         {
             // Open options
-            
-        }
 
-        
+        }
     }
+
+        public GameState GameState => state;
 }

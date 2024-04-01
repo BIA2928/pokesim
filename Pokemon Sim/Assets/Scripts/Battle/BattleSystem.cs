@@ -167,18 +167,11 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.ActionSelection;
             };
 
-            Action onItemUsed = () =>
+            Action<ItemBase> onItemUsed = (ItemBase usedItem) =>
             {
-                state = BattleState.Busy;
-                inventoryUI.gameObject.SetActive(false);
-                StartCoroutine(RunTurns(BattleAction.UseItem));
+                StartCoroutine(OnItemUsed(usedItem));
             };
             inventoryUI.HandleUpdate(onBack, onItemUsed);
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            StartCoroutine(ThrowPokeball());
         }
     }
 
@@ -242,11 +235,24 @@ public class BattleSystem : MonoBehaviour
         dialogueBox.EnableChoiceSelector(true);
     }
 
+    IEnumerator OnItemUsed(ItemBase usedItem)
+    {
+        state = BattleState.Busy;
+        inventoryUI.gameObject.SetActive(false);
+        if (usedItem is PokeballItem)
+        {
+            yield return ThrowPokeball((PokeballItem)usedItem);
+        }
+        StartCoroutine(RunTurns(BattleAction.UseItem));
+    }
+
     void BattleOver(bool playerWin)
     {
         state = BattleState.BattleOver;
 
         playerParty.PokemonList.ForEach(p => p.OnBattleOver());
+        playerPoke.BattleHUD.ClearData();
+        enemyPoke.BattleHUD.ClearData();
         if (playerWin)
         {
             enemyPoke.ResetAfterFaint();
@@ -640,7 +646,6 @@ public class BattleSystem : MonoBehaviour
                 if (isTrainerBattle)
                 {
                     StartCoroutine(dialogueBox.TypeDialogue($"There's no running from\n a trainer battle!"));
-
                 }
                 else
                 {
@@ -887,7 +892,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.RunningTurn;
     }
 
-    IEnumerator ThrowPokeball()
+    IEnumerator ThrowPokeball(PokeballItem pokeballItem)
     {
         state = BattleState.Busy;
 
@@ -900,22 +905,25 @@ public class BattleSystem : MonoBehaviour
 
 
         dialogueBox.HideActions(true);
-        yield return dialogueBox.TypeDialogue($"{player.Name} used a {pokeballSprite.name}!");
+        yield return dialogueBox.TypeDialogue($"{player.Name} used a {pokeballItem.Name}!");
 
         var pokeballObj = Instantiate(pokeballSprite, playerPoke.transform.position - new Vector3(2, 0), Quaternion.identity);
         var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
-
+        pokeball.sprite = pokeballItem.BagIcon;
         // Animations
         // Throw
         Vector3 buffer = new Vector3(0, 1f);
-        yield return pokeball.transform.DOJump(enemyPoke.transform.position + buffer, 2f, 1, 1.2f).WaitForCompletion();
+        var sequence = DOTween.Sequence();
+        sequence.Append(pokeball.transform.DOJump(enemyPoke.transform.position + buffer, 2f, 1, 1.2f));
+        sequence.Join(pokeball.transform.DORotate(new Vector3(0, 0, -1080f), 1.2f, RotateMode.FastBeyond360));
+        yield return sequence.WaitForCompletion();
         // Shrink into ball
         yield return enemyPoke.PlayCaptureAnimation();
         // Drop to floor
         yield return pokeball.transform.DOMoveY(enemyPoke.transform.position.y - 1.25f, 0.4f).WaitForCompletion();
         //Shake
 
-        int shakeCount = TryCatchPokemon(enemyPoke.Pokemon);
+        int shakeCount = TryCatchPokemon(enemyPoke.Pokemon, pokeballItem);
         for (int i = 0; i < Mathf.Min(shakeCount, 3); i++)
         {
             yield return new WaitForSeconds(.5f);
@@ -965,12 +973,12 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     /// <param name="pokemon">Pokemon attempting to be caught</param>
     /// <returns></returns>
-    int TryCatchPokemon(Pokemon pokemon)
+    int TryCatchPokemon(Pokemon pokemon, PokeballItem pokeballItem)
     {
 
         float statusBonus = ConditionsDB.GetStatusBonus(pokemon.Cnd);
 
-        float a = (3 * pokemon.MaxHP - 2 * pokemon.HP) * pokemon.Base.CatchRate * statusBonus / (3 * pokemon.MaxHP);
+        float a = (3 * pokemon.MaxHP - 2 * pokemon.HP) * pokemon.Base.CatchRate * pokeballItem.CatchRateModifier * statusBonus / (3 * pokemon.MaxHP);
 
         if (a >= 255)
             return 4;

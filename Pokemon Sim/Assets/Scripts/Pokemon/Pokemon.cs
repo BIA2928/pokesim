@@ -220,6 +220,11 @@ public class Pokemon
         Moves.Add(new Move(move.Base));
     }
 
+    public void LearnMove(MoveBase moveBase)
+    {
+        Moves.Add(new Move(moveBase));
+    }
+
     public void SetCondition(ConditionType cndType)
     {
         if (Cnd != null)
@@ -396,6 +401,11 @@ public class Pokemon
 
         Moves[i] = newMove;
 
+    }
+
+    public bool HasMove(MoveBase move)
+    {
+        return this.Moves.Count(m => m.Base == move) > 0;
     }
 
 

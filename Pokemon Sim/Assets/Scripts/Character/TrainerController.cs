@@ -30,7 +30,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         character.HandleUpdate();
     }
 
-    public void Interact(Transform initiator)
+    public IEnumerator Interact(Transform initiator)
     {
 
         // Look towards player
@@ -39,14 +39,12 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         // Play dialogue
         if (!hasBeenBeaten)
         {
-            StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, () =>
-            {
-                GameController.i.StartTrainerBattle(this);
-            }));
+            yield return DialogueManager.Instance.ShowDialogue(dialogue);
+            GameController.i.StartTrainerBattle(this);
         }
         else
         {
-            StartCoroutine(DialogueManager.Instance.ShowDialogue(beatenDialogue));
+            yield return DialogueManager.Instance.ShowDialogue(beatenDialogue);
         }
         
        
@@ -75,11 +73,9 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         yield return character.Move(diff);
 
         player.GetComponent<Character>().LookTowards(transform.position);
-        StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, () =>
-        {
-            Debug.Log("Trainer battle started!");
-            GameController.i.StartTrainerBattle(this);
-        }));
+        yield return DialogueManager.Instance.ShowDialogue(dialogue);
+        //Debug.Log("Trainer battle started!");
+        GameController.i.StartTrainerBattle(this);
     }
 
     public void SetFovRotation(FacingDirection dir)

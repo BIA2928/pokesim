@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class MoveForgetScreen : MonoBehaviour
     MoveForgetUI moveToLearnSlot;
     List<Move> moves;
     MoveBase moveToLearn;
+
+    int currSelection = 0;
 
     // Start is called before the first frame update
     public void Init()
@@ -37,7 +40,7 @@ public class MoveForgetScreen : MonoBehaviour
     }
 
     public void UpdateMoveSelection(int selectedMoveIndex)
-    {
+    { 
         if (selectedMoveIndex == 4)
         {
             // New move is selected
@@ -74,6 +77,41 @@ public class MoveForgetScreen : MonoBehaviour
             movePower = moveToLearn.Power.ToString();
         string topLine = $"Power: {movePower},  Accur: {moveToLearn.Accuracy}\n";
         moveDescriptionText .text = topLine + moveToLearn.Description;
+    }
+
+    public void HandleUpdate(Action<int> onMoveSelected, Action onBack)
+    {
+        int prevSelection = currSelection;
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            onMoveSelected?.Invoke(currSelection);
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            Debug.Log($"Going back, onBack = null is {onBack == null}");
+            onBack?.Invoke();
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            currSelection += 2;
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            currSelection -= 2;
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currSelection++;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currSelection--;
+        }
+
+        currSelection = InventoryUI.MyClamp(currSelection, 0, 4);
+        if (currSelection != prevSelection)
+            UpdateMoveSelection(currSelection);
+
     }
 
 

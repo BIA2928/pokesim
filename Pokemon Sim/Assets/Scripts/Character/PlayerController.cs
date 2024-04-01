@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
         character.HandleUpdate();
         if (Input.GetKeyDown(KeyCode.Z))
-            Interact();
+            StartCoroutine(Interact());
     }
 
     private void OnMoveOver()
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
     }
 
-    void Interact()
+    IEnumerator Interact()
     {
         var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
         var interactingPos = transform.position + facingDir;
@@ -75,8 +75,7 @@ public class PlayerController : MonoBehaviour, ISavable
         var collider = Physics2D.OverlapCircle(interactingPos, 0.5f, GameLayers.i.InteractableLayer);
         if (collider != null)
         {
-            collider.GetComponent<Interactive>()?.Interact(transform);
-            Debug.Log($"Checkpoint 2");
+            yield return collider.GetComponent<Interactive>()?.Interact(transform);
             character.Stop();
         }
     }

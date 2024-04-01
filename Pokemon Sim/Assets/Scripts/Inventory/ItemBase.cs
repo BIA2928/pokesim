@@ -8,6 +8,11 @@ public class ItemBase : ScriptableObject
     [SerializeField] string description;
     [SerializeField] Sprite bagIcon;
 
+    public virtual bool CanUseInBattle => true;
+    public virtual bool CanUseOutsideBattle => true;
+
+    public virtual bool IsResuable => false;
+
     public string Name => name;
     public string Description => description;
     public Sprite BagIcon => bagIcon;

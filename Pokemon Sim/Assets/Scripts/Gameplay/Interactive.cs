@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface Interactive
 {
-    void Interact(Transform initiator);
+    IEnumerator Interact(Transform initiator);
 
 }
     

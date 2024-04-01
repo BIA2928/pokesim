@@ -16,3 +16,4 @@ MonoBehaviour:
   description: A pokemon capturing device. It has a normal chance of capturing a
     pokemon.
   bagIcon: {fileID: 21300000, guid: fb4390fe410e43b4a9147d5816c0ec86, type: 3}
+  catchRateModifier: 1

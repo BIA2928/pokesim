@@ -13,7 +13,7 @@ public class MoveForgetUI : MonoBehaviour
 
     Move _move;
 
-    private void Start()
+    private void Awake()
     {
         highlightColor = GlobalSettings.i.HighlightedColorRed;
     }

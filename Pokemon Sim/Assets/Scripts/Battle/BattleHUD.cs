@@ -25,11 +25,7 @@ public class BattleHUD : MonoBehaviour
 
     public void SetData(Pokemon pokemon)
     {
-        if (_pokemon != null)
-        {
-            _pokemon.OnStatusCndChange -= SetCndImage;
-            _pokemon.OnHPChanged -= UpdateHp;
-        }
+        ClearData();
         _pokemon = pokemon;
 
         pokemonNameText.text = pokemon.Base.Name;
@@ -136,6 +132,15 @@ public class BattleHUD : MonoBehaviour
     {
         maxHpText.text = _pokemon.MaxHP.ToString();
         currHpText.text = _pokemon.HP.ToString();
+    }
+
+    public void ClearData()
+    {
+        if (_pokemon != null)
+        {
+            _pokemon.OnStatusCndChange -= SetCndImage;
+            _pokemon.OnHPChanged -= UpdateHp;
+        }
     }
 
 }

@@ -11,4 +11,9 @@ public class Dialogue
     {
         get { return lines; }
     }
+
+    public Dialogue()
+    {
+        lines = new List<string>();
+    }
 }

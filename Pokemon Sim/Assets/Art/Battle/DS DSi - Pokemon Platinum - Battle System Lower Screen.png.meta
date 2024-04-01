@@ -193,9 +193,9 @@ TextureImporter:
       name: moveSelctorBlack
       rect:
         serializedVersion: 2
-        x: 165
+        x: 166
         y: 650
-        width: 125
+        width: 124
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

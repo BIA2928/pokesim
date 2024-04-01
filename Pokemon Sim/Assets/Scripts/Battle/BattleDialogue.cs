@@ -25,7 +25,9 @@ public class BattleDialogue : MonoBehaviour
     [SerializeField] Text continueText;
 
     Color highlightedColor;
+    bool isTyping = false;
 
+    public bool IsTyping => isTyping;
     private void Start()
     {
         highlightedColor = GlobalSettings.i.HighlightedColorBlue;
@@ -37,6 +39,7 @@ public class BattleDialogue : MonoBehaviour
 
     public IEnumerator TypeDialogue(string dialogue)
     {
+        isTyping = true;
         dialogueText.text = "";
         foreach (var character in dialogue.ToCharArray())
         {
@@ -45,6 +48,7 @@ public class BattleDialogue : MonoBehaviour
         }
         // add buffer
         yield return new WaitForSeconds(1f/ (textSpeed * 0.04f));
+        isTyping = false;
     }
 
     

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+public enum ItemType { HoldableItem, MedicineItem, Pokeball, Tms, Berries, Mail, BattleItem, KeyItem}
+
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<ItemSlot> generalItems;
@@ -28,14 +30,16 @@ public class Inventory : MonoBehaviour
         };
     }
 
-    public ItemBase UseItem(int selectedItemIndex, Pokemon selectedPokemon)
+    public ItemBase UseItem(int selectedItemIndex, Pokemon selectedPokemon, int selectedPocket)
     {
-        var currItem = medicineItems[selectedItemIndex].ItemBase;
+        var pocketItems = GetItemsByCategory(selectedPocket);
+        var currItem = pocketItems[selectedItemIndex].ItemBase;
         bool successful = currItem.Use(selectedPokemon);
 
         if (successful)
         {
-            RemoveOneOfItem(currItem);
+            if (!currItem.IsResuable)
+                RemoveOneOfItem(currItem, selectedPocket);
             return currItem;
         }
 
@@ -47,17 +51,57 @@ public class Inventory : MonoBehaviour
     {
         return pocketList[selectedCategory];
     }
-     
-    public void RemoveOneOfItem(ItemBase item)
+
+    public ItemBase GetItemBase(int selectedItem, int selectedPocket)
     {
-        var currItemSlot = medicineItems.First(slot => slot.ItemBase == item);
+        var item = GetItemsByCategory(selectedPocket)[selectedItem].ItemBase;
+        return item;
+    }
+     
+    public void RemoveOneOfItem(ItemBase item, int selectedPocket)
+    {
+        var pocketItems = GetItemsByCategory(selectedPocket);
+        var currItemSlot = pocketItems.First(slot => slot.ItemBase == item);
 
         currItemSlot.Count--;
 
         if (currItemSlot.Count == 0)
         {
-            medicineItems.Remove(currItemSlot);
+            pocketItems.Remove(currItemSlot);
         }
+        OnUpdated?.Invoke();
+    }
+
+    public ItemType GetPocketForItem(ItemBase item)
+    {
+        if (item is MedicineItem)
+            return ItemType.MedicineItem;
+        else if (item is PokeballItem)
+            return ItemType.Pokeball;
+        else if (item is TmItem)
+            return ItemType.Tms;
+        return ItemType.Berries;
+    }
+
+    public void AddItem(ItemBase item, int count=1)
+    {
+        var itemPocketIndex = (int)GetPocketForItem(item);
+        var slots = GetItemsByCategory(itemPocketIndex);
+
+        var itemSlot = slots.FirstOrDefault(slot => slot.ItemBase == item);
+        if (itemSlot == null)
+        {
+            slots.Add(new ItemSlot()
+            {
+                ItemBase = item,
+                Count = count
+            });
+        }
+        else
+        {
+            itemSlot.Count += count;
+        }
+
         OnUpdated?.Invoke();
     }
 
@@ -74,7 +118,12 @@ public class ItemSlot
     [SerializeField] ItemBase item;
     [SerializeField] int count;
 
-    public ItemBase ItemBase => item;
+    public ItemBase ItemBase
+    { 
+        get => item;
+        set => item = value;
+    }
+    
     public int Count
     {
         get => count;

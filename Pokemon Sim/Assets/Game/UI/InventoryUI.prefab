@@ -1705,6 +1705,7 @@ MonoBehaviour:
   itemDescriptionBar: {fileID: 8861697982156921277}
   partyScreen: {fileID: 0}
   pocketUI: {fileID: 6930566507037295467}
+  moveForgetScreen: {fileID: 0}
 --- !u!1 &3812404044522715530
 GameObject:
   m_ObjectHideFlags: 0

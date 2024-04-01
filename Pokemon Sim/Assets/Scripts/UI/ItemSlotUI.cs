@@ -14,12 +14,18 @@ public class ItemSlotUI : MonoBehaviour
     private void Awake()
     {
         selectedHighlighter = GetComponent<Image>();
-        rectTransform = GetComponent<RectTransform>();
+        
     }
 
     public void SetData(ItemSlot itemSlot)
     {
+        rectTransform = GetComponent<RectTransform>();
         nameText.text = itemSlot.ItemBase.Name;
+        if (itemSlot.ItemBase is TmItem)
+        {
+            var tm = (TmItem)itemSlot.ItemBase;
+            nameText.text += $" : {tm.Move.Name}";
+        }
         countText.text = "x" + itemSlot.Count.ToString();
     }
 

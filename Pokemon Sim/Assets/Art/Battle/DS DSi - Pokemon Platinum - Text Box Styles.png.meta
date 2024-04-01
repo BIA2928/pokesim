@@ -37,7 +37,7 @@ TextureImporter:
     second: DS DSi - Pokemon Platinum - Text Box Styles_10
   - first:
       213: -9099476569392231981
-    second: DS DSi - Pokemon Platinum - Text Box Styles_11
+    second: redEdgesTextBox
   - first:
       213: -2933138753657069544
     second: DS DSi - Pokemon Platinum - Text Box Styles_12
@@ -388,13 +388,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DS DSi - Pokemon Platinum - Text Box Styles_11
+      name: redEdgesTextBox
       rect:
         serializedVersion: 2
-        x: 263
-        y: 242
-        width: 250
-        height: 42
+        x: 264
+        y: 243
+        width: 248
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
