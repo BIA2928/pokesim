@@ -50,19 +50,31 @@ public class PlayerController : MonoBehaviour, ISavable
             StartCoroutine(Interact());
     }
 
+    IPlayerTriggerable currentlyInTrigger;
+
     private void OnMoveOver()
     {
         var colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f, GameLayers.i.TriggerableLayers);
 
+        IPlayerTriggerable trigger = null;
         foreach (var collider in colliders)
         {
-            var trigger = collider.GetComponent<IPlayerTriggerable>();
+            trigger = collider.GetComponent<IPlayerTriggerable>();
             if (trigger != null)
             {
+                if (trigger == currentlyInTrigger && !trigger.TriggerRepeatedly)
+                {
+                    break;
+                }
+                    
                 trigger.OnPlayerTrigger(this);
+                currentlyInTrigger = trigger;
                 break;
             }
         }
+
+        if (colliders.Count() == 0 || trigger != currentlyInTrigger)
+            currentlyInTrigger = null;
 
     }
 
@@ -75,9 +87,15 @@ public class PlayerController : MonoBehaviour, ISavable
         var collider = Physics2D.OverlapCircle(interactingPos, 0.5f, GameLayers.i.InteractableLayer);
         if (collider != null)
         {
-            yield return collider.GetComponent<Interactive>()?.Interact(transform);
             character.Stop();
+            yield return collider.GetComponent<Interactive>()?.Interact(transform);
+            
         }
+    }
+
+    public void StopPlayerMovement()
+    {
+        character.Stop();
     }
 
     public object CaptureState()

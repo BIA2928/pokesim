@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemGiver.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MapArea.cs" />
     <Compile Include="Assets\Scripts\Character\NPCController.cs" />
     <Compile Include="Assets\Scripts\Character\TrainerFOV.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Game\Hotkeys.cs" />
     <Compile Include="Assets\Scripts\Core\Fader.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\LocationPortal.cs" />
+    <Compile Include="Assets\Scripts\Data\ItemDB.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleUnit.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyScreen.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\StoryItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -10,6 +10,8 @@ public class LocationPortal : MonoBehaviour, IPlayerTriggerable
     PlayerController player;
     Fader fader;
 
+    public bool TriggerRepeatedly => false;
+
     private void Start()
     {
         fader = FindObjectOfType<Fader>();

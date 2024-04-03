@@ -13,6 +13,6 @@ public class LongGrass : MonoBehaviour, IPlayerTriggerable
         }
     }
 
-     
-    
+    public bool TriggerRepeatedly => true;
+
 }

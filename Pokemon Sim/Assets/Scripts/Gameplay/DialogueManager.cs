@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator ShowDialogue(string text, bool waitForInput = true)
     {
-        //yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
         IsShowing = true;
 
         dialogueBox.SetActive(true);
@@ -103,8 +103,56 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
     }
 
+    public IEnumerator ShowItemReceivedDialogue(ItemBase itemBase, int count = 1)
+    {
+        Dialogue d = new Dialogue();
+        if (count > 1)
+        {
+            d.Lines.Add($"You obtained {count} {itemBase.Name}s!");
+            d.Lines.Add($"The {itemBase.Name}s were added to the inventory.");
+        }
+        else
+        {
+            //if itemBase is keyItem
+            if(Vowels.Contains(itemBase.Name.ToCharArray()[0]))
+                d.Lines.Add($"You obtained an {itemBase.Name}!");
+            else
+                d.Lines.Add($"You obtained a {itemBase.Name}!");
+            d.Lines.Add($"The {itemBase.Name} was added to the inventory.");
+        }
+
+        yield return ShowDialogue(d);
+
+    }
+
+    public IEnumerator ShowItemPickupDialogue(ItemBase itemBase, int count = 1)
+    {
+        Dialogue d = new Dialogue();
+        if (count > 1)
+        {
+            d.Lines.Add($"You found {count} {itemBase.Name}s!");
+            d.Lines.Add($"The {itemBase.Name}s were added to the inventory.");
+        }
+        else
+        {
+            //if itemBase is keyItem
+            // if word needs to be proceed by an not a (an apple, an object, etc)
+            if (Vowels.Contains(itemBase.Name.ToCharArray()[0]))
+                d.Lines.Add($"You found an {itemBase.Name}!");
+            else
+                d.Lines.Add($"You found a {itemBase.Name}!");
+            d.Lines.Add($"The {itemBase.Name} was added to the inventory.");
+        }
+
+        yield return ShowDialogue(d);
+    }
+
     public void HandleUpdate()
     {
         
     }
+
+    public static List<char> Vowels = new List<char>(){ 'A', 'E', 'I', 'O', 'U'};
 }
+
+

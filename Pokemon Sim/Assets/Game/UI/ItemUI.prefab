@@ -408,3 +408,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1875151565456331850}
   countText: {fileID: 2592398476440897208}
+  selectedHighlighter: {fileID: 9156256288335524905}

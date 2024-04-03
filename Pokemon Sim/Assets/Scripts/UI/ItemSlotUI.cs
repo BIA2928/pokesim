@@ -8,13 +8,15 @@ public class ItemSlotUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] TextMeshProUGUI countText;
-    Image selectedHighlighter;
+    [SerializeField] Image selectedHighlighter;
 
     RectTransform rectTransform;
     private void Awake()
     {
-        selectedHighlighter = GetComponent<Image>();
         
+        //selectedHighlighter = GetComponent<Image>();
+        //Debug.Log("selected highlighter is now" + selectedHighlighter.ToString());
+
     }
 
     public void SetData(ItemSlot itemSlot)

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6418626294109919957}
   - component: {fileID: 6418626294109919958}
   - component: {fileID: 6418626294109919959}
+  - component: {fileID: 7361015319472091804}
   m_Layer: 10
   m_Name: GuardNPC
   m_TagString: Untagged
@@ -203,3 +204,16 @@ MonoBehaviour:
   - {fileID: -1586677432131916483, guid: 36a2af1266197134eac164d5c4097830, type: 3}
   - {fileID: 5796051097540485617, guid: 36a2af1266197134eac164d5c4097830, type: 3}
   defaultDirection: 1
+--- !u!114 &7361015319472091804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418626294109919960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public enum ItemType { HoldableItem, MedicineItem, Pokeball, Tms, Berries, Mail, BattleItem, KeyItem}
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> generalItems;
     [SerializeField] List<ItemSlot> medicineItems;
@@ -109,6 +109,45 @@ public class Inventory : MonoBehaviour
     {
         return FindObjectOfType<PlayerController>().GetComponent<Inventory>();
     }
+
+    public object CaptureState()
+    {
+        var saveData = new InventorySaveData()
+        {
+            genItems = generalItems.Select(i => i.GetItemSaveData()).ToList(),
+            medItems = medicineItems.Select(i => i.GetItemSaveData()).ToList(),
+            pokeballs = pokeballItems.Select(i => i.GetItemSaveData()).ToList(),
+            tms = tmItems.Select(i => i.GetItemSaveData()).ToList(),
+            keys = keyItems.Select(i => i.GetItemSaveData()).ToList(),
+            berries = berryItems.Select(i => i.GetItemSaveData()).ToList(),
+            mails = mailItems.Select(i => i.GetItemSaveData()).ToList(),
+            battles = berryItems.Select(i => i.GetItemSaveData()).ToList()
+
+        };
+        return saveData;
+    }
+
+    public void RestoreState(object state)
+    {
+        var saveData = state as InventorySaveData;
+
+        generalItems = saveData.genItems.Select(i => new ItemSlot(i)).ToList();
+        medicineItems = saveData.medItems.Select(i => new ItemSlot(i)).ToList();
+        pokeballItems = saveData.pokeballs.Select(i => new ItemSlot(i)).ToList();
+        tmItems = saveData.tms.Select(i => new ItemSlot(i)).ToList();
+        keyItems = saveData.keys.Select(i => new ItemSlot(i)).ToList();
+        berryItems = saveData.berries.Select(i => new ItemSlot(i)).ToList();
+        battleItems = saveData.battles.Select(i => new ItemSlot(i)).ToList();
+        mailItems = saveData.mails.Select(i => new ItemSlot(i)).ToList();
+
+        pocketList = new List<List<ItemSlot>>()
+        {
+            generalItems, medicineItems, pokeballItems, tmItems, mailItems,
+            berryItems, battleItems, keyItems
+        };
+
+        OnUpdated?.Invoke();
+    }
 }
 
 
@@ -129,4 +168,45 @@ public class ItemSlot
         get => count;
         set => count = value;
     }
+
+    public ItemSaveData GetItemSaveData()
+    {
+        var saveData = new ItemSaveData()
+        {
+            name = item.Name,
+            count = this.count,
+        };
+        return saveData;
+    }
+
+    public ItemSlot(ItemSaveData sD)
+    {
+        this.count = sD.count;
+        item = ItemDB.GetMoveByName(sD.name);
+    }
+
+    public ItemSlot()
+    {
+
+    }
+}
+
+[Serializable]
+public class ItemSaveData
+{
+    public string name;
+    public int count;
+}
+
+[Serializable]
+public class InventorySaveData
+{
+    public List<ItemSaveData> genItems;
+    public List<ItemSaveData> medItems;
+    public List<ItemSaveData> pokeballs;
+    public List<ItemSaveData> tms;
+    public List<ItemSaveData> mails;
+    public List<ItemSaveData> berries;
+    public List<ItemSaveData> battles;
+    public List<ItemSaveData> keys;
 }

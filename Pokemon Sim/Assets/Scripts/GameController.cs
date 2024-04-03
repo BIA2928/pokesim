@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
         ConditionsDB.Init();
         PokemonDB.Init();
         MoveDB.Init();
+        ItemDB.Init();
 
         // Mouse not needed, turn off
         //Cursor.lockState = CursorLockMode.Locked;
@@ -141,6 +142,8 @@ public class GameController : MonoBehaviour
             pC.HandleUpdate();
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                pC.StopPlayerMovement();
+                //Pause all NPCs as well
                 menuController.OpenMenu();
                 state = GameState.InMenu;
             }
