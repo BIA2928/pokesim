@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PokemonGiver : MonoBehaviour
+public class PokemonGiver : MonoBehaviour, ISavable
 {
     [SerializeField] Pokemon pokemon;
     [SerializeField] Dialogue dialogue;

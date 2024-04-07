@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Data\QuestDB.cs" />
+    <Compile Include="Assets\Scripts\Util\ScriptableObjectDB.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonGiver.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemGiver.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MapArea.cs" />
@@ -125,8 +127,6 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Util\ScriptableObjectDB.cs" />
-    <Compile Include="Assets\Scripts\Data\QuestDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
