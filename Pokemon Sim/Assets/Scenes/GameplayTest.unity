@@ -1012,7 +1012,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2b138852cf9d43343b425dd53e9a3a26, type: 2}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[0]._level
-      value: 6
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[1]._level

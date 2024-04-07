@@ -285,6 +285,13 @@ public class Pokemon
         OnHPChanged?.Invoke();
     }
 
+    public void SetHpByPercentage(float hpPercentage)
+    {
+        int currHp = Mathf.FloorToInt(hpPercentage * MaxHP);
+        currHp = Mathf.Clamp(currHp, 0, MaxHP);
+        HP = currHp;
+    }
+
     public Move GetRandomMove()
     {
         var movesWithPP = Moves.Where(x => x.PP > 0).ToList();
@@ -339,15 +346,19 @@ public class Pokemon
 
     }
 
-    public class DamageDetails
+    public Evolution CheckForEvolution()
     {
-
-        public float Crit { get; set; }
-        public bool DidFaint { get; set; }
-
-        public float TypeEffectiveness { get; set; }
-
+        var evos = Base.Evolutions.FirstOrDefault(e => e.RequiredLevel == _level);
+        return evos;
     }
+
+    public void Evolve(Evolution evo)
+    {
+        _base = evo.EvolvesInto;
+        CalculateStats();
+    }
+
+    
     public void OnBattleOver()
     {
         VolatileCnd = null;
@@ -409,6 +420,13 @@ public class Pokemon
     }
 
 
+}
+
+public class DamageDetails
+{
+    public float Crit { get; set; }
+    public bool DidFaint { get; set; }
+    public float TypeEffectiveness { get; set; }
 }
 
 [System.Serializable]

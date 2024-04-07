@@ -55,6 +55,23 @@ public class PokemonParty : MonoBehaviour
         }
     }
 
+    public IEnumerator CheckForEvolutions()
+    {
+        foreach(var pokemon in PokemonList)
+        {
+            var evo = pokemon.CheckForEvolution();
+            if (evo != null)
+            {
+                float hpPercentage = ((float)pokemon.HP) / pokemon.MaxHP;
+                yield return DialogueManager.Instance.ShowPreEvolutionDialogue(pokemon.Base.Name);
+                yield return DialogueManager.Instance.ShowPostEvolutionDialogue(pokemon, evo);
+                pokemon.Evolve(evo);
+                pokemon.SetHpByPercentage(hpPercentage);
+                OnPartyUpdate?.Invoke();
+            }
+        }
+    }
+
     public static PokemonParty GetPlayerParty()
     {
         return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();

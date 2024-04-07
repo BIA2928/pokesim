@@ -117,23 +117,33 @@ public class GameController : MonoBehaviour
 
     void EndBattle(bool won)
     {
-        if (currentTrainer != null && won)
+        if (won)
         {
-            currentTrainer.Beat();
-            currentTrainer = null;
+            if (currentTrainer != null)
+            {
+                currentTrainer.Beat();
+                currentTrainer = null;
+            }
+
+            var playerParty = pC.GetComponent<PokemonParty>();
+            StartCoroutine(playerParty.CheckForEvolutions());
+        }
+        else
+        {
+            //Defeat logic
+            if (currentTrainer != null)
+            {
+                //pay up
+                currentTrainer = null;
+            }
+            // black out and go to poke centre
         }
         
         state = GameState.FreeRoam;
         bS.gameObject.SetActive(false);
         worldCam.gameObject.SetActive(true);
-        if (won)
-        {
 
-        }
-        else
-        {
-
-        }
+        
     }
 
     private void Update()

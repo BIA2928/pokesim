@@ -521,7 +521,7 @@ public class BattleSystem : MonoBehaviour
         return (UnityEngine.Random.Range(0, 100) < moveAccur);
 
     }
-    IEnumerator TypeDamageDetails(Pokemon.DamageDetails damageDetails, string name)
+    IEnumerator TypeDamageDetails(DamageDetails damageDetails, string name)
     {
         if (damageDetails.TypeEffectiveness > 1.0f)
         {

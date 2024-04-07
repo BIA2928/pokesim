@@ -40,6 +40,8 @@ public class PokemonBase : ScriptableObject
     [SerializeField] int expYield;
     [SerializeField] GrowthRate growthRate;
 
+    [SerializeField] List<Evolution> evolutions;
+
     public int GetExpForLevel(int level)
     {
         float nCubed = Mathf.Pow(level, 3);
@@ -163,6 +165,8 @@ public class PokemonBase : ScriptableObject
 
     public List<MoveBase> TmMoves => tmMoves;
 
+    public List<Evolution> Evolutions => evolutions;
+
     public bool CanLearnByTm(MoveBase attemptedToLearn)
     {
         return tmMoves.Contains(attemptedToLearn);
@@ -184,6 +188,16 @@ public class LearnableMove
     {
         get { return learnLevel; }
     }
+}
+
+[System.Serializable]
+public class Evolution
+{
+    [SerializeField] PokemonBase evolvesInto;
+    [SerializeField] int requiredLevel;
+
+    public PokemonBase EvolvesInto => evolvesInto;
+    public int RequiredLevel => requiredLevel;
 }
 
 
