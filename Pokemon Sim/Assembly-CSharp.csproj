@@ -63,10 +63,12 @@
     <Compile Include="Assets\Scripts\Saving\SavableEntity.cs" />
     <Compile Include="Assets\Scripts\UI\MenuSlot.cs" />
     <Compile Include="Assets\Scripts\Util\SpriteAnimator.cs" />
+    <Compile Include="Assets\Scripts\Pokemon\PokemonTrader.cs" />
     <Compile Include="Assets\Scripts\Data\MoveDB.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Pokemon\PokemonGiver.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemGiver.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MapArea.cs" />
     <Compile Include="Assets\Scripts\Character\NPCController.cs" />
@@ -87,12 +89,14 @@
     <Compile Include="Assets\Scripts\Inventory\Pickup.cs" />
     <Compile Include="Assets\Scripts\UI\ItemDescriptionBarUI.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
+    <Compile Include="Assets\Scripts\Quests\QuestObject.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
     <Compile Include="Assets\Scripts\Inventory\PokeballItem.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\SceneDetails.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GlobalSettings.cs" />
     <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemBase.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\StoryItem.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Move.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetUI.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DialogueManager.cs" />
@@ -113,12 +117,16 @@
     <Compile Include="Assets\Scripts\Battle\MoveForgetScreen.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonParty.cs" />
+    <Compile Include="Assets\Scripts\Quests\QuestBase.cs" />
+    <Compile Include="Assets\Scripts\Quests\QuestList.cs" />
     <Compile Include="Assets\Scripts\Data\PokemonDB.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Interactive.cs" />
+    <Compile Include="Assets\Scripts\Quests\Quest.cs" />
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\StoryItem.cs" />
+    <Compile Include="Assets\Scripts\Util\ScriptableObjectDB.cs" />
+    <Compile Include="Assets\Scripts\Data\QuestDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -116,6 +116,13 @@ public class DialogueManager : MonoBehaviour
             //if itemBase is keyItem
             if(Vowels.Contains(itemBase.Name.ToCharArray()[0]))
                 d.Lines.Add($"You obtained an {itemBase.Name}!");
+            else if (itemBase is TmItem tmHm)
+            {
+                if (tmHm.IsHM)
+                    d.Lines.Add($"You obtained an {itemBase.Name}: {tmHm.Move.Name}!");
+                else
+                    d.Lines.Add($"You obtained a {itemBase.Name}: {tmHm.Move.Name}");
+            }
             else
                 d.Lines.Add($"You obtained a {itemBase.Name}!");
             d.Lines.Add($"The {itemBase.Name} was added to the inventory.");
@@ -139,12 +146,52 @@ public class DialogueManager : MonoBehaviour
             // if word needs to be proceed by an not a (an apple, an object, etc)
             if (Vowels.Contains(itemBase.Name.ToCharArray()[0]))
                 d.Lines.Add($"You found an {itemBase.Name}!");
+            else if (itemBase is TmItem tmHm)
+            {
+                if (tmHm.IsHM)
+                    d.Lines.Add($"You found an {itemBase.Name}: {tmHm.Move.Name}!");
+                else
+                    d.Lines.Add($"You found a {itemBase.Name}: {tmHm.Move.Name}");
+            }
             else
                 d.Lines.Add($"You found a {itemBase.Name}!");
             d.Lines.Add($"The {itemBase.Name} was added to the inventory.");
         }
 
         yield return ShowDialogue(d);
+    }
+
+    public IEnumerator ShowItemGivenDialogue(ItemBase itemBase, int count = 1)
+    {
+        Dialogue d = new Dialogue();
+        if (count == 1)
+        {
+            if (Vowels.Contains(itemBase.Name.ToCharArray()[0]))
+                d.Lines.Add($"You handed over an {itemBase.Name}!");
+            else
+                d.Lines.Add($"You handed over a {itemBase.Name}!");
+        }
+        else
+        {
+            d.Lines.Add($"You handed over {count} {itemBase.Name}s");
+        }
+
+        yield return ShowDialogue(d);
+    }
+
+    public IEnumerator ShowItemUsedDialogue(ItemBase item)
+    {
+        Dialogue d = new Dialogue();
+        d.Lines.Add($"You used the {item.Name}");
+        yield return ShowDialogue(d);
+    }
+
+    public IEnumerator ShowCantUseDialogue()
+    {
+        Dialogue dialogue = new Dialogue();
+        dialogue.Lines.Add($"Professor Rowan's words echo in your ears...");
+        dialogue.Lines.Add($"There's a time and place for everything!\nBut not now.");
+        yield return ShowDialogue(dialogue);
     }
 
     public void HandleUpdate()

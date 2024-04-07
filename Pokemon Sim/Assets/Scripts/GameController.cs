@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
         PokemonDB.Init();
         MoveDB.Init();
         ItemDB.Init();
+        QuestDB.Init();
 
         // Mouse not needed, turn off
         //Cursor.lockState = CursorLockMode.Locked;

@@ -22,14 +22,14 @@ public class Move
     public Move(MoveSaveData sD)
     {
         PP = sD.currPP;
-        Base = MoveDB.LookUpByName(sD.baseName);
+        Base = MoveDB.LookupByName(sD.baseName);
     }
 
     public MoveSaveData GetSaveData()
     {
         var sD = new MoveSaveData()
         {
-            baseName = Base.Name,
+            baseName = Base.name,
             currPP = PP
         };
         return sD;

@@ -56,3 +56,6 @@ TagManager:
   - name: Battle
     uniqueID: 3449731805
     locked: 0
+  - name: OverCharacterDetails
+    uniqueID: 3004178119
+    locked: 0

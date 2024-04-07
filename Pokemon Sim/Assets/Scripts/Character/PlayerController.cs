@@ -98,6 +98,18 @@ public class PlayerController : MonoBehaviour, ISavable
         character.Stop();
     }
 
+    /// <summary>
+    /// Force player to move. Note that this uses automove=true, meaning that it is making player move without user input
+    /// </summary>
+    /// <param name="moveDirection"></param>
+    /// <param name="mag"></param>
+    /// <returns></returns>
+    public IEnumerator ForceMove(Vector2 moveDirection, int mag=1)
+    {
+        yield return character.Move(moveDirection * mag, OnMoveOver, true);
+    }
+        
+
     public object CaptureState()
     {
         var saveData = new PlayerSaveData()
@@ -119,6 +131,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
         GetComponent<PokemonParty>().PokemonList = saveData.pokemonSaveDatas.Select(s => new Pokemon(s)).ToList();
     }
+
 
     public string Name
     {

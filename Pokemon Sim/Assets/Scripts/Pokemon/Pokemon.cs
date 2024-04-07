@@ -140,7 +140,7 @@ public class Pokemon
         PokemonSaveData sD = new PokemonSaveData()
         {
             level = _level,
-            baseName = Base.Name,
+            baseName = Base.name,
             hp = this.HP,
             exp = Exp,
             condition = Cnd?.CndType,
@@ -153,7 +153,7 @@ public class Pokemon
     
     public Pokemon(PokemonSaveData sD)
     {
-        _base = PokemonDB.LookUpByName(sD.baseName);
+        _base = PokemonDB.LookupByName(sD.baseName);
         HP = sD.hp;
         _level = sD.level;
         Exp = sD.exp;

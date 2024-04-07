@@ -20,6 +20,7 @@ MonoBehaviour:
   nationalDexNum: 0
   frontSprite: {fileID: 21300000, guid: 7fbbe29935e46794c844918eda20fb0d, type: 3}
   backSprite: {fileID: 21300000, guid: 46476b2bc09aee841a111241d3aa34eb, type: 3}
+  boxSprite: {fileID: 21300000, guid: 41c615bb4a01245468e71f49fa71ff8f, type: 3}
   type1: 18
   type2: 0
   maxHP: 50
@@ -28,4 +29,12 @@ MonoBehaviour:
   spAttack: 50
   spDefence: 50
   speed: 41
-  learnableMoves: []
+  catchRate: 38
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
+    learnLevel: 3
+  - moveBase: {fileID: 11400000, guid: 8819c83baf38f664683ec4c3f0a26d32, type: 2}
+    learnLevel: 6
+  tmMoves: []
+  expYield: 10
+  growthRate: 1

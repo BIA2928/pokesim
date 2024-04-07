@@ -30,7 +30,7 @@ public class Character : MonoBehaviour
 
     }
 
-    public IEnumerator Move(Vector2 moveVector, Action OnMoveOver=null)
+    public IEnumerator Move(Vector2 moveVector, Action OnMoveOver=null, bool autoMove=false)
     {
 
         animator.MoveX = Mathf.Clamp(moveVector.x, -1f, 1f);
@@ -58,12 +58,10 @@ public class Character : MonoBehaviour
         }
         transform.position = targetPos;
         IsMoving = false;
-        if (OnMoveOver == null)
+        if (OnMoveOver == null || autoMove)
         {
             HandleUpdate();
         }
-        //HandleUpdate();
-
         OnMoveOver?.Invoke();
     }
 

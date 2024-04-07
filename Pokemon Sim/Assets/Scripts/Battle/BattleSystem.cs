@@ -556,7 +556,7 @@ public class BattleSystem : MonoBehaviour
             float trainerBonus = 1f;
             if (isTrainerBattle)
             {
-                yield return dialogueBox.TypeDialogue($"The opponent's {faintedUnit.Pokemon.Base.Name} fainted.");
+                yield return dialogueBox.TypeDialogue($"The foe's {faintedUnit.Pokemon.Base.Name} fainted.");
                 trainerBonus = 1.5f;
             }
             else

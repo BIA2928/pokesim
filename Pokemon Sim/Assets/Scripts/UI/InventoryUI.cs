@@ -288,10 +288,7 @@ public class InventoryUI : MonoBehaviour
             if (!item.CanUseInBattle)
             {
                 // Can't use item
-                Dialogue dialogue = new Dialogue();
-                dialogue.Lines.Add($"Professor Rowan's words echo in your ears...");
-                dialogue.Lines.Add($"There's a time and place for everything!\nBut not now.");
-                yield return DialogueManager.Instance.ShowDialogue(dialogue);
+                yield return DialogueManager.Instance.ShowCantUseDialogue();
                 state = InventoryUIState.ItemSelection;
                 yield break;
             }
@@ -301,10 +298,7 @@ public class InventoryUI : MonoBehaviour
             if (!item.CanUseOutsideBattle)
             {
                 // Can't use item
-                Dialogue dialogue = new Dialogue();
-                dialogue.Lines.Add($"Professor Rowan's words echo in your ears...");
-                dialogue.Lines.Add($"There's a time and place for everything!\nBut not now.");
-                yield return DialogueManager.Instance.ShowDialogue(dialogue);
+                yield return DialogueManager.Instance.ShowCantUseDialogue();
                 state = InventoryUIState.ItemSelection;
                 yield break;
             }
