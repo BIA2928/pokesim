@@ -197,16 +197,16 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowPreEvolutionDialogue(string pokemonName)
     {
         Dialogue d = new Dialogue();
-        d.Lines.Add(".          .          .");
+        d.Lines.Add("...");
         d.Lines.Add("What's this?");
         d.Lines.Add($"{pokemonName} is evolving!");
         yield return ShowDialogue(d);
         yield return new WaitForSeconds(1f);
     }
 
-    public IEnumerator ShowPostEvolutionDialogue(Pokemon pokemon, Evolution evolution)
+    public IEnumerator ShowPostEvolutionDialogue(string oldName, string newName)
     {
-        yield return ShowDialogue($"Your {pokemon.Base.Name} evolved into {evolution.EvolvesInto.Name}!");
+        yield return ShowDialogue($"Your {oldName} evolved into {newName}!");
     }
 
     public void HandleUpdate()

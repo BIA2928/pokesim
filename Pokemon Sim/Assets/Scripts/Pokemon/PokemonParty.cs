@@ -63,9 +63,7 @@ public class PokemonParty : MonoBehaviour
             if (evo != null)
             {
                 float hpPercentage = ((float)pokemon.HP) / pokemon.MaxHP;
-                yield return DialogueManager.Instance.ShowPreEvolutionDialogue(pokemon.Base.Name);
-                yield return DialogueManager.Instance.ShowPostEvolutionDialogue(pokemon, evo);
-                pokemon.Evolve(evo);
+                yield return EvolutionManager.i.Evolve(pokemon, evo);
                 pokemon.SetHpByPercentage(hpPercentage);
                 OnPartyUpdate?.Invoke();
             }

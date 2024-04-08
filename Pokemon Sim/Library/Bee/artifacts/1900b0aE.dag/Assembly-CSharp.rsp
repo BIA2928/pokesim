@@ -372,6 +372,7 @@
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/Gameplay/Dialogue.cs"
 "Assets/Scripts/Gameplay/DialogueManager.cs"
+"Assets/Scripts/Gameplay/EvolutionManager.cs"
 "Assets/Scripts/Gameplay/GlobalSettings.cs"
 "Assets/Scripts/Gameplay/Interactive.cs"
 "Assets/Scripts/Gameplay/IPlayerTriggerable.cs"

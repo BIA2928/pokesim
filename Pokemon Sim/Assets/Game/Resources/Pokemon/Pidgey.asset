@@ -34,6 +34,6 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
     learnLevel: 1
   tmMoves: []
-  expYield: 1000
+  expYield: 2500
   growthRate: 0
   evolutions: []

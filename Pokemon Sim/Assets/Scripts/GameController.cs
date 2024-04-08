@@ -13,7 +13,8 @@ public enum GameState
     Paused,
     InMenu,
     InPartyScreen,
-    InBag
+    InBag,
+    InEvolution
 }
 public class GameController : MonoBehaviour
 {
@@ -69,6 +70,16 @@ public class GameController : MonoBehaviour
         {
             if (state == GameState.InDialogue)
                 state = prevState;
+        };
+
+        EvolutionManager.i.OnStartEvolution += () =>
+        {
+            state = GameState.InEvolution;
+        };
+
+        EvolutionManager.i.OnFinishEvolution += () =>
+        {
+            state = GameState.FreeRoam;
         };
     }
 
