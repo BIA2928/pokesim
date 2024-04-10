@@ -601,6 +601,10 @@ PrefabInstance:
       propertyPath: pokeballItems.Array.data[2].count
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 187062482671917215, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 329857772722785700, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -981,6 +985,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5280483199053610146, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5280483199127227326, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1043,22 +1051,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[0]._base
       value: 
-      objectReference: {fileID: 11400000, guid: 0f4a7deabde30414abdc704734e4746b, type: 2}
+      objectReference: {fileID: 11400000, guid: 570512a93f529a346a94dad105ee712f, type: 2}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[1]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f4a7deabde30414abdc704734e4746b, type: 2}
+    - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: mons.Array.data[2]._base
       value: 
       objectReference: {fileID: 11400000, guid: 2b138852cf9d43343b425dd53e9a3a26, type: 2}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[0]._level
-      value: 17
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[1]._level
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: mons.Array.data[2]._level
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200590597648, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
@@ -1077,6 +1093,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5280483200721233004, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: pokeballImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280483200721233004, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: pokeballSprite
+      value: 
+      objectReference: {fileID: 7981288165962750317, guid: 72f4343eb7498bb49929add7a5bf6d52, type: 3}
+    - target: {fileID: 5280483200721233006, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280483200743164377, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280483200743164378, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: pokeballImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280483200743164378, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: pokeballSprite
+      value: 
+      objectReference: {fileID: 7981288165962750317, guid: 72f4343eb7498bb49929add7a5bf6d52, type: 3}
     - target: {fileID: 5280483200849929064, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_IsActive
       value: 0

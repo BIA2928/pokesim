@@ -8,6 +8,7 @@ public class BattleUnit : MonoBehaviour
 {
     [SerializeField] bool isPlayerUnit;
     [SerializeField] BattleHUD battleHUD;
+    [SerializeField] GameObject pokeballSprite;
 
     public BattleHUD BattleHUD
     {
@@ -28,6 +29,12 @@ public class BattleUnit : MonoBehaviour
         originalPos = transform.localPosition;
         origColor = image.color;
     }
+
+    public void EnableImage (bool enable)
+    {
+        image.enabled = enable;
+    }
+
     public void Setup(Pokemon poke)
     {
         transform.localScale = origScale; 
@@ -44,7 +51,7 @@ public class BattleUnit : MonoBehaviour
 
         battleHUD.SetData(poke);
         battleHUD.gameObject.SetActive(true);
-        PlayEnterAnimation();
+        EnableImage(false);
     }
 
     public void Clear()
@@ -57,8 +64,9 @@ public class BattleUnit : MonoBehaviour
     /// </summary>
     public void ResetAfterFaint()
     {
+        Debug.Log("Resetting image");
         image.transform.localPosition = originalPos;
-        image.color = origColor;
+        image.color = new Color(1, 1, 1, 1);
     }
 
     /// <summary>
@@ -119,15 +127,18 @@ public class BattleUnit : MonoBehaviour
         sequence.Append(image.DOColor(origColor, 0.05f));
     }
 
-    public void PlayFaintAnimation() 
+    public IEnumerator PlayFaintAnimation() 
     {
         Vector3 startPos = transform.localPosition;
         var sequence = DOTween.Sequence();
         sequence.Append(image.transform.DOLocalMoveY(originalPos.y - 120f, 0.3f));
         sequence.Join(image.DOFade(0f, 0.3f));
-
-        transform.localPosition = startPos;
+        yield return sequence.WaitForCompletion();
+        EnableImage(false);
+        ResetAfterFaint();
     }
+
+    
 
     public void PlayEnterAnimation()
     {
@@ -145,7 +156,66 @@ public class BattleUnit : MonoBehaviour
         }
         sequence.Append(image.transform.DOLocalMoveX(originalPos.x, 0.8f));
         sequence.Join(image.DOFade(origColor.a, 0.1f));
-    } 
+        //yield return sequence.WaitForCompletion();
+    }
+
+    public IEnumerator PlayEnterAnimation2(bool isWild=false)
+    {
+        // Ensure in the correct position
+        Vector3 buffer = new Vector3(0f, 1.5f, 0f);
+        image.transform.localPosition = originalPos;
+        
+        if (isPlayerUnit)
+        {
+            
+            var ballSequence = DOTween.Sequence();
+            image.transform.localScale = Vector3.zero;
+            EnableImage(true);
+
+            // Have pokeball thrown in
+            float rotationMagnitude = -1080f;
+            var pokeballObj = Instantiate(pokeballSprite, image.transform.position - new Vector3(3.1f, -1f), Quaternion.identity);
+            var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
+            ballSequence.Append(pokeball.transform.DOJump(image.transform.position + buffer, 2f, 1, 1f));
+            ballSequence.Join(pokeball.transform.DORotate(new Vector3(0, 0, rotationMagnitude), 1f, RotateMode.FastBeyond360));
+            ballSequence.Append(image.transform.DOScale(Vector3.one, 0.1f));
+            ballSequence.Join(pokeball.DOFade(0f, 0.05f));
+            yield return ballSequence.WaitForCompletion();
+            Destroy(pokeballObj);
+        }
+        else
+        {
+            if (isWild)
+            {
+                var sequence = DOTween.Sequence();
+                // Have pokemon fade in from the side
+                image.transform.localPosition = new Vector3(500f, originalPos.y);
+                EnableImage(true);
+                sequence.Append(image.transform.DOLocalMoveX(originalPos.x, 0.8f));
+                sequence.Join(image.DOFade(origColor.a, 0.1f));
+                yield return sequence.WaitForCompletion();
+            }
+            else
+            {
+                var ballSequence = DOTween.Sequence();
+                image.transform.localScale = Vector3.zero;
+                EnableImage(true);
+
+                // Have pokeball thrown in
+                float rotationMagnitude = 1080f;
+                var pokeballObj = Instantiate(pokeballSprite, image.transform.position + new Vector3(3.75f, 1.75f), Quaternion.identity);
+                var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
+                ballSequence.Append(pokeball.transform.DOJump(image.transform.position + buffer, 2f, 1, 1f));
+                ballSequence.Join(pokeball.transform.DORotate(new Vector3(0, 0, rotationMagnitude), 1f, RotateMode.FastBeyond360));
+                ballSequence.Append(image.transform.DOScale(Vector3.one, 0.1f));
+                ballSequence.Join(pokeball.DOFade(0f, 0.05f));
+                yield return ballSequence.WaitForCompletion();
+                Destroy(pokeballObj);
+            }    
+        }
+        
+    }
+
 
     public IEnumerator PlayCaptureAnimation()
     {
@@ -156,6 +226,11 @@ public class BattleUnit : MonoBehaviour
 
         yield return sequence.WaitForCompletion();
 
+    }
+
+    public IEnumerator PlayThrownOutAnimation()
+    {
+        yield break;
     }
 
     public IEnumerator PlayBreakOutAnimation()

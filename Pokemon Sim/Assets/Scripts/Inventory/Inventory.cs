@@ -75,7 +75,9 @@ public class Inventory : MonoBehaviour, ISavable
 
     public ItemType GetPocketForItem(ItemBase item)
     {
-        if (item is MedicineItem)
+        if (item is GeneralItem)
+            return ItemType.HoldableItem;
+        else if (item is MedicineItem)
             return ItemType.MedicineItem;
         else if (item is PokeballItem)
             return ItemType.Pokeball;

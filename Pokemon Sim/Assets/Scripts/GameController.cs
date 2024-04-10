@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
 {
     GameState state;
     GameState prevState;
+    GameState stateBeforeEvo;
 
     [SerializeField] PlayerController pC;
     [SerializeField] BattleSystem bS;
@@ -74,12 +75,14 @@ public class GameController : MonoBehaviour
 
         EvolutionManager.i.OnStartEvolution += () =>
         {
+            stateBeforeEvo = state;
             state = GameState.InEvolution;
         };
 
         EvolutionManager.i.OnFinishEvolution += () =>
         {
-            state = GameState.FreeRoam;
+            state = stateBeforeEvo;
+            pS.SetPartyData();
         };
     }
 
@@ -135,8 +138,9 @@ public class GameController : MonoBehaviour
                 currentTrainer.Beat();
                 currentTrainer = null;
             }
-
+            
             var playerParty = pC.GetComponent<PokemonParty>();
+            state = GameState.FreeRoam;
             StartCoroutine(playerParty.CheckForEvolutions());
         }
         else
@@ -149,7 +153,8 @@ public class GameController : MonoBehaviour
             }
             // black out and go to poke centre
         }
-        
+
+        pS.SetPartyData();
         state = GameState.FreeRoam;
         bS.gameObject.SetActive(false);
         worldCam.gameObject.SetActive(true);

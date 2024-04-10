@@ -50,6 +50,33 @@ public class BattleDialogue : MonoBehaviour
         yield return new WaitForSeconds(1f/ (textSpeed * 0.04f));
         isTyping = false;
     }
+    
+    public IEnumerator ShowDialogueOnly(string dialogue, bool waitForInput = true)
+    {
+        yield return new WaitForEndOfFrame();
+
+        yield return TypeDialogue(dialogue);
+        if (waitForInput)
+        {
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+        }
+
+    }
+
+    public IEnumerator ShowDialogueOnly(Dialogue dialogue, bool waitForInput = true)
+    {
+        yield return new WaitForEndOfFrame();
+
+        foreach (var line in dialogue.Lines)
+        {
+            yield return TypeDialogue(line);
+            if (waitForInput)
+            {
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+            }
+        }
+
+    }
 
     
 

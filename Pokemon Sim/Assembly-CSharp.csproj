@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Pokemon\Condition.cs" />
     <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
     <Compile Include="Assets\Scripts\Inventory\MedicineItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\EvolutionItem.cs" />
     <Compile Include="Assets\Game\Hotkeys.cs" />
     <Compile Include="Assets\Scripts\Core\Fader.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\LocationPortal.cs" />
@@ -92,8 +93,10 @@
     <Compile Include="Assets\Scripts\UI\ItemDescriptionBarUI.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
     <Compile Include="Assets\Scripts\Quests\QuestObject.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\EvolutionManager.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
     <Compile Include="Assets\Scripts\Inventory\PokeballItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\GeneralItem.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\SceneDetails.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GlobalSettings.cs" />
     <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
@@ -127,7 +130,6 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\EvolutionManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

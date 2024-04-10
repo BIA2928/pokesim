@@ -65,9 +65,10 @@ public class PokemonParty : MonoBehaviour
                 float hpPercentage = ((float)pokemon.HP) / pokemon.MaxHP;
                 yield return EvolutionManager.i.Evolve(pokemon, evo);
                 pokemon.SetHpByPercentage(hpPercentage);
-                OnPartyUpdate?.Invoke();
             }
         }
+        // No need to handle updating party screen, that is done in gamecontroller
+
     }
 
     public static PokemonParty GetPlayerParty()

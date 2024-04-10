@@ -62,6 +62,7 @@ public class BattleSystem : MonoBehaviour
         player = playerParty.GetComponent<PlayerController>();
         this.wildPokemon = wildPokemon;
         partyScreen.Init();
+        dialogueBox.ClearDialogue();
         StartCoroutine(SetupBattle());
     }
 
@@ -85,19 +86,29 @@ public class BattleSystem : MonoBehaviour
         enemyPoke.Clear();
         if (!isTrainerBattle)
         {
-            playerPoke.Setup(playerParty.GetFirstHealthy());
+            playerImage.gameObject.SetActive(true);
+            playerPoke.EnableImage(false);
+            playerImage.sprite = player.BattleSprite;
             enemyPoke.Setup(wildPokemon);
-            dialogueBox.SetMoveNames(playerPoke.Pokemon.Moves);
+            yield return enemyPoke.PlayEnterAnimation2(true);
             yield return dialogueBox.TypeDialogue($"A wild {enemyPoke.Pokemon.Base.Name} appeared!");
+            
+            
 
+
+            playerImage.gameObject.SetActive(false);
+            playerPoke.Setup(playerParty.GetFirstHealthy());
+            yield return dialogueBox.TypeDialogue($"Go {playerPoke.Pokemon.Base.Name}!");
+            yield return playerPoke.PlayEnterAnimation2();
+            dialogueBox.SetMoveNames(playerPoke.Pokemon.Moves);
         }
         else
         {
             // Trainer battle
 
             // Hide information images
-            playerPoke.gameObject.SetActive(false);
-            enemyPoke.gameObject.SetActive(false);
+            playerPoke.EnableImage(false);
+            enemyPoke.EnableImage(false);
 
 
             // Show battle sprites
@@ -111,21 +122,22 @@ public class BattleSystem : MonoBehaviour
 
             // Send out enemy first Poke
             enemyImage.gameObject.SetActive(false);
-            enemyPoke.gameObject.SetActive(true);
             var enemyPokemon = enemyParty.GetFirstHealthy();
+                      
             enemyPoke.Setup(enemyPokemon);
-
             yield return dialogueBox.TypeDialogue($"{enemyTrainer.Name} sent out {enemyPokemon.Base.Name}.");
+            yield return enemyPoke.PlayEnterAnimation2();
+
 
             // Send out player first Poke
             playerImage.gameObject.SetActive(false);
-            playerPoke.gameObject.SetActive(true);
             var playerPokemon = playerParty.GetFirstHealthy();
+              
             playerPoke.Setup(playerPokemon);
+            yield return dialogueBox.TypeDialogue($"Go {playerPokemon.Base.Name}!");
+            yield return playerPoke.PlayEnterAnimation2();
 
             dialogueBox.SetMoveNames(playerPokemon.Moves);
-
-            yield return dialogueBox.TypeDialogue($"Go {playerPokemon.Base.Name}!");
 
         }
 
@@ -215,7 +227,11 @@ public class BattleSystem : MonoBehaviour
     IEnumerator AboutToUse(Pokemon pokemon)
     {
         state = BattleState.Busy;
-        yield return dialogueBox.TypeDialogue($"{enemyTrainer.Name} is about to use {pokemon.Base.Name}. Do you want to switch?");
+        Dialogue d = new Dialogue();
+        d.Lines.Add($"{enemyTrainer.Name} is about to use {pokemon.Base.Name}.");
+        d.Lines.Add("Do you want to switch?");
+        yield return dialogueBox.ShowDialogueOnly(d, false);
+        //yield return dialogueBox.TypeDialogue($"{enemyTrainer.Name} is about to use {pokemon.Base.Name}.\nDo you want to switch?");
         state = BattleState.AboutToUseNewPoke;
         aboutToUseChoice = true;
         dialogueBox.EnableChoiceSelector(true);
@@ -602,7 +618,7 @@ public class BattleSystem : MonoBehaviour
             yield return new WaitForSeconds(0.8f);
         }
 
-        faintedUnit.PlayFaintAnimation();
+        yield return faintedUnit.PlayFaintAnimation();
 
         yield return new WaitForSeconds(1f);
 
@@ -860,12 +876,13 @@ public class BattleSystem : MonoBehaviour
         {
             yield return dialogueBox.TypeDialogue(
                 $"That's enough for now {playerPoke.Pokemon.Base.Name}, come back!");
-            playerPoke.PlayFaintAnimation();
+            yield return playerPoke.PlayFaintAnimation();
             yield return new WaitForSeconds(0.9f);
         }
 
 
         playerPoke.Setup(newPokemon);
+        yield return playerPoke.PlayEnterAnimation2();
         dialogueBox.SetMoveNames(newPokemon.Moves);
         yield return dialogueBox.TypeDialogue($"Go {newPokemon.Base.Name}!");
 
@@ -886,8 +903,10 @@ public class BattleSystem : MonoBehaviour
         var nextPoke = enemyParty.GetFirstHealthy();
 
         enemyPoke.Setup(nextPoke);
-
         yield return dialogueBox.TypeDialogue($"{enemyTrainer.Name} sent out {nextPoke.Base.Name}.");
+        yield return enemyPoke.PlayEnterAnimation2();
+
+        
 
         state = BattleState.RunningTurn;
     }
@@ -911,18 +930,21 @@ public class BattleSystem : MonoBehaviour
         var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
         pokeball.sprite = pokeballItem.BagIcon;
         // Animations
-        // Throw
+
+        // Throw and spin
         Vector3 buffer = new Vector3(0, 1f);
         var sequence = DOTween.Sequence();
         sequence.Append(pokeball.transform.DOJump(enemyPoke.transform.position + buffer, 2f, 1, 1.2f));
         sequence.Join(pokeball.transform.DORotate(new Vector3(0, 0, -1080f), 1.2f, RotateMode.FastBeyond360));
         yield return sequence.WaitForCompletion();
+
         // Shrink into ball
         yield return enemyPoke.PlayCaptureAnimation();
+
         // Drop to floor
         yield return pokeball.transform.DOMoveY(enemyPoke.transform.position.y - 1.25f, 0.4f).WaitForCompletion();
+        
         //Shake
-
         int shakeCount = TryCatchPokemon(enemyPoke.Pokemon, pokeballItem);
         for (int i = 0; i < Mathf.Min(shakeCount, 3); i++)
         {

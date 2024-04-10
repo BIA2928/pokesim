@@ -43,6 +43,7 @@ public class InventoryUI : MonoBehaviour
         UpdateItemList();
         UpdateItemSelection();
         inventory.OnUpdated += UpdateItemList;
+        inventory.OnUpdated += UpdateItemSelection;
     }
 
     void UpdateItemList()
@@ -109,7 +110,6 @@ public class InventoryUI : MonoBehaviour
         }
         else if (state == InventoryUIState.PartySelection)
         {
-            Debug.Log("partyScreen handles updates");
             Action OnBack = () =>
             {
                 ClosePartyScreen();
@@ -124,7 +124,6 @@ public class InventoryUI : MonoBehaviour
         }
         else if (state == InventoryUIState.MoveToForget)
         {
-            Debug.Log("moveScreen handles updates");
             Action<int> onMoveSelected = (int moveIndex) =>
             {
                 StartCoroutine(OnMoveForgotten(moveIndex));
@@ -160,6 +159,10 @@ public class InventoryUI : MonoBehaviour
         {
             itemDescriptionBar.SetData(items[selectedItem].ItemBase);
             HandleScrolling();
+        }
+        else
+        {
+            itemDescriptionBar.ClearFields();
         }
 
     }
@@ -199,13 +202,29 @@ public class InventoryUI : MonoBehaviour
 
         yield return HandleTM();
 
+        var currItem = inventory.GetItemBase(selectedItem, selectedPocket);
+        if (currItem is EvolutionItem)
+        {
+            var evo = partyScreen.SelectedMember.CheckForEvolution(currItem);
+            if (evo != null)
+            {
+                yield return EvolutionManager.i.Evolve(partyScreen.SelectedMember, evo);
+            }
+            else
+            {
+                yield return DialogueManager.Instance.ShowDialogue("It won't have any effect.");
+                ClosePartyScreen();
+                yield break;
+            }
+        }
         // Use item on selected poke
         var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedPocket);
         if (usedItem == null)
         {
-            // Potentially add more info here, use Prof Rowan's voice echoes in your head: theres a time and place for everything
             if (selectedPocket == (int)ItemType.MedicineItem)
                 yield return DialogueManager.Instance.ShowDialogue($"It won't have any effect.");
+            else
+                yield return DialogueManager.Instance.ShowCantUseDialogue();
         }
         else
         {

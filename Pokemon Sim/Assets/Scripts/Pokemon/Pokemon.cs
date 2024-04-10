@@ -348,8 +348,15 @@ public class Pokemon
 
     public Evolution CheckForEvolution()
     {
-        var evos = Base.Evolutions.FirstOrDefault(e => e.RequiredLevel == _level);
-        return evos;
+        var evos = Base.Evolutions.FirstOrDefault(e => e.RequiredLevel <= _level);
+        if (evos != null && evos.RequiredItem == null)
+            return evos;
+        return null;
+    }
+
+    public Evolution CheckForEvolution(ItemBase itemToCheck)
+    {
+        return Base.Evolutions.FirstOrDefault(e => e.RequiredItem == itemToCheck);
     }
 
     public void Evolve(Evolution evo)

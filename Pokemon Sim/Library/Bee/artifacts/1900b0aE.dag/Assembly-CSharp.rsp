@@ -379,6 +379,8 @@
 "Assets/Scripts/Gameplay/LongGrass.cs"
 "Assets/Scripts/Gameplay/MapArea.cs"
 "Assets/Scripts/Gameplay/StoryItem.cs"
+"Assets/Scripts/Inventory/EvolutionItem.cs"
+"Assets/Scripts/Inventory/GeneralItem.cs"
 "Assets/Scripts/Inventory/Inventory.cs"
 "Assets/Scripts/Inventory/ItemBase.cs"
 "Assets/Scripts/Inventory/ItemGiver.cs"

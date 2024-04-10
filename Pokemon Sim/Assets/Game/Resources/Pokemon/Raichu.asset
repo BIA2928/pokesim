@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Raichu
   m_EditorClassIdentifier: 
   name: Raichu
-  description: "\t\t"
+  description: It can loose 100,000-volt bursts of electricity, instantly downing
+    foes several times its size
   pokeSize: 1
+  regionalDexNum: 0
   nationalDexNum: 0
-  pokedexNum: 26
   frontSprite: {fileID: 21300000, guid: c9990bb5258aa0b479f7fe2201db150b, type: 3}
   backSprite: {fileID: 21300000, guid: 2757425baf7d488409409176c3bef022, type: 3}
+  boxSprite: {fileID: 21300000, guid: 891346e11e2733041875dc8e7f0c14ec, type: 3}
   type1: 4
   type2: 0
   maxHP: 60
@@ -27,4 +29,9 @@ MonoBehaviour:
   spAttack: 94
   spDefence: 80
   speed: 110
+  catchRate: 0
   learnableMoves: []
+  tmMoves: []
+  expYield: 0
+  growthRate: 0
+  evolutions: []

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Pikachu
   m_EditorClassIdentifier: 
   name: Pikachu
-  description: "\t"
+  description: It lives in forests with others. It stores electricity in the pouches
+    on its cheeks.
   pokeSize: 0
   regionalDexNum: 0
   nationalDexNum: 0
@@ -28,12 +29,20 @@ MonoBehaviour:
   spAttack: 50
   spDefence: 50
   speed: 90
+  catchRate: 0
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 5992798f378249f409848fbf7b9f5367, type: 2}
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 9a20e16d08bb96c4daa042b248afe0e4, type: 2}
     learnLevel: 5
-  - moveBase: {fileID: 11400000, guid: 751d816bb0063cb4989eca8aa55b9de4, type: 2}
+  - moveBase: {fileID: 11400000, guid: c1ff295908fbd0d46892aa886809f8d3, type: 2}
     learnLevel: 7
   - moveBase: {fileID: 11400000, guid: cf59f93b9caf5cf4994bc78fa2af3ec0, type: 2}
     learnLevel: 8
+  tmMoves: []
+  expYield: 0
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: f412cbfaa10c13247bbc0736405360ea, type: 2}
+    requiredLevel: 1
+    requiredItem: {fileID: 11400000, guid: 349bda7771066414484409eeeb74010c, type: 2}
