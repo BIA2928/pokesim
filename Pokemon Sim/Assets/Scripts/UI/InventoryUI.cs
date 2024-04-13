@@ -302,6 +302,12 @@ public class InventoryUI : MonoBehaviour
     {
         state = InventoryUIState.Busy;
         var item = inventory.GetItemBase(selectedItem, selectedPocket);
+        if (GameController.i.GameState == GameState.Shop)
+        {
+            OnItemUsed?.Invoke(item);
+            state = InventoryUIState.ItemSelection;
+            yield break;
+        }
         if (GameController.i.GameState == GameState.InBattle)
         {
             if (!item.CanUseInBattle)

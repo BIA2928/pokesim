@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: 6e653e10e0be7a94abe121c7dc9a6e62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1018602107664515105
+    second: NPC 14_0
+  - first:
+      213: 772486273918409807
+    second: NPC 14_1
+  - first:
+      213: -4944882498323059892
+    second: NPC 14_2
+  - first:
+      213: -3983001904366752372
+    second: NPC 14_3
+  - first:
+      213: 6769349498403696996
+    second: NPC 14_4
+  - first:
+      213: -2929150835191760745
+    second: NPC 14_5
+  - first:
+      213: 7734519001628513358
+    second: NPC 14_6
+  - first:
+      213: -342079770654824768
+    second: NPC 14_7
+  - first:
+      213: -6248058138807961521
+    second: NPC 14_8
+  - first:
+      213: -1551205281166790018
+    second: NPC 14_9
+  - first:
+      213: -288272648217193002
+    second: NPC 14_10
+  - first:
+      213: 699040292921703053
+    second: NPC 14_11
+  - first:
+      213: 5496927517217075977
+    second: NPC 14_12
+  - first:
+      213: 7215026508184180495
+    second: NPC 14_13
+  - first:
+      213: -4458612203899051882
+    second: NPC 14_14
+  - first:
+      213: 2834770929265555348
+    second: NPC 14_15
+  - first:
+      213: 6104271598021302686
+    second: mother_0
+  - first:
+      213: 6639881344722595843
+    second: mother_1
+  - first:
+      213: 2503365212967238150
+    second: mother_2
+  - first:
+      213: 3511635659545913728
+    second: mother_3
+  - first:
+      213: 8080075250222203405
+    second: mother_4
+  - first:
+      213: -6820642777407476916
+    second: mother_5
+  - first:
+      213: 6450856327877299545
+    second: mother_6
+  - first:
+      213: 2574092912733230478
+    second: mother_7
+  - first:
+      213: -7404471808900441384
+    second: mother_8
+  - first:
+      213: -2558230578233543712
+    second: mother_9
+  - first:
+      213: 6590508741895417071
+    second: mother_10
+  - first:
+      213: -4106541572540959260
+    second: mother_11
+  - first:
+      213: 1638167828199899196
+    second: mother_12
+  - first:
+      213: 7784781074473703600
+    second: mother_13
+  - first:
+      213: 2179024715323464003
+    second: mother_14
+  - first:
+      213: -1704389152495472493
+    second: mother_15
+  - first:
+      213: 5896860041396279143
+    second: mother_16
+  - first:
+      213: -2058331346012221357
+    second: mother_17
+  - first:
+      213: 9221816557434960475
+    second: mother_18
+  - first:
+      213: -3227883564971994991
+    second: mother_19
+  - first:
+      213: -4658049163521638049
+    second: mother_20
+  - first:
+      213: 1482912854289626886
+    second: mother_21
+  - first:
+      213: 2106820181527090386
+    second: mother_22
+  - first:
+      213: -4613108200245549080
+    second: mother_23
+  - first:
+      213: 9203596430692996169
+    second: mother_24
+  - first:
+      213: 5312045636412053835
+    second: mother_25
+  - first:
+      213: 6594819008718766173
+    second: mother_26
+  - first:
+      213: -1840219248769626548
+    second: mother_27
+  - first:
+      213: -509485784586739429
+    second: mother_28
+  - first:
+      213: 6344871352597275980
+    second: mother_29
+  - first:
+      213: -5557651183418489986
+    second: mother_30
+  - first:
+      213: -7010005566433502692
+    second: mother_31
+  - first:
+      213: -443858796133754781
+    second: mother_32
+  - first:
+      213: 9190968420108739900
+    second: mother_33
+  - first:
+      213: 5933097370954861862
+    second: mother_34
+  - first:
+      213: -4115686407778220496
+    second: mother_35
+  - first:
+      213: -4601384534785961366
+    second: mother_36
+  - first:
+      213: 166598484749908805
+    second: mother_37
+  - first:
+      213: 8172878442607758807
+    second: mother_38
+  - first:
+      213: -4335208551452288815
+    second: mother_39
+  - first:
+      213: -8394768220770615221
+    second: mother_40
+  - first:
+      213: 425917691479812081
+    second: mother_41
+  - first:
+      213: 3846286815206628393
+    second: mother_42
+  - first:
+      213: 461502417107758189
+    second: mother_43
+  - first:
+      213: -8473470790110329051
+    second: mother_44
+  - first:
+      213: 7507567209858465793
+    second: mother_45
+  - first:
+      213: 3251274891003579027
+    second: mother_46
+  - first:
+      213: 2587772603409713689
+    second: mother_47
+  - first:
+      213: 6771056427111042404
+    second: mother_48
+  - first:
+      213: 6440643723671747925
+    second: mother_49
+  - first:
+      213: -1476800231602655309
+    second: mother_50
+  - first:
+      213: -4086062783821655520
+    second: mother_51
+  - first:
+      213: -9053798572735268986
+    second: mother_52
+  - first:
+      213: -8072144305822378219
+    second: mother_53
+  - first:
+      213: 2452086932852550335
+    second: mother_54
+  - first:
+      213: -8640164265268565340
+    second: mother_55
+  - first:
+      213: -2256362896488113204
+    second: mother_56
+  - first:
+      213: 1903765459567237454
+    second: mother_57
+  - first:
+      213: 1183188157855495788
+    second: mother_58
+  - first:
+      213: 8262747902519472311
+    second: mother_59
+  - first:
+      213: 2208185356402892929
+    second: mother_60
+  - first:
+      213: 4332201925931140084
+    second: mother_61
+  - first:
+      213: 5630995660933603424
+    second: mother_62
+  - first:
+      213: -631575713947033922
+    second: mother_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mother_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99d0943daab6b450800000000000000
+      internalID: 6104271598021302686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300fee647e8952c50800000000000000
+      internalID: 6639881344722595843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a7bf5d56dbdb220800000000000000
+      internalID: 2503365212967238150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08924d3e606dbb030800000000000000
+      internalID: 3511635659545913728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d028be741a1322070800000000000000
+      internalID: 8080075250222203405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b2bc008853851a0800000000000000
+      internalID: -6820642777407476916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d0530f6ab068950800000000000000
+      internalID: 6450856327877299545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e859052bdd309b320800000000000000
+      internalID: 2574092912733230478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da5811de180e3990800000000000000
+      internalID: -7404471808900441384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3f8dad7d65f7cd0800000000000000
+      internalID: -2558230578233543712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec68c168c0367b50800000000000000
+      internalID: 6590508741895417071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e572597232a207c0800000000000000
+      internalID: -4106541572540959260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30045ad5f0fbb610800000000000000
+      internalID: 1638167828199899196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b850364429190c60800000000000000
+      internalID: 7784781074473703600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349d6a10f637d3e10800000000000000
+      internalID: 2179024715323464003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3907a76981bc858e0800000000000000
+      internalID: -1704389152495472493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

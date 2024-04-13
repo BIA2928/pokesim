@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
 
     [SerializeField] GameObject dialogueBox;
+    [SerializeField] ChoiceBox choiceBox;
     [SerializeField] Text dialogueText;
     [Range(5, 50)] [SerializeField] int textSpeed;
 
@@ -25,7 +26,7 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
-    public IEnumerator ShowDialogue(Dialogue dialogue)
+    public IEnumerator ShowDialogue(Dialogue dialogue, bool waitForInput = true)
     {
         yield return new WaitForEndOfFrame();
         IsShowing = true;
@@ -35,7 +36,8 @@ public class DialogueManager : MonoBehaviour
         foreach (var line in dialogue.Lines)
         {
             yield return TypeDialogue(line);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+            if (waitForInput)
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
         }
         dialogueBox.SetActive(false);
         IsShowing = false;
@@ -59,6 +61,32 @@ public class DialogueManager : MonoBehaviour
         IsShowing = false;
         OnCloseDialogue?.Invoke();
     }
+
+    public IEnumerator ShowDialogueChoices(Dialogue d, List<string> choices, Action<int> onChoicesSelected, bool waitForInput = true)
+    {
+        yield return new WaitForEndOfFrame();
+        IsShowing = true;
+        OnShowDialogue?.Invoke();
+        dialogueBox.SetActive(true);
+
+        foreach (var line in d.Lines)
+        {
+            yield return TypeDialogue(line);
+            if (waitForInput)
+            {
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+            }
+        }
+
+        if (choices != null && choices.Count > 1)
+        {
+            yield return choiceBox.ShowChoices(choices, onChoicesSelected);
+        }
+        dialogueBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialogue?.Invoke();
+    }
+
 
     /// <summary>
     /// Shows multi-line dialogue, but will wait until final line before waiting for input

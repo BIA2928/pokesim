@@ -1137,6 +1137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PartyScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 3590526548013494306, guid: 710a3f5a34b60bf4baff7bb9e03febf5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3590526548013494307, guid: 710a3f5a34b60bf4baff7bb9e03febf5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

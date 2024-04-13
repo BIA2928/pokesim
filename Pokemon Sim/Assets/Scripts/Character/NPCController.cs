@@ -24,11 +24,15 @@ public class NPCController : MonoBehaviour, Interactive, ISavable
     Character character;
     ItemGiver itemGiver;
     PokemonGiver pokemonGiver;
+    Healer healer;
+    Merchant merchant;
     private void Awake()
     {
         character = GetComponent<Character>();
         itemGiver = GetComponent<ItemGiver>();
         pokemonGiver = GetComponent<PokemonGiver>();
+        healer = GetComponent<Healer>();
+        merchant = GetComponent<Merchant>();
     }
 
     public IEnumerator Interact(Transform initiator)
@@ -79,6 +83,14 @@ public class NPCController : MonoBehaviour, Interactive, ISavable
                 {
                     yield return DialogueManager.Instance.ShowDialogue(activeQuest.Base.InProgressDialogue);
                 }
+            } 
+            else if (healer != null)
+            {
+                yield return healer.Heal(initiator, dialogue);
+            }
+            else if (merchant != null)
+            {
+                yield return merchant.Trade();
             }
             else
             {

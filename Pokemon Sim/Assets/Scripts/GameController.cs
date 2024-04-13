@@ -14,7 +14,8 @@ public enum GameState
     InMenu,
     InPartyScreen,
     InBag,
-    InEvolution
+    InEvolution,
+    Shop,
 }
 public class GameController : MonoBehaviour
 {
@@ -83,6 +84,15 @@ public class GameController : MonoBehaviour
         {
             state = stateBeforeEvo;
             pS.SetPartyData();
+        };
+
+        ShopController.instance.OnStartShopping += () =>
+        {
+            state = GameState.Shop;
+        };
+        ShopController.instance.OnCloseShop += () =>
+        {
+            state = GameState.FreeRoam;
         };
     }
 
@@ -213,6 +223,10 @@ public class GameController : MonoBehaviour
                 state = GameState.FreeRoam;
             };
             iUI.HandleUpdate(onBack);
+        }
+        else if (state == GameState.Shop)
+        {
+            ShopController.instance.HandleUpdate();
         }
 
         

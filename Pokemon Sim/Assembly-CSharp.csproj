@@ -58,6 +58,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Dialogue\ChoiceText.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleHUD.cs" />
     <Compile Include="Assets\Scripts\Util\GameLayers.cs" />
     <Compile Include="Assets\Scripts\Saving\SavableEntity.cs" />
@@ -102,19 +103,23 @@
     <Compile Include="Assets\Scripts\Character\TrainerController.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemBase.cs" />
     <Compile Include="Assets\Scripts\Gameplay\StoryItem.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\ChoiceBox.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Move.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetUI.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleSystem.cs" />
     <Compile Include="Assets\Scripts\UI\PocketSelectorUI.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotUI.cs" />
     <Compile Include="Assets\Scripts\Saving\ISavable.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\IPlayerTriggerable.cs" />
+    <Compile Include="Assets\Scripts\Character\Merchant.cs" />
+    <Compile Include="Assets\Scripts\Character\Healer.cs" />
     <Compile Include="Assets\Scripts\Core\InvisbleTiles.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjects.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ShopController.cs" />
     <Compile Include="Assets\Scripts\UI\MenuController.cs" />
     <Compile Include="Assets\Scripts\Inventory\TmItem.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
@@ -130,6 +135,8 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Wallet.cs" />
+    <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

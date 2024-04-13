@@ -6,10 +6,12 @@ using DG.Tweening;
 
 public class Fader : MonoBehaviour
 {
+    public static Fader instance { get; private set; }
     Image image;
 
     private void Awake()
     {
+        instance = this;
         image = GetComponent<Image>();
     }
 

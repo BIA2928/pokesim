@@ -7,6 +7,8 @@ public class ItemBase : ScriptableObject
     [SerializeField] new string name;
     [SerializeField] string description;
     [SerializeField] Sprite bagIcon;
+    [SerializeField] int price = 10;
+    [SerializeField] bool isSellable = true;
 
     public virtual bool CanUseInBattle => true;
     public virtual bool CanUseOutsideBattle => true;
@@ -16,10 +18,13 @@ public class ItemBase : ScriptableObject
     public string Name => name;
     public string Description => description;
     public Sprite BagIcon => bagIcon;
+    public int Price => price;
+    public bool IsSellable => isSellable;
 
     public virtual bool Use(Pokemon pokemon)
     {
         return false;
     }
+
 
 }

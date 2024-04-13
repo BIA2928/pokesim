@@ -25,7 +25,7 @@ TextureImporter:
     second: DS DSi - Pokemon Platinum - Text Box Styles_6
   - first:
       213: -95797581613242928
-    second: DS DSi - Pokemon Platinum - Text Box Styles_7
+    second: textBox2
   - first:
       213: 3707429766523503563
     second: DS DSi - Pokemon Platinum - Text Box Styles_8
@@ -304,16 +304,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DS DSi - Pokemon Platinum - Text Box Styles_7
+      name: textBox2
       rect:
         serializedVersion: 2
-        x: 261
-        y: 337
-        width: 251
-        height: 46
+        x: 270
+        y: 339
+        width: 226
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 3, y: 2, z: 3, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0

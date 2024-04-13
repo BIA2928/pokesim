@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Ether
   description: "Restores 10 PP to one Pok\xE9mon's selected move"
   bagIcon: {fileID: 21300000, guid: ee12f53713c34f140a99bc28b551ac33, type: 3}
+  price: 10
+  isSellable: 1
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 10

@@ -55,6 +55,11 @@ public class PokemonParty : MonoBehaviour
         }
     }
 
+    public void PartyUpdated()
+    {
+        OnPartyUpdate?.Invoke();
+    }
+
     public IEnumerator CheckForEvolutions()
     {
         foreach(var pokemon in PokemonList)

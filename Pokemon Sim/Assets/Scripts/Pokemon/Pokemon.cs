@@ -426,6 +426,17 @@ public class Pokemon
         return this.Moves.Count(m => m.Base == move) > 0;
     }
 
+    public void Heal()
+    {
+        HP = MaxHP;
+        foreach (Move move in Moves)
+        {
+            move.PP = move.Base.Pp;
+        }
+        CureCondition();
+        OnHPChanged?.Invoke();
+    }
+
 
 }
 
