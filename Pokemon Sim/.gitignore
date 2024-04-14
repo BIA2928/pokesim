@@ -39,7 +39,8 @@
 *.zip
 
 # Giant ArtifactDB
-[Aa]rtifact[Dd][Bb]
+*.[Dd][Bb]$
+
 
 # Visual Studio cache directory
 .vs/
