@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 681
+  controlID: 78
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 682
+  controlID: 79
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 594
+  controlID: 113
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,11 +189,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1354
-    height: 505
+    height: 509
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 595
+  controlID: 114
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +212,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 324
-    height: 505
+    height: 509
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -238,7 +238,7 @@ MonoBehaviour:
     x: 324
     y: 0
     width: 1030
-    height: 505
+    height: 509
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -264,9 +264,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 505
+    y: 509
     width: 1354
-    height: 442
+    height: 438
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 13}
@@ -326,9 +326,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 578
+    y: 582
     width: 1353
-    height: 421
+    height: 417
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -343,22 +343,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 81
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 81
   m_LastProjectPath: C:\Users\sebas\OneDrive\Desktop\PokeProject\Pokemon Sim
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 143}
-    m_SelectedIDs: 7e760000
-    m_LastClickedID: 30334
-    m_ExpandedIDs: 000000007a7600007c7600007e76000080760000827600008476000086760000887600005e780000
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: 92760000
+    m_LastClickedID: 30354
+    m_ExpandedIDs: 0000000090760000927600009476000096760000987600009a7600009c7600009e760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -386,7 +386,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a7600007c7600007e7600008076000082760000847600008676000088760000
+    m_ExpandedIDs: 0000000090760000927600009476000096760000987600009a7600009c7600009e760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -465,14 +465,14 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 323
-    height: 484
+    height: 488
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 13}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3886ffff288cffff368cffffb8c8ffff3cfbfffff4ffffff
+      m_ExpandedIDs: 3a1fffff9af4ffff3af5ffff2cfbffff3afbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -519,7 +519,7 @@ MonoBehaviour:
     x: 324
     y: 73
     width: 1028
-    height: 484
+    height: 488
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -532,9 +532,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 649.04254, y: 406.5009, z: -240.76506}
+    m_Target: {x: 552.37885, y: 337.34262, z: -313.77197}
     speed: 2
-    m_Value: {x: 649.04254, y: 406.5009, z: -240.76506}
+    m_Value: {x: 552.37885, y: 337.34262, z: -313.77197}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -585,9 +585,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 354.78955
+    m_Target: 435.469
     speed: 2
-    m_Value: 354.78955
+    m_Value: 435.469
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -730,7 +730,7 @@ MonoBehaviour:
     x: 324
     y: 73
     width: 1028
-    height: 484
+    height: 488
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames:
   - UnityEditor.DeviceSimulation.SimulatorWindow
@@ -777,22 +777,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1028
-      height: 463
-    m_Scale: {x: 0.60286456, y: 0.60286456}
-    m_Translation: {x: 514, y: 231.5}
+      height: 467
+    m_Scale: {x: 0.60807294, y: 0.60807294}
+    m_Translation: {x: 514, y: 233.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -852.5961
+      x: -845.29333
       y: -384
-      width: 1705.1923
+      width: 1690.5867
       height: 768
     m_MinimalGUI: 1
-  m_defaultScale: 0.60286456
-  m_LastWindowPixelSize: {x: 1028, y: 484}
+  m_defaultScale: 0.60807294
+  m_LastWindowPixelSize: {x: 1028, y: 488}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000

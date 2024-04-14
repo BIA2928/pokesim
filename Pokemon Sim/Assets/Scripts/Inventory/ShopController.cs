@@ -15,6 +15,7 @@ public class ShopController : MonoBehaviour
     public ShopState state;
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] WalletUI walletUI;
+    [SerializeField] CountSelectorUI countSelector;
     Merchant currMerchant;
     Inventory inventory;
 
@@ -96,28 +97,39 @@ public class ShopController : MonoBehaviour
 
         if (!item.IsSellable)
         {
-            yield return DialogueManager.Instance.ShowDialogue($"Sorry, we don't take that item.");
+            yield return DialogueManager.Instance.ShowDialogue($"{item.Name}?\nSorry, we don't buy those.");
             state = ShopState.Selling;
             yield break;
         }
 
         int sellPrice = Mathf.FloorToInt(item.Price * 0.8f);
+        int amount = inventory.GetItemQuantity(item);
+        int countToSell = 1;
+        if (amount > 1)
+        {
+            yield return DialogueManager.Instance.ShowDialogue($"{item.Name}?\nHow many would you like to sell?", false, false);
+            yield return countSelector.ShowSelector(amount, sellPrice, (selCount) => countToSell = selCount);
+            DialogueManager.Instance.CloseDialogue();
+            if (countToSell == -1)
+            {
+                // this means user selected back option
+                state = ShopState.Selling;
+                yield break;
+            }
+        }
+
         int selectedChoice = 0;
+        sellPrice *= countToSell;
+
         List<string> choices = new List<string>() { "Yes", "No"};
-        Action<int> onChoiceSelection = (i) =>
-        {
-            selectedChoice = i;
-        };
-        Dialogue d = new Dialogue()
-        {
-            Lines = { $"I can offer you ${sellPrice} for that.", }
-        };
+        Action<int> onChoiceSelection = (i) =>{ selectedChoice = i; };
+        Dialogue d = new Dialogue(){ Lines = { $"I can offer you ${sellPrice} for that.", } };
         
         yield return DialogueManager.Instance.ShowDialogueChoices(d, choices, onChoiceSelection, false);
         if (selectedChoice == 0)
         {
             // Add money, remove item
-            inventory.RemoveOneOfItem(item);
+            inventory.RemoveMany(item, countToSell);
             Wallet.i.AddMoney(sellPrice);
             yield return DialogueManager.Instance.ShowDialogue($"Handed over {item.Name} and received ${sellPrice}.");
         }

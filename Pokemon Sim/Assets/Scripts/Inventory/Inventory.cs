@@ -73,6 +73,30 @@ public class Inventory : MonoBehaviour, ISavable
         OnUpdated?.Invoke();
     }
 
+    public void RemoveMany(ItemBase item, int count)
+    {
+        if (count == 0)
+            return;
+        if (count == 1)
+        {
+            RemoveOneOfItem(item);
+            return;
+        }
+
+        int pocketIndex = (int)GetPocketForItem(item);
+        var pocketItems = GetItemsByCategory(pocketIndex);
+        var currItemSlot = pocketItems.First(slot => slot.ItemBase == item);
+
+        currItemSlot.Count -= count;
+
+        if (currItemSlot.Count == 0)
+        {
+            pocketItems.Remove(currItemSlot);
+        }
+        OnUpdated?.Invoke();
+
+    }
+
     public ItemType GetPocketForItem(ItemBase item)
     {
         if (item is GeneralItem)
@@ -108,6 +132,18 @@ public class Inventory : MonoBehaviour, ISavable
         OnUpdated?.Invoke();
     }
 
+    public int GetItemQuantity(ItemBase item)
+    {
+        int category = (int)GetPocketForItem(item);
+        var currSlots = GetItemsByCategory(category);
+        var itemSlot = currSlots.FirstOrDefault(s => s.ItemBase == item);
+
+        if (itemSlot != null)
+            return itemSlot.Count;
+        else
+            return 0;
+    }
+
     public bool HasItem(ItemBase item)
     {
         int slotIndex = (int)GetPocketForItem(item);
@@ -121,6 +157,7 @@ public class Inventory : MonoBehaviour, ISavable
     {
         return FindObjectOfType<PlayerController>().GetComponent<Inventory>();
     }
+
 
     public object CaptureState()
     {

@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Condition.cs" />
     <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Wallet.cs" />
     <Compile Include="Assets\Scripts\Inventory\MedicineItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\EvolutionItem.cs" />
     <Compile Include="Assets\Game\Hotkeys.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Assets\Scripts\UI\MenuController.cs" />
     <Compile Include="Assets\Scripts\Inventory\TmItem.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
+    <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetScreen.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />
@@ -135,8 +137,7 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Wallet.cs" />
-    <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
+    <Compile Include="Assets\CountSelectorUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
