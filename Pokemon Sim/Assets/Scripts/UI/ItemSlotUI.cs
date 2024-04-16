@@ -10,6 +10,7 @@ public class ItemSlotUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI countText;
     [SerializeField] Image selectedHighlighter;
 
+    public TextMeshProUGUI NameText => nameText;
     RectTransform rectTransform;
     private void Awake()
     {
@@ -29,6 +30,13 @@ public class ItemSlotUI : MonoBehaviour
             nameText.text += $" : {tm.Move.Name}";
         }
         countText.text = "x" + itemSlot.Count.ToString();
+    }
+
+    public void SetData(ItemBase item, int price)
+    {
+        rectTransform = GetComponent<RectTransform>();
+        nameText.text = item.Name;
+        countText.text = "$" + price;
     }
 
     public void SelectItem()

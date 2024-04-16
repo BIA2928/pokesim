@@ -1457,7 +1457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5971705564144099300, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: balance
-      value: 10000
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5989517579018345917, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1687,6 +1687,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8763500060314780426, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: itemSlotUI
+      value: 
+      objectReference: {fileID: 2355187031304197424, guid: aad87eb2172c1904d8d31e05af247f57, type: 3}
     - target: {fileID: 8924918721074217344, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1743,6 +1747,10 @@ PrefabInstance:
       propertyPath: countSelector
       value: 
       objectReference: {fileID: 2010387115}
+    - target: {fileID: 9057537628043486962, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: shopCamOffset.x
+      value: 3.4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3741400396129342530, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9c277797717dccf47a38a28362c7a427, type: 3}

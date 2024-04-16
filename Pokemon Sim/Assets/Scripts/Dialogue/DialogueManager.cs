@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     public event Action OnShowDialogue;
     public event Action OnCloseDialogue;
 
-
+    public static int CHARACTER_LIMIT = 78;
     bool isTyping;
 
 

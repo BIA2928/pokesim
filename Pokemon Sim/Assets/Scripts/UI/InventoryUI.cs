@@ -66,7 +66,6 @@ public class InventoryUI : MonoBehaviour
     public void HandleUpdate(Action onBack, Action<ItemBase> onItemUsed=null)
     {
         OnItemUsed = onItemUsed;
-        Debug.Log("Handling update in inventoryUI");
         if (state == InventoryUIState.ItemSelection)
         {
             int prevSelection = selectedItem;

@@ -27,6 +27,8 @@ public class BattleDialogue : MonoBehaviour
     Color highlightedColor;
     bool isTyping = false;
 
+    public static int charLimit = 75;
+
     public bool IsTyping => isTyping;
     private void Start()
     {

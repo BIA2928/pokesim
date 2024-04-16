@@ -98,7 +98,7 @@
     <Compile Include="Assets\Scripts\Gameplay\EvolutionManager.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
     <Compile Include="Assets\Scripts\Inventory\PokeballItem.cs" />
-    <Compile Include="Assets\CountSelectorUI.cs" />
+    <Compile Include="Assets\Scripts\UI\CountSelectorUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\GeneralItem.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\SceneDetails.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GlobalSettings.cs" />
@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\Inventory\TmItem.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopUI.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetScreen.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />

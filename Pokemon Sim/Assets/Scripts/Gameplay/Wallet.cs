@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wallet : MonoBehaviour
+public class Wallet : MonoBehaviour, ISavable
 {
     
     [SerializeField] int balance;
@@ -34,5 +34,21 @@ public class Wallet : MonoBehaviour
         {
             Debug.LogWarning("Negative balance error.");
         }
+    }
+
+    public bool HasSufficientFunds(int amount)
+    {
+        return amount <= balance;
+    }
+
+    public object CaptureState()
+    {
+        return balance;
+    }
+
+    public void RestoreState(object state)
+    {
+        int money = (int)state;
+        balance = money;
     }
 }

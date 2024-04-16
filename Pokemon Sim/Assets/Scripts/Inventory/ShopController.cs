@@ -13,9 +13,11 @@ public class ShopController : MonoBehaviour
 
     public static ShopController instance { get; private set; }
     public ShopState state;
+    [SerializeField] Vector2 shopCamOffset;
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] WalletUI walletUI;
     [SerializeField] CountSelectorUI countSelector;
+    [SerializeField] ShopUI shopOverlay;
     Merchant currMerchant;
     Inventory inventory;
 
@@ -51,13 +53,17 @@ public class ShopController : MonoBehaviour
         if (selectedChoice == 0)
         {
             // Buy
+            
+            yield return GameController.i.MoveCamera(shopCamOffset);
+            shopOverlay.Show(currMerchant.SellingItems, (selItem)=>StartCoroutine(BuyItem(selItem)), () => StartCoroutine(OnBackFromBuying()));
+            state = ShopState.Buying;
         }
         else if (selectedChoice == 1)
         {
             // sell
-            state = ShopState.Selling;
             inventoryUI.gameObject.SetActive(true);
             walletUI.ShowBalance();
+            state = ShopState.Selling;
         }
         else
         {
@@ -87,8 +93,67 @@ public class ShopController : MonoBehaviour
         }
         else if (state ==  ShopState.Buying)
         {
-
+            shopOverlay.HandleUpdate();
         }
+    }
+
+    IEnumerator BuyItem(ItemBase item)
+    {
+        state = ShopState.Busy;
+        int count = 1;
+        int maxToBuy = Mathf.Min(999, Wallet.i.Balance / item.Price);
+        yield return DialogueManager.Instance.ShowDialogue($"{item.Name}? Certainly.\nHow many would you like?",false, false);
+        yield return countSelector.ShowSelector(maxToBuy, item.Price, (selectedCount) => count = selectedCount);
+
+        DialogueManager.Instance.CloseDialogue();
+
+        int totalPrice = item.Price * count;
+
+        if (count == 0)
+        {
+            // Can't afford
+            yield return DialogueManager.Instance.ShowDialogue("Sorry, you don't seem to have enough money for that...");
+            state = ShopState.Buying;
+            yield break;
+        }
+        else if (count == -1)
+        {
+            // Opted to go back
+            state = ShopState.Buying;
+            yield break;
+        }
+
+        int selectedChoice = 0;
+        List<string> choices = new List<string>() { "Yes", "No" };
+        Action<int> onChoiceSelection = (i) => { selectedChoice = i; };
+        Dialogue d = new Dialogue();
+        if (count == 1)
+        {
+            d.AddLine($"{item.Name}, and you want one.\nThat'll be ${totalPrice}. Is that OK?");
+        }
+        else
+        {
+            d.AddLine($"{item.Name}, and you want {count}.\nThat'll be ${totalPrice}. Is that OK?");
+        }
+        yield return DialogueManager.Instance.ShowDialogueChoices(d, choices, (cI) => selectedChoice = cI, false);
+
+        if (selectedChoice == 0)
+        {
+            //yes
+            inventory.AddItem(item, count);
+            Wallet.i.Pay(totalPrice);
+            Dialogue postBuyDialogue = new Dialogue()
+            {
+                Lines =
+                {
+                    "Here you are!\nThank you!",
+                    $"You put away the {item.Name}(s) in the {inventory.GetPocketForItem(item)} pocket."
+                }
+            };
+            yield return DialogueManager.Instance.ShowDialogue(postBuyDialogue);
+        }
+        state = ShopState.Buying;
+
     }
 
     IEnumerator SellItem(ItemBase item)
@@ -135,4 +200,12 @@ public class ShopController : MonoBehaviour
         }
         state = ShopState.Selling;
     }
+
+    IEnumerator OnBackFromBuying()
+    {
+        yield return GameController.i.MoveCamera(-shopCamOffset);
+        shopOverlay.Close();
+        StartCoroutine(StartMenuState());
+    }
+
 }
