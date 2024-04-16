@@ -129,6 +129,7 @@ MonoBehaviour:
   enemyImage: {fileID: 7204084678739897506}
   pokeballSprite: {fileID: 7981288165962750317, guid: 72f4343eb7498bb49929add7a5bf6d52, type: 3}
   inventoryUI: {fileID: 2330340761911062138}
+  wildBattleMusic: {fileID: 8300000, guid: 368cba57349624246a3c2b3631e09532, type: 3}
 --- !u!1 &7204084678369162065
 GameObject:
   m_ObjectHideFlags: 0

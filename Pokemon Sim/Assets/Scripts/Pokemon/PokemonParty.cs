@@ -60,7 +60,11 @@ public class PokemonParty : MonoBehaviour
         OnPartyUpdate?.Invoke();
     }
 
-    public IEnumerator CheckForEvolutions()
+    public bool CheckForEvolution()
+    {
+        return PokemonList.Any(p => p.CheckForEvolution() != null);
+    }
+    public IEnumerator RunEvolutions()
     {
         foreach(var pokemon in PokemonList)
         {

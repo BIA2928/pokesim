@@ -37,6 +37,9 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] GameObject pokeballSprite;
     [SerializeField] InventoryUI inventoryUI;
 
+    [SerializeField] AudioClip wildBattleMusic;
+    [SerializeField] AudioClip wildVictoryMusic;
+
     BattleState state;
     int currentAction;
     int currentMove;
@@ -61,7 +64,7 @@ public class BattleSystem : MonoBehaviour
         playerParty = party;
         player = playerParty.GetComponent<PlayerController>();
         this.wildPokemon = wildPokemon;
-        partyScreen.Init();
+        AudioManager.i.PlayMusic(wildBattleMusic, fade:false);
         dialogueBox.ClearDialogue();
         StartCoroutine(SetupBattle());
     }
@@ -74,7 +77,7 @@ public class BattleSystem : MonoBehaviour
         isTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
         enemyTrainer = enemyParty.GetComponent<TrainerController>();
-
+        AudioManager.i.PlayMusic(enemyTrainer.BattleMusic, fade:false);
         StartCoroutine(SetupBattle());
     }
 
@@ -569,6 +572,10 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
+            bool battleWon = true;
+            if (isTrainerBattle)
+                battleWon = (enemyParty.GetFirstHealthy() == null);
+                
             float trainerBonus = 1f;
             if (isTrainerBattle)
             {
@@ -576,8 +583,17 @@ public class BattleSystem : MonoBehaviour
                 trainerBonus = 1.5f;
             }
             else
+            {
                 yield return dialogueBox.TypeDialogue($"The wild {faintedUnit.Pokemon.Base.Name} fainted.");
-
+            }
+            if (battleWon)
+            {
+                if (isTrainerBattle)
+                    AudioManager.i.PlayMusic(enemyTrainer.VictoryMusic, fade: false);
+                else
+                    AudioManager.i.PlayMusic(wildVictoryMusic, fade: false);
+            }
+                
             int expYield = faintedUnit.Pokemon.Base.ExpYield;
             int enemyLvl = faintedUnit.Pokemon.Level;
 

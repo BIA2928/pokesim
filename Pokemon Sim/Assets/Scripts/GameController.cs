@@ -84,6 +84,7 @@ public class GameController : MonoBehaviour
         {
             state = stateBeforeEvo;
             pS.SetPartyData();
+            AudioManager.i.PlayMusic(CurrentScene.SceneMusic);
         };
 
         ShopController.instance.OnStartShopping += () =>
@@ -150,8 +151,15 @@ public class GameController : MonoBehaviour
             }
             
             var playerParty = pC.GetComponent<PokemonParty>();
-            state = GameState.FreeRoam;
-            StartCoroutine(playerParty.CheckForEvolutions());
+            bool willEvolve = playerParty.CheckForEvolution();
+            if (willEvolve)
+            {
+                state = GameState.FreeRoam;
+                StartCoroutine(playerParty.RunEvolutions());
+            }
+            else
+                AudioManager.i.PlayMusic(CurrentScene.SceneMusic);
+            
         }
         else
         {

@@ -11,6 +11,10 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
     [SerializeField] Sprite battleSprite;
+    
+    [SerializeField] AudioClip battleMusic;
+    [SerializeField] AudioClip victoryMusic;
+    [SerializeField] AudioClip approachMusic;
     Character character;
 
     bool hasBeenBeaten = false;
@@ -19,7 +23,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
     {
         character = GetComponent<Character>();
     }
-
+    
     private void Start()
     {
         SetFovRotation(character.Animator.DefaultDirection);
@@ -39,6 +43,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         // Play dialogue
         if (!hasBeenBeaten)
         {
+            AudioManager.i.PlayMusic(approachMusic, fade: false);
             yield return DialogueManager.Instance.ShowDialogue(dialogue);
             GameController.i.StartTrainerBattle(this);
         }
@@ -59,9 +64,11 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
 
     public IEnumerator TriggerBattle(PlayerController player)
     {
+        AudioManager.i.PlayMusic(approachMusic, fade: false);
         exclamation.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.2f);
         exclamation.SetActive(false);
+        
 
         var diff = (player.transform.position - transform.position);
         var moveVec = diff.normalized;
@@ -112,4 +119,8 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
     {
         get { return battleSprite; }
     }
+
+    public AudioClip ApproachMusic => approachMusic;
+    public AudioClip BattleMusic => battleMusic;
+    public AudioClip VictoryMusic => victoryMusic;
 }

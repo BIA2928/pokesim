@@ -75,13 +75,22 @@ public class DialogueManager : MonoBehaviour
         OnShowDialogue?.Invoke();
         dialogueBox.SetActive(true);
 
-        foreach (var line in d.Lines)
+        for (int i = 0; i < d.Lines.Count; i++)
         {
-            yield return TypeDialogue(line);
+            yield return TypeDialogue(d.Lines[i]);
             if (waitForInput)
             {
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
             }
+            else
+            {
+                if (i != d.Lines.Count - 1)
+                {
+                    // If not last, wait for input
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                }
+            }
+                
         }
 
         if (choices != null && choices.Count > 1)

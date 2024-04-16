@@ -11,6 +11,7 @@ public class EvolutionManager : MonoBehaviour
     [SerializeField] Image oldPokemonImage;
     [SerializeField] Image newPokemonImage;
     [SerializeField] Image backgroundImage;
+    [SerializeField] AudioClip evolutionMusic;
 
     public event Action OnStartEvolution;
     public event Action OnFinishEvolution;
@@ -25,6 +26,7 @@ public class EvolutionManager : MonoBehaviour
     {
         OnStartEvolution?.Invoke();
         evoUI.SetActive(true);
+        AudioManager.i.PlayMusic(evolutionMusic);
 
         //Get OldPokemon Data
         oldPokemonImage.sprite = pokemon.Base.FrontSprite;
