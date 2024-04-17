@@ -145,25 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1125543173 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 150283868395696885, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
-  m_PrefabInstance: {fileID: 2010387109}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1125543174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125543173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db875e7bf8bd0f34497b5e652b6956b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicPlayer: {fileID: 0}
-  sfxPlayer: {fileID: 0}
 --- !u!114 &1630355782 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8363901693438610711, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
@@ -748,6 +729,46 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[0].id
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[6].id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[7].id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[8].id
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f3707d663319854591fd53eda1344ad, type: 3}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d8e85ab274539f744ba4976071313849, type: 3}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 876537b23e5373f44ad85387f53e6fae, type: 3}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ab7489f745980245a320e50da29a2ca, type: 3}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6973d6d0bb47c354995576d49f74bec3, type: 3}
     - target: {fileID: 1503426265458647883, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1271,22 +1292,22 @@ PrefabInstance:
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[0]._base
       value: 
-      objectReference: {fileID: 11400000, guid: 570512a93f529a346a94dad105ee712f, type: 2}
+      objectReference: {fileID: 11400000, guid: 0f4a7deabde30414abdc704734e4746b, type: 2}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[1]._base
       value: 
-      objectReference: {fileID: 11400000, guid: 0f4a7deabde30414abdc704734e4746b, type: 2}
+      objectReference: {fileID: 11400000, guid: 570512a93f529a346a94dad105ee712f, type: 2}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[2]._base
       value: 
       objectReference: {fileID: 11400000, guid: 2b138852cf9d43343b425dd53e9a3a26, type: 2}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[0]._level
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[1]._level
-      value: 17
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200571027432, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: mons.Array.data[2]._level
@@ -1575,8 +1596,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6191355113758976285, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: Priority
+      value: 156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191355113758976285, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_Volume
-      value: 0.432
+      value: 0.531
       objectReference: {fileID: 0}
     - target: {fileID: 6626138726987266754, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1649,6 +1674,10 @@ PrefabInstance:
     - target: {fileID: 7286331054627706750, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474859536614783677, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7502232667262355037, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_IsActive

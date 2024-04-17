@@ -27,3 +27,4 @@ MonoBehaviour:
     volatileCnd: 0
   secondaryEffects: []
   target: 0
+  moveSound: {fileID: 8300000, guid: 06618745614310240bb97e4ff5f8bce8, type: 3}

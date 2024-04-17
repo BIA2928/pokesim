@@ -147,7 +147,7 @@ public class ShopController : MonoBehaviour
                 Lines =
                 {
                     "Here you are!\nThank you!",
-                    $"You put away the {item.Name}(s) in the {inventory.GetPocketForItem(item)} pocket."
+                    $"You put away the {item.Name}(s) in the {Inventory.GetPocketForItem(item)} pocket."
                 }
             };
             yield return DialogueManager.Instance.ShowDialogue(postBuyDialogue);

@@ -30,7 +30,7 @@ public class Character : MonoBehaviour
 
     }
 
-    public IEnumerator Move(Vector2 moveVector, Action OnMoveOver=null, bool autoMove=false)
+    public IEnumerator Move(Vector2 moveVector, Action OnMoveOver=null, bool autoMove=false, bool isPlayer=false)
     {
 
         animator.MoveX = Mathf.Clamp(moveVector.x, -1f, 1f);
@@ -42,7 +42,11 @@ public class Character : MonoBehaviour
 
         if (!IsPathClear(targetPos))
         {
-            Debug.Log($"position {targetPos} is not walkable!");
+            if (isPlayer)
+            {
+                AudioManager.i.PlaySFX(AudioID.Bump);
+            }
+                
             yield break;
         }
 
@@ -97,8 +101,6 @@ public class Character : MonoBehaviour
         var dir = diff.normalized;
         var collision = Physics2D.BoxCast(transform.position + dir, new Vector2(0.2f, 0.2f), 0f, dir, diff.magnitude - 1,
             GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer);
-        if (collision)
-            Debug.Log(collision.collider.name);
         return (!collision);
     }
 

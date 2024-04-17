@@ -384,8 +384,14 @@ public class BattleSystem : MonoBehaviour
 
         // Play move animation
         sourcePoke.PlayAttackAnimation();
-        yield return new WaitForSeconds(0.5f);
+        if (move.Base.Sound != null)
+        {
+            AudioManager.i.PlaySFX(move.Base.Sound);
+            yield return new WaitForSeconds(move.Base.Sound.length);
+        }
+        
         targetPoke.PlayHitEffect();
+       
 
         // Apply move
         if (move.Base.MoveType == MoveType.Status)
@@ -395,7 +401,12 @@ public class BattleSystem : MonoBehaviour
         else
         {
             var damageDetails = targetPoke.Pokemon.TakeDamage(move, playerPoke.Pokemon);
-
+            if (damageDetails.TypeEffectiveness >= 2)
+                AudioManager.i.PlaySFX(AudioID.HitSprEft);
+            else if (damageDetails.TypeEffectiveness < 1)
+                AudioManager.i.PlaySFX(AudioID.HitNVEft);
+            else
+                AudioManager.i.PlaySFX(AudioID.Hit);
             yield return targetPoke.BattleHUD.WaitForHPUpdate();
 
             yield return TypeDamageDetails(damageDetails, targetPoke.Pokemon.Base.Name);
@@ -591,7 +602,11 @@ public class BattleSystem : MonoBehaviour
                 if (isTrainerBattle)
                     AudioManager.i.PlayMusic(enemyTrainer.VictoryMusic, fade: false);
                 else
+                {
                     AudioManager.i.PlayMusic(wildVictoryMusic, fade: false);
+                    Debug.Log("Playing wild victory music!");
+                }
+                    
             }
                 
             int expYield = faintedUnit.Pokemon.Base.ExpYield;
@@ -609,6 +624,8 @@ public class BattleSystem : MonoBehaviour
             {
                 playerPoke.BattleHUD.SetLevel();
                 playerPoke.BattleHUD.UpdateHpOnLevelUp();
+                AudioManager.i.PlaySFX(AudioID.LvlUp);
+                yield return new WaitUntil(() => AudioManager.i.ExtraAudioPlayer.isPlaying == false);
                 yield return dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} grew to level {playerPoke.Pokemon.Level}!");
 
                 var move = playerPoke.Pokemon.GetMoveAtCurrLevel();

@@ -17,4 +17,14 @@ MonoBehaviour:
   type: 13
   power: 45
   accuracy: 100
+  neverMiss: 0
   pp: 20
+  movePriority: 0
+  moveType: 0
+  effects:
+    boosts: []
+    cnd: 0
+    volatileCnd: 0
+  secondaryEffects: []
+  target: 0
+  moveSound: {fileID: 8300000, guid: de124ef6e6ed5ca448f18474c908151e, type: 3}

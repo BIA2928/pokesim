@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
             if (input != Vector2.zero)
             {
-                StartCoroutine(character.Move(input, OnMoveOver));
+                StartCoroutine(character.Move(input, OnMoveOver, isPlayer:true));
                 
             }
         }

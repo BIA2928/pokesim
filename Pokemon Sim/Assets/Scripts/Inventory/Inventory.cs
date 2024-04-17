@@ -97,7 +97,7 @@ public class Inventory : MonoBehaviour, ISavable
 
     }
 
-    public ItemType GetPocketForItem(ItemBase item)
+    public static ItemType GetPocketForItem(ItemBase item)
     {
         if (item is GeneralItem)
             return ItemType.HoldableItem;

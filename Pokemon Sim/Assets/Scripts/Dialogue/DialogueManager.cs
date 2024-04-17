@@ -35,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogue(Dialogue dialogue, bool waitForInput = true)
     {
         yield return new WaitForEndOfFrame();
+        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
         dialogueBox.SetActive(true);
@@ -43,7 +44,12 @@ public class DialogueManager : MonoBehaviour
         {
             yield return TypeDialogue(line);
             if (waitForInput)
+            {
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                AudioManager.i.PlaySFX(AudioID.UISelect);
+            }
+                
+
         }
         dialogueBox.SetActive(false);
         IsShowing = false;
@@ -53,6 +59,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogue(string text, bool waitForInput = true, bool autoClose = true)
     {
         yield return new WaitForEndOfFrame();
+        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
 
         dialogueBox.SetActive(true);
@@ -61,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         if (waitForInput)
         {
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+            AudioManager.i.PlaySFX(AudioID.UISelect);
         }
 
         if (autoClose)
@@ -71,6 +79,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogueChoices(Dialogue d, List<string> choices, Action<int> onChoicesSelected, bool waitForInput = true)
     {
         yield return new WaitForEndOfFrame();
+        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
         dialogueBox.SetActive(true);
@@ -81,6 +90,7 @@ public class DialogueManager : MonoBehaviour
             if (waitForInput)
             {
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                AudioManager.i.PlaySFX(AudioID.UISelect);
             }
             else
             {
@@ -88,6 +98,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     // If not last, wait for input
                     yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                    AudioManager.i.PlaySFX(AudioID.UISelect);
                 }
             }
                 
@@ -112,6 +123,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogueContinuous(Dialogue dialogue, Action onFinished = null)
     {
         yield return new WaitForEndOfFrame();
+        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
 
@@ -122,7 +134,11 @@ public class DialogueManager : MonoBehaviour
         {
             yield return TypeDialogue(dialogue.Lines[i]);
             if (i == dialogue.Lines.Count - 1)
+            {
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                AudioManager.i.PlaySFX(AudioID.UISelect);
+            }
+                
             else
                 yield return new WaitUntil(() => isTyping == false);
         }
@@ -152,7 +168,7 @@ public class DialogueManager : MonoBehaviour
         if (count > 1)
         {
             d.Lines.Add($"You obtained {count} {itemBase.Name}s!");
-            d.Lines.Add($"The {itemBase.Name}s were added to the inventory.");
+            d.Lines.Add($"You put away the {itemBase.Name}s in the {Inventory.GetPocketForItem(itemBase)} pocket.");
         }
         else
         {
@@ -168,7 +184,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
                 d.Lines.Add($"You obtained a {itemBase.Name}!");
-            d.Lines.Add($"The {itemBase.Name} was added to the inventory.");
+            d.Lines.Add($"You put away the {itemBase.Name} in the {Inventory.GetPocketForItem(itemBase)} pocket.");
         }
 
         yield return ShowDialogue(d);
