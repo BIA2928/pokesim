@@ -74,6 +74,12 @@ MonoBehaviour:
   - id: 9
     clip: {fileID: 8300000, guid: 6973d6d0bb47c354995576d49f74bec3, type: 3}
     stopsMusic: 0
+  - id: 10
+    clip: {fileID: 8300000, guid: a0bf7bcdebfaef843915e6c9a2d4adc0, type: 3}
+    stopsMusic: 0
+  - id: 11
+    clip: {fileID: 8300000, guid: 9991327765d07a748a344008c79fa39c, type: 3}
+    stopsMusic: 1
   musicPlayer: {fileID: 1291976242895518296}
   sfxPlayer: {fileID: 5850951166861174480}
   extraSoundsPlayer: {fileID: 358511310935525784}

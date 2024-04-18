@@ -21,10 +21,7 @@ public class Pickup : MonoBehaviour, Interactive, ISavable
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
 
-            Dialogue dialogue = new Dialogue();
-            dialogue.Lines.Add($"You found a {item.Name}!");
-            dialogue.Lines.Add($"{item.Name} was added to the inventory.");
-            yield return DialogueManager.Instance.ShowDialogue(dialogue);
+            yield return DialogueManager.Instance.ShowItemPickupDialogue(item);
         }
         
     }

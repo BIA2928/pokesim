@@ -105,7 +105,7 @@ public class AudioManager : MonoBehaviour
 
 public enum AudioID
 {
-    UISelect, Hit, HitSprEft, HitNVEft, ExpGain, TMReceived, ItemReceived, KeyItemReceived, LvlUp, Bump
+    UISelect, Hit, HitSprEft, HitNVEft, ExpGain, TMReceived, ItemReceived, KeyItemReceived, LvlUp, Bump, Jump, ObtainedPoke
 }
 
 

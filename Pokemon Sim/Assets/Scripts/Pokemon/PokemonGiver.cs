@@ -12,16 +12,12 @@ public class PokemonGiver : MonoBehaviour, ISavable
     public IEnumerator GivePokemon(PlayerController player)
     {
         yield return DialogueManager.Instance.ShowDialogue(dialogue);
-
+         
         pokemon.Init();
-        player.GetComponent<PokemonParty>().AddPokemon(pokemon);
+        bool partyFull = player.GetComponent<PokemonParty>().AddPokemon(pokemon);
 
         hasGiven = true;
-
-        Dialogue d = new Dialogue();
-        d.Lines.Add($"You received {pokemon.Base.Name}!");
-
-        yield return DialogueManager.Instance.ShowDialogue(d);
+        yield return DialogueManager.Instance.ShowPokemonReceivedDialogue(pokemon.Base, partyFull);
     }
 
     public bool CanGive()

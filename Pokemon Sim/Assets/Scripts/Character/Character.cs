@@ -40,6 +40,13 @@ public class Character : MonoBehaviour
         targetPos.x += moveVector.x;
         targetPos.y += moveVector.y;
 
+        var ledge = CheckForLedge(targetPos);
+        if (ledge != null) 
+        {
+            Debug.Log("checkpoint 0");
+            if (ledge.TryToJump(this, moveVector))
+                yield break;
+        }
         if (!IsPathClear(targetPos))
         {
             if (isPlayer)
@@ -78,6 +85,18 @@ public class Character : MonoBehaviour
     private bool IsWalkable(Vector3 targetPos)
     {
         return !(Physics2D.OverlapCircle(targetPos, 0.1f, GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer) != null);
+    }
+
+    Ledge CheckForLedge(Vector3 targetPos)
+    {
+        Debug.DrawLine(transform.position, targetPos, Color.green, 2.0f, false);
+        var collider = Physics2D.OverlapCircle(targetPos, 0.15f, GameLayers.i.Ledges);
+        if (collider == null)
+        {
+            return null;
+        }
+        Debug.Log($"collider is null at {targetPos}");
+        return collider.GetComponent<Ledge>();
     }
 
     public void LookTowards(Vector3 targetPos)

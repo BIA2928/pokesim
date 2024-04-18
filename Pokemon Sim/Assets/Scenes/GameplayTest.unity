@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: commonAudios.Array.size
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: commonAudios.Array.data[0].id
@@ -748,6 +748,14 @@ PrefabInstance:
     - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: commonAudios.Array.data[8].id
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[9].id
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[10].id
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: commonAudios.Array.data[2].clip
@@ -769,6 +777,18 @@ PrefabInstance:
       propertyPath: commonAudios.Array.data[8].clip
       value: 
       objectReference: {fileID: 8300000, guid: 6973d6d0bb47c354995576d49f74bec3, type: 3}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0bf7bcdebfaef843915e6c9a2d4adc0, type: 3}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9991327765d07a748a344008c79fa39c, type: 3}
+    - target: {fileID: 1427830453081547509, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: commonAudios.Array.data[10].stopsMusic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1503426265458647883, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

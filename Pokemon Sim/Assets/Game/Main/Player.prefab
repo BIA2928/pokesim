@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 4131531866761559226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.67, y: 0.88, z: 0}
-  m_LocalScale: {x: 6.2, y: 6.2, z: 1}
+  m_LocalScale: {x: 6.24, y: 6.24, z: 1}
   m_Children:
   - {fileID: 4131531866662580560}
   m_Father: {fileID: 0}
@@ -166,12 +166,12 @@ SpriteRenderer:
   m_SortingLayerID: -480938365
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1042038247396554037, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  m_Sprite: {fileID: -1042038247396554037, guid: 826ea2e14d701064e947a346cba27195, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2580645, y: 0.2580645}
+  m_Size: {x: 0.25, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -234,25 +234,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: -1042038247396554037, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -1850363733428201762, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -8476001918808431274, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -8317159268839455448, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -1042038247396554037, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -1850363733428201762, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -8476001918808431274, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -8317159268839455448, guid: 826ea2e14d701064e947a346cba27195, type: 3}
   walkUpSprites:
-  - {fileID: -3810559206067239292, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -6038969061149365368, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -3701816734048366607, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: 180261537161359813, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -3810559206067239292, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -6038969061149365368, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -3701816734048366607, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 180261537161359813, guid: 826ea2e14d701064e947a346cba27195, type: 3}
   walkLeftSprites:
-  - {fileID: 8104316368533534348, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: 991717436615643851, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: 5235243898877690490, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -9033063289740846144, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: 8104316368533534348, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 991717436615643851, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 5235243898877690490, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -9033063289740846144, guid: 826ea2e14d701064e947a346cba27195, type: 3}
   walkRightSprites:
-  - {fileID: -7188827139793418798, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -404700894726824541, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: -8682972939839007333, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
-  - {fileID: 2438714492205642725, guid: 70a7ba349aec5ae47b2b86d1d231a4b6, type: 3}
+  - {fileID: -7188827139793418798, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -404700894726824541, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -8682972939839007333, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 2438714492205642725, guid: 826ea2e14d701064e947a346cba27195, type: 3}
   defaultDirection: 1
 --- !u!50 &4131531866761559202
 Rigidbody2D:
@@ -292,8 +292,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2580645, y: 0.2580645}
-    newSize: {x: 0.2580645, y: 0.2580645}
+    oldSize: {x: 0.25, y: 0.25}
+    newSize: {x: 0.25, y: 0.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -358,3 +358,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387d65051ffdf5e4ab1b80cb677ce57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balance: 0

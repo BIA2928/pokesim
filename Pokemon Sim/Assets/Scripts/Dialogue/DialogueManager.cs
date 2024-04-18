@@ -162,6 +162,39 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
     }
 
+    /// <summary>
+    /// Only to be used with item received template dialogues. Expects 2 line dialogue
+    /// </summary>
+    /// <param name="dialogue"></param>
+    /// <param name="audioID"></param>
+    /// <returns></returns>
+    private IEnumerator ShowDialogueWithSFX(Dialogue dialogue, AudioID audioID)
+    {
+        if (dialogue.Lines.Count > 2)
+        {
+            yield return ShowDialogue(dialogue);
+        }
+        yield return new WaitForEndOfFrame();
+        AudioManager.i.PlaySFX(AudioID.UISelect);
+        IsShowing = true;
+        OnShowDialogue?.Invoke();
+        dialogueBox.SetActive(true);
+
+        for (int i = 0; i < dialogue.Lines.Count; i++)
+        {
+            if (i != 1)
+            {
+                AudioManager.i.PlaySFX(audioID);
+            }
+            yield return TypeDialogue(dialogue.Lines[i]);
+
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+            AudioManager.i.PlaySFX(AudioID.UISelect);
+        }
+        dialogueBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialogue?.Invoke();
+    }
     public IEnumerator ShowItemReceivedDialogue(ItemBase itemBase, int count = 1)
     {
         Dialogue d = new Dialogue();
@@ -186,9 +219,24 @@ public class DialogueManager : MonoBehaviour
                 d.Lines.Add($"You obtained a {itemBase.Name}!");
             d.Lines.Add($"You put away the {itemBase.Name} in the {Inventory.GetPocketForItem(itemBase)} pocket.");
         }
+        AudioID audio = AudioID.ItemReceived;
+        if (itemBase is TmItem)
+            audio = AudioID.TMReceived;
+        else if (itemBase is KeyItem)
+            audio = AudioID.KeyItemReceived;
+        yield return ShowDialogueWithSFX(d, audio);
 
-        yield return ShowDialogue(d);
+    }
 
+    public IEnumerator ShowPokemonReceivedDialogue(PokemonBase pokemon, bool partyFull=false)
+    {
+        Dialogue dialogue = new Dialogue();
+        dialogue.AddLine($"You obtained {pokemon.Name}!");
+        if (partyFull)
+            dialogue.AddLine($"{pokemon.Name} was stored in Box 1.");
+        else
+            dialogue.AddLine($"{pokemon.Name} was added to the party.");
+        yield return ShowDialogueWithSFX(dialogue, AudioID.ObtainedPoke);
     }
 
     public IEnumerator ShowItemPickupDialogue(ItemBase itemBase, int count = 1)
@@ -217,7 +265,7 @@ public class DialogueManager : MonoBehaviour
             d.Lines.Add($"The {itemBase.Name} was added to the inventory.");
         }
 
-        yield return ShowDialogue(d);
+        yield return ShowDialogueWithSFX(d, AudioID.ItemReceived);
     }
 
     public IEnumerator ShowItemGivenDialogue(ItemBase itemBase, int count = 1)

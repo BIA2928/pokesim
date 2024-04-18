@@ -55,6 +55,7 @@ public class PokemonParty : MonoBehaviour
         }
     }
 
+
     public void PartyUpdated()
     {
         OnPartyUpdate?.Invoke();

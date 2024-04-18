@@ -31,7 +31,6 @@ public class PartyScreen : MonoBehaviour
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>(true);
         playerParty = PokemonParty.GetPlayerParty();
-        Debug.Log($"{playerParty}");
         SetPartyData();
 
         playerParty.OnPartyUpdate += SetPartyData;

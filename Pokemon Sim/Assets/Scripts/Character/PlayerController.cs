@@ -78,6 +78,11 @@ public class PlayerController : MonoBehaviour, ISavable
 
     }
 
+    public bool FullParty()
+    {
+        return !(GetComponent<PokemonParty>().PokemonList.Count < 6);
+    }
+
     IEnumerator Interact()
     {
         var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
