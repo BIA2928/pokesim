@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour, ISavable
 {
     [SerializeField] Sprite battleSprite;
     [SerializeField] new string name;
+    [SerializeField] float interactBuffer = 0.08f;
 
     const float offsetY = 0.3f;
 
@@ -40,8 +41,8 @@ public class PlayerController : MonoBehaviour, ISavable
 
             if (input != Vector2.zero)
             {
-                StartCoroutine(character.Move(input, OnMoveOver, isPlayer:true));
-                
+                StartCoroutine(character.Move(input, OnMoveOver, isPlayer: true));
+
             }
         }
 
@@ -85,11 +86,11 @@ public class PlayerController : MonoBehaviour, ISavable
 
     IEnumerator Interact()
     {
-        var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
+        var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY - interactBuffer);
         var interactingPos = transform.position + facingDir;
 
 
-        var collider = Physics2D.OverlapCircle(interactingPos, 0.5f, GameLayers.i.InteractableLayer);
+        var collider = Physics2D.OverlapCircle(interactingPos, 0.25f, GameLayers.i.InteractableLayer);
         if (collider != null)
         {
             character.Stop();

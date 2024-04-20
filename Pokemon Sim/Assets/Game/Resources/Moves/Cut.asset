@@ -13,8 +13,19 @@ MonoBehaviour:
   m_Name: Cut
   m_EditorClassIdentifier: 
   moveName: Cut
-  description: 
+  description: The user lashes out with sharp claws or fangs to damage the enemy.
+    It can also be used to cut down small trees.
   type: 13
   power: 50
   accuracy: 95
+  neverMiss: 0
   pp: 30
+  movePriority: 0
+  moveType: 0
+  effects:
+    boosts: []
+    cnd: 0
+    volatileCnd: 0
+  secondaryEffects: []
+  target: 0
+  moveSound: {fileID: 8300000, guid: 6531b7c4dd9e3f647b462f1eac07471e, type: 3}

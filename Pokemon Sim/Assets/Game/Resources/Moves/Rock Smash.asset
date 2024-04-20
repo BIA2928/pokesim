@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b60f2e145c603458b04abe764392d3, type: 3}
+  m_Name: Rock Smash
+  m_EditorClassIdentifier: 
+  moveName: Rock Smash
+  description: The user attacks with a punch. This may also lower the target's Defense
+    stat. This move can also shatter rocks in the field.
+  type: 6
+  power: 50
+  accuracy: 100
+  neverMiss: 0
+  pp: 15
+  movePriority: 0
+  moveType: 0
+  effects:
+    boosts: []
+    cnd: 0
+    volatileCnd: 0
+  secondaryEffects:
+  - boosts: []
+    cnd: 0
+    volatileCnd: 0
+    chance: 0
+    target: 0
+  target: 0
+  moveSound: {fileID: 8300000, guid: 21d42df74139f5b438c42a196f45f6a7, type: 3}

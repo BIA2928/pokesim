@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6795652225185756821}
   - component: {fileID: 6795652225185756822}
   - component: {fileID: 6795652225185756823}
+  - component: {fileID: 3415716222553212277}
   m_Layer: 0
   m_Name: SceneTrigger
   m_TagString: Untagged
@@ -70,3 +71,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b1f9bf3fc63c547a150c344c9a36e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectedScenes: []
+  sceneMusic: {fileID: 0}
+--- !u!114 &3415716222553212277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795652225185756820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8babbc83d93ca4aaa6c62b11ca94f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wildPokemon:
+  - _base: {fileID: 11400000, guid: 03e15eb0de60900468fe7a4229e5ac4b, type: 2}
+    _level: 3
+  - _base: {fileID: 11400000, guid: 570512a93f529a346a94dad105ee712f, type: 2}
+    _level: 4

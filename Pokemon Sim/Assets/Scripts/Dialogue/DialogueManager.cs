@@ -61,6 +61,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
+        OnShowDialogue?.Invoke();
 
         dialogueBox.SetActive(true);
         yield return TypeDialogue(text);

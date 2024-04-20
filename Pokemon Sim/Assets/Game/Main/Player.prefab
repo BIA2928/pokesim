@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleSprite: {fileID: 21300000, guid: 1d3837dcb86a22c4394713fa6dba7417, type: 3}
   name: Asspeen
+  interactBuffer: 0.08
 --- !u!114 &4131531866761559231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +209,8 @@ MonoBehaviour:
     _level: 6
   - _base: {fileID: 11400000, guid: 2b138852cf9d43343b425dd53e9a3a26, type: 2}
     _level: 4
+  - _base: {fileID: 11400000, guid: c38cac12cb5099e4c99eb4bdea0bc302, type: 2}
+    _level: 8
 --- !u!114 &4131531866761559230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +332,11 @@ MonoBehaviour:
   generalItems: []
   medicineItems: []
   pokeballItems: []
-  tmItems: []
+  tmItems:
+  - item: {fileID: 11400000, guid: 9eb46fabf0dd9064382d718492d85de1, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 372c9d3a4db5a354996cb88612345ae7, type: 2}
+    count: 1
   mailItems: []
   berryItems: []
   battleItems: []

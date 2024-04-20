@@ -93,9 +93,11 @@
     <Compile Include="Assets\Scripts\Gameplay\LongGrass.cs" />
     <Compile Include="Assets\Scripts\Inventory\Pickup.cs" />
     <Compile Include="Assets\Scripts\UI\ItemDescriptionBarUI.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CuttableTree.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
     <Compile Include="Assets\Scripts\Quests\QuestObject.cs" />
     <Compile Include="Assets\Scripts\Gameplay\EvolutionManager.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\LedgeController.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
     <Compile Include="Assets\Scripts\Inventory\PokeballItem.cs" />
     <Compile Include="Assets\Scripts\UI\CountSelectorUI.cs" />
@@ -129,6 +131,7 @@
     <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
     <Compile Include="Assets\Scripts\UI\ShopUI.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Ledge.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetScreen.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonParty.cs" />
@@ -140,8 +143,8 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\LedgeController.cs" />
-    <Compile Include="Assets\Ledge.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\BreakableRock.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\InteractableObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

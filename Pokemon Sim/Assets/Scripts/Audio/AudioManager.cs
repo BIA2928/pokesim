@@ -29,8 +29,13 @@ public class AudioManager : MonoBehaviour
     {
         if (effect == null) return;
 
-        if (!sfxPlayer.isPlaying)
+        
+        if (!sfxPlayer.isPlaying || sfxPlayer.clip != effect)
+        {
+            sfxPlayer.clip = effect;
             sfxPlayer.PlayOneShot(effect);
+        }
+            
     }
     public IEnumerator PlayMusicSFX(AudioClip effect)
     {
