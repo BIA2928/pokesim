@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour, ISavable
         var interactingPos = transform.position + facingDir;
 
 
-        var collider = Physics2D.OverlapCircle(interactingPos, 0.25f, GameLayers.i.InteractableLayer);
+        var collider = Physics2D.OverlapCircle(interactingPos, 0.25f, GameLayers.i.InteractableLayer | GameLayers.i.Water);
         if (collider != null)
         {
             character.Stop();

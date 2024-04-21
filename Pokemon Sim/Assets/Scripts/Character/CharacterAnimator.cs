@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class CharacterAnimator : MonoBehaviour
 {
+    const int rightIndex = 2;
+    const int leftIndex= 1;
+    const int upIndex = 3;
+    const int downIndex = 0;
+
     //Parameters
     [SerializeField] List<Sprite> walkDownSprites;
     [SerializeField] List<Sprite> walkUpSprites;
     [SerializeField] List<Sprite> walkLeftSprites;
     [SerializeField] List<Sprite> walkRightSprites;
+    [SerializeField] List<Sprite> surfLeftSprites;
+    [SerializeField] List<Sprite> surfRightSprites;
+    [SerializeField] List<Sprite> surfUpSprites;
+    [SerializeField] List<Sprite> surfDownSprites;
     [SerializeField] FacingDirection defaultDirection = FacingDirection.Down;
     public float MoveX { get; set; }
     public float MoveY { get; set; }
@@ -17,11 +26,17 @@ public class CharacterAnimator : MonoBehaviour
 
     public bool IsJumping { get; set; }
 
+    public bool IsSurfing { get; set; }
+
     //States
     SpriteAnimator walkDownAnim;
     SpriteAnimator walkUpAnim;
     SpriteAnimator walkRightAnim;
     SpriteAnimator walkLeftAnim;
+    SpriteAnimator surfDownAnim;
+    SpriteAnimator surfUpAnim;
+    SpriteAnimator surfRightAnim;
+    SpriteAnimator surfLeftAnim;
 
     SpriteAnimator currAnim;
     bool wasPrevMoving;
@@ -37,6 +52,12 @@ public class CharacterAnimator : MonoBehaviour
         walkUpAnim = new SpriteAnimator(walkUpSprites, spriteRenderer);
         walkLeftAnim = new SpriteAnimator(walkLeftSprites, spriteRenderer);
 
+
+        surfDownAnim = new SpriteAnimator(surfDownSprites, spriteRenderer);
+        surfRightAnim = new SpriteAnimator(surfRightSprites, spriteRenderer);
+        surfUpAnim = new SpriteAnimator(surfUpSprites, spriteRenderer);
+        surfLeftAnim = new SpriteAnimator(surfLeftSprites, spriteRenderer);
+
         SetFacingDirection(defaultDirection);
     }
 
@@ -48,38 +69,57 @@ public class CharacterAnimator : MonoBehaviour
     private void Update()
     {
         var prevAnim = currAnim;
-
-        if (MoveX == 1)
+        
+        if (IsSurfing)
         {
-            currAnim = walkRightAnim;
+            if (MoveX == 1)
+            {
+                currAnim =  surfRightAnim;
+            }
+            else if (MoveX == -1)
+            {
+                currAnim =  surfLeftAnim;
+            }
+            else if (MoveY == 1)
+            {
+                currAnim = surfUpAnim;
+            }
+            else if (MoveY == -1)
+            {
+                currAnim =  surfDownAnim;
+            }
         }
-        else if (MoveX == -1)
+        else
         {
-            currAnim = walkLeftAnim;
-        }
-        else if (MoveY == 1)
-        {
-            currAnim = walkUpAnim;
-        }
-        else if (MoveY == -1)
-        {
-            currAnim = walkDownAnim;
+            if (MoveX == 1)
+            {
+                currAnim = walkRightAnim;
+            }
+            else if (MoveX == -1)
+            {
+                currAnim = walkLeftAnim;
+            }
+            else if (MoveY == 1)
+            {
+                currAnim = walkUpAnim;
+            }
+            else if (MoveY == -1)
+            {
+                currAnim = walkDownAnim;
+            }
+  
         }
 
         if (currAnim != prevAnim || IsMoving != wasPrevMoving)
         {
             currAnim.Start();
         }
-
-        
         if (IsJumping)
             spriteRenderer.sprite = currAnim.Frames[3];
         else if (IsMoving)
             currAnim.HandleUpdate();
         else
             spriteRenderer.sprite = currAnim.Frames[0];
-
-        
 
         wasPrevMoving = IsMoving;
     }
@@ -102,6 +142,11 @@ public class CharacterAnimator : MonoBehaviour
         {
             MoveY = -1;
         }
+    }
+
+    public void SetSurfing(bool surfing)
+    {
+        IsSurfing = surfing;
     }
 }
 

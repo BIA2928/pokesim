@@ -30,7 +30,7 @@ public class Ledge : MonoBehaviour
         character.Animator.IsJumping = true;
         Vector3 destination = character.transform.position + new Vector3(xDir, yDir) * 2;
         AudioManager.i.PlaySFX(AudioID.Jump);
-        yield return character.transform.DOJump(destination, 0.25f, 1, 0.75f).WaitForCompletion();
+        yield return character.transform.DOJump(destination, 0.2f, 1, 0.4f).WaitForCompletion();
         character.Animator.IsJumping = false;
         GameController.i.PauseGame(false);
     }

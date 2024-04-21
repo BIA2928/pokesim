@@ -12,11 +12,14 @@ public class GameLayers : MonoBehaviour
     [SerializeField] LayerMask portalLayer;
     [SerializeField] LayerMask triggersLayer;
     [SerializeField] LayerMask ledges;
+    [SerializeField] LayerMask water;
 
     public LayerMask FovLayer
     {
         get => fovLayer;
     }
+
+    public LayerMask Water => water;
 
     public LayerMask SolidLayer
     {

@@ -7,11 +7,13 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] List<AudioData> commonAudios;
+    [SerializeField] AudioClip surfMusic;
     [SerializeField] AudioSource musicPlayer;
     [SerializeField] AudioSource sfxPlayer;
     [SerializeField] AudioSource extraSoundsPlayer;
     [SerializeField][Range(0f,1.5f)] float fadeDuration = 0.8f;
 
+    AudioClip musicBeforeSurfing;
     Dictionary<AudioID, AudioData> sfxLookup;
 
     public static AudioManager i { get; private set; }
@@ -78,6 +80,17 @@ public class AudioManager : MonoBehaviour
             StartCoroutine(PlayMusicAsync(clip, loop, fade));
         }
         
+    }
+
+    public void PlaySurfMusic()
+    {
+        musicBeforeSurfing = musicPlayer.clip;
+        StartCoroutine(PlayMusicAsync(surfMusic, true, true));
+    }
+
+    public void StopSurfMusic()
+    {
+        StartCoroutine(PlayMusicAsync(musicBeforeSurfing, true, true));
     }
 
     IEnumerator PlayMusicAsync(AudioClip clip, bool loop, bool fade)

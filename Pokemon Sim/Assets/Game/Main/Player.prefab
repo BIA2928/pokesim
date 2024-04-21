@@ -211,6 +211,8 @@ MonoBehaviour:
     _level: 4
   - _base: {fileID: 11400000, guid: c38cac12cb5099e4c99eb4bdea0bc302, type: 2}
     _level: 8
+  - _base: {fileID: 11400000, guid: c2b1ea8f31c784e4b911a58042fc1a20, type: 2}
+    _level: 12
 --- !u!114 &4131531866761559230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +258,18 @@ MonoBehaviour:
   - {fileID: -404700894726824541, guid: 826ea2e14d701064e947a346cba27195, type: 3}
   - {fileID: -8682972939839007333, guid: 826ea2e14d701064e947a346cba27195, type: 3}
   - {fileID: 2438714492205642725, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  surfLeftSprites:
+  - {fileID: 21300000, guid: c91b1cba326f2c940a8957f20f9003fe, type: 3}
+  - {fileID: 21300000, guid: 7e2342134bb6ae0469b1abda5401fae5, type: 3}
+  surfRightSprites:
+  - {fileID: 21300000, guid: 41a4ca7a129e2f7418bf7fba0aa31783, type: 3}
+  - {fileID: 21300000, guid: 1fe2b0b4c3878c84596d302b3a330365, type: 3}
+  surfUpSprites:
+  - {fileID: 21300000, guid: 2ccda3bef064b594b95785405c4ffc8d, type: 3}
+  - {fileID: 21300000, guid: 9915332a4cc6d8841bd5677b350ed868, type: 3}
+  surfDownSprites:
+  - {fileID: 21300000, guid: 30c1485e6831ee048b4b10200697c8d0, type: 3}
+  - {fileID: 21300000, guid: 4c20c510648aa4242ae29c060642a406, type: 3}
   defaultDirection: 1
 --- !u!50 &4131531866761559202
 Rigidbody2D:
@@ -336,6 +350,8 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 9eb46fabf0dd9064382d718492d85de1, type: 2}
     count: 3
   - item: {fileID: 11400000, guid: 372c9d3a4db5a354996cb88612345ae7, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 6ac865c23add80743a93be65e33b8151, type: 2}
     count: 1
   mailItems: []
   berryItems: []

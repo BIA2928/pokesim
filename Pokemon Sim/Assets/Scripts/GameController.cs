@@ -37,6 +37,15 @@ public class GameController : MonoBehaviour
     public SceneDetails CurrentScene { get; private set; }
     public SceneDetails PrevScene { get; private set; }
 
+    public void SurfMusicChange(bool IsSurfing)
+    {
+        Debug.Log("Changing music");
+        if (IsSurfing)
+            AudioManager.i.PlaySurfMusic();
+        else
+            AudioManager.i.PlayMusic(CurrentScene.SceneMusic);
+        Debug.Log("Music change complete");
+    }
 
     private void Awake()
     {

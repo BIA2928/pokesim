@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,10 +12,12 @@ public class Character : MonoBehaviour
     private CharacterAnimator animator;
 
     public float OffsetY { get; private set; } = 0.3f;
+
     public CharacterAnimator Animator
     {
         get => animator;
     }
+
 
     private void Awake()
     {
@@ -32,7 +35,6 @@ public class Character : MonoBehaviour
 
     public IEnumerator Move(Vector2 moveVector, Action OnMoveOver=null, bool autoMove=false, bool isPlayer=false)
     {
-
         animator.MoveX = Mathf.Clamp(moveVector.x, -1f, 1f);
         animator.MoveY = Mathf.Clamp(moveVector.y, -1f, 1f);
 
@@ -57,7 +59,15 @@ public class Character : MonoBehaviour
             yield break;
         }
 
-            
+        if (animator.IsSurfing && Physics2D.OverlapCircle(targetPos, 0.15f, GameLayers.i.Water) == null)
+        {
+            // Trying to get out of water
+            animator.SetSurfing(false);
+            AudioManager.i.PlaySFX(AudioID.Jump);
+            yield return transform.DOJump(targetPos, 0.15f, 1, 0.5f).WaitForCompletion();
+            AudioManager.i.StopSurfMusic();
+            yield break;
+        }
 
         IsMoving = true;
         HandleUpdate();
@@ -118,8 +128,11 @@ public class Character : MonoBehaviour
     {
         var diff = targetPos - transform.position;
         var dir = diff.normalized;
-        var collision = Physics2D.BoxCast(transform.position + dir, new Vector2(0.15f, 0.15f), 0f, dir, diff.magnitude - 1,
-            GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer);
+        var collisionLayers = GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer;
+        if (!animator.IsSurfing)
+            collisionLayers |= GameLayers.i.Water;
+        var collision = Physics2D.BoxCast(transform.position + dir, new Vector2(0.15f, 0.15f), 0f, dir, 
+            diff.magnitude - 1, collisionLayers);
         return (!collision);
     }
 

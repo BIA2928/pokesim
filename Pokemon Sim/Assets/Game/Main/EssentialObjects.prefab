@@ -156,6 +156,9 @@ MonoBehaviour:
   ledges:
     serializedVersion: 2
     m_Bits: 32768
+  water:
+    serializedVersion: 2
+    m_Bits: 16
 --- !u!114 &4226718400070417816
 MonoBehaviour:
   m_ObjectHideFlags: 0
