@@ -153,8 +153,52 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: totalChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: totalChanceWater
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
       propertyPath: wildPokemon.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: waterWildPokemon.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: wildPokemon.Array.data[0].pokemon
+      value: 
+      objectReference: {fileID: 11400000, guid: 11912a87c4ab47549a53160e2008c434, type: 2}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: waterWildPokemon.Array.data[0].pokemon
+      value: 
+      objectReference: {fileID: 11400000, guid: b1e583beca91428459adef8d86390f47, type: 2}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: wildPokemon.Array.data[0].encounterRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: wildPokemon.Array.data[0].levelRange.max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: wildPokemon.Array.data[0].levelRange.min
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: waterWildPokemon.Array.data[0].encounterRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: waterWildPokemon.Array.data[0].levelRange.max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415716222553212277, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: waterWildPokemon.Array.data[0].levelRange.min
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6795652225185756820, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
       propertyPath: m_Name
@@ -166,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6795652225185756821, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 7.07
       objectReference: {fileID: 0}
     - target: {fileID: 6795652225185756821, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -204,6 +248,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6795652225185756822, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: m_Size.x
+      value: 27.717176
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795652225185756822, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: m_Size.y
+      value: 17.723888
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795652225185756822, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.042183876
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795652225185756822, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: m_Offset.y
+      value: 5.2503796
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795652225185756823, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ce4f9f8d4264b84dbc0880e3df149a7, type: 3}
     - target: {fileID: 6795652225185756823, guid: 73d96a1f42f139446be27be0de7bf58f, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 1
@@ -1966,24 +2030,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2010387112 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8329823080438619298, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+--- !u!114 &2010387113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6562602116487645615, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
   m_PrefabInstance: {fileID: 2010387109}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2010387113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010387112}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a12329f5df2f4ed419be92c106da8e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choiceTextPrefab: {fileID: 141082917156309471, guid: 7522933a39b2ed6409d100a833d2470e, type: 3}
 --- !u!114 &2010387114 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1997533798724113549, guid: 9c277797717dccf47a38a28362c7a427, type: 3}

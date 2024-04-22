@@ -38,3 +38,5 @@ MonoBehaviour:
   tmMoves: []
   expYield: 10
   growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 2426734ae9d2ece42afb592f89f428e5, type: 3}

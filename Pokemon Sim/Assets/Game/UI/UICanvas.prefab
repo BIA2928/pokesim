@@ -498,6 +498,7 @@ GameObject:
   - component: {fileID: 1000036858598604105}
   - component: {fileID: 2623226209190814767}
   - component: {fileID: 4196521105378189160}
+  - component: {fileID: 2509808320575616463}
   m_Layer: 5
   m_Name: ChoiceBox
   m_TagString: Untagged
@@ -605,6 +606,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &2509808320575616463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747267071517614274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12329f5df2f4ed419be92c106da8e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choiceTextPrefab: {fileID: 141082917156309471, guid: 7522933a39b2ed6409d100a833d2470e, type: 3}
 --- !u!1 &1130589114918080395
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,11 +4637,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2880af42e67a3fc4d89cae6fbfe4ed26, type: 3}
---- !u!224 &6289353911145961013 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8458846875410416223, guid: 2880af42e67a3fc4d89cae6fbfe4ed26, type: 3}
-  m_PrefabInstance: {fileID: 2462231383608874090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6289353911145961010 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8458846875410416216, guid: 2880af42e67a3fc4d89cae6fbfe4ed26, type: 3}
@@ -4639,6 +4648,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc9af5225711c29459022e0e7c2ecfe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &6289353911145961013 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8458846875410416223, guid: 2880af42e67a3fc4d89cae6fbfe4ed26, type: 3}
+  m_PrefabInstance: {fileID: 2462231383608874090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3403224618164812345
 PrefabInstance:
   m_ObjectHideFlags: 0

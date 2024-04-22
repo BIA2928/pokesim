@@ -24,9 +24,18 @@ public enum BattleState
     Bag
 }
 
-public class BattleSystem : MonoBehaviour
-{
+public enum BattleEnvironment { LongGrass, Water, Cave}
 
+public class BattleSystem : MonoBehaviour
+{ 
+    [Header("Battle Imagery")]
+    [SerializeField] Image battleBackground;
+    [SerializeField] Sprite grassEnvironment;
+    [SerializeField] Sprite waterEnvironment;
+    [SerializeField] Sprite caveEnvironment;
+    [SerializeField] Sprite stadiumEnvironment;
+
+    [Header("Battle Components")]
     [SerializeField] BattleUnit playerPoke;
     [SerializeField] BattleUnit enemyPoke;
     [SerializeField] BattleDialogue dialogueBox;
@@ -37,6 +46,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] GameObject pokeballSprite;
     [SerializeField] InventoryUI inventoryUI;
 
+    [Header("Music")]
     [SerializeField] AudioClip wildBattleMusic;
     [SerializeField] AudioClip wildVictoryMusic;
 
@@ -54,22 +64,28 @@ public class BattleSystem : MonoBehaviour
     PlayerController player;
     TrainerController enemyTrainer;
 
+    BattleEnvironment battleEnvironment;
     public event Action<bool> OnBattleOver;
 
     int nEscapeAttempts;
 
-    public void StartBattle(PokemonParty party, Pokemon wildPokemon)
+    public void StartBattle(PokemonParty party, Pokemon wildPokemon, 
+        BattleEnvironment battleEnvironment = BattleEnvironment.LongGrass)
     {
         isTrainerBattle = false;
         playerParty = party;
         player = playerParty.GetComponent<PlayerController>();
         this.wildPokemon = wildPokemon;
-        AudioManager.i.PlayMusic(wildBattleMusic, fade:false);
+
+        this.battleEnvironment = battleEnvironment;
+
+        AudioManager.i.PlayBattleMusic(wildBattleMusic, fade:false);
         dialogueBox.ClearDialogue();
         StartCoroutine(SetupBattle());
     }
 
-    public void StartTrainerBattle(PokemonParty party, PokemonParty enemyParty)
+    public void StartTrainerBattle(PokemonParty party, PokemonParty enemyParty, 
+        BattleEnvironment battleEnvironment = BattleEnvironment.LongGrass)
     {
         playerParty = party;
         this.enemyParty = enemyParty;
@@ -77,7 +93,10 @@ public class BattleSystem : MonoBehaviour
         isTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
         enemyTrainer = enemyParty.GetComponent<TrainerController>();
-        AudioManager.i.PlayMusic(enemyTrainer.BattleMusic, fade:false);
+
+        this.battleEnvironment = battleEnvironment;
+        AudioManager.i.PlayBattleMusic(enemyTrainer.BattleMusic, fade:false);
+        dialogueBox.ClearDialogue();
         StartCoroutine(SetupBattle());
     }
 
@@ -87,6 +106,7 @@ public class BattleSystem : MonoBehaviour
         nEscapeAttempts = 0;
         playerPoke.Clear();
         enemyPoke.Clear();
+        SetBackground();
         if (!isTrainerBattle)
         {
             playerImage.gameObject.SetActive(true);
@@ -146,6 +166,17 @@ public class BattleSystem : MonoBehaviour
 
         dialogueBox.HideActions(false);
         ActionSelection();
+    }
+
+    public void SetBackground()
+    {
+        battleBackground.sprite = battleEnvironment switch
+        {
+            BattleEnvironment.LongGrass => grassEnvironment,
+            BattleEnvironment.Water => waterEnvironment,
+            BattleEnvironment.Cave => caveEnvironment,
+            _ => grassEnvironment,
+        };
     }
 
     public void HandleUpdate()

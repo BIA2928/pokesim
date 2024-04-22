@@ -6,8 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Create new pokemon")]
 public class PokemonBase : ScriptableObject
 {
-
-
     [SerializeField] new string name;
 
     [TextArea]
@@ -41,6 +39,7 @@ public class PokemonBase : ScriptableObject
     [SerializeField] GrowthRate growthRate;
 
     [SerializeField] List<Evolution> evolutions;
+    [SerializeField] AudioClip cry;
 
     public int GetExpForLevel(int level)
     {
@@ -162,6 +161,8 @@ public class PokemonBase : ScriptableObject
         get { return growthRate; }
 
     }
+
+    public AudioClip Cry => cry;
 
     public List<MoveBase> TmMoves => tmMoves;
 

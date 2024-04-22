@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Gameplay\BreakableRock.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\SurfableWater.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Data\QuestDB.cs" />
     <Compile Include="Assets\Scripts\Util\ScriptableObjectDB.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Assets\Scripts\Inventory\ShopController.cs" />
     <Compile Include="Assets\Scripts\UI\MenuController.cs" />
     <Compile Include="Assets\Scripts\Inventory\TmItem.cs" />
+    <Compile Include="Assets\Scripts\Character\SurfingAnimator.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
     <Compile Include="Assets\Scripts\UI\ShopUI.cs" />
@@ -145,8 +147,6 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\SurfableWater.cs" />
-    <Compile Include="Assets\Scripts\Character\SurfingAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

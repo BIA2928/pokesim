@@ -176,12 +176,14 @@ public class BattleUnit : MonoBehaviour
             float rotationMagnitude = -1080f;
             var pokeballObj = Instantiate(pokeballSprite, image.transform.position - new Vector3(3.1f, -1f), Quaternion.identity);
             var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
+            AudioManager.i.PlaySFX(AudioID.PokeballThrow);
             ballSequence.Append(pokeball.transform.DOJump(image.transform.position + buffer, 2f, 1, 1f));
             ballSequence.Join(pokeball.transform.DORotate(new Vector3(0, 0, rotationMagnitude), 1f, RotateMode.FastBeyond360));
             ballSequence.Append(image.transform.DOScale(Vector3.one, 0.1f));
             ballSequence.Join(pokeball.DOFade(0f, 0.05f));
             yield return ballSequence.WaitForCompletion();
             Destroy(pokeballObj);
+            AudioManager.i.PlaySFX(AudioID.PokemonOut);
         }
         else
         {
@@ -205,13 +207,22 @@ public class BattleUnit : MonoBehaviour
                 float rotationMagnitude = 1080f;
                 var pokeballObj = Instantiate(pokeballSprite, image.transform.position + new Vector3(3.75f, 1.75f), Quaternion.identity);
                 var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
+                AudioManager.i.PlaySFX(AudioID.PokeballThrow);
                 ballSequence.Append(pokeball.transform.DOJump(image.transform.position + buffer, 2f, 1, 1f));
                 ballSequence.Join(pokeball.transform.DORotate(new Vector3(0, 0, rotationMagnitude), 1f, RotateMode.FastBeyond360));
                 ballSequence.Append(image.transform.DOScale(Vector3.one, 0.1f));
                 ballSequence.Join(pokeball.DOFade(0f, 0.05f));
                 yield return ballSequence.WaitForCompletion();
                 Destroy(pokeballObj);
+                AudioManager.i.PlaySFX(AudioID.PokemonOut);
             }    
+        }
+
+        if (Pokemon.Base.Cry != null)
+        {
+            yield return new WaitForSeconds(0.4f);
+            AudioManager.i.PlaySFX(Pokemon.Base.Cry);
+            yield return new WaitForSeconds(Pokemon.Base.Cry.length);
         }
         
     }

@@ -17,6 +17,7 @@ public enum GameState
     InEvolution,
     Shop,
 }
+
 public class GameController : MonoBehaviour
 {
     GameState state;
@@ -136,16 +137,16 @@ public class GameController : MonoBehaviour
         StartCoroutine(trainer.TriggerBattle(pC));
     }
 
-    public void StartBattle()
+    public void StartBattle(BattleEnvironment environment)
     {
         state = GameState.InBattle;
         bS.gameObject.SetActive(true);
         worldCam.gameObject.SetActive(false);
 
         var playerParty = pC.GetComponent<PokemonParty>();
-        var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon();
+        var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon(environment);
         var copy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
-        bS.StartBattle(playerParty, copy);
+        bS.StartBattle(playerParty, copy, environment);
 
     }
 
@@ -167,7 +168,7 @@ public class GameController : MonoBehaviour
                 StartCoroutine(playerParty.RunEvolutions());
             }
             else
-                AudioManager.i.PlayMusic(CurrentScene.SceneMusic);
+                AudioManager.i.StopBattleMusic();
             
         }
         else

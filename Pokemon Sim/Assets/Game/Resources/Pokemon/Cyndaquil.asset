@@ -43,3 +43,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 25f332d7924d85646a6aeaf303600f45, type: 2}
   expYield: 0
   growthRate: 0
+  evolutions: []
+  cry: {fileID: 8300000, guid: 62da7fa437a729b4ea35dacf2395ec16, type: 3}

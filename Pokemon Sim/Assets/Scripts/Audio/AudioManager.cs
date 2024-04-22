@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField][Range(0f,1.5f)] float fadeDuration = 0.8f;
 
     AudioClip musicBeforeSurfing;
+    AudioClip musicBeforeBattle;
     Dictionary<AudioID, AudioData> sfxLookup;
 
     public static AudioManager i { get; private set; }
@@ -75,11 +76,26 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioClip clip, bool loop=true, bool fade=true)
     {
-        if (clip != null)
+        if (clip != null && (clip != musicPlayer.clip || musicPlayer.isPlaying == false))
         {
             StartCoroutine(PlayMusicAsync(clip, loop, fade));
         }
         
+    }
+
+    public void PlayBattleMusic(AudioClip clip, bool loop=true, bool fade = true)
+    {
+        if (clip != null)
+        {
+            musicBeforeBattle = musicPlayer.clip;
+            StartCoroutine(PlayMusicAsync(clip, loop, fade));
+        }
+    }
+
+    public void StopBattleMusic(bool fade = true)
+    {
+        StartCoroutine(PlayMusicAsync(musicBeforeBattle, true, fade));
+        musicBeforeBattle = null;
     }
 
     public void PlaySurfMusic()
@@ -91,6 +107,7 @@ public class AudioManager : MonoBehaviour
     public void StopSurfMusic()
     {
         StartCoroutine(PlayMusicAsync(musicBeforeSurfing, true, true));
+        musicBeforeSurfing = null;
     }
 
     IEnumerator PlayMusicAsync(AudioClip clip, bool loop, bool fade)
@@ -117,13 +134,22 @@ public class AudioManager : MonoBehaviour
         musicPlayer.UnPause();
     }
 
+    public AudioClip GetAudioClip(AudioID audioID)
+    {
+        if (sfxLookup.ContainsKey(audioID))
+            return sfxLookup[audioID].clip;
+        return null;
+    }
+
     public AudioSource SFXPlayer => sfxPlayer;
     public AudioSource ExtraAudioPlayer => extraSoundsPlayer;
 }
 
 public enum AudioID
 {
-    UISelect, Hit, HitSprEft, HitNVEft, ExpGain, TMReceived, ItemReceived, KeyItemReceived, LvlUp, Bump, Jump, ObtainedPoke
+    UISelect, UISwitchSelection, MenuOpen, MenuClose, Hit, HitSprEft, HitNVEft, ExpGain, TMReceived, 
+    ItemReceived, KeyItemReceived, LvlUp, Bump, Jump, ObtainedPoke, StatUp, StatDown,
+    PokemonOut, PokeballThrow
 }
 
 

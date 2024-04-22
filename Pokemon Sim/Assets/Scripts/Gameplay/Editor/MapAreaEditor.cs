@@ -10,14 +10,19 @@ public class MapAreaEditor : Editor
     {
         base.OnInspectorGUI();
         int totalChance = serializedObject.FindProperty("totalChance").intValue;
+        int totalWaterChance = serializedObject.FindProperty("totalChanceWater").intValue;
 
         var style = new GUIStyle
         {
             fontStyle = FontStyle.Bold
         };
-        GUILayout.Label($"Total Chance = {totalChance}%", style);
+        GUILayout.Label($"Total Chance (Grassy Areas) = {totalChance}%", style);
+        
 
-        if (totalChance != 100)
-            EditorGUILayout.HelpBox("Total chance percentage should be equal to 100%", MessageType.Warning);
+        if (totalChance != 100 && totalChance != -1)
+            EditorGUILayout.HelpBox("GrassError. Total encounter chance percentage should be equal to 100%", MessageType.Warning);
+        GUILayout.Label($"Total Chance (Water Areas) = {totalWaterChance}%", style);
+        if (totalWaterChance != 100 && totalWaterChance != -1)
+            EditorGUILayout.HelpBox("WaterError. Total encounter chance percentage should be equal to 100% in all areas.", MessageType.Warning);
     }
 }
