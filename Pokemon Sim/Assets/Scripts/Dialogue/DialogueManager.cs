@@ -35,7 +35,6 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogue(Dialogue dialogue, bool waitForInput = true)
     {
         yield return new WaitForEndOfFrame();
-        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
         dialogueBox.SetActive(true);
@@ -59,7 +58,6 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogue(string text, bool waitForInput = true, bool autoClose = true)
     {
         yield return new WaitForEndOfFrame();
-        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
 
@@ -80,7 +78,6 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogueChoices(Dialogue d, List<string> choices, Action<int> onChoicesSelected, bool waitForInput = true)
     {
         yield return new WaitForEndOfFrame();
-        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
         dialogueBox.SetActive(true);
@@ -124,7 +121,6 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialogueContinuous(Dialogue dialogue, Action onFinished = null)
     {
         yield return new WaitForEndOfFrame();
-        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
 
@@ -176,7 +172,6 @@ public class DialogueManager : MonoBehaviour
             yield return ShowDialogue(dialogue);
         }
         yield return new WaitForEndOfFrame();
-        AudioManager.i.PlaySFX(AudioID.UISelect);
         IsShowing = true;
         OnShowDialogue?.Invoke();
         dialogueBox.SetActive(true);

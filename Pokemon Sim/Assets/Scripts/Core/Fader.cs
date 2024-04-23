@@ -17,6 +17,7 @@ public class Fader : MonoBehaviour
 
     public IEnumerator FadeIn(float time)
     {
+        
         yield return image.DOFade(1f, time).WaitForCompletion();
     }
 

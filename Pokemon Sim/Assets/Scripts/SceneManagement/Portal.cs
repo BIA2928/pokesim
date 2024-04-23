@@ -35,7 +35,7 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
     {
         DontDestroyOnLoad(gameObject);
         GameController.i.PauseGame(true);
-
+        AudioManager.i.PlaySFX(AudioID.EnterArea);
         yield return fader.FadeIn(0.5f);
 
         yield return SceneManager.LoadSceneAsync(sceneToLoad);

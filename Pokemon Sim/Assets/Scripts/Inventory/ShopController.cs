@@ -68,6 +68,7 @@ public class ShopController : MonoBehaviour
         else
         {
             //Exit
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
             OnCloseShop?.Invoke();
             yield return DialogueManager.Instance.ShowDialogue(currMerchant.ClosingDialogue);
             yield break;

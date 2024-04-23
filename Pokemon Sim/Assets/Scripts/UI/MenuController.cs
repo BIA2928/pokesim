@@ -21,12 +21,15 @@ public class MenuController : MonoBehaviour
     }
     public void OpenMenu()
     {
+        AudioManager.i.PlaySFX(AudioID.MenuOpen);
         menu.SetActive(true);
         UpdateMenuSelection();
     }
 
-    public void CloseMenu()
+    public void CloseMenu(bool goneBack = false)
     {
+        if (goneBack)
+            AudioManager.i.PlaySFX(AudioID.MenuClose);
         selectedItem = 0;
         menu.SetActive(false);
     }
@@ -48,17 +51,19 @@ public class MenuController : MonoBehaviour
         if (selectedItem != prevSelection)
         {
             UpdateMenuSelection();
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            AudioManager.i.PlaySFX(AudioID.UISelect);
             onMenuSlotSelected?.Invoke(selectedItem);
             CloseMenu();
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             onBack?.Invoke();
-            CloseMenu();
+            CloseMenu(true);
         }
         
     }
@@ -76,5 +81,6 @@ public class MenuController : MonoBehaviour
                 menuSlots[i].Deselect();
             }
         }
+        
     }
 }

@@ -31,7 +31,7 @@ public class LocationPortal : MonoBehaviour, IPlayerTriggerable
     IEnumerator Teleport()
     {
         GameController.i.PauseGame(true);
-
+        AudioManager.i.PlaySFX(AudioID.EnterArea);
         yield return fader.FadeIn(0.5f);
 
         var destPortal = FindObjectsOfType<LocationPortal>().First(x => x != this && x.destination == this.destination);

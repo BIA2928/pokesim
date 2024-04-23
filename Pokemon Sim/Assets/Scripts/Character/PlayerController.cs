@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour, ISavable
         var collider = Physics2D.OverlapCircle(interactingPos, 0.25f, GameLayers.i.InteractableLayer | GameLayers.i.Water);
         if (collider != null)
         {
+            AudioManager.i.PlaySFX(AudioID.UISelect);
             character.Stop();
             yield return collider.GetComponent<Interactive>()?.Interact(transform);
             

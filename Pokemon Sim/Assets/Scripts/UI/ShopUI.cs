@@ -109,15 +109,18 @@ public class ShopUI : MonoBehaviour
         if (prevSelection != selectedItem)
         {
             UpdateItemSelection();
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
             onItemSelected?.Invoke(availableItems[selectedItem]);
+            AudioManager.i.PlaySFX(AudioID.UISelect);
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             onBack?.Invoke();
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
 
 

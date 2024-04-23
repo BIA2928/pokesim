@@ -68,6 +68,7 @@ public class PartyScreen : MonoBehaviour
                 memberSlots[i].SetSelected(false);
             }
         }
+        
     }
 
     public void HandleUpdate(Action onSelection, Action onBack)
@@ -86,16 +87,21 @@ public class PartyScreen : MonoBehaviour
         currPartyPoke = Mathf.Clamp(currPartyPoke, 0, PokemonList.Count - 1);
 
         if (prevSelection != currPartyPoke)
+        {
             UpdatePokemonSelection(currPartyPoke);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
+        }
+            
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
             onSelection?.Invoke();
+            AudioManager.i.PlaySFX(AudioID.UISelect);
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             onBack?.Invoke();
-            Debug.Log("Going back");
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
     }
 
@@ -116,7 +122,10 @@ public class PartyScreen : MonoBehaviour
     {
         for (int i = 0; i < pokemonList.Count; i++)
         {
-            string message = pokemonList[i].Base.CanLearnByTm(tm.Move) ? "ABLE!" : "NOT ABLE.";
+            string message = pokemonList[i].Base.CanLearnByTm(tm.Move) ? "ABLE!" : "UNABLE!";
+            if (pokemonList[i].HasMove(tm.Move))
+                message = "LEARNED.";
+            
             memberSlots[i].SetMesage(message);
         }
     }

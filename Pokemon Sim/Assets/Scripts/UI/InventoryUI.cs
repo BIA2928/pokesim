@@ -87,6 +87,7 @@ public class InventoryUI : MonoBehaviour
 
             if (selectedItem != prevSelection)
             {
+                AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
                 UpdateItemSelection();
             }
             if (selectedPocket != prevPocket)
@@ -94,17 +95,20 @@ public class InventoryUI : MonoBehaviour
                 ResetOnPocketChange();
                 UpdateItemList();
                 pocketUI.UpdatePocket(selectedPocket);
+                AudioManager.i.PlaySFX(AudioID.ChangePocket);
                 UpdateItemSelection();
             }
                 
 
             if (Input.GetKeyDown(KeyCode.Z))
             {
+                AudioManager.i.PlaySFX(AudioID.UISelect);
                 StartCoroutine(ItemSelected());
             }
             else if (Input.GetKeyDown(KeyCode.X))
             {
                 onBack?.Invoke();
+                AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
             }
         }
         else if (state == InventoryUIState.PartySelection)

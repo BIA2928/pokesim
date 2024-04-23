@@ -53,6 +53,7 @@ public class CountSelectorUI : MonoBehaviour
         if (prevCount != currCount)
         {
             SetValues();
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
         if (Input.GetKeyDown(KeyCode.Z))
             selected = true;
