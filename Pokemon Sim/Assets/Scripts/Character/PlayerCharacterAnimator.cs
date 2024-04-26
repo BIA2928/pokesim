@@ -18,12 +18,10 @@ public class PlayerCharacterAnimator : CharacterAnimator
     new void Start()
     {
         base.Start();
-        Debug.Log("starting assignment of running sprites");
         runDownAnim = new SpriteAnimator(runDownSprites, spriteRenderer);
         runUpAnim = new SpriteAnimator(runUpSprites, spriteRenderer);
         runLeftAnim = new SpriteAnimator(runLeftSprites, spriteRenderer);
         runRightAnim = new SpriteAnimator(runRightSprites, spriteRenderer);
-
     }
 
     new void Update()

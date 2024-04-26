@@ -11,8 +11,10 @@ public class CutsceneEditor : Editor
         Cutscene cS = target as Cutscene;
         if (GUILayout.Button("Add Dialogue Action"))
             cS.AddAction(new DialogueAction());
-        else if (GUILayout.Button("Add Move Actor Action"))
+        else if (GUILayout.Button("Add MoveActor Action"))
             cS.AddAction(new MoveActorAction());
+        else if (GUILayout.Button("Add TurnActor Action"))
+            cS.AddAction(new TurnActorAction());
 
         base.OnInspectorGUI();
     }

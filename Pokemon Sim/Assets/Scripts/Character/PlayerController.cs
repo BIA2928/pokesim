@@ -17,9 +17,11 @@ public class PlayerController : MonoBehaviour, ISavable
 
     private Character character;
 
+    public static PlayerController i { get; set; }
     void Awake()
     {
-        character = this.GetComponent<Character>();
+        i = this;
+        character = GetComponent<Character>();
     }
 
     // Start is called before the first frame update
@@ -112,7 +114,7 @@ public class PlayerController : MonoBehaviour, ISavable
     /// <returns></returns>
     public IEnumerator ForceMove(Vector2 moveDirection, int mag=1)
     {
-        yield return character.Move(moveDirection * mag, OnMoveOver, true);
+        yield return character.Move(moveDirection * mag, OnMoveOver, isPlayer:true);
     }
         
 

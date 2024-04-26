@@ -8066,7 +8066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5532131542591339769, guid: 8b9849a98ff884548bc1dae06a4d21e4, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5532131542591339769, guid: 8b9849a98ff884548bc1dae06a4d21e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17427,7 +17427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 377307358945025901, guid: 634fc735bf5e7e94aa47b0f03c9b3ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 377307358945025901, guid: 634fc735bf5e7e94aa47b0f03c9b3ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17504,7 +17504,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: df5827126b9cdbc43a8665c5d194ad5b, type: 2}
     - target: {fileID: 990138602082718577, guid: 20a444375d17d3b47b433e4a01c4770c, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 990138602082718577, guid: 20a444375d17d3b47b433e4a01c4770c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19300,6 +19300,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -2, y: 12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 24
+      m_TileSpriteIndex: 24
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 11, y: 12, z: 0}
     second:
       serializedVersion: 2
@@ -19720,8 +19730,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: bee19cab7a62d994dbf01126c34508cb, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c4f429dd44d149e499b203984eb5b9ec, type: 2}
   - m_RefCount: 2
@@ -19803,8 +19813,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -941134333046072074, guid: 378b74e5df861c645ad64af004412fbf, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 786661062723731931, guid: 5d6f5f37a2b20d547bd56fd0b065e6e5, type: 3}
   - m_RefCount: 2
@@ -19838,7 +19848,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1580243608754873077, guid: 5d6f5f37a2b20d547bd56fd0b065e6e5, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 166
+  - m_RefCount: 167
     m_Data:
       e00: 1
       e01: 0
@@ -19857,7 +19867,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 166
+  - m_RefCount: 167
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -20439,6 +20449,42 @@ CompositeCollider2D:
         Y: -90000100
       - X: 120000041
         Y: -90000100
+    - - X: -14374958
+        Y: 120624908
+      - X: -9999924
+        Y: 123437434
+      - X: -9999900
+        Y: 123437478
+      - X: -9999900
+        Y: 129687524
+      - X: -9999915
+        Y: 129687561
+      - X: -10312443
+        Y: 130000085
+      - X: -10312480
+        Y: 130000100
+      - X: -12812504
+        Y: 130000100
+      - X: -12812512
+        Y: 130000099
+      - X: -18750031
+        Y: 129062592
+      - X: -18750060
+        Y: 129062578
+      - X: -20000085
+        Y: 127812553
+      - X: -20000100
+        Y: 127812516
+      - X: -20000100
+        Y: 121249988
+      - X: -20000095
+        Y: 121249966
+      - X: -19687577
+        Y: 120624930
+      - X: -19687528
+        Y: 120624900
+      - X: -14374986
+        Y: 120624900
     - - X: 20000007
         Y: 81249900
       - X: 29999998
@@ -20881,6 +20927,15 @@ CompositeCollider2D:
       - {x: -13.062513, y: 14.00001}
       - {x: -14.00001, y: 13.999974}
       - {x: -13.999974, y: -9.00001}
+    - - {x: -1.4375061, y: 12.0624895}
+      - {x: -0.99999, y: 12.343762}
+      - {x: -0.9999991, y: 12.968764}
+      - {x: -1.0312588, y: 13.00001}
+      - {x: -1.2812531, y: 13.00001}
+      - {x: -1.875012, y: 12.906252}
+      - {x: -2.00001, y: 12.781241}
+      - {x: -2.000007, y: 12.124991}
+      - {x: -1.9687362, y: 12.0624895}
     - - {x: 5.249996, y: 8.06249}
       - {x: 5.500015, y: 8.062504}
       - {x: 5.6250105, y: 8.250004}
@@ -21026,7 +21081,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1996277313}
   - component: {fileID: 1996277312}
-  m_Layer: 0
+  - component: {fileID: 1996277314}
+  m_Layer: 14
   m_Name: PreventLeaving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21045,9 +21101,139 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b06ecfc4339142adaf9e4a423c13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  - id: 10
   references:
     version: 1
+    00000000:
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 4869292279629869322}
+        movePattern:
+        - {x: 0, y: 1}
+        - {x: 3, y: 0}
+    00000001:
+      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TurnActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        action:
+          direction: 0
+          characterToLookAt: {fileID: 4869292279629869322}
+    00000002:
+      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DialogueAction
+        waitToComplete: 1
+        dialogue:
+          lines:
+          - It's dangerous to go out there all alone.
+          - You should get a Pokemon first!
+          - Try asking Professor Rowan. Here, I'll take you to him.
+    00000003:
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 4869292279629869322}
+        movePattern:
+        - {x: 0, y: -1}
+    00000004:
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        movePattern:
+        - {x: -1, y: 0}
+    00000005:
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitToComplete: 0
+        actor:
+          isPlayer: 0
+          character: {fileID: 4869292279629869322}
+        movePattern:
+        - {x: 0, y: -4}
+        - {x: 9, y: 0}
+    00000006:
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        movePattern:
+        - {x: 0, y: -5}
+        - {x: 8, y: 0}
+        - {x: 0, y: -1}
+        - {x: 1, y: 0}
+    00000007:
+      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TurnActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 4869292279629869322}
+        action:
+          direction: 1
+          characterToLookAt: {fileID: 0}
+    00000008:
+      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TurnActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        action:
+          direction: 0
+          characterToLookAt: {fileID: 0}
+    00000009:
+      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DialogueAction
+        waitToComplete: 1
+        dialogue:
+          lines:
+          - I know he looks stern and scary, but trust me, he's nice!
+          - See ya round!
+    0000000A:
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitToComplete: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 4869292279629869322}
+        movePattern:
+        - {x: -9, y: 0}
+        - {x: 0, y: 4}
+        - {x: -3, y: 0}
 --- !u!4 &1996277313
 Transform:
   m_ObjectHideFlags: 0
@@ -21056,12 +21242,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996277311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.847777, y: 3.3183587, z: -10.746583}
+  m_LocalPosition: {x: -2, y: 13, z: -10.746583}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1996277314
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996277311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0344674, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2134954998
 GameObject:
   m_ObjectHideFlags: 0
@@ -21130,7 +21342,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21148,6 +21360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeetProfessorQuestline
       objectReference: {fileID: 0}
+    - target: {fileID: 990138602082718543, guid: 20a444375d17d3b47b433e4a01c4770c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 990138602082718576, guid: 20a444375d17d3b47b433e4a01c4770c, type: 3}
       propertyPath: onComplete
       value: 2
@@ -21158,7 +21374,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 8ffd0b0c5b87be440b118f5fae956103, type: 2}
     - target: {fileID: 990138602082718577, guid: 20a444375d17d3b47b433e4a01c4770c, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 990138602082718577, guid: 20a444375d17d3b47b433e4a01c4770c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21215,7 +21431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5374669481733648355, guid: 46d567677efc87948a7158d0fdd8f099, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5374669481733648355, guid: 46d567677efc87948a7158d0fdd8f099, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21276,7 +21492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3279431837942341602, guid: 08c6ddd1def185f4c874c39075822937, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3279431837942341602, guid: 08c6ddd1def185f4c874c39075822937, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21409,7 +21625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016411118921604162, guid: 511c03791cac0054e90f4eaaeb160081, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4016411118921604162, guid: 511c03791cac0054e90f4eaaeb160081, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21632,11 +21848,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4869292279629869316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 12.7, z: 0}
+  m_LocalPosition: {x: -6.5, y: 11.7, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4869292279629869319
 BoxCollider2D:
@@ -21699,8 +21915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - Have you tried walking through the long grass?
-    - You can find wild pokemon inside!
+    - Out there lies Route 1. Many wild pokemon and trainers await!
   questToGive: {fileID: 0}
   questToComplete: {fileID: 0}
   movements: []
@@ -21719,7 +21934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e524e182b60a3fb4f8fea253aca73677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ms: 2
+  ms: 4
 --- !u!114 &4869292279629869323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21756,7 +21971,7 @@ MonoBehaviour:
   surfRightSprites: []
   surfUpSprites: []
   surfDownSprites: []
-  defaultDirection: 1
+  defaultDirection: 3
 --- !u!1001 &4905793092862439309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21770,7 +21985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905793091978834706, guid: 12ce3a68918c6c343af441e5829206af, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4905793091978834706, guid: 12ce3a68918c6c343af441e5829206af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22024,7 +22239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418626294109919962, guid: 6e2bc3abef9595840bbfb67f871860cf, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6418626294109919962, guid: 6e2bc3abef9595840bbfb67f871860cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22120,7 +22335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397524414858330416, guid: eda2ef94b389adc4182e9a9ac4953c89, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8397524414858330416, guid: eda2ef94b389adc4182e9a9ac4953c89, type: 3}
       propertyPath: m_LocalScale.x

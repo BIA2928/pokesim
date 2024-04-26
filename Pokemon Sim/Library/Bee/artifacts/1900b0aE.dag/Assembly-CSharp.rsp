@@ -373,6 +373,7 @@
 "Assets/Scripts/Cutscenes/CutsceneAction.cs"
 "Assets/Scripts/Cutscenes/DialogueAction.cs"
 "Assets/Scripts/Cutscenes/MoveActorAction.cs"
+"Assets/Scripts/Cutscenes/TurnActorAction.cs"
 "Assets/Scripts/Data/ConditionsDB.cs"
 "Assets/Scripts/Data/ItemDB.cs"
 "Assets/Scripts/Data/MoveDB.cs"

@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Inventory\ItemGiver.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MapArea.cs" />
     <Compile Include="Assets\Scripts\Character\NPCController.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\TurnActorAction.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\MoveActorAction.cs" />
     <Compile Include="Assets\Scripts\Character\TrainerFOV.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerCharacterAnimator.cs" />

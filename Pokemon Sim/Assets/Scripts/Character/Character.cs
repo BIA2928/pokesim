@@ -34,7 +34,7 @@ public class Character : MonoBehaviour
 
     }
 
-    public IEnumerator Move(Vector2 moveVector, Action OnMoveOver=null, bool autoMove=false, bool isPlayer=false)
+    public IEnumerator Move(Vector2 moveVector, Action OnMoveOver=null, bool autoMove=false, bool isPlayer=false, bool checkCollisions=true)
     {
         animator.MoveX = Mathf.Clamp(moveVector.x, -1f, 1f);
         animator.MoveY = Mathf.Clamp(moveVector.y, -1f, 1f);
@@ -50,7 +50,7 @@ public class Character : MonoBehaviour
             if (ledge.TryToJump(this, moveVector))
                 yield break;
         }
-        if (!IsPathClear(targetPos))
+        if (checkCollisions && !IsPathClear(targetPos))
         {
             if (isPlayer)
             {
