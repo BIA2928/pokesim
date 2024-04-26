@@ -26,10 +26,12 @@ public class BattleDialogue : MonoBehaviour
 
     Color highlightedColor;
     bool isTyping = false;
+    bool isBusy;
 
     public static int charLimit = 75;
 
     public bool IsTyping => isTyping;
+    public bool IsBusy { get => isBusy; set => isBusy = value; }
     private void Start()
     {
         highlightedColor = GlobalSettings.i.HighlightedColorBlue;
@@ -53,21 +55,30 @@ public class BattleDialogue : MonoBehaviour
         isTyping = false;
     }
     
-    public IEnumerator ShowDialogueOnly(string dialogue, bool waitForInput = true)
+    public IEnumerator ShowDialogue(string dialogue, bool waitForInput = true, bool hideActions = false)
     {
+        isBusy = true;
         yield return new WaitForEndOfFrame();
+        actionSelector.SetActive(!hideActions);
+       
 
         yield return TypeDialogue(dialogue);
         if (waitForInput)
         {
+            Debug.Log("waiting for input");
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
+        Debug.Log("Input received");
+        isBusy = false;
 
     }
 
-    public IEnumerator ShowDialogueOnly(Dialogue dialogue, bool waitForInput = true)
+    public IEnumerator ShowDialogue(Dialogue dialogue, bool waitForInput = true, bool hideActions = false)
     {
         yield return new WaitForEndOfFrame();
+        actionSelector.SetActive(!hideActions);
+        isBusy = true;
 
         foreach (var line in dialogue.Lines)
         {
@@ -75,8 +86,11 @@ public class BattleDialogue : MonoBehaviour
             if (waitForInput)
             {
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
             }
         }
+        isBusy = false;
+
 
     }
 

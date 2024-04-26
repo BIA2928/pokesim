@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 3279431837942341600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.13, y: 6.7, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -153,8 +153,11 @@ MonoBehaviour:
     lines:
     - Pokemon need love and care to grow, just like us.
   questToGive: {fileID: 0}
-  movementPattern: []
+  questToComplete: {fileID: 0}
+  movements: []
   timeBetweenPatterns: 3
+  references:
+    version: 1
 --- !u!114 &3279431837942341614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +203,10 @@ MonoBehaviour:
   - {fileID: -6199082314669921549, guid: 69abc03bcc52e12469b2881bdab89739, type: 3}
   - {fileID: -2564782781051508433, guid: 69abc03bcc52e12469b2881bdab89739, type: 3}
   - {fileID: 1200726193412568769, guid: 69abc03bcc52e12469b2881bdab89739, type: 3}
+  surfLeftSprites: []
+  surfRightSprites: []
+  surfUpSprites: []
+  surfDownSprites: []
   defaultDirection: 2
 --- !u!114 &1348545600019773348
 MonoBehaviour:

@@ -51,15 +51,15 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] AudioClip wildVictoryMusic;
 
     BattleState state;
-    int currentAction;
-    int currentMove;
-    bool aboutToUseChoice = true;
 
+    int currentAction = 0;
+    int currentMove = 0;
+    bool aboutToUseChoice = true;
     MoveBase currMoveToLearn;
+
     PokemonParty playerParty;
     PokemonParty enemyParty;
     Pokemon wildPokemon;
-
     bool isTrainerBattle = false;
     PlayerController player;
     TrainerController enemyTrainer;
@@ -226,6 +226,7 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.ActionSelection;
         StartCoroutine(dialogueBox.TypeDialogue($"What will {playerPoke.Pokemon.Base.Name} do?"));
+        dialogueBox.UpdateActionSelection(0);
         dialogueBox.EnableActionSelector(true);
     }
 
@@ -247,7 +248,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ForgettingMove;
         moveForgetScreen.Init();
         moveForgetScreen.SetMoveData(playerPoke.Pokemon.Moves, currMoveToLearn);
-        moveForgetScreen.gameObject.SetActive(true);      
+        moveForgetScreen.gameObject.SetActive(true);
+        moveForgetScreen.UpdateMoveSelection(0);
     }
 
     void MoveSelection()
@@ -264,8 +266,7 @@ public class BattleSystem : MonoBehaviour
         Dialogue d = new Dialogue();
         d.Lines.Add($"{enemyTrainer.Name} is about to use {pokemon.Base.Name}.");
         d.Lines.Add("Do you want to switch?");
-        yield return dialogueBox.ShowDialogueOnly(d, false);
-        //yield return dialogueBox.TypeDialogue($"{enemyTrainer.Name} is about to use {pokemon.Base.Name}.\nDo you want to switch?");
+        yield return dialogueBox.ShowDialogue(d, false);
         state = BattleState.AboutToUseNewPoke;
         aboutToUseChoice = true;
         dialogueBox.EnableChoiceSelector(true);
@@ -691,6 +692,7 @@ public class BattleSystem : MonoBehaviour
 
     void HandleActionSelection()
     {
+        int prevAction = currentAction;
         if (Input.GetKeyDown(KeyCode.RightArrow))
             ++currentAction;
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -702,10 +704,16 @@ public class BattleSystem : MonoBehaviour
 
         currentAction = Mathf.Clamp(currentAction, 0, 3);
 
-        dialogueBox.UpdateActionSelection(currentAction);
+        if (prevAction != currentAction)
+        {
+            dialogueBox.UpdateActionSelection(currentAction);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            AudioManager.i.PlaySFX(AudioID.UISelect);
             if (currentAction == 0)
             {
                 // Fihgt
@@ -725,7 +733,9 @@ public class BattleSystem : MonoBehaviour
                 // Run
                 if (isTrainerBattle)
                 {
-                    StartCoroutine(dialogueBox.TypeDialogue($"There's no running from\n a trainer battle!"));
+                    //StartCoroutine(dialogueBox.TypeDialogue($"There's no running from\n a trainer battle!"));
+                    dialogueBox.IsBusy = true;
+                    StartCoroutine(HandleRunFromBattle());
                 }
                 else
                 {
@@ -736,8 +746,21 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    private IEnumerator HandleRunFromBattle()
+    {
+        Debug.Log("Set state to busy");
+        state = BattleState.Busy;
+        yield return dialogueBox.ShowDialogue($"There's no running from a trainer battle!", true, true);
+        yield return new WaitUntil(() => dialogueBox.IsBusy == false);
+        dialogueBox.EnableActionSelector(true);
+        yield return dialogueBox.TypeDialogue($"What will {playerPoke.Pokemon.Base.Name} do?");
+        state = BattleState.ActionSelection;
+        Debug.Log("Set state back to actionSeleciton");
+    }
+
     void HandleMoveSelection()
     {
+        int prevMove = currentMove;
         if (Input.GetKeyDown(KeyCode.RightArrow))
             ++currentMove;
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -748,16 +771,19 @@ public class BattleSystem : MonoBehaviour
             currentMove -= 2;
         else if (Input.GetKeyDown(KeyCode.X))
         {
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
             dialogueBox.EnableMoveSelector(false);
             dialogueBox.EnableDialogueText(true);
             ActionSelection();
+            return;
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {
+            AudioManager.i.PlaySFX(AudioID.UISelect);
             var move = playerPoke.Pokemon.Moves[currentMove];
             if (move.PP == 0)
             {
-                dialogueBox.TypeDialogue("Can't select a move with 0 PP!");
+                StartCoroutine(dialogueBox.TypeDialogue("Can't select a move with 0 PP!"));
                 return;
             }
             dialogueBox.EnableMoveSelector(false);
@@ -767,8 +793,12 @@ public class BattleSystem : MonoBehaviour
 
         currentMove = Mathf.Clamp(currentMove, 0, playerPoke.Pokemon.Moves.Count - 1);
 
-
-        dialogueBox.UpdateMoveSelection(currentMove, playerPoke.Pokemon.Moves[currentMove]);
+        if (currentMove != prevMove)
+        {
+            dialogueBox.UpdateMoveSelection(currentMove, playerPoke.Pokemon.Moves[currentMove]);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
+        }
+        
 
     }
 
@@ -831,6 +861,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator HandleForgetMove()
     {
+        int prevSelection = currentMove;
         if (Input.GetKeyDown(KeyCode.RightArrow))
             ++currentMove;
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -842,11 +873,17 @@ public class BattleSystem : MonoBehaviour
 
         currentMove = Mathf.Clamp(currentMove, 0, 3);
 
-        moveForgetScreen.UpdateMoveSelection(currentMove);
+        if (currentMove != prevSelection)
+        {
+            moveForgetScreen.UpdateMoveSelection(currentMove);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
             var selectedMove = playerPoke.Pokemon.Moves[currentMove];
+            AudioManager.i.PlaySFX(AudioID.UISelect);
             playerPoke.Pokemon.ReplaceMove(selectedMove, new Move(currMoveToLearn));
             dialogueBox.SetMoveNames(playerPoke.Pokemon.Moves);
             moveForgetScreen.gameObject.SetActive(false);
@@ -858,6 +895,7 @@ public class BattleSystem : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.X))
         {
             moveForgetScreen.gameObject.SetActive(false);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
             state = BattleState.AskToForgetMove;
             yield return AskToForget();
         }
@@ -870,12 +908,14 @@ public class BattleSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             aboutToUseChoice = !aboutToUseChoice;
-            dialogueBox.UpdateChoiceSelection(aboutToUseChoice); 
+            dialogueBox.UpdateChoiceSelection(aboutToUseChoice);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
             dialogueBox.EnableChoiceSelector(false);
+            AudioManager.i.PlaySFX(AudioID.UISelect);
             if (aboutToUseChoice)
             {
                 // Switch
@@ -890,6 +930,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
             dialogueBox.EnableChoiceSelector(false);
             StartCoroutine(SendNextTrainerPokemon());
         }
@@ -903,11 +944,13 @@ public class BattleSystem : MonoBehaviour
         {
             aboutToUseChoice = !aboutToUseChoice;
             dialogueBox.UpdateChoiceSelection(aboutToUseChoice);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
             dialogueBox.EnableChoiceSelector(false);
+            AudioManager.i.PlaySFX(AudioID.UISelect);
             if (aboutToUseChoice)
             {
                 // Forget move for new move
@@ -924,6 +967,7 @@ public class BattleSystem : MonoBehaviour
         {
             // Also continue turns
             dialogueBox.EnableChoiceSelector(false);
+            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
             StartCoroutine(dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} did not learn {currMoveToLearn.Name}."));
             state = BattleState.ActionSelection;
         }

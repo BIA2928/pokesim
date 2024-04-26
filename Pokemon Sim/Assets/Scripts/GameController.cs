@@ -119,6 +119,16 @@ public class GameController : MonoBehaviour
             state = prevState;
     }
 
+    public void StartCutscene()
+    {
+        state = GameState.Cutscene;
+    }
+
+    public void EnterFreeRoam()
+    {
+        state = GameState.FreeRoam;
+    }
+
     public void StartTrainerBattle(TrainerController trainer)
     {
         currentTrainer = trainer;

@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-
+    const float RUNNING_MULTIPLIER = 1.25f;
     public float ms; //movement speed
     public bool IsMoving { get; private set; }
+    public bool IsRunning { get; private set; }
     private CharacterAnimator animator;
 
     public float OffsetY { get; private set; } = 0.3f;
@@ -68,17 +69,27 @@ public class Character : MonoBehaviour
             AudioManager.i.StopSurfMusic();
             yield break;
         }
-
+        
+        IsRunning = false;
+        if (isPlayer)
+        {
+            if (Input.GetKey(KeyCode.X)) 
+            {
+                IsRunning = true;
+            }
+        }
         IsMoving = true;
         HandleUpdate();
 
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, ms * Time.deltaTime);
+            float factor = IsRunning ? ms * RUNNING_MULTIPLIER : ms;
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, factor * Time.deltaTime);
             yield return null;
         }
         transform.position = targetPos;
         IsMoving = false;
+        IsRunning = false;
         if (OnMoveOver == null || autoMove)
         {
             HandleUpdate();
@@ -90,6 +101,7 @@ public class Character : MonoBehaviour
     public void HandleUpdate()
     {
         animator.IsMoving = IsMoving;
+        animator.IsRunning = IsRunning;
     }
 
     private bool IsWalkable(Vector3 targetPos)
@@ -119,9 +131,12 @@ public class Character : MonoBehaviour
             
             animator.MoveX = Mathf.Clamp(xDiff, -1f, 1f);
             animator.MoveY = Mathf.Clamp(yDiff, -1f, 1f);
-
-            
         }
+    }
+
+    public void Turn(FacingDirection facingDirection)
+    {
+        animator.SetFacingDirection(facingDirection);
     }
 
     private bool IsPathClear(Vector3 targetPos)
@@ -138,7 +153,8 @@ public class Character : MonoBehaviour
 
     public void Stop()
     {
-        this.IsMoving = false;
+        IsMoving = false;
+        IsRunning = false;
         HandleUpdate();
     }
 

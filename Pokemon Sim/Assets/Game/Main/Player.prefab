@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4131531866761559229}
   - component: {fileID: 4131531866761559231}
   - component: {fileID: 4131531866761559230}
-  - component: {fileID: 4131531866761559200}
+  - component: {fileID: 3681178284725190118}
   - component: {fileID: 4131531866761559202}
   - component: {fileID: 4131531866761559201}
   - component: {fileID: 5825435747780622107}
@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 4131531866761559226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.67, y: 0.88, z: 0}
-  m_LocalScale: {x: 6.24, y: 6.24, z: 1}
+  m_LocalScale: {x: 6.41, y: 6.41, z: 1}
   m_Children:
   - {fileID: 4131531866662580560}
   m_Father: {fileID: 0}
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ms: 4
---- !u!114 &4131531866761559200
+--- !u!114 &3681178284725190118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4131531866761559226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a948cae0e5193b748a2516aad9dfbb58, type: 3}
+  m_Script: {fileID: 11500000, guid: dae1930c69ea5cc4eae718751c0ec619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
@@ -271,6 +271,26 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 30c1485e6831ee048b4b10200697c8d0, type: 3}
   - {fileID: 21300000, guid: 4c20c510648aa4242ae29c060642a406, type: 3}
   defaultDirection: 1
+  runDownSprites:
+  - {fileID: 5492672904704099183, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -552008529196073988, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -2214237560337795564, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 2235499699665634998, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  runUpSprites:
+  - {fileID: 4199112386547951362, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -6687712934347727179, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 2038826198563898254, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 3517329118146540389, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  runLeftSprites:
+  - {fileID: 446886695475964241, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -8422125570959822444, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -3598354345458221425, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -4337239510405085123, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  runRightSprites:
+  - {fileID: -806345235500674288, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -3993328100868209951, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: 1826535590590052419, guid: 826ea2e14d701064e947a346cba27195, type: 3}
+  - {fileID: -4081608116807755925, guid: 826ea2e14d701064e947a346cba27195, type: 3}
 --- !u!50 &4131531866761559202
 Rigidbody2D:
   serializedVersion: 4

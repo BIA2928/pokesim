@@ -11,7 +11,7 @@ public class NPCController : MonoBehaviour, Interactive, ISavable
     [SerializeField] QuestBase questToComplete;
 
     [Header("Movement")]
-    [SerializeField] List<Vector2> movementPattern;
+    [SerializeReference] [SerializeField] List<Movement> movements;
     [SerializeField] float timeBetweenPatterns;
 
     Quest activeQuest;
@@ -33,6 +33,11 @@ public class NPCController : MonoBehaviour, Interactive, ISavable
         pokemonGiver = GetComponent<PokemonGiver>();
         healer = GetComponent<Healer>();
         merchant = GetComponent<Merchant>();
+    }
+
+    public void AddMovement(Movement movement)
+    {
+        movements.Add(movement);
     }
 
     public IEnumerator Interact(Transform initiator)
@@ -110,31 +115,44 @@ public class NPCController : MonoBehaviour, Interactive, ISavable
             idleTimer += Time.deltaTime;
             if (idleTimer > timeBetweenPatterns)
             {
-                if (movementPattern.Count > 0)
+                if (movements.Count > 0)
                 {
-                    StartCoroutine(Walk()) ;
+                    if (movements[currMovementIndex] is MoveVector)
+                        StartCoroutine(Walk());
+                    else
+                    {
+                        state = NPCState.Turning;
+                        Turn turn = (movements[currMovementIndex++] as Turn);
+                        character.Turn(turn.Direction);
+                        state = NPCState.Idle;
+                    }
+
                 }
-                
+
                 idleTimer = 0f;
             }
         }
         character.HandleUpdate();
     }
 
+   
+
     IEnumerator Walk()
     {
         state = NPCState.Walking;
 
         var prevPos = transform.position;
-        //Debug.Log($"Executing move {currMovementIndex} of {movementPattern.Count}");
-        yield return character.Move(movementPattern[currMovementIndex]);
+        Vector2 movement = (movements[currMovementIndex] as MoveVector).Move;
+        yield return character.Move(movement);
 
         if (transform.position != prevPos)
             // only increment pattern if the character actually walks
-            currMovementIndex = (currMovementIndex + 1) % movementPattern.Count;
+            currMovementIndex = (currMovementIndex + 1) % movements.Count;
 
         state = NPCState.Idle;
     }
+
+
 
     public object CaptureState()
     {
@@ -172,4 +190,24 @@ public class NPCQuestSaveData
     public QuestSaveData questToComplete;
 }
 
-public enum NPCState { Idle, Walking, Dialogue }
+[System.Serializable]
+public class Movement
+{
+    
+}
+
+[System.Serializable]
+public class MoveVector : Movement
+{
+    [SerializeField] Vector2 move;
+    public Vector2 Move => move;
+}
+
+[System.Serializable]
+public class Turn : Movement
+{
+    [SerializeField] FacingDirection direction;
+    public FacingDirection Direction => direction;
+}
+
+public enum NPCState { Idle, Walking, Dialogue, Turning }

@@ -77,7 +77,9 @@
     <Compile Include="Assets\Scripts\Inventory\ItemGiver.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MapArea.cs" />
     <Compile Include="Assets\Scripts\Character\NPCController.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\MoveActorAction.cs" />
     <Compile Include="Assets\Scripts\Character\TrainerFOV.cs" />
+    <Compile Include="Assets\Scripts\Character\PlayerCharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Condition.cs" />
     <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="Assets\Scripts\Inventory\ItemBase.cs" />
     <Compile Include="Assets\Scripts\Gameplay\StoryItem.cs" />
     <Compile Include="Assets\Scripts\Dialogue\ChoiceBox.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\Cutscene.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Move.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetUI.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
@@ -135,9 +138,11 @@
     <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
     <Compile Include="Assets\Scripts\UI\ShopUI.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\DialogueAction.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Ledge.cs" />
     <Compile Include="Assets\Scripts\Battle\MoveForgetScreen.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonBase.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\CutsceneAction.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonParty.cs" />
     <Compile Include="Assets\Scripts\Quests\QuestBase.cs" />
     <Compile Include="Assets\Scripts\Quests\QuestList.cs" />

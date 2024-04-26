@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class CharacterAnimator : MonoBehaviour
 {
-    const int rightIndex = 2;
-    const int leftIndex= 1;
-    const int upIndex = 3;
-    const int downIndex = 0;
-
     //Parameters
     [SerializeField] List<Sprite> walkDownSprites;
     [SerializeField] List<Sprite> walkUpSprites;
@@ -24,27 +19,31 @@ public class CharacterAnimator : MonoBehaviour
 
     public bool IsMoving { get; set; }
 
+    public bool IsRunning { get; set; }
+
+    public bool IsTurning { get; set; }
+
     public bool IsJumping { get; set; }
 
     public bool IsSurfing { get; set; }
 
     //States
-    SpriteAnimator walkDownAnim;
-    SpriteAnimator walkUpAnim;
-    SpriteAnimator walkRightAnim;
-    SpriteAnimator walkLeftAnim;
-    SpriteAnimator surfDownAnim;
-    SpriteAnimator surfUpAnim;
-    SpriteAnimator surfRightAnim;
-    SpriteAnimator surfLeftAnim;
+    protected SpriteAnimator walkDownAnim;
+    protected SpriteAnimator walkUpAnim;
+    protected SpriteAnimator walkRightAnim;
+    protected SpriteAnimator walkLeftAnim;
+    protected SpriteAnimator surfDownAnim;
+    protected SpriteAnimator surfUpAnim;
+    protected SpriteAnimator surfRightAnim;
+    protected SpriteAnimator surfLeftAnim;
 
-    SpriteAnimator currAnim;
-    bool wasPrevMoving;
+    protected SpriteAnimator currAnim;
+    protected bool wasPrevMoving;
 
     //Refernces
-    SpriteRenderer spriteRenderer;
+    protected SpriteRenderer spriteRenderer;
 
-    private void Start()
+    protected void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         walkDownAnim = new SpriteAnimator(walkDownSprites, spriteRenderer);
@@ -66,7 +65,7 @@ public class CharacterAnimator : MonoBehaviour
         get { return defaultDirection; }
     }
 
-    private void Update()
+    protected void Update()
     {
         var prevAnim = currAnim;
         
@@ -147,6 +146,31 @@ public class CharacterAnimator : MonoBehaviour
     public void SetSurfing(bool surfing)
     {
         IsSurfing = surfing;
+    }
+
+    public void Turn(FacingDirection dir)
+    {
+        
+        if (dir == FacingDirection.Left)
+        {
+            Debug.Log("Turning left animator");
+            spriteRenderer.sprite = walkLeftSprites[0];        
+        }
+        else if (dir == FacingDirection.Right)
+        {
+            Debug.Log("Turning right animator");
+            spriteRenderer.sprite = walkRightSprites[0];
+        }
+        else if (dir == FacingDirection.Up)
+        {
+            Debug.Log("Turning up animator");
+            spriteRenderer.sprite = walkUpSprites[0];
+        }
+        else
+        {
+            Debug.Log("Turning down animator");
+            spriteRenderer.sprite = walkDownSprites[0];
+        }
     }
 }
 

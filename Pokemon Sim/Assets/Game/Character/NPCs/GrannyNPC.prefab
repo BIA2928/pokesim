@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1331138698547332632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.925989, y: 51.559742, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -154,12 +154,10 @@ MonoBehaviour:
     - You can find wild pokemon inside!
   questToGive: {fileID: 0}
   questToComplete: {fileID: 0}
-  movementPattern:
-  - {x: 1, y: 0}
-  - {x: 0, y: -1}
-  - {x: -1, y: 0}
-  - {x: 0, y: 1}
+  movements: []
   timeBetweenPatterns: 1
+  references:
+    version: 1
 --- !u!114 &1331138698547332630
 MonoBehaviour:
   m_ObjectHideFlags: 0

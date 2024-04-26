@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5374669481733648353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.4, y: -4.4, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -152,8 +152,12 @@ MonoBehaviour:
     lines:
     - Did you like my gift?
     - I hope you did!
-  movementPattern: []
+  questToGive: {fileID: 0}
+  questToComplete: {fileID: 0}
+  movements: []
   timeBetweenPatterns: 1
+  references:
+    version: 1
 --- !u!114 &5374669481733648367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +203,10 @@ MonoBehaviour:
   - {fileID: -7606947885252526162, guid: 112aa48d3cbb3854ebb772f703cce7d7, type: 3}
   - {fileID: 9164626160657005978, guid: 112aa48d3cbb3854ebb772f703cce7d7, type: 3}
   - {fileID: 8556264582813305142, guid: 112aa48d3cbb3854ebb772f703cce7d7, type: 3}
+  surfLeftSprites: []
+  surfRightSprites: []
+  surfUpSprites: []
+  surfDownSprites: []
   defaultDirection: 0
 --- !u!114 &8476539344120514469
 MonoBehaviour:

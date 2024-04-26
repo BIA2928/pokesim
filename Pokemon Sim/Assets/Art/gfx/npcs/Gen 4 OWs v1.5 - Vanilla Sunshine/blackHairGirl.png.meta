@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 7e822b71bdbe0fe4087fcd1c9f283bd9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7019457709576975272
+    second: NPC 76_0
+  - first:
+      213: 7678896647465163800
+    second: NPC 76_1
+  - first:
+      213: 1750877409322214778
+    second: NPC 76_2
+  - first:
+      213: -4059045364523466393
+    second: NPC 76_3
+  - first:
+      213: -7780436767963354134
+    second: NPC 76_4
+  - first:
+      213: 3982884676870571509
+    second: NPC 76_5
+  - first:
+      213: 1677458235292482091
+    second: NPC 76_6
+  - first:
+      213: 1761192667211107589
+    second: NPC 76_7
+  - first:
+      213: -2885738153480251832
+    second: NPC 76_8
+  - first:
+      213: -3997625791131122585
+    second: NPC 76_9
+  - first:
+      213: -2370577394971580886
+    second: NPC 76_10
+  - first:
+      213: 9133253932194602000
+    second: NPC 76_11
+  - first:
+      213: -954509195028742259
+    second: NPC 76_12
+  - first:
+      213: -8710019092686554716
+    second: NPC 76_13
+  - first:
+      213: -3078344175635701336
+    second: NPC 76_14
+  - first:
+      213: -7928036749266341151
+    second: NPC 76_15
+  - first:
+      213: -2528936881572651876
+    second: blackHairGirl_0
+  - first:
+      213: -5217918592962757780
+    second: blackHairGirl_1
+  - first:
+      213: -3920688953264671019
+    second: blackHairGirl_2
+  - first:
+      213: 5184184248977670215
+    second: blackHairGirl_3
+  - first:
+      213: 6368526484961099503
+    second: blackHairGirl_4
+  - first:
+      213: -2965793011463452200
+    second: blackHairGirl_5
+  - first:
+      213: 6536805533849821521
+    second: blackHairGirl_6
+  - first:
+      213: 2951843942433056035
+    second: blackHairGirl_7
+  - first:
+      213: 5682282651152176750
+    second: blackHairGirl_8
+  - first:
+      213: 8053556792186020619
+    second: blackHairGirl_9
+  - first:
+      213: 8243450237847575167
+    second: blackHairGirl_10
+  - first:
+      213: -5061388258430085555
+    second: blackHairGirl_11
+  - first:
+      213: -725771551749730821
+    second: blackHairGirl_12
+  - first:
+      213: -5007263930446954464
+    second: blackHairGirl_13
+  - first:
+      213: 4032208368237489107
+    second: blackHairGirl_14
+  - first:
+      213: -3029434291693801286
+    second: blackHairGirl_15
+  - first:
+      213: -6709629208948000309
+    second: blackHairGirl_16
+  - first:
+      213: -6206504711468522535
+    second: blackHairGirl_17
+  - first:
+      213: -3504143763743642190
+    second: blackHairGirl_18
+  - first:
+      213: 2492450966090090230
+    second: blackHairGirl_19
+  - first:
+      213: -3164787089518070250
+    second: blackHairGirl_20
+  - first:
+      213: -5825445351342134860
+    second: blackHairGirl_21
+  - first:
+      213: -7317499176478784407
+    second: blackHairGirl_22
+  - first:
+      213: -1458606457005789854
+    second: blackHairGirl_23
+  - first:
+      213: -8851459704959347251
+    second: blackHairGirl_24
+  - first:
+      213: -7593449564202854021
+    second: blackHairGirl_25
+  - first:
+      213: -2911724788639301904
+    second: blackHairGirl_26
+  - first:
+      213: -8704877407242045092
+    second: blackHairGirl_27
+  - first:
+      213: -2156956704253388145
+    second: blackHairGirl_28
+  - first:
+      213: 5527211036402881224
+    second: blackHairGirl_29
+  - first:
+      213: 7739353310661597852
+    second: blackHairGirl_30
+  - first:
+      213: 1235836130460204875
+    second: blackHairGirl_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blackHairGirl_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c5a7a1e4967ecd0800000000000000
+      internalID: -2528936881572651876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b7c877faa3697b0800000000000000
+      internalID: -5217918592962757780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d67cd17b2ae699c0800000000000000
+      internalID: -3920688953264671019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7404d728b1ce1f740800000000000000
+      internalID: 5184184248977670215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feef5ce981d816850800000000000000
+      internalID: 6368526484961099503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9826238f267d6d0800000000000000
+      internalID: -2965793011463452200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1512de2eff567ba50800000000000000
+      internalID: 6536805533849821521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3256c151d6e07f820800000000000000
+      internalID: 2951843942433056035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e665a4717f58bde40800000000000000
+      internalID: 5682282651152176750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03aea0ab3bf3cf60800000000000000
+      internalID: 8053556792186020619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a938ec05e966270800000000000000
+      internalID: 8243450237847575167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4611f1023652c9b0800000000000000
+      internalID: -5061388258430085555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd8fd57e9a8de5f0800000000000000
+      internalID: -725771551749730821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02045112cff928ab0800000000000000
+      internalID: -5007263930446954464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db2729b52845f730800000000000000
+      internalID: 4032208368237489107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHairGirl_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab03435ff8945f5d0800000000000000
+      internalID: -3029434291693801286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

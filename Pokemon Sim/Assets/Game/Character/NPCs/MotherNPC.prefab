@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 7286307778024648830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -49.350754, y: 2.7574608, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -155,8 +155,10 @@ MonoBehaviour:
     - Take a rest a while.
   questToGive: {fileID: 0}
   questToComplete: {fileID: 0}
-  movementPattern: []
+  movements: []
   timeBetweenPatterns: 1
+  references:
+    version: 1
 --- !u!114 &7286307778024648816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +204,10 @@ MonoBehaviour:
   - {fileID: -2558230578233543712, guid: 6e653e10e0be7a94abe121c7dc9a6e62, type: 3}
   - {fileID: 6590508741895417071, guid: 6e653e10e0be7a94abe121c7dc9a6e62, type: 3}
   - {fileID: 1638167828199899196, guid: 6e653e10e0be7a94abe121c7dc9a6e62, type: 3}
+  surfLeftSprites: []
+  surfRightSprites: []
+  surfUpSprites: []
+  surfDownSprites: []
   defaultDirection: 1
 --- !u!114 &6497063293434452026
 MonoBehaviour:
