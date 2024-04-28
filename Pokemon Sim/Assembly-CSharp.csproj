@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Gameplay\BreakableRock.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SurfableWater.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\NPCInteractAction.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Data\QuestDB.cs" />
     <Compile Include="Assets\Scripts\Util\ScriptableObjectDB.cs" />
@@ -83,10 +84,12 @@
     <Compile Include="Assets\Scripts\Character\PlayerCharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Condition.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\TeleportActorAction.cs" />
     <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Wallet.cs" />
     <Compile Include="Assets\Scripts\Inventory\MedicineItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\EvolutionItem.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\FadeScreenAction.cs" />
     <Compile Include="Assets\Game\Hotkeys.cs" />
     <Compile Include="Assets\Scripts\Core\Fader.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\LocationPortal.cs" />
@@ -120,6 +123,7 @@
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleSystem.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\EnableObjectAction.cs" />
     <Compile Include="Assets\Scripts\UI\PocketSelectorUI.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotUI.cs" />
     <Compile Include="Assets\Scripts\Saving\ISavable.cs" />

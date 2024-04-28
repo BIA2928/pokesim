@@ -258,7 +258,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
                 d.Lines.Add($"You found a {itemBase.Name}!");
-            d.Lines.Add($"The {itemBase.Name} was added to the inventory.");
+            d.Lines.Add($"You put away the {itemBase.Name} in the {Inventory.GetPocketForItem(itemBase)} pocket.");
         }
 
         yield return ShowDialogueWithSFX(d, AudioID.ItemReceived);
