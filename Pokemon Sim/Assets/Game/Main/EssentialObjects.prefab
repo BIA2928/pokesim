@@ -61,11 +61,12 @@ GameObject:
   - component: {fileID: 5280483200646281778}
   - component: {fileID: 5280483200646281777}
   - component: {fileID: 5280483200646281776}
-  - component: {fileID: 4226718400070417816}
   - component: {fileID: 3842531134688835660}
   - component: {fileID: 6638546903590505996}
   - component: {fileID: 781164476829713896}
   - component: {fileID: 9057537628043486962}
+  - component: {fileID: 2471499629269232315}
+  - component: {fileID: 5604640919640432175}
   m_Layer: 0
   m_Name: CameController
   m_TagString: Untagged
@@ -159,19 +160,6 @@ MonoBehaviour:
   water:
     serializedVersion: 2
     m_Bits: 16
---- !u!114 &4226718400070417816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5280483200646281780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989b68d24d08f6445b0329f923c9ad8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 5794295601056789667}
 --- !u!114 &3842531134688835660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +221,31 @@ MonoBehaviour:
   walletUI: {fileID: 1997533798724113549}
   countSelector: {fileID: 7748127264148758447}
   shopOverlay: {fileID: 8763500060314780426}
+--- !u!114 &2471499629269232315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280483200646281780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2665ec0ecc6bdc146b4d69d94c7cbb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5604640919640432175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280483200646281780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300354627af540d4ba261bfa38b2772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuController: {fileID: 3115343538944676936}
 --- !u!1 &5280483200823115774
 GameObject:
   m_ObjectHideFlags: 0
@@ -6965,11 +6978,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3499193530819900030, guid: d92d7f3f83b12ee44a52917e8a4796f0, type: 3}
   m_PrefabInstance: {fileID: 8775169884633152608}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5794295601056789667 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3003570695211485379, guid: d92d7f3f83b12ee44a52917e8a4796f0, type: 3}
+--- !u!114 &3115343538944676936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5979732423478913064, guid: d92d7f3f83b12ee44a52917e8a4796f0, type: 3}
   m_PrefabInstance: {fileID: 8775169884633152608}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eeba400b5e00624692452473a4dbe8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &549909722787090093 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9107968940772012749, guid: d92d7f3f83b12ee44a52917e8a4796f0, type: 3}

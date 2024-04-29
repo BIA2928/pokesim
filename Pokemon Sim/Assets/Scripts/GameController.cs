@@ -1,8 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using Utils.StateMachine;
 
 public enum GameState
 {
@@ -24,6 +23,8 @@ public class GameController : MonoBehaviour
     GameState prevState;
     GameState stateBeforeEvo;
 
+    public StateMachine<GameController> StateMachine { get; private set; }
+
     [SerializeField] PlayerController pC;
     [SerializeField] BattleSystem bS;
     [SerializeField] Camera worldCam;
@@ -33,8 +34,7 @@ public class GameController : MonoBehaviour
     public static GameController i;
 
     TrainerController currentTrainer;
-    MenuController menuController;
-
+    
     public SceneDetails CurrentScene { get; private set; }
     public SceneDetails PrevScene { get; private set; }
 
@@ -51,7 +51,6 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         i = this;
-        menuController = GetComponent<MenuController>();
         ConditionsDB.Init();
         PokemonDB.Init();
         MoveDB.Init();
@@ -64,13 +63,10 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
+        StateMachine = new StateMachine<GameController>(this);
+        StateMachine.ChangeState(FreeRoamState.i);
         pS.Init();
         bS.OnBattleOver += EndBattle;
-        menuController.onBack += () =>
-        {
-            state = GameState.FreeRoam;
-        };
-        menuController.onMenuSlotSelected += OnMenuSelection;
 
         DialogueManager.Instance.OnShowDialogue += () =>
         {
@@ -202,46 +198,14 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (state == GameState.FreeRoam)
-        {
-            pC.HandleUpdate();
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                pC.StopPlayerMovement();
-                //Pause all NPCs as well
-                menuController.OpenMenu();
-                state = GameState.InMenu;
-            }
-            // Only for testing purposes, to be remvoed later
-            else if (Input.GetKeyDown(KeyCode.L))
-            {
-                SavingSystem.i.Load("testSave1");
-            }
-        } 
-        else if (state == GameState.InBattle)
+        StateMachine.Execute();
+        if (state == GameState.InBattle)
         {
             bS.HandleUpdate();
         }
         else if (state == GameState.InDialogue)
         {
             DialogueManager.Instance.HandleUpdate();
-        }
-        else if (state == GameState.InMenu)
-        {
-            menuController.HandleUpdate();
-        }
-        else if (state == GameState.InPartyScreen)
-        {
-            Action onSelected = () => 
-            {
-                // Open summary screen
-            };
-            Action onBack = () => 
-            {
-                pS.gameObject.SetActive(false);
-                state = GameState.FreeRoam;
-            };
-            pS.HandleUpdate(onSelected, onBack);
         }
         else if (state == GameState.InBag)
         {
@@ -309,6 +273,18 @@ public class GameController : MonoBehaviour
             yield return Fader.instance.FadeOut(0.5f);
         else
             StartCoroutine(Fader.instance.FadeOut(0.5f));
+    }
+
+    //StateStack Tesing Purposes Only
+    private void OnGUI()
+    {
+        var style = new GUIStyle();
+        style.fontSize = 22;
+        GUILayout.Label("STATE STACK", style);
+        foreach(var state in StateMachine.StateStack)
+        {
+            GUILayout.Label(state.GetType().ToString(), style);
+        }
     }
 
     public GameState GameState => state;

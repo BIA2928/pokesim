@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7732648983138575326}
-  - component: {fileID: 1670534271859851750}
+  - component: {fileID: 3925124492424279501}
   m_Layer: 5
   m_Name: PokedexSlot
   m_TagString: Untagged
@@ -113,7 +113,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5863, y: -260}
   m_SizeDelta: {x: 98.8274, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1670534271859851750
+--- !u!114 &3925124492424279501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,11 +122,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 66420008162453140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56bb5ee516b6ae94da5e539740229f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 939e85d77d2647148820a50cdc0f4f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 4589370529125848575}
-  imageField: {fileID: 4613545118511584270}
+  image: {fileID: 4613545118511584270}
   selectedSprite: {fileID: 7999322656748556528, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
   deselectedSprite: {fileID: -5682593150321825744, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
 --- !u!1 &311715921949174611
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3388434672361930557}
   - component: {fileID: 3085634814363856615}
-  - component: {fileID: 2480436075617261343}
+  - component: {fileID: 3071029061144688077}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -297,7 +297,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331169465375774376}
   m_CullTransparentMesh: 1
---- !u!114 &2480436075617261343
+--- !u!114 &3071029061144688077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -707,7 +707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5136826015805491119}
-  - component: {fileID: 1377217735027186121}
+  - component: {fileID: 5267214098761800695}
   m_Layer: 5
   m_Name: SaveSlot
   m_TagString: Untagged
@@ -736,7 +736,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5863, y: -442}
   m_SizeDelta: {x: 98.8274, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1377217735027186121
+--- !u!114 &5267214098761800695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -745,11 +745,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1209925165902172788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56bb5ee516b6ae94da5e539740229f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 939e85d77d2647148820a50cdc0f4f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 8846285016100128928}
-  imageField: {fileID: 3152069375352826633}
+  image: {fileID: 3152069375352826633}
   selectedSprite: {fileID: -5543794696892418234, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
   deselectedSprite: {fileID: 6411589911904058239, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
 --- !u!1 &1287659973570211193
@@ -1065,7 +1065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 204722429777241633}
-  - component: {fileID: 755916600358216689}
+  - component: {fileID: 7407433926496692372}
   m_Layer: 5
   m_Name: PokeballSlot
   m_TagString: Untagged
@@ -1094,7 +1094,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5863, y: -207}
   m_SizeDelta: {x: 98.8274, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &755916600358216689
+--- !u!114 &7407433926496692372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1103,11 +1103,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2613635912081928099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56bb5ee516b6ae94da5e539740229f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 939e85d77d2647148820a50cdc0f4f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textField: {fileID: 2480436075617261343}
-  imageField: {fileID: 1550529455139526632}
+  textField: {fileID: 3071029061144688077}
+  image: {fileID: 1550529455139526632}
   selectedSprite: {fileID: 7207552974325986876, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
   deselectedSprite: {fileID: -14902729816345926, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
 --- !u!1 &2707634329578214995
@@ -1247,6 +1247,7 @@ GameObject:
   - component: {fileID: 7208035335842852286}
   - component: {fileID: 3629769569716836137}
   - component: {fileID: 5417461959862336693}
+  - component: {fileID: 5979732423478913064}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1317,6 +1318,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5979732423478913064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003570695211485379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eeba400b5e00624692452473a4dbe8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionBuffer: 0.2
 --- !u!1 &3272161827525785492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4556501598575084717}
-  - component: {fileID: 9120616127133796618}
+  - component: {fileID: 156027821067786984}
   m_Layer: 5
   m_Name: OptionsSlot
   m_TagString: Untagged
@@ -1434,7 +1448,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5863, y: -507}
   m_SizeDelta: {x: 98.8274, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9120616127133796618
+--- !u!114 &156027821067786984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1443,11 +1457,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3467810552828069507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56bb5ee516b6ae94da5e539740229f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 939e85d77d2647148820a50cdc0f4f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 1315381093662957063}
-  imageField: {fileID: 3046861017031826478}
+  image: {fileID: 3046861017031826478}
   selectedSprite: {fileID: 6790798229702028745, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
   deselectedSprite: {fileID: -5618197028112380638, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
 --- !u!1 &3499193530819900018
@@ -2473,7 +2487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3524668255742319087}
-  - component: {fileID: 8172689464531204787}
+  - component: {fileID: 8900367254184834224}
   m_Layer: 5
   m_Name: BagSlot
   m_TagString: Untagged
@@ -2502,7 +2516,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5863, y: -130}
   m_SizeDelta: {x: 98.8274, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8172689464531204787
+--- !u!114 &8900367254184834224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2511,11 +2525,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5908853852269936635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56bb5ee516b6ae94da5e539740229f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 939e85d77d2647148820a50cdc0f4f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 5761101092947986281}
-  imageField: {fileID: 5817594933629977973}
+  image: {fileID: 5817594933629977973}
   selectedSprite: {fileID: -3679977308184195520, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
   deselectedSprite: {fileID: 6734936913962881735, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
 --- !u!1 &6245664346645833362
@@ -2623,7 +2637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6042070498553188093}
-  - component: {fileID: 6636209189163270092}
+  - component: {fileID: 8936229509638800180}
   m_Layer: 5
   m_Name: BadgesSlot
   m_TagString: Untagged
@@ -2652,7 +2666,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5863, y: -190}
   m_SizeDelta: {x: 98.8274, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6636209189163270092
+--- !u!114 &8936229509638800180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2661,11 +2675,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6666679680705233615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56bb5ee516b6ae94da5e539740229f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 939e85d77d2647148820a50cdc0f4f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 6505896001959088825}
-  imageField: {fileID: 2357934935886074850}
+  image: {fileID: 2357934935886074850}
   selectedSprite: {fileID: 8213678729949878827, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
   deselectedSprite: {fileID: 2558817296760600069, guid: ae1d44fe9ef983d47b447264945c92a1, type: 3}
 --- !u!1 &6732691860473039105

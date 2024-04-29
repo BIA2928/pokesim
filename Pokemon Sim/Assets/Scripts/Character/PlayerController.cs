@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour, ISavable
     // Update is called once per frame
     public void HandleUpdate()
     {
+
         if (!character.IsMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");

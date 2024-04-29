@@ -1,19 +1,19 @@
+
 using System;
-using System.Collections;
+using GenericSelectionUI;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
-public class PartyScreen : MonoBehaviour
+public class PartyScreen : SelectionUI<TextSlot>
 {
     [SerializeField] Text messageText;
     PartyMemberUI[] memberSlots;
     List<Pokemon> pokemonList;
     PokemonParty playerParty;
     
-    int currPartyPoke = 0;
 
-    public BattleState? CalledFromState { get; set; }
 
 
     public List<Pokemon> PokemonList
@@ -23,10 +23,10 @@ public class PartyScreen : MonoBehaviour
 
     public int CurrPartyPoke
     {
-        get { return currPartyPoke; }
+        get { return selection; }
     }
 
-    public Pokemon SelectedMember => pokemonList[currPartyPoke];
+    public Pokemon SelectedMember => pokemonList[selection];
     public void Init()
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>(true);
@@ -51,59 +51,13 @@ public class PartyScreen : MonoBehaviour
                 memberSlots[i].gameObject.SetActive(false);
         }
 
+        var textSlots = memberSlots.Select(m => m.GetComponent<TextSlot>());
+        SetItems(textSlots.Take(pokemonList.Count).ToList());
         messageText.text = "Choose a pokemon.";
-        UpdatePokemonSelection(0);
     }
 
-    public void UpdatePokemonSelection(int selectedPokeIndex)
-    {
-        for (int i = 0; i < pokemonList.Count; i++)
-        {
-            if (i == selectedPokeIndex)
-            {
-                memberSlots[i].SetSelected(true);
-            }
-            else
-            {
-                memberSlots[i].SetSelected(false);
-            }
-        }
-        
-    }
 
-    public void HandleUpdate(Action onSelection, Action onBack)
-    {
-        var prevSelection = currPartyPoke;
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-            ++currPartyPoke;
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-            --currPartyPoke;
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-            currPartyPoke += 2;
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-            currPartyPoke -= 2;
-
-        currPartyPoke = Mathf.Clamp(currPartyPoke, 0, PokemonList.Count - 1);
-
-        if (prevSelection != currPartyPoke)
-        {
-            UpdatePokemonSelection(currPartyPoke);
-            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
-        }
-            
-
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            onSelection?.Invoke();
-            AudioManager.i.PlaySFX(AudioID.UISelect);
-        }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-            onBack?.Invoke();
-            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
-        }
-    }
+    
 
     public void SetMessageText(string text)
     {

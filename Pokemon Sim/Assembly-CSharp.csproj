@@ -104,8 +104,10 @@
     <Compile Include="Assets\Scripts\UI\ItemDescriptionBarUI.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CuttableTree.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
+    <Compile Include="Assets\Scripts\Util\GenericSelection\SelectionUI.cs" />
     <Compile Include="Assets\Scripts\Quests\QuestObject.cs" />
     <Compile Include="Assets\Scripts\Gameplay\EvolutionManager.cs" />
+    <Compile Include="Assets\Scripts\Util\GenericSelection\ISelectableItem.cs" />
     <Compile Include="Assets\Scripts\Gameplay\LedgeController.cs" />
     <Compile Include="Assets\Scripts\Core\EssentialObjectsSpawner.cs" />
     <Compile Include="Assets\Scripts\Inventory\PokeballItem.cs" />
@@ -123,11 +125,13 @@
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleSystem.cs" />
+    <Compile Include="Assets\Scripts\Util\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\EnableObjectAction.cs" />
     <Compile Include="Assets\Scripts\UI\PocketSelectorUI.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotUI.cs" />
     <Compile Include="Assets\Scripts\Saving\ISavable.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Util\StateMachine\State.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\IPlayerTriggerable.cs" />
     <Compile Include="Assets\Scripts\Character\Merchant.cs" />
@@ -136,10 +140,11 @@
     <Compile Include="Assets\Scripts\Core\EssentialObjects.cs" />
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
     <Compile Include="Assets\Scripts\Inventory\ShopController.cs" />
-    <Compile Include="Assets\Scripts\UI\MenuController.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuControllerOld.cs" />
     <Compile Include="Assets\Scripts\Inventory\TmItem.cs" />
     <Compile Include="Assets\Scripts\Character\SurfingAnimator.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuController1.cs" />
     <Compile Include="Assets\Scripts\UI\WalletUI.cs" />
     <Compile Include="Assets\Scripts\UI\ShopUI.cs" />
     <Compile Include="Assets\Scripts\Battle\HPBar.cs" />
@@ -150,13 +155,18 @@
     <Compile Include="Assets\Scripts\Cutscenes\CutsceneAction.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonParty.cs" />
     <Compile Include="Assets\Scripts\Quests\QuestBase.cs" />
+    <Compile Include="Assets\Scripts\Util\GenericSelection\MenuItemSlot.cs" />
+    <Compile Include="Assets\Scripts\GameStates\FreeRoamState.cs" />
     <Compile Include="Assets\Scripts\Quests\QuestList.cs" />
     <Compile Include="Assets\Scripts\Data\PokemonDB.cs" />
+    <Compile Include="Assets\Scripts\GameStates\MenuOpenState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Interactive.cs" />
     <Compile Include="Assets\Scripts\Quests\Quest.cs" />
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
+    <Compile Include="Assets\Scripts\Battle\PartyScreen1.cs" />
+    <Compile Include="Assets\Scripts\Battle\PartyMemberSlot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
