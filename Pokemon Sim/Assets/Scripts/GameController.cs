@@ -199,6 +199,7 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         StateMachine.Execute();
+
         if (state == GameState.InBattle)
         {
             bS.HandleUpdate();
