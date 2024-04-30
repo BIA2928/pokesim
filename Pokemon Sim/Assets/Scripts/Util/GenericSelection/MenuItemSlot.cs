@@ -11,13 +11,16 @@ public class MenuItemSlot : MonoBehaviour, ISelectableItem
     [SerializeField] Sprite deselectedSprite;
 
     Color originalTextColor;
-    private void Awake()
-    {
-        originalTextColor = textField.color;
-    }
+
     public void SetSelected(bool selected)
     {
         textField.color = (selected) ? GlobalSettings.i.HighlightedColorBlue : originalTextColor;
         image.sprite = (selected) ? selectedSprite : deselectedSprite;
     }
+
+    public void Init()
+    {
+        originalTextColor = textField.color;
+    }
+
 }

@@ -6,20 +6,33 @@ using UnityEngine;
 
 namespace GenericSelectionUI
 {
+    public enum SelectionType
+    {
+        LinearList, Grid
+    }
     public class SelectionUI<T> : MonoBehaviour where T:ISelectableItem
     {
+
         List<T> items;
         protected int selection = 0;
         float selectionTime = 0;
         [SerializeField] float selectionBuffer = 0.2f;
-
+        SelectionType selectionType;
+        int gridWidth = 2;
 
         public event Action<int> OnSelected;
         public event Action OnBack;
         public void SetItems(List<T> items)
         {
             this.items = items;
+            items.ForEach(i => i.Init());
             UpdateSelectionInUI();
+        }
+
+        public void SetSelectionSettings(SelectionType selectionType, int gridWidth)
+        {
+            this.selectionType = selectionType;
+            this.gridWidth = gridWidth;
         }
 
         public virtual void HandleUpdate()
@@ -27,7 +40,10 @@ namespace GenericSelectionUI
             UpdateSelectionTimer();
             int prevSelection = selection;
 
-            HandleListSelection();
+            if (selectionType == SelectionType.LinearList)
+                HandleListSelection();
+            else
+                HandleGridSelection();
 
             selection = SelectionClamp(selection, 0, items.Count - 1);
 
@@ -55,13 +71,24 @@ namespace GenericSelectionUI
                 selection += -(int)(Mathf.Sign(v));
                 selectionTime = selectionBuffer;
             }
-                
+
 
         }
 
         void HandleGridSelection()
         {
+            var horizontal = Input.GetAxis("Horizontal");
+            var vertical = Input.GetAxis("Veritcal");
+            if (selectionTime == 0 && (Mathf.Abs(vertical) > selectionBuffer || Mathf.Abs(horizontal) > selectionBuffer))
+            {
+                if (Mathf.Abs(horizontal) > Mathf.Abs(vertical))
+                    selection += (int)(Mathf.Sign(horizontal));
+                else
+                    selection += -(int)(Mathf.Sign(vertical)) * gridWidth;
+                    
+                selectionTime = selectionBuffer;
 
+            }
         }
 
         private void UpdateSelectionInUI()

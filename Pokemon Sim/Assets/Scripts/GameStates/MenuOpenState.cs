@@ -43,6 +43,9 @@ public class MenuOpenState : State<GameController>
     {
         AudioManager.i.PlaySFX(AudioID.UISelect);
         Debug.Log("Selected menu item " + selection);
+        if (selection == 0)
+            gC.StateMachine.Push(GCPartyScreenState.i);
+            
     }
 
     void OnMenuBack()

@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.3446622, b: 0.1064436, a: 0.84313726}
+  m_Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 2183437246106904761}
   - component: {fileID: 2183437246106904766}
   - component: {fileID: 1157530251025389656}
+  - component: {fileID: 852169188250226900}
   m_Layer: 0
   m_Name: PartyMemberHUD
   m_TagString: Untagged
@@ -341,6 +342,19 @@ MonoBehaviour:
   maxHpText: {fileID: 3063377561237221694}
   spriteImage: {fileID: 6434960441112213820}
   messageText: {fileID: 294171962753674915}
+--- !u!114 &852169188250226900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183437246106904765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2183437245801611366}
 --- !u!1 &2183437246224513404
 GameObject:
   m_ObjectHideFlags: 0

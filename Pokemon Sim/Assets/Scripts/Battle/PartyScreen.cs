@@ -30,6 +30,7 @@ public class PartyScreen : SelectionUI<TextSlot>
     public void Init()
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>(true);
+        SetSelectionSettings(SelectionType.Grid, 2);
         playerParty = PokemonParty.GetPlayerParty();
         SetPartyData();
 
