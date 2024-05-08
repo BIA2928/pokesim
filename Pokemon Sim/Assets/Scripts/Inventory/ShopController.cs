@@ -90,7 +90,7 @@ public class ShopController : MonoBehaviour
             {
                 StartCoroutine(SellItem(sellItem));
             };
-            inventoryUI.HandleUpdate(onBack, onSelected);
+            //inventoryUI.HandleUpdate(onBack, onSelected);
         }
         else if (state ==  ShopState.Buying)
         {

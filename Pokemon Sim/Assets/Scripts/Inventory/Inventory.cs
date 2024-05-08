@@ -44,7 +44,21 @@ public class Inventory : MonoBehaviour, ISavable
         }
 
         return null;
+    }
 
+    public ItemBase UseItem(ItemBase itemBase, Pokemon selectedPokemon)
+    {
+
+        bool successful = itemBase.Use(selectedPokemon);
+
+        if (successful)
+        {
+            if (!itemBase.IsResuable)
+                RemoveOneOfItem(itemBase);
+            return itemBase;
+        }
+
+        return null;
     }
 
     public List<ItemSlot> GetItemsByCategory(int selectedCategory)

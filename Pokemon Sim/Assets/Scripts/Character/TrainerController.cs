@@ -64,6 +64,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
 
     public IEnumerator TriggerBattle(PlayerController player)
     {
+        GameController.i.StateMachine.Push(CutsceneState.i);
         AudioManager.i.PlayMusic(approachMusic, fade: false);
         exclamation.SetActive(true);
         yield return new WaitForSeconds(1.2f);
@@ -73,15 +74,13 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         var diff = (player.transform.position - transform.position);
         var moveVec = diff.normalized;
         diff -= moveVec;
-        Debug.Log($"Trying originally to reach {diff}");
-        //moveVec = new Vector2(Mathf.Round(moveVec.x), Mathf.Round(moveVec.y));
         diff = new Vector2(Mathf.Round(diff.x), Mathf.Round(diff.y));
-        Debug.Log($"Trying to reach {diff}");
         yield return character.Move(diff);
 
         player.GetComponent<Character>().LookTowards(transform.position);
         yield return DialogueManager.Instance.ShowDialogue(dialogue);
-        //Debug.Log("Trainer battle started!");
+
+        GameController.i.StateMachine.Pop();
         GameController.i.StartTrainerBattle(this);
     }
 

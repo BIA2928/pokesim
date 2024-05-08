@@ -6,4 +6,5 @@ public interface ISelectableItem
 {
     public void Init();
     public void SetSelected(bool selected);
+    public void Clear();
 }

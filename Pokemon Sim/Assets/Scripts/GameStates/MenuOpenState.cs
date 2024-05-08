@@ -44,7 +44,12 @@ public class MenuOpenState : State<GameController>
         AudioManager.i.PlaySFX(AudioID.UISelect);
         Debug.Log("Selected menu item " + selection);
         if (selection == 0)
-            gC.StateMachine.Push(GCPartyScreenState.i);
+            gC.StateMachine.Push(PartyScreenState.i);
+        else if (selection == 1)
+            //Pokedex
+            Debug.Log("Pokedex selected");
+        else if (selection == 2)
+            gC.StateMachine.Push(InventoryState.i);
             
     }
 

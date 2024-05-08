@@ -23,4 +23,9 @@ public class MenuItemSlot : MonoBehaviour, ISelectableItem
         originalTextColor = textField.color;
     }
 
+    public void Clear()
+    {
+        textField.color = originalTextColor;
+    }
+
 }

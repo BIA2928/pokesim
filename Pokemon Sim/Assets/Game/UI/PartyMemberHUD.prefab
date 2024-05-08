@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 2183437245801611366}
+  selectedIsRed: 1
 --- !u!1 &2183437246224513404
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,13 +9,29 @@ public class TextSlot : MonoBehaviour, ISelectableItem
 
     Color originalTextColor;
 
+    [SerializeField] bool selectedIsRed = false;
+
     public void SetSelected(bool selected)
     {
-        textField.color = (selected) ? GlobalSettings.i.HighlightedColorRed: originalTextColor;
+        if (selectedIsRed)
+            textField.color = (selected) ? GlobalSettings.i.HighlightedColorRed : originalTextColor;
+        else
+            textField.color = (selected) ? GlobalSettings.i.HighlightedColorBlue : originalTextColor;
     }
 
     public void Init()
     {
         originalTextColor = textField.color;
     }
+
+    public void SetText(string text)
+    {
+        this.textField.text = text;
+    }
+
+    public void Clear()
+    {
+        textField.color = originalTextColor;
+    }
+
 }

@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 9036103464087601089}
   - component: {fileID: 9036103464087601094}
   - component: {fileID: 6894444814815273700}
+  - component: {fileID: 5076997199016555770}
   m_Layer: 0
   m_Name: Move
   m_TagString: Untagged
@@ -171,11 +172,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b0326a1c920bc4891a789d04c86a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 0.9528302, g: 0.049524013, b: 0.013483422, a: 0}
   moveNameText: {fileID: 9036103464159741227}
   ppText: {fileID: 9036103464605788393}
   moveTypeText: {fileID: 9036103464157956589}
   moveCategoryText: {fileID: 9036103463525364607}
+--- !u!114 &5076997199016555770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9036103464087601092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 9036103464159741227}
+  selectedIsRed: 1
 --- !u!1 &9036103464157956595
 GameObject:
   m_ObjectHideFlags: 0

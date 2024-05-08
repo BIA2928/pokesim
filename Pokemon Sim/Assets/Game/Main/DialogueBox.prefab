@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2241730200864809732}
   - component: {fileID: 2241730200864809734}
   - component: {fileID: 2241730200864809735}
+  - component: {fileID: 5742951625195158968}
   m_Layer: 0
   m_Name: MoveTextBottomRight
   m_TagString: Untagged
@@ -160,6 +161,20 @@ MonoBehaviour:
   m_Text: 'Bulldoze
 
 '
+--- !u!114 &5742951625195158968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730200864809733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730200864809735}
+  selectedIsRed: 0
 --- !u!1 &2241730200993853597
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2241730201121299179}
   - component: {fileID: 2241730201121299178}
+  - component: {fileID: 991387983364420977}
   m_Layer: 0
   m_Name: ActionSelector
   m_TagString: Untagged
@@ -337,6 +353,19 @@ MonoBehaviour:
   m_Spacing: {x: 39.8, y: -6.2}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &991387983364420977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730201121299176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04d1ce172ead0947b26841d19bc54a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionBuffer: 0.2
 --- !u!1 &2241730201174287233
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2241730201174287232}
   - component: {fileID: 2241730201174287235}
+  - component: {fileID: 7701082037820802109}
   m_Layer: 0
   m_Name: MoveSelector
   m_TagString: Untagged
@@ -401,6 +431,26 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &7701082037820802109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730201174287233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13705ef84c24ba140a10b80e4c9861df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionBuffer: 0.2
+  moveTexts:
+  - {fileID: 4889376921468613667}
+  - {fileID: 5023367659920563209}
+  - {fileID: 503859865283116336}
+  - {fileID: 5742951625195158968}
+  ppText: {fileID: 2241730200797553984}
+  typeText: {fileID: 2241730202629682863}
 --- !u!1 &2241730201368558582
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +499,7 @@ GameObject:
   - component: {fileID: 2241730201408124965}
   - component: {fileID: 2241730201408124967}
   - component: {fileID: 2241730201408124964}
+  - component: {fileID: 4889376921468613667}
   m_Layer: 0
   m_Name: MoveTextTopLeft
   m_TagString: Untagged
@@ -519,6 +570,20 @@ MonoBehaviour:
   m_Text: 'Thunderbolt
 
 '
+--- !u!114 &4889376921468613667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730201408124962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730201408124964}
+  selectedIsRed: 0
 --- !u!1 &2241730201510607884
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +595,7 @@ GameObject:
   - component: {fileID: 2241730201510607887}
   - component: {fileID: 2241730201510607889}
   - component: {fileID: 2241730201510607886}
+  - component: {fileID: 5023367659920563209}
   m_Layer: 0
   m_Name: MoveTextTopRight
   m_TagString: Untagged
@@ -598,6 +664,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Psychic
+--- !u!114 &5023367659920563209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730201510607884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730201510607886}
+  selectedIsRed: 0
 --- !u!1 &2241730201547800251
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +689,7 @@ GameObject:
   - component: {fileID: 2241730201547800250}
   - component: {fileID: 2241730201547800252}
   - component: {fileID: 2241730201547800253}
+  - component: {fileID: 503859865283116336}
   m_Layer: 0
   m_Name: MoveTextBottomLeft
   m_TagString: Untagged
@@ -677,6 +758,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Earthquake
+--- !u!114 &503859865283116336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730201547800251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730201547800253}
+  selectedIsRed: 0
 --- !u!1 &2241730202078969161
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +783,7 @@ GameObject:
   - component: {fileID: 2241730202078969160}
   - component: {fileID: 2241730202078969162}
   - component: {fileID: 2241730202078969163}
+  - component: {fileID: 1705768362210479442}
   m_Layer: 0
   m_Name: BagText
   m_TagString: Untagged
@@ -756,6 +852,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Bag
+--- !u!114 &1705768362210479442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730202078969161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730202078969163}
+  selectedIsRed: 0
 --- !u!1 &2241730202161558311
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +877,7 @@ GameObject:
   - component: {fileID: 2241730202161558310}
   - component: {fileID: 2241730202161558312}
   - component: {fileID: 2241730202161558313}
+  - component: {fileID: 3320051739814214616}
   m_Layer: 0
   m_Name: PokemonText
   m_TagString: Untagged
@@ -835,6 +946,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Pokemon
+--- !u!114 &3320051739814214616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730202161558311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730202161558313}
+  selectedIsRed: 0
 --- !u!1 &2241730202330985570
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +1050,7 @@ GameObject:
   - component: {fileID: 2241730202415985078}
   - component: {fileID: 2241730202415985080}
   - component: {fileID: 2241730202415985081}
+  - component: {fileID: 3474729193749574607}
   m_Layer: 0
   m_Name: FightText
   m_TagString: Untagged
@@ -993,6 +1119,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Fight
+--- !u!114 &3474729193749574607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730202415985079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730202415985081}
+  selectedIsRed: 0
 --- !u!1 &2241730202448203502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1144,7 @@ GameObject:
   - component: {fileID: 2241730202448203505}
   - component: {fileID: 2241730202448203507}
   - component: {fileID: 2241730202448203504}
+  - component: {fileID: 5044826654083696333}
   m_Layer: 0
   m_Name: RunText
   m_TagString: Untagged
@@ -1072,6 +1213,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Run
+--- !u!114 &5044826654083696333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241730202448203502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2241730202448203504}
+  selectedIsRed: 0
 --- !u!1 &2241730202629682861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,11 +1408,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5233753604011222603, guid: dd5e1fa29a306c44e86aa680d3433ae2, type: 3}
   m_PrefabInstance: {fileID: 6322559723345277092}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &2241730201458153198 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5233753604011222602, guid: dd5e1fa29a306c44e86aa680d3433ae2, type: 3}
-  m_PrefabInstance: {fileID: 6322559723345277092}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2241730201953158115 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5233753603532993351, guid: dd5e1fa29a306c44e86aa680d3433ae2, type: 3}
@@ -1280,3 +1430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &2241730201458153198 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5233753604011222602, guid: dd5e1fa29a306c44e86aa680d3433ae2, type: 3}
+  m_PrefabInstance: {fileID: 6322559723345277092}
+  m_PrefabAsset: {fileID: 0}

@@ -200,6 +200,6 @@ public class BattleDialogue : MonoBehaviour
         dialogueText.text = "";
     }
 
-    
+    public bool IsChoiceBoxEnabled => switchBox.activeSelf;
 
 }

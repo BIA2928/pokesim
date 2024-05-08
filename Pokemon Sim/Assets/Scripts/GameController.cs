@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
     public SceneDetails CurrentScene { get; private set; }
     public SceneDetails PrevScene { get; private set; }
 
+    public Camera WorldCam => worldCam;
     public void SurfMusicChange(bool IsSurfing)
     {
         Debug.Log("Changing music");
@@ -70,14 +71,12 @@ public class GameController : MonoBehaviour
 
         DialogueManager.Instance.OnShowDialogue += () =>
         {
-            prevState = state;
-            state = GameState.InDialogue;
+            StateMachine.Push(DialogueState.i);
         };
 
         DialogueManager.Instance.OnCloseDialogue += () =>
         {
-            if (state == GameState.InDialogue)
-                state = prevState;
+            StateMachine.Pop();
         };
 
         EvolutionManager.i.OnStartEvolution += () =>
@@ -115,45 +114,24 @@ public class GameController : MonoBehaviour
             state = prevState;
     }
 
-    public void StartCutscene()
-    {
-        state = GameState.Cutscene;
-    }
-
-    public void EnterFreeRoam()
-    {
-        state = GameState.FreeRoam;
-    }
-
-    public void StartTrainerBattle(TrainerController trainer)
-    {
-        currentTrainer = trainer;
-        state = GameState.InBattle;
-        bS.gameObject.SetActive(true);
-        worldCam.gameObject.SetActive(false);
-
-        var playerParty = pC.GetComponent<PokemonParty>();
-        bS.StartTrainerBattle(playerParty, trainer.GetComponent<PokemonParty>());
-
-    }
-
     public void OnEnterTrainerFOV(TrainerController trainer)
     {
-        state = GameState.Cutscene;
+        
         StartCoroutine(trainer.TriggerBattle(pC));
     }
 
     public void StartBattle(BattleEnvironment environment)
     {
-        state = GameState.InBattle;
-        bS.gameObject.SetActive(true);
-        worldCam.gameObject.SetActive(false);
+        BattleState.i.CurrEnvironment = environment;
+        StateMachine.Push(BattleState.i);
+    }
 
-        var playerParty = pC.GetComponent<PokemonParty>();
-        var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon(environment);
-        var copy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
-        bS.StartBattle(playerParty, copy, environment);
-
+    public void StartTrainerBattle(TrainerController trainer)
+    {
+        currentTrainer = trainer;
+        BattleState.i.Trainer = trainer;
+        BattleState.i.CurrEnvironment = BattleEnvironment.LongGrass;
+        StateMachine.Push(BattleState.i);
     }
 
     void EndBattle(bool won)
@@ -173,8 +151,6 @@ public class GameController : MonoBehaviour
                 state = GameState.FreeRoam;
                 StartCoroutine(playerParty.RunEvolutions());
             }
-            else
-                AudioManager.i.StopBattleMusic();
             
         }
         else
@@ -200,24 +176,7 @@ public class GameController : MonoBehaviour
     {
         StateMachine.Execute();
 
-        if (state == GameState.InBattle)
-        {
-            bS.HandleUpdate();
-        }
-        else if (state == GameState.InDialogue)
-        {
-            DialogueManager.Instance.HandleUpdate();
-        }
-        else if (state == GameState.InBag)
-        {
-            Action onBack = () =>
-            {
-                iUI.gameObject.SetActive(false);
-                state = GameState.FreeRoam;
-            };
-            iUI.HandleUpdate(onBack);
-        }
-        else if (state == GameState.Shop)
+        if (state == GameState.Shop)
         {
             ShopController.instance.HandleUpdate();
         }
@@ -231,40 +190,6 @@ public class GameController : MonoBehaviour
         CurrentScene = scene;
     }
 
-    void OnMenuSelection(int selectedIndex)
-    {
-        if (selectedIndex == 0)
-        {
-            // Open Party
-            pS.gameObject.SetActive(true);
-            state = GameState.InPartyScreen;
-        }
-        else if (selectedIndex == 1)
-        {
-            //Open pokedex 
-        }
-        else if (selectedIndex == 2)
-        {
-            // Open bag
-            iUI.gameObject.SetActive(true);
-            state = GameState.InBag;
-        }
-        else if (selectedIndex == 3)
-        {
-            // Open badges
-        }
-        else if (selectedIndex == 4)
-        {
-            // Save
-            SavingSystem.i.Save("testSave1");
-            state = GameState.FreeRoam;
-        }
-        else if (selectedIndex == 5)
-        {
-            // Open options
-
-        }
-    }
 
     public IEnumerator MoveCamera(Vector2 moveVec, bool waitForFade=false)
     {

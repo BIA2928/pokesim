@@ -29,6 +29,12 @@ namespace GenericSelectionUI
             UpdateSelectionInUI();
         }
 
+        public void ClearItems()
+        {
+            items.ForEach(i => i.Clear());
+            this.items = null;
+        }
+
         public void SetSelectionSettings(SelectionType selectionType, int gridWidth)
         {
             this.selectionType = selectionType;
@@ -45,7 +51,7 @@ namespace GenericSelectionUI
             else
                 HandleGridSelection();
 
-            selection = SelectionClamp(selection, 0, items.Count - 1);
+            selection = MinClamp(selection, 0, items.Count - 1);
 
             if (selection != prevSelection)
             {
@@ -55,10 +61,16 @@ namespace GenericSelectionUI
 
             if (Input.GetButtonDown("Selection"))
             {
-                OnSelected?.Invoke(selection);
+                if (items.Count != 0)
+                {
+                    AudioManager.i.PlaySFX(AudioID.UISelect);
+                    OnSelected?.Invoke(selection);
+                }
+                    
             }
             else if (Input.GetButtonDown("GoBack") || Input.GetKeyDown(KeyCode.Return))
             {
+                AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
                 OnBack?.Invoke();
             }
         }
@@ -78,7 +90,7 @@ namespace GenericSelectionUI
         void HandleGridSelection()
         {
             var horizontal = Input.GetAxis("Horizontal");
-            var vertical = Input.GetAxis("Veritcal");
+            var vertical = Input.GetAxis("Vertical");
             if (selectionTime == 0 && (Mathf.Abs(vertical) > selectionBuffer || Mathf.Abs(horizontal) > selectionBuffer))
             {
                 if (Mathf.Abs(horizontal) > Mathf.Abs(vertical))
@@ -91,7 +103,7 @@ namespace GenericSelectionUI
             }
         }
 
-        private void UpdateSelectionInUI()
+        protected virtual void UpdateSelectionInUI()
         {
             for (int i = 0; i < items.Count; i++)
             {
@@ -108,12 +120,21 @@ namespace GenericSelectionUI
             }
         }
 
-        private int SelectionClamp(int n, int min, int max)
+        private int MaxClamp(int n, int min, int max)
         {
             if (max <= min || n > max)
                 return max;
             if (n < min)
                 return min;
+            return n;
+        }
+
+        private int MinClamp(int n, int min, int max)
+        {
+            if (min >= max || n < min)
+                return min;
+            if (n > max)
+                return max;
             return n;
         }
 

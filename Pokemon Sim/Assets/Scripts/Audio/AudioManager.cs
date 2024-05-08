@@ -94,6 +94,7 @@ public class AudioManager : MonoBehaviour
 
     public void StopBattleMusic(bool fade = true)
     {
+        Debug.Log("Stopping battle music");
         StartCoroutine(PlayMusicAsync(musicBeforeBattle, true, fade));
         musicBeforeBattle = null;
     }
