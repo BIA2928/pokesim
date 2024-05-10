@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Utils.StateMachine;
 
@@ -15,7 +16,6 @@ public class RunTurnState : State<BattleSystem>
 
     BattleUnit playerUnit;
     BattleUnit enemyUnit;
-    PartyScreen partyScreen;
     BattleDialogue dialogueBox;
     MoveBase currMoveToLearn;
     public override void EnterState(BattleSystem owner)
@@ -24,7 +24,6 @@ public class RunTurnState : State<BattleSystem>
         playerUnit = bS.AllyUnit;
         enemyUnit = bS.EnemyUnit;
         dialogueBox = bS.DialogueBox;
-        partyScreen = bS.PartyScreen;
 
         StartCoroutine(RunTurns(bS.SelectedAction));
     }
@@ -88,6 +87,15 @@ public class RunTurnState : State<BattleSystem>
             }
             else if (playerAction == BattleAction.UseItem)
             {
+                if (bS.SelectedItem is PokeballItem)
+                {
+                    yield return bS.ThrowPokeball(bS.SelectedItem as PokeballItem);
+                    if (bS.IsBattleOver) yield break;
+                }
+                else
+                {
+
+                }
                 dialogueBox.EnableActionSelector(false);
             }
             else if (playerAction == BattleAction.Run)
@@ -288,7 +296,7 @@ public class RunTurnState : State<BattleSystem>
         else
             moveAccur *= boostValues[evasiveness];
 
-        return (UnityEngine.Random.Range(0, 100) < moveAccur);
+        return (Random.Range(0, 100) < moveAccur);
 
     }
 
@@ -332,6 +340,7 @@ public class RunTurnState : State<BattleSystem>
         if (bS.IsTrainerBattle)
         {
             yield return dialogueBox.TypeDialogue($"There's no runnning from a trainer battle!");
+            bS.StateMachine.ChangeState(ActionSelectionState.i);
             yield break;
         }
 
@@ -421,13 +430,43 @@ public class RunTurnState : State<BattleSystem>
                     if (playerUnit.Pokemon.Moves.Count < PokemonBase.MaxNMoves)
                     {
                         playerUnit.Pokemon.LearnMove(move);
-                        yield return dialogueBox.TypeDialogue($"{playerUnit.Pokemon.Base.Name} learnt {move.Base.Name}!");
+                        AudioManager.i.PlaySFX(AudioID.LvlUp);
+                        yield return new WaitUntil(() => AudioManager.i.ExtraAudioPlayer.isPlaying == false);
+                        yield return dialogueBox.ShowDialogue($"{playerUnit.Pokemon.Base.Name} learnt {move.Base.Name}!", hideActions: true);
                         dialogueBox.SetMoveNames(bS.AllyUnit.Pokemon.Moves);
                     }
                     else
                     {
-                        /*yield return AskToForget();
-                        yield return new WaitUntil(() => state != BattleStates.ForgettingMove && state != BattleStates.AskToForgetMove && state != BattleStates.Busy);*/
+                        AskToForgetState.i.MoveToLearn = move.Base;
+                        yield return bS.StateMachine.PushAndWait(AskToForgetState.i);
+
+                        if (AskToForgetState.i.ForgetMoveChoice)
+                        {
+                            ForgettingMoveState.i.Moves = playerUnit.Pokemon.Moves;
+                            ForgettingMoveState.i.MoveToLearn = move.Base;
+                            yield return GameController.i.StateMachine.PushAndWait(ForgettingMoveState.i);
+
+                            int moveIndex = ForgettingMoveState.i.Selection;
+                            if (moveIndex == -1 || moveIndex >= bS.AllyUnit.Pokemon.Moves.Count)
+                            {
+                                yield return dialogueBox.ShowDialogue($"{bS.AllyUnit.Pokemon.Base.Name} did not learn {currMoveToLearn.Name}", hideActions:true);
+                            }
+                            else
+                            {
+                                yield return dialogueBox.TypeDialogue($"3...2...1... and poof!");
+                                
+                                yield return new WaitForSeconds(0.9f);
+                                var replacedMove = bS.AllyUnit.Pokemon.Moves[moveIndex].Base.Name;
+                                bS.AllyUnit.Pokemon.ReplaceMove(bS.AllyUnit.Pokemon.Moves[moveIndex], new Move(currMoveToLearn));
+                                AudioManager.i.PlaySFX(AudioID.LvlUp);
+                                yield return dialogueBox.ShowDialogue($"{bS.AllyUnit.Pokemon.Base.Name} forgot {replacedMove} and learned {currMoveToLearn.Name}!", hideActions: true);
+                            }
+                        }
+                        else
+                        {
+                            yield return dialogueBox.ShowDialogue($"{bS.AllyUnit.Pokemon.Base.Name} did not learn {currMoveToLearn.Name}", hideActions: true); 
+                        }
+                        
                     }
                     yield return new WaitForSeconds(1f);
                 }
@@ -441,6 +480,8 @@ public class RunTurnState : State<BattleSystem>
 
         yield return new WaitForSeconds(1f);
 
-        CheckForBattleOver(faintedUnit);
+        yield return CheckForBattleOver(faintedUnit);
     }
+
+    
 }

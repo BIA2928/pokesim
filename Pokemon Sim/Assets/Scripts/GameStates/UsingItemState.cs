@@ -8,6 +8,8 @@ public class UsingItemState : State<GameController>
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
     public static UsingItemState i;
+
+    public bool ItemUsed { get; private set; }
     private void Awake()
     {
         i = this;
@@ -20,6 +22,7 @@ public class UsingItemState : State<GameController>
     {
         gC = owner;
         StartCoroutine(UseItem());
+        ItemUsed = false;
     }
 
     public override void Execute()
@@ -62,6 +65,7 @@ public class UsingItemState : State<GameController>
         var usedItem = inventory.UseItem(currItem, partyScreen.SelectedMember);
         if (usedItem == null)
         {
+            
             if (!(usedItem is KeyItem))
                 yield return DialogueManager.Instance.ShowDialogue($"It won't have any effect.");
             else
@@ -69,6 +73,7 @@ public class UsingItemState : State<GameController>
         }
         else
         {
+            ItemUsed = true;
             if (usedItem is MedicineItem)
                 yield return DialogueManager.Instance.ShowDialogue($"One {usedItem.Name} was used.");
         }

@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 3059784576336699901}
   - component: {fileID: 5010989459025518259}
   - component: {fileID: 8200578261564148433}
+  - component: {fileID: 1739636389264171439}
   m_Layer: 0
   m_Name: BattleSystem
   m_TagString: Untagged
@@ -189,6 +190,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c77c8d7204922724ba1feac7e4edd3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1739636389264171439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204084678289421072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16f5f225b752ad4f8e7c26833b33ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7204084678369162065

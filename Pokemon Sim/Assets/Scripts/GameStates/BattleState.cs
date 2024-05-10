@@ -26,24 +26,27 @@ public class BattleState : State<GameController>
     {
         gC = owner;
 
+        StartCoroutine(StartBattle());
+    }
+
+    IEnumerator StartBattle()
+    {
+        
         battleSystem.gameObject.SetActive(true);
         gC.WorldCam.gameObject.SetActive(false);
         var playerParty = PlayerController.i.GetComponent<PokemonParty>();
-        var music = battleSystem.WildBattleMusic; 
         if (Trainer == null)
         {
             var wildPokemon = gC.CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon(CurrEnvironment);
             var copy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
-            AudioManager.i.PlayBattleMusic(music, true, false);
+            yield return Fader.instance.BattleFader.FadeToBlack();
             battleSystem.StartBattle(playerParty, copy, CurrEnvironment);
         }
         else
         {
-            music = Trainer.BattleMusic;
-            AudioManager.i.PlayBattleMusic(music, true, false);
             battleSystem.StartTrainerBattle(playerParty, Trainer.GetComponent<PokemonParty>());
         }
-
+        
         battleSystem.OnBattleOver += OnBattleOver;
     }
 

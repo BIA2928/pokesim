@@ -64,7 +64,7 @@ public class AboutToUseState : State<BattleSystem>
         Dialogue d = new Dialogue();
         d.Lines.Add($"{bS.EnemyTrainer.Name} is about to use {NewPokemon.Base.Name}.");
         d.Lines.Add("Do you want to switch?");
-        yield return bS.DialogueBox.ShowDialogue(d, false);
+        yield return bS.DialogueBox.ShowDialogue(d, false, true);
         bS.DialogueBox.EnableChoiceSelector(true);
         bS.DialogueBox.UpdateChoiceSelection(aboutToUseChoice);
     }

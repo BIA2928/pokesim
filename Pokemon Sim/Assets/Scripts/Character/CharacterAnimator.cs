@@ -172,6 +172,7 @@ public class CharacterAnimator : MonoBehaviour
             spriteRenderer.sprite = walkDownSprites[0];
         }
     }
+
 }
 
 public enum FacingDirection

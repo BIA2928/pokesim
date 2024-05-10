@@ -63,8 +63,8 @@ GameObject:
   - component: {fileID: 5280483200646281776}
   - component: {fileID: 3842531134688835660}
   - component: {fileID: 6638546903590505996}
-  - component: {fileID: 781164476829713896}
   - component: {fileID: 9057537628043486962}
+  - component: {fileID: 781164476829713896}
   - component: {fileID: 2471499629269232315}
   - component: {fileID: 5604640919640432175}
   - component: {fileID: 2533751287828047545}
@@ -193,23 +193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColorRed: {r: 0.9137255, g: 0.22352941, b: 0.07450981, a: 1}
   highlightedColorBlue: {r: 0.043137256, g: 0.57254905, b: 0.89411765, a: 1}
---- !u!114 &781164476829713896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5280483200646281780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02419a09e540194a99e7a55309b81fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evoUI: {fileID: 187062482671917215}
-  oldPokemonImage: {fileID: 4225960133047818773}
-  newPokemonImage: {fileID: 329857772722785700}
-  backgroundImage: {fileID: 3460849767465233403}
-  evolutionMusic: {fileID: 8300000, guid: 271b824b3bc8362468602660e5c2edf4, type: 3}
 --- !u!114 &9057537628043486962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +211,23 @@ MonoBehaviour:
   walletUI: {fileID: 1997533798724113549}
   countSelector: {fileID: 7748127264148758447}
   shopOverlay: {fileID: 8763500060314780426}
+--- !u!114 &781164476829713896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280483200646281780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02419a09e540194a99e7a55309b81fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evoUI: {fileID: 187062482671917215}
+  oldPokemonImage: {fileID: 4225960133047818773}
+  newPokemonImage: {fileID: 329857772722785700}
+  backgroundImage: {fileID: 3460849767465233403}
+  evolutionMusic: {fileID: 8300000, guid: 271b824b3bc8362468602660e5c2edf4, type: 3}
 --- !u!114 &2471499629269232315
 MonoBehaviour:
   m_ObjectHideFlags: 0

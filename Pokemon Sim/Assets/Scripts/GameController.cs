@@ -21,7 +21,6 @@ public class GameController : MonoBehaviour
 {
     GameState state;
     GameState prevState;
-    GameState stateBeforeEvo;
 
     public StateMachine<GameController> StateMachine { get; private set; }
 
@@ -37,6 +36,8 @@ public class GameController : MonoBehaviour
     
     public SceneDetails CurrentScene { get; private set; }
     public SceneDetails PrevScene { get; private set; }
+
+    public PartyScreen PartyScreen => pS;
 
     public Camera WorldCam => worldCam;
     public void SurfMusicChange(bool IsSurfing)
@@ -78,20 +79,6 @@ public class GameController : MonoBehaviour
         {
             StateMachine.Pop();
         };
-
-        EvolutionManager.i.OnStartEvolution += () =>
-        {
-            stateBeforeEvo = state;
-            state = GameState.InEvolution;
-        };
-
-        EvolutionManager.i.OnFinishEvolution += () =>
-        {
-            state = stateBeforeEvo;
-            pS.SetPartyData();
-            AudioManager.i.PlayMusic(CurrentScene.SceneMusic);
-        };
-
         ShopController.instance.OnStartShopping += () =>
         {
             state = GameState.Shop;
@@ -124,14 +111,17 @@ public class GameController : MonoBehaviour
     {
         BattleState.i.CurrEnvironment = environment;
         StateMachine.Push(BattleState.i);
+        AudioManager.i.PlayBattleMusic(bS.WildBattleMusic);
     }
 
-    public void StartTrainerBattle(TrainerController trainer)
+    public IEnumerator StartTrainerBattle(TrainerController trainer)
     {
         currentTrainer = trainer;
         BattleState.i.Trainer = trainer;
         BattleState.i.CurrEnvironment = BattleEnvironment.LongGrass;
-        StateMachine.Push(BattleState.i);
+        AudioManager.i.PlayBattleMusic(trainer.BattleMusic, fade:false);
+        yield return new WaitForSeconds(0.8f);
+        StateMachine.ChangeState(BattleState.i);
     }
 
     void EndBattle(bool won)

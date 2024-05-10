@@ -8,6 +8,9 @@ public class Fader : MonoBehaviour
 {
     public static Fader instance { get; private set; }
     Image image;
+    [SerializeField] BattleFader battleFader;
+
+    public BattleFader BattleFader => battleFader;
 
     private void Awake()
     {

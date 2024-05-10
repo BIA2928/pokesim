@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System;
+using Utils.StateMachine;
 
-public class EvolutionManager : MonoBehaviour
+public class EvolutionManager : State<GameController>
 {
     [SerializeField] GameObject evoUI;
     [SerializeField] Image oldPokemonImage;
@@ -13,8 +14,6 @@ public class EvolutionManager : MonoBehaviour
     [SerializeField] Image backgroundImage;
     [SerializeField] AudioClip evolutionMusic;
 
-    public event Action OnStartEvolution;
-    public event Action OnFinishEvolution;
     public static EvolutionManager i { get; private set; }
 
     private void Awake()
@@ -24,7 +23,7 @@ public class EvolutionManager : MonoBehaviour
 
     public IEnumerator Evolve(Pokemon pokemon, Evolution evolution) 
     {
-        OnStartEvolution?.Invoke();
+        GameController.i.StateMachine.Push(this);
         evoUI.SetActive(true);
         AudioManager.i.PlayMusic(evolutionMusic);
 
@@ -48,7 +47,13 @@ public class EvolutionManager : MonoBehaviour
         // Turn off 
         ResetImages();
         evoUI.SetActive(false);
-        OnFinishEvolution?.Invoke();
+        GameController.i.StateMachine.Pop();
+    }
+
+    public override void ExitState()
+    {
+        GameController.i.PartyScreen.SetPartyData();
+        AudioManager.i.PlayMusic(GameController.i.CurrentScene.SceneMusic);
     }
 
     public void ResetImages()

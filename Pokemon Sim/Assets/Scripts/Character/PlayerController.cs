@@ -157,6 +157,8 @@ public class PlayerController : MonoBehaviour, ISavable
         get => character;
     }
 
+    public bool IsSurfing => character.Animator.IsSurfing;
+
 }
 
 [Serializable]

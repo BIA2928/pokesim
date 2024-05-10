@@ -47,7 +47,7 @@ public class ActionSelectionState : State<BattleSystem>
         else if (selection == 1) 
         {
             //Bag
-            bS.SelectedAction = BattleAction.UseItem;
+            StartCoroutine(GoToInventoryState());
         }
         else if (selection == 2)
         {
@@ -58,9 +58,21 @@ public class ActionSelectionState : State<BattleSystem>
         {
             //Run
             bS.SelectedAction = BattleAction.Run;
-            bS.StateMachine.ChangeState(RunTurnState.i);
+            if (!bS.IsTrainerBattle)
+                bS.StateMachine.ChangeState(RunTurnState.i);
+            else
+            {
+                StartCoroutine(RunFromTrainerBattle());
+            }
         }
 
+    }
+
+    IEnumerator RunFromTrainerBattle()
+    {
+        bS.DialogueBox.HideActions(true);
+        yield return bS.DialogueBox.TypeDialogue($"There's no runnning from a trainer battle!");
+        bS.StateMachine.ChangeState(i);
     }
 
     IEnumerator GoToPartyState()
@@ -74,6 +86,19 @@ public class ActionSelectionState : State<BattleSystem>
             bS.SelectedSwitchPokemon = selected;
             bS.StateMachine.ChangeState(RunTurnState.i);
         }
+    }
+
+    IEnumerator GoToInventoryState()
+    {
+        yield return GameController.i.StateMachine.PushAndWait(InventoryState.i);
+        var item = InventoryState.i.SelectedItem;
+        if (item != null)
+        {
+            bS.SelectedAction = BattleAction.UseItem;
+            bS.SelectedItem = item;
+            bS.StateMachine.ChangeState(RunTurnState.i);
+        }
+
     }
     
     void OnBack()

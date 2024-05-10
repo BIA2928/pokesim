@@ -94,8 +94,10 @@ public class AudioManager : MonoBehaviour
 
     public void StopBattleMusic(bool fade = true)
     {
-        Debug.Log("Stopping battle music");
-        StartCoroutine(PlayMusicAsync(musicBeforeBattle, true, fade));
+        if (!PlayerController.i.IsSurfing)
+            StartCoroutine(PlayMusicAsync(GameController.i.CurrentScene.SceneMusic, true, fade));
+        else
+            StartCoroutine(PlayMusicAsync(surfMusic, true, fade));
         musicBeforeBattle = null;
     }
 
@@ -150,7 +152,7 @@ public enum AudioID
 {
     UISelect, UISwitchSelection, MenuOpen, MenuClose, Hit, HitSprEft, HitNVEft, ExpGain, TMReceived, 
     ItemReceived, KeyItemReceived, LvlUp, Bump, Jump, ObtainedPoke, StatUp, StatDown,
-    PokemonOut, PokeballThrow, ChangePocket, EnterArea
+    PokemonOut, PokeballThrow, ChangePocket, EnterArea, PokeballShake, PokeballClick, PokeballBounce
 }
 
 

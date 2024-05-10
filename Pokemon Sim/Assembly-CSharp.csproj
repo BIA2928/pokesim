@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Dialogue\ChoiceText.cs" />
+    <Compile Include="Assets\Scripts\Battle\States\AskToForgetState.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleHUD.cs" />
     <Compile Include="Assets\Scripts\Util\GameLayers.cs" />
     <Compile Include="Assets\Scripts\Saving\SavableEntity.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\Scripts\Util\SpriteAnimator.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonTrader.cs" />
     <Compile Include="Assets\Scripts\Battle\States\RunTurnState.cs" />
+    <Compile Include="Assets\Scripts\GameStates\CutsceneState.cs" />
     <Compile Include="Assets\Scripts\Battle\UI\MoveSelectionUI.cs" />
     <Compile Include="Assets\Scripts\Data\MoveDB.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -108,6 +110,7 @@
     <Compile Include="Assets\Scripts\Gameplay\LongGrass.cs" />
     <Compile Include="Assets\Scripts\Inventory\Pickup.cs" />
     <Compile Include="Assets\Scripts\UI\ItemDescriptionBarUI.cs" />
+    <Compile Include="Assets\Scripts\Battle\States\AboutToUseState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CuttableTree.cs" />
     <Compile Include="Assets\Scripts\Data\ConditionsDB.cs" />
     <Compile Include="Assets\Scripts\Util\GenericSelection\SelectionUI.cs" />
@@ -143,6 +146,7 @@
     <Compile Include="Assets\Scripts\UI\InventoryItemSlot.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\IPlayerTriggerable.cs" />
+    <Compile Include="Assets\Scripts\GameStates\DialogueState.cs" />
     <Compile Include="Assets\Scripts\Character\Merchant.cs" />
     <Compile Include="Assets\Scripts\Character\Healer.cs" />
     <Compile Include="Assets\Scripts\Core\InvisbleTiles.cs" />
@@ -178,9 +182,7 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\Scripts\GameStates\DialogueState.cs" />
-    <Compile Include="Assets\Scripts\GameStates\CutsceneState.cs" />
-    <Compile Include="Assets\Scripts\Battle\States\AboutToUseState.cs" />
+    <Compile Include="Assets\BattleFader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

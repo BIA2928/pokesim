@@ -107,6 +107,15 @@ MonoBehaviour:
   - id: 20
     clip: {fileID: 8300000, guid: e9d466231c016194b8bec544c0c017d2, type: 3}
     stopsMusic: 0
+  - id: 21
+    clip: {fileID: 8300000, guid: 60a3a18655e8bfe44a05dc7ffd1f91e4, type: 3}
+    stopsMusic: 0
+  - id: 22
+    clip: {fileID: 8300000, guid: aabf800fd04478b4faba8188e6781974, type: 3}
+    stopsMusic: 0
+  - id: 23
+    clip: {fileID: 8300000, guid: 2e773471db1f17e4ea0637275f6b7109, type: 3}
+    stopsMusic: 0
   surfMusic: {fileID: 8300000, guid: e972145b1929b2e45a7b3d35728fe390, type: 3}
   musicPlayer: {fileID: 1291976242895518296}
   sfxPlayer: {fileID: 5850951166861174480}

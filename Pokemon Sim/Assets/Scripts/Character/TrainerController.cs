@@ -45,7 +45,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         {
             AudioManager.i.PlayMusic(approachMusic, fade: false);
             yield return DialogueManager.Instance.ShowDialogue(dialogue);
-            GameController.i.StartTrainerBattle(this);
+            yield return GameController.i.StartTrainerBattle(this);
         }
         else
         {
@@ -64,7 +64,9 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
 
     public IEnumerator TriggerBattle(PlayerController player)
     {
+        var playerCharacter = player.GetComponent<Character>();
         GameController.i.StateMachine.Push(CutsceneState.i);
+        playerCharacter.Stop();
         AudioManager.i.PlayMusic(approachMusic, fade: false);
         exclamation.SetActive(true);
         yield return new WaitForSeconds(1.2f);
@@ -77,11 +79,14 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         diff = new Vector2(Mathf.Round(diff.x), Mathf.Round(diff.y));
         yield return character.Move(diff);
 
-        player.GetComponent<Character>().LookTowards(transform.position);
+        
+        
+        playerCharacter.LookTowards(transform.position);
         yield return DialogueManager.Instance.ShowDialogue(dialogue);
 
-        GameController.i.StateMachine.Pop();
-        GameController.i.StartTrainerBattle(this);
+        //GameController.i.StateMachine.Pop();
+        //Handled in StartTrainerBattle
+        yield return GameController.i.StartTrainerBattle(this);
     }
 
     public void SetFovRotation(FacingDirection dir)
