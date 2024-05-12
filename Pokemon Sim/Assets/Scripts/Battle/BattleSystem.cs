@@ -208,45 +208,6 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-
-    /*void HandleAskMoveForget()
-    {
-        Debug.Log("Checkpoint2");
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            aboutToUseChoice = !aboutToUseChoice;
-            dialogueBox.UpdateChoiceSelection(aboutToUseChoice);
-            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            dialogueBox.EnableChoiceSelector(false);
-            AudioManager.i.PlaySFX(AudioID.UISelect);
-            if (aboutToUseChoice)
-            {
-                // Forget move for new move
-                OpenMoveForgetScreen();
-            }
-            else
-            {
-                // Don't forget, continue turns
-                StartCoroutine(dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} did not learn {currMoveToLearn.Name}."));
-                state = BattleStates.ActionSelection;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-            // Also continue turns
-            dialogueBox.EnableChoiceSelector(false);
-            AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
-            StartCoroutine(dialogueBox.TypeDialogue($"{playerPoke.Pokemon.Base.Name} did not learn {currMoveToLearn.Name}."));
-            state = BattleStates.ActionSelection;
-        }
-    }*/
-
-    
-
     public IEnumerator SwitchPokemon(Pokemon newPokemon)
     {
         playerPoke.Pokemon.CureVolatileCondition();
@@ -323,6 +284,7 @@ public class BattleSystem : MonoBehaviour
         if (shakeCount == 4)
         {
             AudioManager.i.PlaySFX(AudioID.PokeballClick);
+            AudioManager.i.PlayMusic(WildVictoryMusic);
             yield return pokeball.DOColor(Color.gray, 0.1f).WaitForCompletion();
             yield return dialogueBox.TypeDialogue($"{enemyPoke.Pokemon.Base.Name} was successfully caught!");
             yield return pokeball.DOFade(0, 1f).WaitForCompletion();

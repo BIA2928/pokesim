@@ -63,7 +63,6 @@ GameObject:
   - component: {fileID: 5280483200646281776}
   - component: {fileID: 3842531134688835660}
   - component: {fileID: 6638546903590505996}
-  - component: {fileID: 9057537628043486962}
   - component: {fileID: 781164476829713896}
   - component: {fileID: 2471499629269232315}
   - component: {fileID: 5604640919640432175}
@@ -74,6 +73,9 @@ GameObject:
   - component: {fileID: 8609785319601757444}
   - component: {fileID: 470739465296228316}
   - component: {fileID: 6847083602448464684}
+  - component: {fileID: 5962841803869296848}
+  - component: {fileID: 2126440188729035796}
+  - component: {fileID: 3183980199318983975}
   m_Layer: 0
   m_Name: CameController
   m_TagString: Untagged
@@ -193,24 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColorRed: {r: 0.9137255, g: 0.22352941, b: 0.07450981, a: 1}
   highlightedColorBlue: {r: 0.043137256, g: 0.57254905, b: 0.89411765, a: 1}
---- !u!114 &9057537628043486962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5280483200646281780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc62ece00f49db4cbb4543c9a558100, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  shopCamOffset: {x: 3.4, y: 0}
-  inventoryUI: {fileID: 549909722787090093}
-  walletUI: {fileID: 1997533798724113549}
-  countSelector: {fileID: 7748127264148758447}
-  shopOverlay: {fileID: 8763500060314780426}
 --- !u!114 &781164476829713896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +327,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cd8a14723f3ee46aff9f8010675166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5962841803869296848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280483200646281780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267ce1e8015b20947b4aae28bb787c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2126440188729035796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280483200646281780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fac8344601090b4a95abc5c4572d233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopCamOffset: {x: 3.4, y: 0}
+  walletUI: {fileID: 1997533798724113549}
+  countSelector: {fileID: 7748127264148758447}
+  shopOverlay: {fileID: 8763500060314780426}
+--- !u!114 &3183980199318983975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280483200646281780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a125eb476db1543b934f4ec3a305ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walletUI: {fileID: 1997533798724113549}
+  countSelector: {fileID: 7748127264148758447}
+  inventoryUI: {fileID: 549909722787090093}
 --- !u!1 &5280483200823115774
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,11 +663,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7583171f4b3586b459bb71840e463e33, type: 3}
---- !u!4 &5280483200571027435 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4131531866761559228, guid: 7583171f4b3586b459bb71840e463e33, type: 3}
-  m_PrefabInstance: {fileID: 8078944438702003031}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &5280483201005019896 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4131531866662580655, guid: 7583171f4b3586b459bb71840e463e33, type: 3}
@@ -657,6 +679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e6f400516b7c547849cca3143cc075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &5280483200571027435 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4131531866761559228, guid: 7583171f4b3586b459bb71840e463e33, type: 3}
+  m_PrefabInstance: {fileID: 8078944438702003031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8775169884633152608
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -50,7 +50,11 @@ public class InventoryState : State<GameController>
     {
         AudioManager.i.PlaySFX(AudioID.UISelect);
         SelectedItem = inventoryUI.SelectedItem;
-        StartCoroutine(SelectPokemonAndUseItem());
+        if (gC.StateMachine.GetPreviousState() is ShopSellingState)
+            gC.StateMachine.Pop();
+        else
+            StartCoroutine(SelectPokemonAndUseItem());
+
     }
 
     void OnBack() 

@@ -7,6 +7,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
 {
     [SerializeField] new string name;
     [SerializeField] Dialogue dialogue;
+    [SerializeField] Dialogue defeatDialogue;
     [SerializeField] Dialogue beatenDialogue;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;

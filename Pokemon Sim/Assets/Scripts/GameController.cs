@@ -79,14 +79,6 @@ public class GameController : MonoBehaviour
         {
             StateMachine.Pop();
         };
-        ShopController.instance.OnStartShopping += () =>
-        {
-            state = GameState.Shop;
-        };
-        ShopController.instance.OnCloseShop += () =>
-        {
-            state = GameState.FreeRoam;
-        };
     }
 
     public void PauseGame(bool pause)
@@ -138,7 +130,6 @@ public class GameController : MonoBehaviour
             bool willEvolve = playerParty.CheckForEvolution();
             if (willEvolve)
             {
-                state = GameState.FreeRoam;
                 StartCoroutine(playerParty.RunEvolutions());
             }
             
@@ -155,23 +146,13 @@ public class GameController : MonoBehaviour
         }
 
         pS.SetPartyData();
-        state = GameState.FreeRoam;
         bS.gameObject.SetActive(false);
         worldCam.gameObject.SetActive(true);
-
-        
     }
 
     private void Update()
     {
         StateMachine.Execute();
-
-        if (state == GameState.Shop)
-        {
-            ShopController.instance.HandleUpdate();
-        }
-
-        
     }
 
     public void SetCurrentScene(SceneDetails scene)

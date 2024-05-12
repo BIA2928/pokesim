@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Gameplay\BreakableRock.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SurfableWater.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\NPCInteractAction.cs" />
+    <Compile Include="Assets\Scripts\GameStates\ShopStates\ShopBuyingState.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Data\QuestDB.cs" />
     <Compile Include="Assets\Scripts\Util\ScriptableObjectDB.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\Character\NPCController.cs" />
     <Compile Include="Assets\Scripts\GameStates\ForgettingMoveState.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\TurnActorAction.cs" />
+    <Compile Include="Assets\BattleFader.cs" />
     <Compile Include="Assets\Scripts\GameStates\PartyScreenState.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\MoveActorAction.cs" />
     <Compile Include="Assets\Scripts\Character\TrainerFOV.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Assets\Scripts\Data\ItemDB.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleUnit.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyScreen.cs" />
+    <Compile Include="Assets\Scripts\GameStates\ShopStates\ShopSellingState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Inventory\KeyItem.cs" />
@@ -141,6 +144,7 @@
     <Compile Include="Assets\Scripts\UI\PocketSelectorUI.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotUI.cs" />
     <Compile Include="Assets\Scripts\Saving\ISavable.cs" />
+    <Compile Include="Assets\Scripts\GameStates\ShopStates\ShopMenuState.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Util\StateMachine\State.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryItemSlot.cs" />
@@ -182,7 +186,6 @@
     <Compile Include="Assets\Scripts\Pokemon\MoveBase.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyMemberUI.cs" />
     <Compile Include="Assets\Scripts\Battle\BattleDialogue.cs" />
-    <Compile Include="Assets\BattleFader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
