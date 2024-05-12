@@ -31,7 +31,8 @@ public class BattleState : State<GameController>
 
     IEnumerator StartBattle()
     {
-        
+        yield return Fader.instance.BattleFader.FadeToBlack(0.8f);
+        yield return new WaitForSeconds(0.4f);
         battleSystem.gameObject.SetActive(true);
         gC.WorldCam.gameObject.SetActive(false);
         var playerParty = PlayerController.i.GetComponent<PokemonParty>();
@@ -39,7 +40,6 @@ public class BattleState : State<GameController>
         {
             var wildPokemon = gC.CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon(CurrEnvironment);
             var copy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
-            yield return Fader.instance.BattleFader.FadeToBlack();
             battleSystem.StartBattle(playerParty, copy, CurrEnvironment);
         }
         else

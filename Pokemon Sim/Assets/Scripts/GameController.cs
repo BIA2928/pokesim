@@ -112,8 +112,8 @@ public class GameController : MonoBehaviour
         BattleState.i.Trainer = trainer;
         BattleState.i.CurrEnvironment = BattleEnvironment.LongGrass;
         AudioManager.i.PlayBattleMusic(trainer.BattleMusic, fade:false);
-        yield return new WaitForSeconds(0.8f);
         StateMachine.ChangeState(BattleState.i);
+        yield break;
     }
 
     void EndBattle(bool won)
@@ -123,6 +123,7 @@ public class GameController : MonoBehaviour
             if (currentTrainer != null)
             {
                 currentTrainer.Beat();
+                bS.ResetTrainer();
                 currentTrainer = null;
             }
             

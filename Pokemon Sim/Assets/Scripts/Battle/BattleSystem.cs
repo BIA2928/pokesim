@@ -37,20 +37,18 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] AudioClip wildBattleMusic;
     [SerializeField] AudioClip wildVictoryMusic;
 
-    public StateMachine<BattleSystem> StateMachine { get; private set; }
-
-
-    public PokemonParty PlayerParty { get; private set; } 
-    public PokemonParty EnemyParty { get; private set; }
-    public Pokemon WildPokemon { get; private set; }
-
+    // Private fields
     bool isTrainerBattle = false;
     PlayerController player;
     TrainerController enemyTrainer;
-
     BattleEnvironment battleEnvironment;
     public event Action<bool> OnBattleOver;
 
+    // Properties
+    public StateMachine<BattleSystem> StateMachine { get; private set; }
+    public PokemonParty PlayerParty { get; private set; } 
+    public PokemonParty EnemyParty { get; private set; }
+    public Pokemon WildPokemon { get; private set; }
     public int SelectedMove { get; set; }
     public BattleAction SelectedAction { get; set; }
     public Pokemon SelectedSwitchPokemon { get; set; }
@@ -59,8 +57,6 @@ public class BattleSystem : MonoBehaviour
     public bool IsBattleOver { get; private set; }
 
     public int NumEscapesTried { get; set; }
-
-
     public BattleDialogue DialogueBox => dialogueBox;
     public PartyScreen PartyScreen => partyScreen;
     public Pokemon CurrentAllyPokemon => playerPoke.Pokemon;
@@ -70,7 +66,6 @@ public class BattleSystem : MonoBehaviour
     public bool IsTrainerBattle => isTrainerBattle;
 
     public TrainerController EnemyTrainer => enemyTrainer;
-
     public AudioClip WildBattleMusic => wildBattleMusic;
     public AudioClip WildVictoryMusic => wildVictoryMusic;
     public void StartBattle(PokemonParty party, Pokemon wildPokemon, 
@@ -104,8 +99,10 @@ public class BattleSystem : MonoBehaviour
 
     public IEnumerator SetupBattle()
     {
+        
         IsBattleOver = false;
         StateMachine = new StateMachine<BattleSystem>(this);
+        
         partyScreen.Init();
         NumEscapesTried = 0;
         playerPoke.Clear();
@@ -117,7 +114,7 @@ public class BattleSystem : MonoBehaviour
             playerPoke.EnableImage(false);
             playerImage.sprite = player.BattleSprite;
             enemyPoke.Setup(WildPokemon);
-            yield return Fader.instance.BattleFader.FadeToColour();
+            yield return Fader.instance.BattleFader.FadeToColour(0.8f);
             yield return enemyPoke.PlayEnterAnimation2(true);
             yield return dialogueBox.TypeDialogue($"A wild {enemyPoke.Pokemon.Base.Name} appeared!");
             
@@ -145,6 +142,8 @@ public class BattleSystem : MonoBehaviour
 
             playerImage.sprite = player.BattleSprite;
             enemyImage.sprite = enemyTrainer.BattleSprite;
+            yield return Fader.instance.BattleFader.FadeToColour(0.8f);
+            yield return new WaitForSeconds(0.3f);
             yield return dialogueBox.TypeDialogue($"You are challenged by {enemyTrainer.Name}!");
 
             // Send out enemy first Poke
@@ -185,19 +184,39 @@ public class BattleSystem : MonoBehaviour
 
     public void HandleUpdate()
     {
+        if (StateMachine == null)
+            return;
         StateMachine.Execute();
     }
 
+    public void ResetTrainer()
+    {
+        enemyTrainer = null;
+        enemyImage.gameObject.SetActive(false);
+    }
 
-    public void BattleOver(bool playerWin)
+
+    public IEnumerator BattleOver(bool playerWin)
     {
         IsBattleOver = true;
 
         PlayerParty.PokemonList.ForEach(p => p.OnBattleOver());
         playerPoke.BattleHUD.ClearData();
         enemyPoke.BattleHUD.ClearData();
+        
         if (playerWin)
         {
+            if (IsTrainerBattle)
+            {
+                AudioManager.i.PlayMusic(enemyTrainer.VictoryMusic, fade:false);
+            }
+            else
+            {
+                AudioManager.i.PlayMusic(wildVictoryMusic, fade: false);
+            }
+                
+            yield return new WaitForSeconds(0.5f);
+            yield return PlayTrainerDefeatAnimation();
             enemyPoke.ResetAfterFaint();
             OnBattleOver(playerWin);
         }
@@ -206,6 +225,19 @@ public class BattleSystem : MonoBehaviour
             playerPoke.ResetAfterFaint();
             OnBattleOver(!playerWin);
         }
+    }
+
+    IEnumerator PlayTrainerDefeatAnimation()
+    {
+        enemyImage.gameObject.SetActive(true);
+        yield return DialogueBox.ShowDialogue($"You defeated {enemyTrainer.Name}!", hideActions: true);
+        yield return new WaitForSeconds(0.3f);
+        yield return DialogueBox.ShowDialogue(enemyTrainer.DefeatDialogue, true, true);
+        yield return new WaitForSeconds(0.3f);
+        Wallet.i.AddMoney(enemyTrainer.Payout);
+        yield return DialogueBox.ShowDialogue($"You got ${enemyTrainer.Payout} for winning!", hideActions: true);
+        yield return new WaitForSeconds(0.2f);
+        
     }
 
     public IEnumerator SwitchPokemon(Pokemon newPokemon)
@@ -218,14 +250,15 @@ public class BattleSystem : MonoBehaviour
             yield return dialogueBox.TypeDialogue(
                 $"That's enough for now {playerPoke.Pokemon.Base.Name}, come back!");
             yield return playerPoke.PlayFaintAnimation();
-            yield return new WaitForSeconds(0.9f);
+            yield return new WaitForSeconds(0.7f);
         }
 
 
         playerPoke.Setup(newPokemon);
+        yield return dialogueBox.TypeDialogue($"Go {newPokemon.Base.Name}!");
         yield return playerPoke.PlayEnterAnimation2();
         dialogueBox.SetMoveNames(newPokemon.Moves);
-        yield return dialogueBox.TypeDialogue($"Go {newPokemon.Base.Name}!");
+        
     }
 
     public IEnumerator SendNextTrainerPokemon()
@@ -296,7 +329,7 @@ public class BattleSystem : MonoBehaviour
                 yield return dialogueBox.TypeDialogue($"{enemyPoke.Pokemon.Base.Name} was sent to the PC.");
 
             Destroy(pokeball);
-            BattleOver(true);
+            yield return BattleOver(true);
         }
         else
         {

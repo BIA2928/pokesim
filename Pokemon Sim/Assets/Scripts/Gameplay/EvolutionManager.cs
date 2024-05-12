@@ -44,6 +44,7 @@ public class EvolutionManager : State<GameController>
         // Play end of routine
         AudioManager.i.PlaySFX(AudioID.Congratulations);
         yield return DialogueManager.Instance.ShowPostEvolutionDialogue(prevName, pokemon.Base.Name);
+        yield return new WaitForSeconds(1f);
 
         // Turn off 
         ResetImages();

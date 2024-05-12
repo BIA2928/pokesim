@@ -313,13 +313,13 @@ public class RunTurnState : State<BattleSystem>
             }
             else
             {
-                bS.BattleOver(false);
+                yield return bS.BattleOver(false);
             }
         }
         else
         {
             if (!bS.IsTrainerBattle)
-                bS.BattleOver(true);
+                yield return bS.BattleOver(true);
             else
             {
                 var nextPoke = bS.EnemyParty.GetFirstHealthy();
@@ -329,7 +329,7 @@ public class RunTurnState : State<BattleSystem>
                     yield return bS.StateMachine.PushAndWait(AboutToUseState.i);
                 }
                 else
-                    bS.BattleOver(true);
+                    yield return bS.BattleOver(true);
             }
         }
     }
@@ -350,7 +350,7 @@ public class RunTurnState : State<BattleSystem>
         if (enemySpeed < playerPokeSpeed)
         {
             yield return dialogueBox.TypeDialogue($"Got away safely!");
-            bS.BattleOver(true);
+            yield return bS.BattleOver(true);
         }
         else
         {
@@ -360,7 +360,7 @@ public class RunTurnState : State<BattleSystem>
             if (Random.Range(0, 266) < f)
             {
                 yield return dialogueBox.TypeDialogue($"Got away safely!");
-                bS.BattleOver(true);
+                yield return bS.BattleOver(true);
             }
             else
             {
@@ -392,24 +392,16 @@ public class RunTurnState : State<BattleSystem>
             {
                 yield return dialogueBox.TypeDialogue($"The wild {faintedUnit.Pokemon.Base.Name} fainted.");
             }
-            if (battleWon)
-            {
-                if (bS.IsTrainerBattle)
-                    AudioManager.i.PlayMusic(bS.EnemyTrainer.VictoryMusic, fade: false);
-                else
-                {
-                    AudioManager.i.PlayMusic(bS.WildVictoryMusic, fade: false);
-                    Debug.Log("Playing wild victory music!");
-                }
-
-            }
-
             int expYield = faintedUnit.Pokemon.Base.ExpYield;
             int enemyLvl = faintedUnit.Pokemon.Level;
 
             int expGain = Mathf.FloorToInt((expYield * enemyLvl * trainerBonus) / 7);
 
             playerUnit.Pokemon.Exp += expGain;
+
+            yield return faintedUnit.PlayFaintAnimation();
+
+            yield return new WaitForSeconds(1f);
 
             yield return dialogueBox.TypeDialogue($"{playerUnit.Pokemon.Base.Name} gained {expGain} EXP.");
             yield return playerUnit.BattleHUD.SetExpAnimation();
@@ -473,12 +465,8 @@ public class RunTurnState : State<BattleSystem>
                 currMoveToLearn = null;
                 yield return playerUnit.BattleHUD.SetExpAnimation(true);
             }
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(1.1f);
         }
-
-        yield return faintedUnit.PlayFaintAnimation();
-
-        yield return new WaitForSeconds(1f);
 
         yield return CheckForBattleOver(faintedUnit);
     }

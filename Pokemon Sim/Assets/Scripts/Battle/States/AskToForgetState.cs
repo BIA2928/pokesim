@@ -46,6 +46,7 @@ public class AskToForgetState : State<BattleSystem>
         else if (Input.GetKeyDown(KeyCode.X))
         {
             AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
+            ForgetMoveChoice = false;
             bS.StateMachine.Pop();
             
         }

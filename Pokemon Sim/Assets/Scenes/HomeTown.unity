@@ -22125,6 +22125,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: trainer
       objectReference: {fileID: 0}
+    - target: {fileID: 8397524414858330412, guid: eda2ef94b389adc4182e9a9ac4953c89, type: 3}
+      propertyPath: defeatDialogue.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397524414858330412, guid: eda2ef94b389adc4182e9a9ac4953c89, type: 3}
+      propertyPath: defeatDialogue.lines.Array.data[0]
+      value: You're more experienced than me!
+      objectReference: {fileID: 0}
     - target: {fileID: 8397524414858330413, guid: eda2ef94b389adc4182e9a9ac4953c89, type: 3}
       propertyPath: m_Size.y
       value: 0.37439013

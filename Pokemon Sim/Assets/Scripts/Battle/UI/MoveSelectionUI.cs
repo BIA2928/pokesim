@@ -23,7 +23,6 @@ public class MoveSelectionUI : SelectionUI<TextSlot>
         this.moves = moves;
         SetItems(moveTexts.Take(moves.Count).ToList());
         
-        Debug.Log($"Set moves with moves=null == {this.moves == null}");
         for (int i = 0; i < moveTexts.Count; i++)
         {
             if (i < moves.Count)
@@ -40,7 +39,6 @@ public class MoveSelectionUI : SelectionUI<TextSlot>
     protected override void UpdateSelectionInUI()
     {
         base.UpdateSelectionInUI();
-        Debug.Log(moves);
         var move = moves[selection];
         ppText.text = $"PP {move.PP}/{move.Base.Pp}";
         typeText.text = move.Base.Type.ToString();

@@ -9,6 +9,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
     [SerializeField] Dialogue dialogue;
     [SerializeField] Dialogue defeatDialogue;
     [SerializeField] Dialogue beatenDialogue;
+    [SerializeField][Range(1,10000)] int payOut = 1;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
     [SerializeField] Sprite battleSprite;
@@ -124,8 +125,9 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
     {
         get { return battleSprite; }
     }
-
+    public Dialogue DefeatDialogue => defeatDialogue;
     public AudioClip ApproachMusic => approachMusic;
     public AudioClip BattleMusic => battleMusic;
     public AudioClip VictoryMusic => victoryMusic;
+    public int Payout => payOut;
 }
