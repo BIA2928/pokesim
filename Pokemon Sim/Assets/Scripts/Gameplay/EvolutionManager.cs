@@ -42,6 +42,7 @@ public class EvolutionManager : State<GameController>
         yield return HandleEvolutionAnimation();
 
         // Play end of routine
+        AudioManager.i.PlaySFX(AudioID.Congratulations);
         yield return DialogueManager.Instance.ShowPostEvolutionDialogue(prevName, pokemon.Base.Name);
 
         // Turn off 

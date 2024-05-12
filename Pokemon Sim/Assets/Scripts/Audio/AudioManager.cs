@@ -152,7 +152,8 @@ public enum AudioID
 {
     UISelect, UISwitchSelection, MenuOpen, MenuClose, Hit, HitSprEft, HitNVEft, ExpGain, TMReceived, 
     ItemReceived, KeyItemReceived, LvlUp, Bump, Jump, ObtainedPoke, StatUp, StatDown,
-    PokemonOut, PokeballThrow, ChangePocket, EnterArea, PokeballShake, PokeballClick, PokeballBounce
+    PokemonOut, PokeballThrow, ChangePocket, EnterArea, PokeballShake, PokeballClick, PokeballBounce,
+    Congratulations,
 }
 
 

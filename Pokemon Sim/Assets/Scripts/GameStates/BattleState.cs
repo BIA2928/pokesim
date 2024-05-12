@@ -47,7 +47,7 @@ public class BattleState : State<GameController>
             battleSystem.StartTrainerBattle(playerParty, Trainer.GetComponent<PokemonParty>());
         }
         
-        battleSystem.OnBattleOver += OnBattleOver;
+        //battleSystem.OnBattleOver += OnBattleOver;
     }
 
     public override void Execute()
@@ -60,10 +60,10 @@ public class BattleState : State<GameController>
         AudioManager.i.StopBattleMusic();
         battleSystem.gameObject.SetActive(false);
         gC.WorldCam.gameObject.SetActive(true);
-        battleSystem.OnBattleOver -= OnBattleOver;
+        //battleSystem.OnBattleOver -= OnBattleOver;
     }
 
-    void OnBattleOver(bool playerWon)
+    /*void OnBattleOver(bool playerWon)
     {
         if (playerWon)
         {
@@ -73,15 +73,14 @@ public class BattleState : State<GameController>
                 Trainer = null;
             }
 
-            /*var playerParty = pC.GetComponent<PokemonParty>();
+            var playerParty = pC.GetComponent<PokemonParty>();
             bool willEvolve = playerParty.CheckForEvolution();
             if (willEvolve)
             {
-                state = GameState.FreeRoam;
                 StartCoroutine(playerParty.RunEvolutions());
             }
             else
-                AudioManager.i.StopBattleMusic();*/
+                AudioManager.i.StopBattleMusic();
             
 
         }
@@ -98,5 +97,5 @@ public class BattleState : State<GameController>
         gC.StateMachine.Pop();
         //playerParty.SetPartyData();
         
-    }
+    }*/
 }

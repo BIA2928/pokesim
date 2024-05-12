@@ -146,8 +146,9 @@ public class GameController : MonoBehaviour
         }
 
         pS.SetPartyData();
-        bS.gameObject.SetActive(false);
-        worldCam.gameObject.SetActive(true);
+
+        //Pop battle state off
+        StateMachine.Pop();
     }
 
     private void Update()
