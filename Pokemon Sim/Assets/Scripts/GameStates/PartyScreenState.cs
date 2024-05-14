@@ -44,35 +44,76 @@ public class PartyScreenState : State<GameController>
 
     void OnPokemonSelected(int selection)
     {
-        Debug.Log($"Selected index = {selection}");
+        StartCoroutine(EnterPokemonSelectedState(selection));
+    }
+
+
+    IEnumerator EnterPokemonSelectedState(int selection)
+    {
+        
         var prev = gC.StateMachine.GetPreviousState();
         if (prev is InventoryState)
         {
             StartCoroutine(EnterUsingItemState());
         }
-        else if (prev is BattleState) 
+        else if (prev is BattleState)
         {
             BattleSystem bS = (prev as BattleState).BattleSystem;
-            var selectedMember = partyScreen.SelectedMember;
-            if (selectedMember.HP <= 0)
-            {
-                partyScreen.SetMessageText($"{selectedMember.Base.Name} has fainted and cannot battle.");
-                return;
-            }
-            if (selectedMember == bS.AllyUnit.Pokemon)
-            {
-                partyScreen.SetMessageText($"{selectedMember.Base.Name} is already in battle!");
-                return;
-            }
 
-            SelectedPokemon = selectedMember;
-            gC.StateMachine.Pop();
+
+            DynamicMenuState.i.MenuItems = new List<string>() { "Shift", "Summary", "Cancel" };
+            yield return gC.StateMachine.PushAndWait(DynamicMenuState.i);
+            if (DynamicMenuState.i.SelectedItem == 0)
+            {
+                // Send out
+                var selectedMember = partyScreen.SelectedMember;
+                if (selectedMember.HP <= 0)
+                {
+                    partyScreen.SetMessageText($"{selectedMember.Base.Name} has fainted and cannot battle.");
+                    yield break;
+                }
+                if (selectedMember == bS.AllyUnit.Pokemon)
+                {
+                    partyScreen.SetMessageText($"{selectedMember.Base.Name} is already in battle!");
+                    yield break;
+                }
+
+                SelectedPokemon = selectedMember;
+                gC.StateMachine.Pop();
+            }
+            else if (DynamicMenuState.i.SelectedItem == 1)
+            {
+                // summary 
+            }
+            else
+            {
+                yield break;
+            }
         }
-        else if (gC.StateMachine.GetPreviousState() is MenuOpenState)
+        else if (prev is MenuOpenState)
         {
             // Pokemon summary screen
+            DynamicMenuState.i.MenuItems = new List<string>() { "Summary", "Switch", "Exit" };
+            yield return gC.StateMachine.PushAndWait(DynamicMenuState.i);
+            if (DynamicMenuState.i.SelectedItem == 0)
+            {
+                //Summary
+                Debug.Log($"Selected index = {selection} for summary");
+            }
+            else if (DynamicMenuState.i.SelectedItem == 1)
+            {
+                //Switch
+                Debug.Log($"Selected index = {selection} to switch");
+            }
+            else
+            {
+                yield break;
+            }
         }
     }
+
+
+
 
     IEnumerator EnterUsingItemState()
     {
