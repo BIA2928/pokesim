@@ -58,6 +58,7 @@ public class GameController : MonoBehaviour
         MoveDB.Init();
         ItemDB.Init();
         QuestDB.Init();
+        
 
         // Mouse not needed, turn off
         //Cursor.lockState = CursorLockMode.Locked;
@@ -65,6 +66,7 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
+        TypeImageDB.i.Init();
         StateMachine = new StateMachine<GameController>(this);
         StateMachine.ChangeState(FreeRoamState.i);
         pS.Init();

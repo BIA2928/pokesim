@@ -84,6 +84,8 @@ public class PartyScreenState : State<GameController>
             else if (DynamicMenuState.i.SelectedItem == 1)
             {
                 // summary 
+                SummaryState.i.PokemonIndex = selection;
+                yield return gC.StateMachine.PushAndWait(SummaryState.i);
             }
             else
             {
@@ -98,7 +100,8 @@ public class PartyScreenState : State<GameController>
             if (DynamicMenuState.i.SelectedItem == 0)
             {
                 //Summary
-                Debug.Log($"Selected index = {selection} for summary");
+                SummaryState.i.PokemonIndex = selection;
+                yield return gC.StateMachine.PushAndWait(SummaryState.i);
             }
             else if (DynamicMenuState.i.SelectedItem == 1)
             {
