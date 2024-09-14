@@ -40,6 +40,7 @@ public class PartyScreen : SelectionUI<TextSlot>
     public void SetPartyData()
     {
         pokemonList = playerParty.PokemonList;
+        ClearItems();
         for (int i = 0; i < memberSlots.Length; i++)
         {
             if (i < pokemonList.Count)

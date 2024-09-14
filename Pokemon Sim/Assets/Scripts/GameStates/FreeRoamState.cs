@@ -33,5 +33,11 @@ public class FreeRoamState: State<GameController>
         {
             SavingSystem.i.Load("testSave1");
         }
+        // Also for testing PC screen
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            PlayerController.i.StopPlayerMovement();
+            gC.StateMachine.Push(BoxState.i);
+        }
     }
 }

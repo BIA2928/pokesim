@@ -15,6 +15,12 @@ public class PartyScreenState : State<GameController>
         i = this;
     }
 
+    private void Start()
+    {
+        pokemonParty = PlayerController.i.GetComponent<PokemonParty>();
+    }
+
+    PokemonParty pokemonParty;
     GameController gC;
     public override void EnterState(GameController owner)
     {
@@ -48,6 +54,8 @@ public class PartyScreenState : State<GameController>
     }
 
 
+    bool isSwitching = false;
+    int selectedIndexForSwitching = 0;
     IEnumerator EnterPokemonSelectedState(int selection)
     {
         
@@ -94,24 +102,46 @@ public class PartyScreenState : State<GameController>
         }
         else if (prev is MenuOpenState)
         {
-            // Pokemon summary screen
-            DynamicMenuState.i.MenuItems = new List<string>() { "Summary", "Switch", "Exit" };
-            yield return gC.StateMachine.PushAndWait(DynamicMenuState.i);
-            if (DynamicMenuState.i.SelectedItem == 0)
+            if (isSwitching)
             {
-                //Summary
-                SummaryState.i.PokemonIndex = selection;
-                yield return gC.StateMachine.PushAndWait(SummaryState.i);
-            }
-            else if (DynamicMenuState.i.SelectedItem == 1)
-            {
-                //Switch
-                Debug.Log($"Selected index = {selection} to switch");
+                if (selectedIndexForSwitching == selection)
+                {
+                    partyScreen.SetMessageText("You can't switch the same pokemon!");
+                    yield break;
+                }
+                var temp = pokemonParty.PokemonList[selectedIndexForSwitching];
+                pokemonParty.PokemonList[selectedIndexForSwitching] = pokemonParty.PokemonList[selection];
+                pokemonParty.PokemonList[selection] = temp;
+                pokemonParty.PartyUpdated();
+                isSwitching = false;
+                selectedIndexForSwitching = 0;
             }
             else
             {
-                yield break;
+                // Pokemon summary screen
+                DynamicMenuState.i.MenuItems = new List<string>() { "Summary", "Switch", "Exit" };
+                yield return gC.StateMachine.PushAndWait(DynamicMenuState.i);
+                if (DynamicMenuState.i.SelectedItem == 0)
+                {
+                    //Summary
+                    SummaryState.i.PokemonIndex = selection;
+                    yield return gC.StateMachine.PushAndWait(SummaryState.i);
+                }
+                else if (DynamicMenuState.i.SelectedItem == 1)
+                {
+                    //Switch
+                    Debug.Log($"Selected index = {selection} to switch");
+                    isSwitching = true;
+                    selectedIndexForSwitching = selection;
+                    partyScreen.SetMessageText("Choose a pokemon to switch.");
+
+                }
+                else
+                {
+                    yield break;
+                }
             }
+            
         }
     }
 
@@ -128,14 +158,52 @@ public class PartyScreenState : State<GameController>
     {
         SelectedPokemon = null;
         AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
-        var prev = gC.StateMachine.GetPreviousState() as BattleState;
-        if (prev != null)
+        var prev = gC.StateMachine.GetPreviousState();
+        if (prev is MenuOpenState)
         {
-            if (prev.BattleSystem.AllyUnit.Pokemon.HP <= 0)
+            if (isSwitching)
+            {
+                isSwitching = false;
+                selectedIndexForSwitching = 0;
+                partyScreen.SetMessageText("Select a pokemon.");
+                return;
+            }
+        }
+        else if (prev is BattleState state)
+        {
+            if (state.BattleSystem.AllyUnit.Pokemon.HP <= 0)
             {
                 partyScreen.SetMessageText("You must select a Pokemon to continue!");
                 return;
             }
+
+        }
+        gC.StateMachine.Pop();
+    }
+
+    void OnBack2()
+    {
+        SelectedPokemon = null;
+        AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
+        var prev = gC.StateMachine.GetPreviousState();
+        if (prev is MenuOpenState)
+        {
+            if (isSwitching)
+            {
+                isSwitching = false;
+                selectedIndexForSwitching = 0;
+                partyScreen.SetMessageText("Select a pokemon.");
+                return;
+            }
+        }
+        else if (prev is BattleState state)
+        {
+            if (state.BattleSystem.AllyUnit.Pokemon.HP <= 0)
+            {
+                partyScreen.SetMessageText("You must select a Pokemon to continue!");
+                return;
+            }
+
         }
         gC.StateMachine.Pop();
     }

@@ -31,7 +31,7 @@ namespace GenericSelectionUI
 
         public void ClearItems()
         {
-            items.ForEach(i => i.Clear());
+            items?.ForEach(i => i.Clear());
             this.items = null;
         }
 
@@ -77,7 +77,7 @@ namespace GenericSelectionUI
 
         void HandleListSelection()
         {
-            var v = Input.GetAxis("Vertical");
+            var v = Input.GetAxisRaw("Vertical");
             if (selectionTime == 0 && Mathf.Abs(v) > selectionBuffer)
             {
                 selection += -(int)(Mathf.Sign(v));
@@ -89,8 +89,8 @@ namespace GenericSelectionUI
 
         void HandleGridSelection()
         {
-            var horizontal = Input.GetAxis("Horizontal");
-            var vertical = Input.GetAxis("Vertical");
+            var horizontal = Input.GetAxisRaw("Horizontal");
+            var vertical = Input.GetAxisRaw("Vertical");
             if (selectionTime == 0 && (Mathf.Abs(vertical) > selectionBuffer || Mathf.Abs(horizontal) > selectionBuffer))
             {
                 if (Mathf.Abs(horizontal) > Mathf.Abs(vertical))

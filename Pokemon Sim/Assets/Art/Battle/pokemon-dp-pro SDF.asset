@@ -42,7 +42,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Ambient: 0.5
-    - _Bevel: 0.5
+    - _Bevel: 0.211
     - _BevelClamp: 0
     - _BevelOffset: 0
     - _BevelRoundness: 0
@@ -66,10 +66,10 @@ Material:
     - _OutlineSoftness: 0.147
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.625
+    - _OutlineWidth: 0.619
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 0.6468305
+    - _ScaleRatioA: 0.650195
     - _ScaleRatioB: 0.459375
     - _ScaleRatioC: 0.459375
     - _ScaleX: 1
@@ -98,7 +98,7 @@ Material:
     - _FaceColor: {r: 1.4782696, g: 1.2899995, b: 1.2899995, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0.1509434, g: 0.13883945, b: 0.13883945, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

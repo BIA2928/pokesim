@@ -15,4 +15,10 @@ public class UITypeBar : MonoBehaviour
         this.type1.sprite = sprite1;
         this.type2.sprite = sprite2;
     }
+
+    public void Clear()
+    {
+        type1.sprite = TypeImageDB.i.Lookup(PokeType.None);
+        type2.sprite = TypeImageDB.i.Lookup(PokeType.None);
+    }
 }
