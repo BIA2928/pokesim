@@ -1,22 +1,12 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxUI : MonoBehaviour
 {
-
-    [SerializeField] PointerSelector pointer;
-    [SerializeField] BoxInfoOverlay boxInfoOverlay;
-    [SerializeField] GameObject partyBoxOverlay;
-    [SerializeField] GameObject buttons;
-    [SerializeField] BoxHeaderUI boxHeaderUI;
-
-    [SerializeField] List<BoxPokemon> boxSlots;
-    [SerializeField] List<BoxPokemon> partySlots;
-
     const int BOX_LIMIT = 36;
     const int ROW_LIMIT = 6;
-
     const int PARTY_BUTTON = BOX_LIMIT;
     const int EXIT_BUTTON = 37;
     const int FIRST_PARTY_MEMBER = 38;
@@ -24,20 +14,29 @@ public class BoxUI : MonoBehaviour
     const int CLOSE_PARTY_BUTTON = 44;
     const int BANNER_SELECTION = -1;
     const int N_BOXES = 10;
-    readonly List<int> buttonsList = new List<int>() {BANNER_SELECTION, PARTY_BUTTON, EXIT_BUTTON, CLOSE_PARTY_BUTTON};
+    readonly List<int> buttonsList = new List<int>() { BANNER_SELECTION, PARTY_BUTTON, EXIT_BUTTON, CLOSE_PARTY_BUTTON };
 
-    int boxSelection = 0;
-    int selectionIndex = 0;
-     
-    // Button 0 = party, button 1 = exit
-    int buttonSelection = 0;
-    int partySelection = 0;
+    // Gameobjects
+    [SerializeField] PointerSelector pointer;
+    [SerializeField] BoxInfoOverlay boxInfoOverlay;
+    [SerializeField] GameObject partyBoxOverlay;
+    [SerializeField] GameObject buttons;
+    
+    [SerializeField] BoxHeaderUI boxHeaderUI;
 
-    // Given swapping requires two selections, have we picked anything up?
-    bool holdingPokemon = false;
-    int heldPokemonIndex = -1;
-    int heldPokemonBox = -1;
+    [SerializeField] List<BoxPokemon> boxSlots;
+    [SerializeField] List<BoxPokemon> partySlots;
 
+
+    public int BoxSelection { get; private set; }
+    public int SelectionIndex { get; private set; }
+    public Pokemon HeldPokemon { get; set; }
+    public bool HoldingPokemon { get => HeldPokemon != null; }
+
+
+
+    public event Action OnPokemonSelected;
+    public event Action OnBack;
 
     PokemonParty party;
     PokemonStorage pokemonBoxes;
@@ -47,191 +46,167 @@ public class BoxUI : MonoBehaviour
         party = PokemonParty.GetPlayerParty();
         pokemonBoxes = PokemonStorage.GetPlayerStorageBoxes();
 
-        Debug.Log("length of partySlots is " + partySlots.Count);
-        Debug.Log("length of party is " + party.PokemonList.Count);
-        boxSelection = 0;
-        List<Pokemon> box = pokemonBoxes.GetBoxByIndex(boxSelection);
-        boxHeaderUI.SetBoxNumber(boxSelection);
+        BoxReset();
+
+        List<Pokemon> box = pokemonBoxes.GetBoxByIndex(BoxSelection);
+        boxHeaderUI.SetBoxNumber(BoxSelection);
         for (int i = 0; i < boxSlots.Count; i++)
         {
             boxSlots[i].SetData(box[i]);
         }
 
-        for (int i = 0; i < party.PokemonList.Count; i++)
-            partySlots[i].SetData(party.PokemonList[i]);
-        for (int i = party.PokemonList.Count; i < partySlots.Count; i++)
-            partySlots[i].SetData(null);
+        SetPartyData();
 
-        UpdateHoverSelection(0, 0);
+        UpdateHoverSelection(BoxSelection, SelectionIndex);
     }
 
     public void HandleUpdate()
     {
         if (Input.GetButtonDown("Selection"))
         {
-            if (selectionIndex == PARTY_BUTTON)
+            if (SelectionIndex == PARTY_BUTTON)
             {
                 // Open party, move cursor, place shadow and cursor on party member 0
                 
                 partyBoxOverlay.SetActive(true);
-                UpdateHoverSelection(selectionIndex, FIRST_PARTY_MEMBER);
-                selectionIndex = FIRST_PARTY_MEMBER;
+                UpdateHoverSelection(SelectionIndex, FIRST_PARTY_MEMBER);
+                SelectionIndex = FIRST_PARTY_MEMBER;
             }
-            else if (selectionIndex == EXIT_BUTTON)
+            else if (SelectionIndex == EXIT_BUTTON)
             {
-                if (holdingPokemon)
-                {
-                    // Trying to exit box while holding pokemon. Show "You can't do that while holding a pokemon!" dialogue and noise
-                }
-                else 
-                {
-                    // Open do you want to exit dialogue choice
-                }
+                OnBack?.Invoke();
             }
-            else if (selectionIndex > BANNER_SELECTION && selectionIndex <= 43)
+            else if (SelectionIndex > BANNER_SELECTION && SelectionIndex <= 43)
             {
-                // If a valid space is selected
-                if (0 <= selectionIndex && selectionIndex < BOX_LIMIT)
-                {
-                    // In box
-                    if (!holdingPokemon)
-                    {
-                        if (pokemonBoxes.GetPokemon(boxSelection, selectionIndex)!= null)
-                        {
-                            // Open choice dialogue
-                        }
-                    }
-                    else
-                    {
-                        if (pokemonBoxes.GetPokemon(boxSelection,selectionIndex) != null)
-                        {
-                            // open choice dialogue
-                        }
-                        else
-                        {
-                            // just place and continue
-                        }
-                    }
-                }
-
+                if (HoverSpotFull() || HoldingPokemon)
+                    OnPokemonSelected?.Invoke();
             }
-            else if (selectionIndex == 44)
+            else if (SelectionIndex == 44)
             {
                 // party close button
-                selectionIndex = 0;
+                SelectionIndex = 0;
                 partyBoxOverlay.SetActive(false);
-                UpdateHoverSelection(44, selectionIndex);
+                UpdateHoverSelection(44, SelectionIndex);
             }
  
         }
         else if (Input.GetButtonDown("GoBack"))
         {
-            if (selectionIndex > EXIT_BUTTON)
+            if (SelectionIndex > EXIT_BUTTON)
             {
-                // In party, so exit party
-                selectionIndex = 0;
-                // close overlay
+                // if in party, close party
+                var prev = SelectionIndex;
+                SelectionIndex = 0;
+                partyBoxOverlay.SetActive(false);
+                UpdateHoverSelection(prev, SelectionIndex);
             }
-            else if (!holdingPokemon)
+            else if (!HoldingPokemon)
             {
-                // open choice box to leave party 
-
-            }
-            else
-            {
-                // Cannot leave box with pokemon in hand, must put down, tell player
+                OnBack?.Invoke();
             }
         }
         else
         {
-            int prev = selectionIndex;
+            int prev = SelectionIndex;
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                if (30 <= selectionIndex && selectionIndex < 34)
-                    selectionIndex = PARTY_BUTTON;
-                else if (selectionIndex == 34 || selectionIndex == 35)
-                    selectionIndex = EXIT_BUTTON;
+                if (30 <= SelectionIndex && SelectionIndex < 34)
+                    SelectionIndex = PARTY_BUTTON;
+                else if (SelectionIndex == 34 || SelectionIndex == 35)
+                    SelectionIndex = EXIT_BUTTON;
                 else if (prev < BOX_LIMIT && prev > -1)
-                    selectionIndex += ROW_LIMIT;
+                    SelectionIndex += ROW_LIMIT;
                 else if (prev > EXIT_BUTTON)
-                    selectionIndex += 2;
+                    SelectionIndex += 2;
                 else if (prev == EXIT_BUTTON || prev == PARTY_BUTTON)
-                    selectionIndex = -1;
+                    SelectionIndex = -1;
                 else if (prev == BANNER_SELECTION)
-                    selectionIndex = 3;
+                    SelectionIndex = 3;
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if (prev == EXIT_BUTTON || prev == PARTY_BUTTON)
-                    selectionIndex = BOX_LIMIT - 6;
+                    SelectionIndex = BOX_LIMIT - 6;
                 else if (prev == BANNER_SELECTION)
-                    selectionIndex = PARTY_BUTTON;
+                    SelectionIndex = PARTY_BUTTON;
                 else if (prev < BOX_LIMIT)
-                    selectionIndex -= ROW_LIMIT;
+                    SelectionIndex -= ROW_LIMIT;
                 else if (prev > EXIT_BUTTON)
-                    selectionIndex -= 2;
+                {
+                    SelectionIndex -= 2;
+                    if (SelectionIndex < FIRST_PARTY_MEMBER)
+                        SelectionIndex = prev;
+                }
+                    
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 if (prev == -1)
                 {
                     // reload box with new pokemon
-                    boxSelection--;
-                    if (boxSelection == -1)
-                        boxSelection = N_BOXES - 1;
+                    BoxSelection--;
+                    if (BoxSelection == -1)
+                        BoxSelection = N_BOXES - 1;
                     SwitchBox();
                 }
                 else if (prev == PARTY_BUTTON)
-                    selectionIndex = EXIT_BUTTON;
+                    SelectionIndex = EXIT_BUTTON;
                 else if (prev == EXIT_BUTTON)
-                    selectionIndex = PARTY_BUTTON;
+                    SelectionIndex = PARTY_BUTTON;
                 else if (prev < BOX_LIMIT || (prev > EXIT_BUTTON && (prev % 2 == 1)))
-                    selectionIndex--;
+                    SelectionIndex--;
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 if (prev == -1)
                 {
                     // reload box with new pokemon
-                    boxSelection++;
-                    if (boxSelection >= N_BOXES)
-                        boxSelection = 0;
+                    BoxSelection++;
+                    if (BoxSelection >= N_BOXES)
+                        BoxSelection = 0;
                     SwitchBox();
                     
                 }
                 else if (prev == PARTY_BUTTON)
-                    selectionIndex = EXIT_BUTTON;
+                    SelectionIndex = EXIT_BUTTON;
                 else if (prev == EXIT_BUTTON)
-                    selectionIndex = PARTY_BUTTON;
+                    SelectionIndex = PARTY_BUTTON;
                 else if (prev > EXIT_BUTTON && (prev % 2 == 1))
                 {
-                    selectionIndex = 0;
+                    SelectionIndex = 0;
                     partyBoxOverlay.SetActive(false);
-                    UpdateHoverSelection(prev, selectionIndex);
+                    UpdateHoverSelection(prev, SelectionIndex);
                     // remove overlay, go back to current box with selection = 0
                 }
                 else
-                    selectionIndex++;
+                    SelectionIndex++;
             }
 
-            selectionIndex = Mathf.Clamp(selectionIndex, -1, 44);
-            if (selectionIndex != prev)
+            SelectionIndex = Mathf.Clamp(SelectionIndex, -1, 44);
+            if (SelectionIndex != prev)
             {
-                UpdateHoverSelection(prev, selectionIndex);
+                UpdateHoverSelection(prev, SelectionIndex);
             }
 
         }
     }
 
     
+    public void SetPartyData()
+    {
+        for (int i = 0; i < party.PokemonList.Count; i++)
+            partySlots[i].SetData(party.PokemonList[i]);
+        for (int i = party.PokemonList.Count; i < partySlots.Count; i++)
+            partySlots[i].SetData(null);
+
+        UpdateHoverSelection(SelectionIndex, SelectionIndex);
+    }
 
     public void BoxReset()
     {
-        boxSelection = 0;
-        buttonSelection = 0;
-        partySelection = BOX_LIMIT;
-        holdingPokemon = false;
-        heldPokemonIndex = -1;
+        BoxSelection = 0;
+        SelectionIndex = 0;
+        HeldPokemon = null;
     }
 
 
@@ -257,35 +232,24 @@ public class BoxUI : MonoBehaviour
             {
                 var current = boxSlots[currentSelection];
                 current.HoverSelect();
-                if (!holdingPokemon)
-                    boxInfoOverlay.ShowDetails(pokemonBoxes.GetPokemon(boxSelection, currentSelection));
+                if (!HoldingPokemon)
+                    boxInfoOverlay.ShowDetails(pokemonBoxes.GetPokemon(BoxSelection, currentSelection));
             }
             else
             {
                 var current = partySlots[currentSelection - FIRST_PARTY_MEMBER];
                 current.HoverSelect();
-                if (!holdingPokemon)
+                if (!HoldingPokemon)
                     boxInfoOverlay.ShowDetails(current.GetPokemon());
             }
             
         }
             
     }
-
-    void UpdatePickupSelection()
-    {
-
-    }
-
-    void UpdateDropSelection()
-    {
-
-    }
-
     void SwitchBox()
     {
-        List<Pokemon> box = pokemonBoxes.GetBoxByIndex(boxSelection);
-        boxHeaderUI.SetBoxNumber(boxSelection);
+        List<Pokemon> box = pokemonBoxes.GetBoxByIndex(BoxSelection);
+        boxHeaderUI.SetBoxNumber(BoxSelection);
         for (int i = 0; i < boxSlots.Count; i++)
         {
             boxSlots[i].SetData(box[i]);
@@ -313,6 +277,92 @@ public class BoxUI : MonoBehaviour
         return partyBoxOverlay.transform.GetChild(6).transform;
             
     }
+
+    public bool HoverSpotFull()
+    {
+        if (buttonsList.Contains(SelectionIndex))
+        {
+            Debug.LogWarning("Checking if button spot is occupied by pokemon");
+            return false;
+        }
+
+        if (SelectionIndex > EXIT_BUTTON)
+        {
+            Debug.Log($"{party.PokemonList.Count} pokemon in party, asking for index {SelectionIndex - EXIT_BUTTON}");
+            if (SelectionIndex - EXIT_BUTTON > party.PokemonList.Count)
+                return false;
+            else
+                return true;
+        }
+
+        return pokemonBoxes.GetPokemon(BoxSelection, SelectionIndex) != null;
+    }
+
+    public bool InBox()
+    {
+        if (!buttonsList.Contains(SelectionIndex))
+        {
+            if (SelectionIndex > BOX_LIMIT)
+                return false;
+            else
+                return true;
+        }
+
+        return false;
+    }
+
+    public Pokemon GetHoverPokemon()
+    {
+        Pokemon poke = null;
+        if (InBox())
+        {
+            poke = pokemonBoxes.GetPokemon(BoxSelection, SelectionIndex);
+        }
+        else
+        {
+            
+            if (SelectionIndex - FIRST_PARTY_MEMBER >= party.PokemonList.Count)
+            {
+                return null;
+            }
+            poke = party.PokemonList[SelectionIndex - FIRST_PARTY_MEMBER];
+        }
+
+        if (poke == null)
+        {
+            Debug.LogWarning("Trying to get null hover pokemon");
+        }
+        return poke;
+    }
+
+    public void ShuffleParty()
+    {
+        if (SelectionIndex < FIRST_PARTY_MEMBER)
+        {
+            Debug.LogError("Trying to shuffle party when not in party");
+        }
+
+        SetPartyData();
+
+
+    }
+
+    public void EmptyCurrentSpot()
+    {
+        if (SelectionIndex > BOX_LIMIT)
+        {
+            Debug.LogError("Trying to empty when spot is not in box");
+        }
+
+        boxSlots[SelectionIndex].Clear();
+    }
+
+    public void FillCurrentSpot() 
+    {
+        boxSlots[SelectionIndex].SetData(HeldPokemon);
+        UpdateHoverSelection(SelectionIndex, SelectionIndex);
+    }
+
 
 
 }

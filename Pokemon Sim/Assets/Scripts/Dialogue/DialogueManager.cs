@@ -8,8 +8,11 @@ public class DialogueManager : MonoBehaviour
 {
 
     [SerializeField] GameObject dialogueBox;
-    [SerializeField] ChoiceBox choiceBox;
     [SerializeField] Text dialogueText;
+    [SerializeField] GameObject pcDialogueBox;
+    [SerializeField] Text pcDialogueText;
+    [SerializeField] ChoiceBox choiceBox;
+    
     [Range(5, 50)] [SerializeField] int textSpeed;
 
     public event Action OnShowDialogue;
@@ -32,6 +35,29 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
     }
 
+    public IEnumerator ShowPCDialogue(Dialogue dialogue, bool waitForInput = true)
+    {
+        yield return new WaitForEndOfFrame();
+        IsShowing = true;
+        OnShowDialogue?.Invoke();
+        pcDialogueBox.SetActive(true);
+
+        foreach (var line in dialogue.Lines)
+        {
+            yield return TypeDialogue(line, true);
+            if (waitForInput)
+            {
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                AudioManager.i.PlaySFX(AudioID.UISelect);
+            }
+                
+
+        }
+        pcDialogueBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialogue?.Invoke();
+    }
+
     public IEnumerator ShowDialogue(Dialogue dialogue, bool waitForInput = true)
     {
         yield return new WaitForEndOfFrame();
@@ -41,13 +67,13 @@ public class DialogueManager : MonoBehaviour
 
         foreach (var line in dialogue.Lines)
         {
-            yield return TypeDialogue(line);
+            yield return TypeDialogue(line, true);
             if (waitForInput)
             {
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
                 AudioManager.i.PlaySFX(AudioID.UISelect);
             }
-                
+
 
         }
         dialogueBox.SetActive(false);
@@ -111,6 +137,8 @@ public class DialogueManager : MonoBehaviour
         OnCloseDialogue?.Invoke();
     }
 
+    
+
 
     /// <summary>
     /// Shows multi-line dialogue, but will wait until final line before waiting for input
@@ -146,13 +174,16 @@ public class DialogueManager : MonoBehaviour
 
     
 
-    public IEnumerator TypeDialogue(string dialogue)
+    public IEnumerator TypeDialogue(string dialogue, bool isPC=false)
     {
+        var textField = dialogueText;
+        if (isPC)
+            textField = pcDialogueText;
         isTyping = true;
-        dialogueText.text = "";
+        textField.text = "";
         foreach (var character in dialogue.ToCharArray())
         {
-            dialogueText.text += character;
+            textField.text += character;
             yield return new WaitForSeconds(1f / textSpeed);
         }
 
@@ -297,6 +328,13 @@ public class DialogueManager : MonoBehaviour
         yield return ShowDialogue(dialogue);
     }
 
+    public IEnumerator ShowCantLeaveBoxDialogue()
+    {
+        Dialogue dialogue = new Dialogue();
+        dialogue.Lines.Add("You're still holding a pokemon!");
+        yield return ShowPCDialogue(dialogue);
+    }
+
     public IEnumerator ShowPreEvolutionDialogue(string pokemonName)
     {
         Dialogue d = new Dialogue();
@@ -310,6 +348,43 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowPostEvolutionDialogue(string oldName, string newName)
     {
         yield return ShowDialogue($"Your {oldName} evolved into {newName}!");
+    }
+
+
+    public IEnumerator ShowPCDialogueChoices(Dialogue d, List<string> choices, Action<int> onChoicesSelected, bool waitForInput = true)
+    {
+        yield return new WaitForEndOfFrame();
+        IsShowing = true;
+        OnShowDialogue?.Invoke();
+        pcDialogueBox.SetActive(true);
+
+        for (int i = 0; i < d.Lines.Count; i++)
+        {
+            yield return TypeDialogue(d.Lines[i], true);
+            if (waitForInput)
+            {
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                AudioManager.i.PlaySFX(AudioID.UISelect);
+            }
+            else
+            {
+                if (i != d.Lines.Count - 1)
+                {
+                    // If not last, wait for input
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
+                    AudioManager.i.PlaySFX(AudioID.UISelect);
+                }
+            }
+
+        }
+
+        if (choices != null && choices.Count > 1)
+        {
+            yield return choiceBox.ShowChoices(choices, onChoicesSelected);
+        }
+        pcDialogueBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialogue?.Invoke();
     }
 
     public void HandleUpdate()

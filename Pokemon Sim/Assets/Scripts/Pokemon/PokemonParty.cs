@@ -76,6 +76,18 @@ public class PokemonParty : MonoBehaviour
 
     }
 
+    public Pokemon TakePokemon(int index)
+    {
+        if (index >= PokemonList.Count)
+        {
+            Debug.LogError("Trying to take pokemon from party that does not exist!");
+        }
+
+        Pokemon pokemon = PokemonList[index];
+        PokemonList.RemoveAt(index);
+        return pokemon;
+    }
+
     public static PokemonParty GetPlayerParty()
     {
         return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();

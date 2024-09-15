@@ -37,6 +37,13 @@ public class PokemonStorage : MonoBehaviour
         boxes[boxIndex, slotIndex] = null;
     }
 
+    public Pokemon TakePokemon(int boxIndex, int slotIndex)
+    {
+        Pokemon pokemon = boxes[boxIndex, slotIndex];
+        boxes[boxIndex, slotIndex] = null;
+        return pokemon;
+    }
+
     public void SwapPokemon(int boxIndex1, int slotIndex1, int boxIndex2, int slotIndex2)
     {
         Pokemon original = boxes[boxIndex1, slotIndex1];
