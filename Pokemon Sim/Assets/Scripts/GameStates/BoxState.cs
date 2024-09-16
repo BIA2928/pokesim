@@ -127,7 +127,7 @@ public class BoxState : State<GameController>
             yield return DialogueManager.Instance.ShowPCDialogueChoices(d, choices, (i) => selectedChoice = i, false);
             if (selectedChoice == 0)
             {
-                if (party.PokemonList.Count == 1)
+                if (party.PokemonList.Count == 1 && !boxUI.InBox())
                 {
                     yield return DialogueManager.Instance.ShowPCDialogue(new Dialogue() { Lines = { "That's your last pokemon!" } });
                     yield break;
