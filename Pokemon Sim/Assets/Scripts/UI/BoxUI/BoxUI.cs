@@ -244,6 +244,10 @@ public class BoxUI : MonoBehaviour
             }
             
         }
+        else
+        {
+            boxInfoOverlay.Clear();
+        }
             
     }
     void SwitchBox()
@@ -341,7 +345,6 @@ public class BoxUI : MonoBehaviour
         {
             Debug.LogError("Trying to shuffle party when not in party");
         }
-
         SetPartyData();
 
 
@@ -349,17 +352,23 @@ public class BoxUI : MonoBehaviour
 
     public void EmptyCurrentSpot()
     {
-        if (SelectionIndex > BOX_LIMIT)
+        if (buttonsList.Contains(SelectionIndex))
         {
             Debug.LogError("Trying to empty when spot is not in box");
         }
 
-        boxSlots[SelectionIndex].Clear();
+        if (SelectionIndex > BOX_LIMIT)
+            ShuffleParty();
+        else
+            boxSlots[SelectionIndex].Clear();
     }
 
     public void FillCurrentSpot() 
     {
-        boxSlots[SelectionIndex].SetData(HeldPokemon);
+        if (SelectionIndex > BOX_LIMIT)
+            SetPartyData();
+        else
+            boxSlots[SelectionIndex].SetData(HeldPokemon);
         UpdateHoverSelection(SelectionIndex, SelectionIndex);
     }
 

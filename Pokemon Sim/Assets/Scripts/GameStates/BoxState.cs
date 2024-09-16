@@ -77,21 +77,21 @@ public class BoxState : State<GameController>
                     {
                         // In party
                         Pokemon temp = party.PokemonList[boxUI.SelectionIndex - 38];
-                        pointer.DropPokemon();
+                        yield return pointer.DropPokemon();
                         party.PokemonList[boxUI.SelectionIndex - 38] = boxUI.HeldPokemon;
                         boxUI.HeldPokemon = temp;
-                        pointer.HoldPokemon(temp);
-                        boxUI.SetPartyData();
+                        yield return pointer.HoldPokemon(temp);
+                        //boxUI.SetPartyData();
                     }
                     else
                     {
                         
                         Pokemon temp = boxes.GetPokemon(boxUI.BoxSelection, boxUI.SelectionIndex);
                         boxes.AddPokemon(boxUI.HeldPokemon, boxUI.BoxSelection, boxUI.SelectionIndex);
-                        pointer.DropPokemon();
-                        boxUI.FillCurrentSpot();
+                        yield return pointer.DropPokemon();
+                        //boxUI.FillCurrentSpot();
                         boxUI.HeldPokemon = temp;
-                        pointer.HoldPokemon(temp);
+                        yield return pointer.HoldPokemon(temp);
  
                     }
                 }
@@ -101,16 +101,16 @@ public class BoxState : State<GameController>
                     {
                         // In party, so add to party 
                         PokemonParty.GetPlayerParty().AddPokemon(boxUI.HeldPokemon);
-                        pointer.DropPokemon();
+                        yield return pointer.DropPokemon();
                         boxUI.HeldPokemon = null;
-                        boxUI.SetPartyData();
+                        //boxUI.SetPartyData();
                     }
                     else
                     {
                         // In box, so add to box spot at boxIndex, spotIndex
                         boxes.AddPokemon(boxUI.HeldPokemon, boxUI.BoxSelection, boxUI.SelectionIndex);
-                        pointer.DropPokemon();
-                        boxUI.FillCurrentSpot();
+                        yield return pointer.DropPokemon();
+                        //boxUI.FillCurrentSpot();
                         boxUI.HeldPokemon = null;
                         
                     }
@@ -137,15 +137,15 @@ public class BoxState : State<GameController>
                 {
                     //remove from box spot, update boxUI, add to held pokemon, update pointer
                     boxUI.HeldPokemon = boxes.TakePokemon(boxUI.BoxSelection, boxUI.SelectionIndex);
-                    pointer.HoldPokemon(boxUI.HeldPokemon);
-                    boxUI.EmptyCurrentSpot();
+                    yield return pointer.HoldPokemon(boxUI.HeldPokemon);
+                    //boxUI.EmptyCurrentSpot();
                 }
                 else
                 {
                     // remove from party spot (unless only pokemon in party), shuffle party, update party, update pointer, update heldpokemon
                     boxUI.HeldPokemon = party.TakePokemon(boxUI.SelectionIndex - 38);
-                    pointer.HoldPokemon(boxUI.HeldPokemon);
-                    boxUI.ShuffleParty();
+                    yield return pointer.HoldPokemon(boxUI.HeldPokemon);
+                    //boxUI.ShuffleParty();
                 }
             }
             else if (selectedChoice == 1)

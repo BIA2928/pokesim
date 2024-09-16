@@ -14,11 +14,13 @@ public class PokemonStorage : MonoBehaviour
     }
     public void AddPokemon(Pokemon pokemon, int boxIndex, int slotIndex)
     {
+        pokemon.Heal();
         boxes[boxIndex,slotIndex] = pokemon;
     }
 
     public void AddCaughtPokemon(Pokemon pokemon)
     {
+        pokemon.Heal();
         for (int i = 0; i < BOX_LIMIT; i++)
         {
             for (int j = 0; j < BOX_POKE_LIMIT; j++)

@@ -35,6 +35,7 @@ public class BoxInfoOverlay : MonoBehaviour
             levelText.text = "Lv. " + pokemon.Level;
             pokedexNumText.text = "No. " + pokemon.Base.RegionalDexNum;
             pokeImage.enabled = true;
+            typeBar.SetImages(pokemon.Base.Type1, pokemon.Base.Type2);
         }
         
     }

@@ -208,15 +208,16 @@ public class BattleSystem : MonoBehaviour
         {
             if (IsTrainerBattle)
             {
-                AudioManager.i.PlayMusic(enemyTrainer.VictoryMusic, fade:false);
+                AudioManager.i.PlayMusic(enemyTrainer.VictoryMusic, fade: false);
+                yield return new WaitForSeconds(0.5f);
+                yield return PlayTrainerDefeatAnimation();
             }
             else
             {
                 AudioManager.i.PlayMusic(wildVictoryMusic, fade: false);
+                yield return new WaitForSeconds(0.5f);
             }
-                
-            yield return new WaitForSeconds(0.5f);
-            yield return PlayTrainerDefeatAnimation();
+                           
             enemyPoke.ResetAfterFaint();
             OnBattleOver(playerWin);
         }
