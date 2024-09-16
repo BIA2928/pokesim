@@ -45,6 +45,7 @@ public class PointerSelector : MonoBehaviour
         // Move held item back 
         heldItemImage.transform.position = hpp;
         yield return sequence.WaitForCompletion();
+        AudioManager.i.PlaySFX(AudioID.ChangePocket);
         pointerImage.sprite = pointingSprite;
     }
 
