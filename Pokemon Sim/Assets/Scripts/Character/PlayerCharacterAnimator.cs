@@ -102,5 +102,17 @@ public class PlayerCharacterAnimator : CharacterAnimator
         wasPrevRunning = IsRunning;
     }
 
+    public void StandStill()
+    {
+        if (currAnim == runDownAnim)
+            spriteRenderer.sprite = walkDownAnim.Frames[0];
+        else if (currAnim == runLeftAnim)
+            spriteRenderer.sprite = walkLeftAnim.Frames[0];
+        else if (currAnim == runRightAnim)
+            spriteRenderer.sprite = walkRightAnim.Frames[0];
+        else if (currAnim == runUpAnim)
+            spriteRenderer.sprite = walkUpAnim.Frames[0];
+    }
+
     
 }

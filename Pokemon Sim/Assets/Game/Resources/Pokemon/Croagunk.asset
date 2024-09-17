@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Croagunk
+  m_EditorClassIdentifier: 
+  name: Croagunk
+  description: Its cheeks hold poison sacs. It tries to catch foes off guard to jab
+    them with toxic fingers.
+  pokeSize: 0
+  regionalDexNum: 28
+  nationalDexNum: 453
+  frontSprite: {fileID: 21300000, guid: fdba7895a64d08b44a3d2e49501f3f79, type: 3}
+  backSprite: {fileID: 21300000, guid: 0535eb1f10e12e04b81ae7235384ffe6, type: 3}
+  boxSprite: {fileID: 21300000, guid: 8a08ec735e0f65d4c9ca3deeb6d5ae74, type: 3}
+  type1: 15
+  type2: 6
+  maxHP: 48
+  attack: 61
+  defence: 40
+  spAttack: 61
+  spDefence: 4
+  speed: 50
+  catchRate: 140
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: cf049fb035cc73548af10ae35c9d79c6, type: 2}
+    learnLevel: 1
+  - moveBase: {fileID: 11400000, guid: 5992798f378249f409848fbf7b9f5367, type: 2}
+    learnLevel: 2
+  - moveBase: {fileID: 11400000, guid: f93f3248871d6c94189faa4218ff7b9c, type: 2}
+    learnLevel: 3
+  - moveBase: {fileID: 11400000, guid: 65983122c05ec3b489f7849d878fc5e7, type: 2}
+    learnLevel: 5
+  - moveBase: {fileID: 11400000, guid: 22e9b1a58e8dbdd41b7d3ac90fd50ec1, type: 2}
+    learnLevel: 9
+  tmMoves:
+  - {fileID: 11400000, guid: cf049fb035cc73548af10ae35c9d79c6, type: 2}
+  expYield: 140
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 5bdcc9e55bd044b48968687e4085f3a4, type: 2}
+    requiredLevel: 37
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 487a2555467d9b94e9e92b9240f3d9da, type: 3}

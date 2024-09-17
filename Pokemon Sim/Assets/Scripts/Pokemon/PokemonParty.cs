@@ -8,7 +8,6 @@ public class PokemonParty : MonoBehaviour
 {
 
     [SerializeField] List<Pokemon> mons;
-    // Start is called before the first frame update
 
     public event Action OnPartyUpdate;
 
@@ -34,17 +33,13 @@ public class PokemonParty : MonoBehaviour
         return mons.Where(x => x.HP > 0).FirstOrDefault();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public bool AddPokemon(Pokemon pokemon)
     {
         if (mons.Count >= 6)
         {
             //AddPokemonToBox(pokemon);
+            PokemonStorage.GetPlayerStorageBoxes().AddCaughtPokemon(pokemon);
             return false;
         }
         else
@@ -79,6 +74,18 @@ public class PokemonParty : MonoBehaviour
         }
         // No need to handle updating party screen, that is done in gamecontroller
 
+    }
+
+    public Pokemon TakePokemon(int index)
+    {
+        if (index >= PokemonList.Count)
+        {
+            Debug.LogError("Trying to take pokemon from party that does not exist!");
+        }
+
+        Pokemon pokemon = PokemonList[index];
+        PokemonList.RemoveAt(index);
+        return pokemon;
     }
 
     public static PokemonParty GetPlayerParty()

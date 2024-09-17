@@ -39,3 +39,4 @@ MonoBehaviour:
   expYield: 200
   growthRate: 2
   evolutions: []
+  cry: {fileID: 8300000, guid: 15a60b513d51b754abf462b646f432ec, type: 3}

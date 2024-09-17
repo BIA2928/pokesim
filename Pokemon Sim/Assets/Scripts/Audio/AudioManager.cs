@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager i { get; private set; }
 
+    float originalPitch;
     private void Awake()
     {
         if (i == null)
@@ -27,18 +28,19 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         sfxLookup = commonAudios.ToDictionary(x => x.id);
+        originalPitch = sfxPlayer.pitch;
     }
     public void PlaySFX(AudioClip effect)
     {
         if (effect == null) return;
 
-        
+
         if (!sfxPlayer.isPlaying || sfxPlayer.clip != effect)
         {
             sfxPlayer.clip = effect;
             sfxPlayer.PlayOneShot(effect);
         }
-            
+
     }
     public IEnumerator PlayMusicSFX(AudioClip effect)
     {
@@ -72,6 +74,45 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public IEnumerator PlaySFXAsync(AudioID id)
+    {
+        AudioData audio;
+        if (sfxLookup.ContainsKey(id))
+            audio = sfxLookup[id];
+        else
+        {
+            Debug.LogWarning($"Error - AudioID: {id} not found");
+            yield break;
+        }
+
+        if (audio.stopsMusic)
+            yield return PlayMusicSFX(audio.clip);
+        else
+        {
+
+            if (!sfxPlayer.isPlaying || sfxPlayer.clip != audio.clip)
+            {
+                sfxPlayer.clip = audio.clip;
+                sfxPlayer.PlayOneShot(audio.clip);
+            }
+            yield return new WaitUntil(() => sfxPlayer.isPlaying == false);
+        }
+    }
+
+    public IEnumerator PlaySFXLowPitch(AudioClip clip)
+    {
+        if (clip == null) yield break;
+
+        if (!sfxPlayer.isPlaying || sfxPlayer.clip != clip)
+        {
+            sfxPlayer.clip = clip;
+            sfxPlayer.pitch = sfxPlayer.pitch * 0.8f;
+            SFXPlayer.PlayOneShot(clip);
+        }
+        yield return new WaitUntil(() => SFXPlayer.isPlaying == false);
+        sfxPlayer.pitch = originalPitch;
+    }
+
     
 
     public void PlayMusic(AudioClip clip, bool loop=true, bool fade=true)
@@ -94,7 +135,10 @@ public class AudioManager : MonoBehaviour
 
     public void StopBattleMusic(bool fade = true)
     {
-        StartCoroutine(PlayMusicAsync(musicBeforeBattle, true, fade));
+        if (!PlayerController.i.IsSurfing)
+            StartCoroutine(PlayMusicAsync(GameController.i.CurrentScene.SceneMusic, true, fade));
+        else
+            StartCoroutine(PlayMusicAsync(surfMusic, true, fade));
         musicBeforeBattle = null;
     }
 
@@ -149,7 +193,8 @@ public enum AudioID
 {
     UISelect, UISwitchSelection, MenuOpen, MenuClose, Hit, HitSprEft, HitNVEft, ExpGain, TMReceived, 
     ItemReceived, KeyItemReceived, LvlUp, Bump, Jump, ObtainedPoke, StatUp, StatDown,
-    PokemonOut, PokeballThrow, ChangePocket, EnterArea
+    PokemonOut, PokeballThrow, ChangePocket, EnterArea, PokeballShake, PokeballClick, PokeballBounce,
+    Congratulations, PokemonReturn
 }
 
 

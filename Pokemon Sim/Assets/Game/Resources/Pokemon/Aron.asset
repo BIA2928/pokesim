@@ -37,5 +37,8 @@ MonoBehaviour:
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 22e9b1a58e8dbdd41b7d3ac90fd50ec1, type: 2}
     learnLevel: 2
+  tmMoves: []
   expYield: 0
   growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: 46d49ba886aab3448bd201b13960e08e, type: 3}

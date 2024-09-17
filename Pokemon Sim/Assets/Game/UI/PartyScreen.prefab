@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0d7c5daa150524a9fabca37504b9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectionBuffer: 0.2
   messageText: {fileID: 3590526547362056452}
 --- !u!1001 &3429838854393955479
 PrefabInstance:
@@ -380,15 +381,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2183437245801611366, guid: fdf92ab86a7af444f9461edc905dc299, type: 3}
       propertyPath: m_Color.b
-      value: 0.09825563
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183437245801611366, guid: fdf92ab86a7af444f9461edc905dc299, type: 3}
       propertyPath: m_Color.g
-      value: 0.23548882
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183437245801611366, guid: fdf92ab86a7af444f9461edc905dc299, type: 3}
       propertyPath: m_Color.r
-      value: 0.9056604
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183437246106904764, guid: fdf92ab86a7af444f9461edc905dc299, type: 3}
       propertyPath: m_Pivot.x

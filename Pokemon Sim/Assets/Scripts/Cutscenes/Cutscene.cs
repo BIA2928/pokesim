@@ -29,7 +29,7 @@ public class Cutscene : MonoBehaviour, IPlayerTriggerable
 
     public IEnumerator PlayCutscene()
     {
-        GameController.i.StartCutscene();
+        GameController.i.StateMachine.Push(CutsceneState.i);
         foreach (var item in actions)
         {
             if (item.WaitToComplete)
@@ -37,6 +37,6 @@ public class Cutscene : MonoBehaviour, IPlayerTriggerable
             else
                 StartCoroutine(item.Play());
         }
-        GameController.i.EnterFreeRoam();
+        GameController.i.StateMachine.Pop();
     }
 }

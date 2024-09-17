@@ -7,7 +7,9 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
 {
     [SerializeField] new string name;
     [SerializeField] Dialogue dialogue;
+    [SerializeField] Dialogue defeatDialogue;
     [SerializeField] Dialogue beatenDialogue;
+    [SerializeField][Range(1,10000)] int payOut = 1;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
     [SerializeField] Sprite battleSprite;
@@ -45,7 +47,7 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         {
             AudioManager.i.PlayMusic(approachMusic, fade: false);
             yield return DialogueManager.Instance.ShowDialogue(dialogue);
-            GameController.i.StartTrainerBattle(this);
+            yield return GameController.i.StartTrainerBattle(this);
         }
         else
         {
@@ -64,6 +66,9 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
 
     public IEnumerator TriggerBattle(PlayerController player)
     {
+        var playerCharacter = player.GetComponent<Character>();
+        GameController.i.StateMachine.Push(CutsceneState.i);
+        playerCharacter.Stop();
         AudioManager.i.PlayMusic(approachMusic, fade: false);
         exclamation.SetActive(true);
         yield return new WaitForSeconds(1.2f);
@@ -73,16 +78,17 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
         var diff = (player.transform.position - transform.position);
         var moveVec = diff.normalized;
         diff -= moveVec;
-        Debug.Log($"Trying originally to reach {diff}");
-        //moveVec = new Vector2(Mathf.Round(moveVec.x), Mathf.Round(moveVec.y));
         diff = new Vector2(Mathf.Round(diff.x), Mathf.Round(diff.y));
-        Debug.Log($"Trying to reach {diff}");
         yield return character.Move(diff);
 
-        player.GetComponent<Character>().LookTowards(transform.position);
+        
+        
+        playerCharacter.LookTowards(transform.position);
         yield return DialogueManager.Instance.ShowDialogue(dialogue);
-        //Debug.Log("Trainer battle started!");
-        GameController.i.StartTrainerBattle(this);
+
+        //GameController.i.StateMachine.Pop();
+        //Handled in StartTrainerBattle
+        yield return GameController.i.StartTrainerBattle(this);
     }
 
     public void SetFovRotation(FacingDirection dir)
@@ -119,8 +125,9 @@ public class TrainerController : MonoBehaviour, Interactive, ISavable
     {
         get { return battleSprite; }
     }
-
+    public Dialogue DefeatDialogue => defeatDialogue;
     public AudioClip ApproachMusic => approachMusic;
     public AudioClip BattleMusic => battleMusic;
     public AudioClip VictoryMusic => victoryMusic;
+    public int Payout => payOut;
 }

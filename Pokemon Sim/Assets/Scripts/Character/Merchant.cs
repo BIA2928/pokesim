@@ -9,7 +9,9 @@ public class Merchant : MonoBehaviour
     [SerializeField] List<ItemBase> sellingItems;
     public IEnumerator Trade()
     {
-        yield return ShopController.instance.StartTrading(this);
+        ShopMenuState.i.AvailableItems = sellingItems;
+        ShopMenuState.i.CurrMerchant = this;
+        yield return GameController.i.StateMachine.PushAndWait(ShopMenuState.i);
     }
 
     public Dialogue OpeningDialogue => openingDialogue;

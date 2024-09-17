@@ -130,6 +130,19 @@ public class BattleUnit : MonoBehaviour
     public IEnumerator PlayFaintAnimation() 
     {
         Vector3 startPos = transform.localPosition;
+        if (Pokemon.Base.Cry != null)
+        {
+            if (Pokemon.HP <= 0)
+            {
+                yield return AudioManager.i.PlaySFXLowPitch(Pokemon.Base.Cry);
+                AudioManager.i.PlaySFX(AudioID.PokemonReturn);
+            }
+            else
+                // Eventually add retreat into pokeball noise
+                yield return AudioManager.i.PlaySFXAsync(AudioID.PokemonReturn);
+        }
+
+            
         var sequence = DOTween.Sequence();
         sequence.Append(image.transform.DOLocalMoveY(originalPos.y - 120f, 0.3f));
         sequence.Join(image.DOFade(0f, 0.3f));

@@ -65,7 +65,6 @@ public class BattleDialogue : MonoBehaviour
         yield return TypeDialogue(dialogue);
         if (waitForInput)
         {
-            Debug.Log("waiting for input");
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X));
             AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
         }
@@ -200,6 +199,6 @@ public class BattleDialogue : MonoBehaviour
         dialogueText.text = "";
     }
 
-    
+    public bool IsChoiceBoxEnabled => switchBox.activeSelf;
 
 }

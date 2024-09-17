@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 4739192501763266268}
   - component: {fileID: 4739192501763266269}
   - component: {fileID: 5776460309779693075}
+  - component: {fileID: 627904994936573910}
   m_Layer: 0
   m_Name: MoveToLearn
   m_TagString: Untagged
@@ -250,11 +251,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b0326a1c920bc4891a789d04c86a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 0, g: 0, b: 0, a: 0}
   moveNameText: {fileID: 7752020552794475244}
   ppText: {fileID: 5457752781149128463}
   moveTypeText: {fileID: 6320580653664099594}
   moveCategoryText: {fileID: 4884282223171769136}
+--- !u!114 &627904994936573910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739192501763266211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3248a4033b3cf194693c68d223a181e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 0}
 --- !u!1 &9075669086826553854
 GameObject:
   m_ObjectHideFlags: 0

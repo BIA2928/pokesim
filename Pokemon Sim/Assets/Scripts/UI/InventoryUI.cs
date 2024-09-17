@@ -1,12 +1,13 @@
+using GenericSelectionUI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
-public enum InventoryUIState { ItemSelection, PartySelection, Busy, MoveToForget}
 
-public class InventoryUI : MonoBehaviour
+public class InventoryUI : SelectionUI<InventoryItemSlot>
 {
     [SerializeField] GameObject itemList;
     [SerializeField] ItemSlotUI itemSlotUI;
@@ -16,17 +17,11 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] PocketSelectorUI pocketUI;
     [SerializeField] MoveForgetScreen moveForgetScreen;
 
-    Action<ItemBase> OnItemUsed;
     Inventory inventory;
     List<ItemSlotUI> slotUIList;
     RectTransform itemListRect;
 
-    MoveBase currMoveToLearn;
-
-    int selectedItem = 0;
     int selectedPocket = 0;
-    
-    InventoryUIState state;
 
     const int itemsInViewPort = 7;
     
@@ -41,9 +36,9 @@ public class InventoryUI : MonoBehaviour
     private void Start()
     {
         UpdateItemList();
-        UpdateItemSelection();
+        UpdateSelectionInUI();
         inventory.OnUpdated += UpdateItemList;
-        inventory.OnUpdated += UpdateItemSelection;
+        inventory.OnUpdated += UpdateSelectionInUI;
     }
 
     void UpdateItemList()
@@ -61,290 +56,68 @@ public class InventoryUI : MonoBehaviour
             newSlotUI.SetData(itemSlot);
             slotUIList.Add(newSlotUI);
         }
-        UpdateItemSelection();
+
+        SetItems(slotUIList.Select(s => s.GetComponent<InventoryItemSlot>()).ToList());
+        UpdateSelectionInUI();
     }
-    public void HandleUpdate(Action onBack, Action<ItemBase> onItemUsed=null)
+
+    public override void HandleUpdate()
     {
-        OnItemUsed = onItemUsed;
-        if (state == InventoryUIState.ItemSelection)
+        int prevPocket = selectedPocket;
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+            --selectedPocket;
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+            ++selectedPocket;
+
+        if (selectedPocket >= nPockets)
+            selectedPocket = 0;
+        else if (selectedPocket < 0)
+            selectedPocket = nPockets - 1;
+
+        if (selectedPocket != prevPocket)
         {
-            int prevSelection = selectedItem;
-            int prevPocket = selectedPocket;
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-                ++selectedItem;
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-                --selectedItem;
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
-                --selectedPocket;
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-                ++selectedPocket;
-
-            if (selectedPocket >= nPockets)
-                selectedPocket = 0;
-            else if (selectedPocket < 0)
-                selectedPocket = nPockets - 1;
-            selectedItem = MyClamp(selectedItem, 0, inventory.GetItemsByCategory(selectedPocket).Count - 1);
-
-            if (selectedItem != prevSelection)
-            {
-                AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
-                UpdateItemSelection();
-            }
-            if (selectedPocket != prevPocket)
-            {
-                ResetOnPocketChange();
-                UpdateItemList();
-                pocketUI.UpdatePocket(selectedPocket);
-                AudioManager.i.PlaySFX(AudioID.ChangePocket);
-                UpdateItemSelection();
-            }
-                
-
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                AudioManager.i.PlaySFX(AudioID.UISelect);
-                StartCoroutine(ItemSelected());
-            }
-            else if (Input.GetKeyDown(KeyCode.X))
-            {
-                onBack?.Invoke();
-                AudioManager.i.PlaySFX(AudioID.UISwitchSelection);
-            }
+            ResetOnPocketChange();
+            UpdateItemList();
+            pocketUI.UpdatePocket(selectedPocket);
+            AudioManager.i.PlaySFX(AudioID.ChangePocket);
+            UpdateSelectionInUI();
         }
-        else if (state == InventoryUIState.PartySelection)
-        {
-            Action OnBack = () =>
-            {
-                ClosePartyScreen();
-            };
-
-            Action onSelected = () =>
-            {
-                StartCoroutine(UseItem());
-                
-            };
-            partyScreen.HandleUpdate(onSelected, OnBack);
-        }
-        else if (state == InventoryUIState.MoveToForget)
-        {
-            Action<int> onMoveSelected = (int moveIndex) =>
-            {
-                StartCoroutine(OnMoveForgotten(moveIndex));
-            };
-            Action OnBack = () =>
-            {
-                Debug.Log("Going back");
-                moveForgetScreen.gameObject.SetActive(false);
-                partyScreen.gameObject.SetActive(false);
-                state = InventoryUIState.ItemSelection;           
-            };
-            moveForgetScreen.HandleUpdate(onMoveSelected, OnBack);
-        }
-        
+        base.HandleUpdate();
     }
 
-    void UpdateItemSelection()
+    protected override void UpdateSelectionInUI()
     {
         var items = inventory.GetItemsByCategory(selectedPocket);
-        selectedItem = MyClamp(selectedItem, 0, items.Count - 1);
-        for (int i = 0; i < slotUIList.Count; i++)
-        {
-            if (i == selectedItem)
-            {
-                slotUIList[i].SelectItem();
-            }
-            else
-                slotUIList[i].DeselectItem();
-        }
+        selection = MyClamp(selection, 0, items.Count - 1);
 
-        
         if (items.Count > 0)
         {
-            itemDescriptionBar.SetData(items[selectedItem].ItemBase);
+            itemDescriptionBar.SetData(items[selection].ItemBase);
             HandleScrolling();
         }
         else
         {
             itemDescriptionBar.ClearFields();
         }
-
+        base.UpdateSelectionInUI();
     }
 
     void HandleScrolling()
     {
         if (slotUIList.Count <= itemsInViewPort) return;
-        float scrollPos = Mathf.Clamp(selectedItem - (itemsInViewPort / 2), 0, selectedItem) * slotUIList[0].Height;
+        float scrollPos = Mathf.Clamp(selection - (itemsInViewPort / 2), 0, selection) * slotUIList[0].Height;
         itemListRect.localPosition = new Vector2(itemListRect.localPosition.x, scrollPos);
     }
 
     void ResetOnPocketChange()
     {
         itemDescriptionBar.ClearFields();
-        selectedItem = 0;
+        selection = 0;
     }
 
-    void OpenPartyScreen()
-    {
+    public ItemBase SelectedItem => inventory.GetItemBase(selection, selectedPocket);
 
-        state = InventoryUIState.PartySelection;
-
-        partyScreen.gameObject.SetActive(true);
-    }
-
-    void ClosePartyScreen()
-    {
-
-        state = InventoryUIState.ItemSelection;
-        partyScreen.ClearMemberSlotMessages();
-        partyScreen.gameObject.SetActive(false);
-    }
-
-    IEnumerator UseItem() 
-    {
-        state = InventoryUIState.Busy;
-
-        yield return HandleTM();
-
-        var currItem = inventory.GetItemBase(selectedItem, selectedPocket);
-        if (currItem is EvolutionItem)
-        {
-            var evo = partyScreen.SelectedMember.CheckForEvolution(currItem);
-            if (evo != null)
-            {
-                yield return EvolutionManager.i.Evolve(partyScreen.SelectedMember, evo);
-            }
-            else
-            {
-                yield return DialogueManager.Instance.ShowDialogue("It won't have any effect.");
-                ClosePartyScreen();
-                yield break;
-            }
-        }
-        // Use item on selected poke
-        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedPocket);
-        if (usedItem == null)
-        {
-            if (selectedPocket == (int)ItemType.MedicineItem)
-                yield return DialogueManager.Instance.ShowDialogue($"It won't have any effect.");
-            else
-                yield return DialogueManager.Instance.ShowCantUseDialogue();
-        }
-        else
-        {
-            if (usedItem is MedicineItem)
-                yield return DialogueManager.Instance.ShowDialogue($"One {usedItem.Name} was used.");
-            OnItemUsed?.Invoke(usedItem);
-        }
-
-        ClosePartyScreen();
-    }
-
-    IEnumerator HandleTM()
-    {
-        var item = inventory.GetItemBase(selectedItem, selectedPocket) as TmItem;
-
-        if (item == null)
-            yield break;
-
-        Pokemon pokemon = partyScreen.SelectedMember;
-        if (pokemon.HasMove(item.Move))
-        {
-            yield return DialogueManager.Instance.ShowDialogue($"{pokemon.Base.Name} already knows {item.Move.Name}.");
-            yield break;
-        }
-
-        if (!pokemon.Base.CanLearnByTm(item.Move))
-        {
-            yield return DialogueManager.Instance.ShowDialogue($"{pokemon.Base.Name} cannot learn {item.Move.Name}.");
-            yield break;
-        }
-
-        if (pokemon.Moves.Count == PokemonBase.MaxNMoves)
-        {
-            
-            yield return AskToForget(pokemon, item.Move);
-            yield return new WaitUntil(() => state != InventoryUIState.MoveToForget);
-        }
-        else
-        {
-            pokemon.LearnMove(item.Move);
-            yield return DialogueManager.Instance.ShowDialogue($"{pokemon.Base.Name} learned {item.Move.Name}!");
-        }
-
-    }
-
-    IEnumerator AskToForget(Pokemon pokemon, MoveBase newMove)
-    {
-        state = InventoryUIState.Busy;
-        currMoveToLearn = newMove;
-        Dialogue dialogue = new Dialogue();
-        dialogue.Lines.Add($"{pokemon.Base.Name} wants to learn {newMove.Name}.");
-        dialogue.Lines.Add($"But {pokemon.Base.Name} already knows four moves.");
-        dialogue.Lines.Add($"Select a move for {pokemon.Base.Name} to forget.");
-        yield return DialogueManager.Instance.ShowDialogueContinuous(dialogue);
-        yield return new WaitUntil(() => DialogueManager.Instance.IsShowing == false);
-        moveForgetScreen.gameObject.SetActive(true);
-        moveForgetScreen.Init();
-        moveForgetScreen.SetMoveData(pokemon.Moves, newMove);
-        state = InventoryUIState.MoveToForget;
-    }
-
-    IEnumerator OnMoveForgotten(int moveIndex)
-    {
-        moveForgetScreen.gameObject.SetActive(false);
-        Debug.Log($"Learning {currMoveToLearn.Name}");
-        var poke = partyScreen.SelectedMember;
-        poke.ReplaceMove(poke.Moves[moveIndex], new Move(currMoveToLearn));
-        yield return DialogueManager.Instance.ShowDialogue($"{poke.Base.Name} forgot a move and learned {currMoveToLearn.Name}!");
-        currMoveToLearn = null;
-        state = InventoryUIState.ItemSelection;
-    }
-
-
-    IEnumerator ItemSelected()
-    {
-        state = InventoryUIState.Busy;
-        var item = inventory.GetItemBase(selectedItem, selectedPocket);
-        if (GameController.i.GameState == GameState.Shop)
-        {
-            OnItemUsed?.Invoke(item);
-            state = InventoryUIState.ItemSelection;
-            yield break;
-        }
-        if (GameController.i.GameState == GameState.InBattle)
-        {
-            if (!item.CanUseInBattle)
-            {
-                // Can't use item
-                yield return DialogueManager.Instance.ShowCantUseDialogue();
-                state = InventoryUIState.ItemSelection;
-                yield break;
-            }
-        }
-        else
-        {
-            if (!item.CanUseOutsideBattle)
-            {
-                // Can't use item
-                yield return DialogueManager.Instance.ShowCantUseDialogue();
-                state = InventoryUIState.ItemSelection;
-                yield break;
-            }
-        }
-        if (selectedPocket == (int)ItemType.Pokeball)
-        {
-            StartCoroutine(UseItem());
-        }
-        else
-        {
-            OpenPartyScreen();
-            if (item is TmItem)
-            {
-                // Show tm useable or not
-                partyScreen.ShowIfTMUsable(item as TmItem);
-            }
-        }
-    }
+    public int SelectedPocket => selectedPocket;
 
     public static int MyClamp(int n, int min, int max)
     {

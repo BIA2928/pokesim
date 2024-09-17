@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 1198264428726847670}
   - component: {fileID: 9156256288335524905}
   - component: {fileID: 8993997481952069968}
+  - component: {fileID: 3781652961060080131}
   m_Layer: 5
   m_Name: ItemUI
   m_TagString: Untagged
@@ -408,4 +409,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1875151565456331850}
   countText: {fileID: 2592398476440897208}
+  selectedHighlighter: {fileID: 9156256288335524905}
+--- !u!114 &3781652961060080131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5394941968076264729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f72e2dcc3eaa88a43a0188d7d8959975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   selectedHighlighter: {fileID: 9156256288335524905}

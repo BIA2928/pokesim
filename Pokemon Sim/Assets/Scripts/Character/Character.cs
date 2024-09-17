@@ -153,6 +153,8 @@ public class Character : MonoBehaviour
 
     public void Stop()
     {
+        if (animator is PlayerCharacterAnimator animator1)
+            animator1.StandStill();
         IsMoving = false;
         IsRunning = false;
         HandleUpdate();
