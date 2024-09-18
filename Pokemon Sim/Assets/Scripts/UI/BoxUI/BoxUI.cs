@@ -41,11 +41,28 @@ public class BoxUI : MonoBehaviour
     PokemonParty party;
     PokemonStorage pokemonBoxes;
 
-    private void Start()
+   /*/private void Start()
+    {
+        
+
+        BoxReset();
+
+        List<Pokemon> box = pokemonBoxes.GetBoxByIndex(BoxSelection);
+        boxHeaderUI.SetBoxNumber(BoxSelection);
+        for (int i = 0; i < boxSlots.Count; i++)
+        {
+            boxSlots[i].SetData(box[i]);
+        }
+
+        SetPartyData();
+
+        UpdateHoverSelection(BoxSelection, SelectionIndex);
+    }*/
+
+    public void LoadBoxState()
     {
         party = PokemonParty.GetPlayerParty();
         pokemonBoxes = PokemonStorage.GetPlayerStorageBoxes();
-
         BoxReset();
 
         List<Pokemon> box = pokemonBoxes.GetBoxByIndex(BoxSelection);

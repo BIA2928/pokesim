@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PokemonStorage : MonoBehaviour
+public class PokemonStorage : MonoBehaviour, ISavable
 {
     const int BOX_POKE_LIMIT = 36;
     const int BOX_LIMIT = 10;
@@ -75,8 +75,71 @@ public class PokemonStorage : MonoBehaviour
         return pokemonBox;
     }
 
+    private void ClearBox()
+    {
+        for (int i = 0; i < BOX_LIMIT; i++)
+        {
+            for (int j = 0; j < BOX_POKE_LIMIT; j++)
+            {
+                boxes[i, j] = null;
+            }
+        }
+    }
+
     public static PokemonStorage GetPlayerStorageBoxes()
     {
         return FindObjectOfType<PlayerController>().GetComponent<PokemonStorage>();
     }
+
+    public object CaptureState()
+    {
+        var saveData = new BoxSaveData()
+        {
+            boxSlots = new List<BoxSlotSaveData>()
+        };
+        for (int i = 0; i < BOX_LIMIT; i++)
+        {
+            for (int j = 0; j < BOX_POKE_LIMIT; j++)
+            {
+                if (boxes[i, j] != null)
+                {
+                    saveData.boxSlots.Add(
+                        new BoxSlotSaveData() { pokemonData = boxes[i, j].GetSaveData(), 
+                            boxIndex = i, 
+                            slotIndex = j 
+                        });
+                }
+            }
+        }
+        return saveData;
+    }
+
+    public void RestoreState(object state)
+    {
+        var boxSaveData = state as BoxSaveData;
+
+        // Clear box
+        ClearBox();
+
+        foreach(var slot in boxSaveData.boxSlots)
+        {
+            boxes[slot.boxIndex, slot.slotIndex] = new Pokemon(slot.pokemonData);
+        }
+
+    }
+}
+
+[System.Serializable]
+public class BoxSaveData
+{
+    public List<BoxSlotSaveData> boxSlots;
+}
+
+[System.Serializable]
+public class BoxSlotSaveData
+{
+    public PokemonSaveData pokemonData;
+    public int boxIndex;
+    public int slotIndex;
+
 }

@@ -23,6 +23,7 @@ public class BoxState : State<GameController>
 
     public override void EnterState(GameController owner)
     {
+        boxUI.LoadBoxState();
         boxUI.OnBack += OnBack;
         boxUI.OnPokemonSelected += OnPokemonSelected;
         gC = owner;

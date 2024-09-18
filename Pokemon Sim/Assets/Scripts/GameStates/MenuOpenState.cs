@@ -50,7 +50,31 @@ public class MenuOpenState : State<GameController>
             Debug.Log("Pokedex selected");
         else if (selection == 2)
             gC.StateMachine.Push(InventoryState.i);
+        else if (selection == 3)
+        {
+            //gC.StateMachine.Push(BadgeState.i);
+            // for testing, use as load funciton
+            SavingSystem.i.Load("SaveSlot1");
+            gC.StateMachine.Pop();
+        }
+        else if (selection == 4)
+        {
+            StartCoroutine(SaveSelected());
+            gC.StateMachine.Pop();
+        }
+        else if (selection == 5)
+        {
+            // options
+        }
+
             
+    }
+
+    IEnumerator SaveSelected()
+    {
+        yield return Fader.instance.FadeIn(0.3f);
+        SavingSystem.i.Save("SaveSlot1");
+        yield return Fader.instance.FadeOut(0.3f);
     }
 
     void OnMenuBack()

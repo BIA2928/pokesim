@@ -33,6 +33,10 @@ public class FreeRoamState: State<GameController>
         {
             SavingSystem.i.Load("testSave1");
         }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            SavingSystem.i.Save("testSave1");
+        }
         // Also for testing PC screen
         else if (Input.GetKeyDown(KeyCode.B))
         {
