@@ -16,11 +16,11 @@ MonoBehaviour:
   description: For some time after its birth, it grows by gaining nourishment from
     the seed on its back.
   pokeSize: 0
-  regionalDexNum: 0
+  regionalDexNum: 20
   nationalDexNum: 1
-  frontSprite: {fileID: 21300000, guid: 6970b1b3162cc2e4eba2119daae7d0b5, type: 3}
-  backSprite: {fileID: 21300000, guid: 8e39e7eea66173e42a9e0895cb4b9c8f, type: 3}
-  boxSprite: {fileID: 21300000, guid: 1dc5fa27a0626604290f46cc5a029abf, type: 3}
+  frontSprite: {fileID: 21300000, guid: 63b2385f62fcbd64fb59557a8598507b, type: 3}
+  backSprite: {fileID: 21300000, guid: 4f895fb1d8dec5d4b8f5a8c99fd46bcf, type: 3}
+  boxSprite: {fileID: 21300000, guid: 749bddf27ad9ed84ea610d399faeeeb2, type: 3}
   type1: 10
   type2: 0
   maxHP: 45
@@ -29,8 +29,17 @@ MonoBehaviour:
   spAttack: 65
   spDefence: 65
   speed: 45
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 6b54132578a6cc64eadd41d82ac5d5a1, type: 2}
     learnLevel: 6
+  tmMoves: []
+  expYield: 64
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 57bf8e42c2643ae4189762db3d493ec8, type: 2}
+    requiredLevel: 18
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 0fbd23037a315d14db1ae23fcc5b9020, type: 3}

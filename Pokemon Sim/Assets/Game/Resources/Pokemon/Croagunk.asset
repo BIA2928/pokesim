@@ -16,11 +16,11 @@ MonoBehaviour:
   description: Its cheeks hold poison sacs. It tries to catch foes off guard to jab
     them with toxic fingers.
   pokeSize: 0
-  regionalDexNum: 28
+  regionalDexNum: 31
   nationalDexNum: 453
   frontSprite: {fileID: 21300000, guid: fdba7895a64d08b44a3d2e49501f3f79, type: 3}
-  backSprite: {fileID: 21300000, guid: 0535eb1f10e12e04b81ae7235384ffe6, type: 3}
-  boxSprite: {fileID: 21300000, guid: 8a08ec735e0f65d4c9ca3deeb6d5ae74, type: 3}
+  backSprite: {fileID: 21300000, guid: 3f6e941b4772a954aa07c32c82c5617d, type: 3}
+  boxSprite: {fileID: 21300000, guid: c91029c877d65b848904b58e99313e57, type: 3}
   type1: 15
   type2: 6
   maxHP: 48
@@ -43,7 +43,7 @@ MonoBehaviour:
     learnLevel: 9
   tmMoves:
   - {fileID: 11400000, guid: cf049fb035cc73548af10ae35c9d79c6, type: 2}
-  expYield: 140
+  expYield: 65
   growthRate: 1
   evolutions:
   - evolvesInto: {fileID: 11400000, guid: 5bdcc9e55bd044b48968687e4085f3a4, type: 2}

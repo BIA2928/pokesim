@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Charmeleon
   m_EditorClassIdentifier: 
   name: Charmeleon
-  description: 
-  pokeSize: 0
-  regionalDexNum: 0
+  description: When it swings its burning tail, it elevates the air temperature to
+    unbearably high levels.
+  pokeSize: 1
+  regionalDexNum: 29
   nationalDexNum: 5
-  frontSprite: {fileID: 21300000, guid: ba84f14dadfc0ae439ff2983403041d4, type: 3}
-  backSprite: {fileID: 21300000, guid: d9f711f41e9e6bc4b86db9a6743b16da, type: 3}
-  boxSprite: {fileID: 21300000, guid: 1752b1f27022d734092c3d4a2b0a395f, type: 3}
+  frontSprite: {fileID: 21300000, guid: 7f9f19010408df6409b40df2ecb0462a, type: 3}
+  backSprite: {fileID: 21300000, guid: 3a408dcace1c56f49abe956ef206e7af, type: 3}
+  boxSprite: {fileID: 21300000, guid: e2d4307e8db4b6445a523221011775a5, type: 3}
   type1: 7
   type2: 0
   maxHP: 58
@@ -28,8 +29,17 @@ MonoBehaviour:
   spAttack: 80
   spDefence: 65
   speed: 80
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 8d858a8eea03f684b9a2b7c4001e1cfd, type: 2}
     learnLevel: 3
+  tmMoves: []
+  expYield: 142
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 824c84b3d2222d543a6f771acb0ee08b, type: 2}
+    requiredLevel: 36
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: a0ce9597b3430d2468233e26b2030639, type: 3}

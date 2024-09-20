@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Corviknight
   m_EditorClassIdentifier: 
   name: Corviknight
-  description: 
+  description: "Although its wings have partly turned to steel and become heavy as
+    a result, this Pok\xE9mon flies through the skies with ease."
   pokeSize: 2
-  regionalDexNum: 0
+  regionalDexNum: 25
   nationalDexNum: 823
-  frontSprite: {fileID: 3059794497011326620, guid: 93c42a672e049a549b933e9afc541000, type: 3}
-  backSprite: {fileID: -224958909174198255, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: f384d7dbdc9e254409124c54667afe9b, type: 3}
+  frontSprite: {fileID: 1841444015812500949, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -7395218132954459240, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 5d87e377638a109448e27ce7a40b80a2, type: 3}
   type1: 8
   type2: 17
   maxHP: 98
@@ -28,9 +29,14 @@ MonoBehaviour:
   spAttack: 57
   spDefence: 85
   speed: 70
-  catchRate: 0
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 5992798f378249f409848fbf7b9f5367, type: 2}
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 4b316457ce3dcd646bd2a27aa4bcaec3, type: 2}
     learnLevel: 3
+  tmMoves: []
+  expYield: 248
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 98631aec1a54ca44bb6cf14f33a3c7d3, type: 3}

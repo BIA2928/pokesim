@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Torterra
+  m_EditorClassIdentifier: 
+  name: Torterra
+  description: "Some Pok\xE9mon are born on a Torterra\u2019s back and spend their
+    entire life there."
+  pokeSize: 2
+  regionalDexNum: 3
+  nationalDexNum: 389
+  frontSprite: {fileID: 21300000, guid: 4589a88271a474746ae6ef00dff197ee, type: 3}
+  backSprite: {fileID: 21300000, guid: c46e56c55f6af1e4e83dd8705a9d190d, type: 3}
+  boxSprite: {fileID: 21300000, guid: dde5903cc240c734aa7f882dee2ceab8, type: 3}
+  type1: 10
+  type2: 11
+  maxHP: 95
+  attack: 109
+  defence: 105
+  spAttack: 75
+  spDefence: 87
+  speed: 57
+  catchRate: 45
+  learnableMoves: []
+  tmMoves: []
+  expYield: 236
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: c15f406849dff50439e8dd45592c6724, type: 3}

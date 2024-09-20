@@ -13,21 +13,31 @@ MonoBehaviour:
   m_Name: Toxel
   m_EditorClassIdentifier: 
   name: Toxel
-  description: "\t\t"
+  description: "It stores poison in an internal poison sac and secretes that poison
+    through its skin. If you touch this Pok\xE9mon, a tingling sensation follows."
   pokeSize: 0
-  regionalDexNum: 0
+  regionalDexNum: 26
   nationalDexNum: 848
-  frontSprite: {fileID: -1064697949385478856, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: -6932625807648352047, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: 3e6140ea1aa29ee428684fa6c0015ab5, type: 3}
-  type1: 15
-  type2: 0
+  frontSprite: {fileID: 4321362320592774242, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -785459750485087211, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 7a58c348ab0750141bcf2b4117a75839, type: 3}
+  type1: 4
+  type2: 15
   maxHP: 40
   attack: 38
   defence: 35
   spAttack: 54
   spDefence: 35
   speed: 45
+  catchRate: 90
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 48
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: ac84213485cb6c04da5d64da32f8980d, type: 2}
+    requiredLevel: 30
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: e6e3e2694d55fe643982d8997e612eab, type: 3}

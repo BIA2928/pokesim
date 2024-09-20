@@ -16,11 +16,11 @@ MonoBehaviour:
   description: It usually lives deep in mountains. However, hunger may drive it to
     eat railroad tracks and cars.
   pokeSize: 0
-  regionalDexNum: 0
+  regionalDexNum: 17
   nationalDexNum: 304
-  frontSprite: {fileID: 21300000, guid: bc367d8b265b1994b8f34172d15dcc8b, type: 3}
-  backSprite: {fileID: 21300000, guid: 532b8ae78b525854faeb3a3f88b1e4f3, type: 3}
-  boxSprite: {fileID: 21300000, guid: 44bfa6f5753f473449ec986dd17581b8, type: 3}
+  frontSprite: {fileID: 21300000, guid: 9c3de2ecacb1f0f4abb7ff01b7537032, type: 3}
+  backSprite: {fileID: 21300000, guid: 110d9d71f28a22543b2aa6d5779b0ce7, type: 3}
+  boxSprite: {fileID: 21300000, guid: 37a0ba5a652b2364ca1b8f68e22d5992, type: 3}
   type1: 17
   type2: 14
   maxHP: 50
@@ -38,7 +38,10 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: 22e9b1a58e8dbdd41b7d3ac90fd50ec1, type: 2}
     learnLevel: 2
   tmMoves: []
-  expYield: 0
-  growthRate: 2
-  evolutions: []
+  expYield: 66
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: fdd63af59dcb7d84cb08f12fbf57a583, type: 2}
+    requiredLevel: 32
+    requiredItem: {fileID: 0}
   cry: {fileID: 8300000, guid: 46d49ba886aab3448bd201b13960e08e, type: 3}

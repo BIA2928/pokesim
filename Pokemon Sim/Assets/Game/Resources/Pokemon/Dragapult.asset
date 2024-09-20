@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Dragapult
+  m_EditorClassIdentifier: 
+  name: Dragapult
+  description: "When it isn\u2019t battling, it keeps Dreepy in the holes on its
+    horns. Once a fight starts, it launches the Dreepy like supersonic missiles."
+  pokeSize: 1
+  regionalDexNum: 39
+  nationalDexNum: 887
+  frontSprite: {fileID: -3633645477390013601, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -7553790287030473632, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 4fdcea43270ae0147b916b278cbe975f, type: 3}
+  type1: 3
+  type2: 9
+  maxHP: 88
+  attack: 120
+  defence: 75
+  spAttack: 100
+  spDefence: 75
+  speed: 140
+  catchRate: 20
+  learnableMoves: []
+  tmMoves: []
+  expYield: 300
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: e15640e86e0fd0a44b531f5fbc4d5031, type: 3}

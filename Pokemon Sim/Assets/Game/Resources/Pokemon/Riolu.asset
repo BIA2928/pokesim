@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Riolu
+  m_EditorClassIdentifier: 
+  name: Riolu
+  description: The aura that emanates from its body intensifies to alert others if
+    it is afraid or sad.
+  pokeSize: 0
+  regionalDexNum: 33
+  nationalDexNum: 447
+  frontSprite: {fileID: 21300000, guid: 3a3b10b7feb59a24e8c63a5e9423b95f, type: 3}
+  backSprite: {fileID: 21300000, guid: 6ca46038bfe1c5240811c37b3c1dd177, type: 3}
+  boxSprite: {fileID: 21300000, guid: 6428eef3f904c7b4dabbcda527dbc3ec, type: 3}
+  type1: 6
+  type2: 0
+  maxHP: 40
+  attack: 70
+  defence: 40
+  spAttack: 40
+  spDefence: 40
+  speed: 60
+  catchRate: 90
+  learnableMoves: []
+  tmMoves: []
+  expYield: 57
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 6505ccfd7e3e901429aff47080367f37, type: 2}
+    requiredLevel: 34
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 5e714e396f3d0c542b53c6f2adea14c7, type: 3}

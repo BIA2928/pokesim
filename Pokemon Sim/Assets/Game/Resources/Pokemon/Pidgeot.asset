@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Pidgeot
+  m_EditorClassIdentifier: 
+  name: Pidgeot
+  description: It spreads its beautiful wings wide to frighten its enemies. It can
+    fly at Mach 2 speed.
+  pokeSize: 2
+  regionalDexNum: 12
+  nationalDexNum: 18
+  frontSprite: {fileID: 21300000, guid: e2cb72552e13a81428039b8d39e1615d, type: 3}
+  backSprite: {fileID: 21300000, guid: 4e7be5ce9621ef2409f421ecfdf6a921, type: 3}
+  boxSprite: {fileID: 21300000, guid: 804160e7078bce1449296889750ee1c9, type: 3}
+  type1: 13
+  type2: 8
+  maxHP: 80
+  attack: 83
+  defence: 75
+  spAttack: 72
+  spDefence: 68
+  speed: 102
+  catchRate: 45
+  learnableMoves: []
+  tmMoves: []
+  expYield: 216
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 4f77fbd23a58f7a4db93918f26fa7572, type: 3}

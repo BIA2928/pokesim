@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Toxtricity
   m_EditorClassIdentifier: 
   name: Toxtricity
-  description: 
+  description: "When this Pok\xE9mon sounds as if it\u2019s strumming a guitar, it\u2019s
+    actually clawing at the protrusions on its chest to generate electricity."
   pokeSize: 2
-  regionalDexNum: 0
+  regionalDexNum: 27
   nationalDexNum: 849
-  frontSprite: {fileID: -8727539531079478456, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: 6378266725328471227, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: 1c26e42e84213e048a7d167babd18d1f, type: 3}
+  frontSprite: {fileID: -7785515602748037539, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 3045475961981839802, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: -785459750485087211, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
   type1: 15
   type2: 4
   maxHP: 75
@@ -28,6 +29,12 @@ MonoBehaviour:
   spAttack: 114
   spDefence: 70
   speed: 75
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: de225de951ee5de43bd41923df75484f, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 176
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 47e0003b1e991ab4b9d1011ee763248c, type: 3}

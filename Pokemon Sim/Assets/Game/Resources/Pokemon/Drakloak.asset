@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Drakloak
+  m_EditorClassIdentifier: 
+  name: Drakloak
+  description: "It\u2019s capable of flying faster than 120 mph. It battles alongside
+    Dreepy and dotes on them until they successfully evolve."
+  pokeSize: 0
+  regionalDexNum: 38
+  nationalDexNum: 886
+  frontSprite: {fileID: -8252166740311889369, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -478375301404084808, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 921ea31744120b547bbdcd1c611c422c, type: 3}
+  type1: 3
+  type2: 9
+  maxHP: 68
+  attack: 80
+  defence: 50
+  spAttack: 60
+  spDefence: 50
+  speed: 100
+  catchRate: 45
+  learnableMoves: []
+  tmMoves: []
+  expYield: 150
+  growthRate: 2
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: feaf619e681071745ab639e74b39093f, type: 2}
+    requiredLevel: 57
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 7aa78ebf516c6ed429001393c4df633f, type: 3}

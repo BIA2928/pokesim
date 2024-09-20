@@ -16,11 +16,11 @@ MonoBehaviour:
   description: Its toughened hind legs enable it to stand upright. Because it weakens
     if its skin dries out, it replenishes fluids by playing in mud.
   pokeSize: 1
-  regionalDexNum: 0
-  nationalDexNum: 0
+  regionalDexNum: 8
+  nationalDexNum: 259
   frontSprite: {fileID: 21300000, guid: f00409d7151b33a4d8c040c266267685, type: 3}
-  backSprite: {fileID: 21300000, guid: 43d06d0d12aa5e045bce33f0b36b016b, type: 3}
-  boxSprite: {fileID: 21300000, guid: 0ddb53aaed37d2442a4c58aa2af5f52e, type: 3}
+  backSprite: {fileID: 21300000, guid: 8406557ff993afe47b6a8fd3ba45e250, type: 3}
+  boxSprite: {fileID: 21300000, guid: 815acaf3ae5b10b4cb80e73aaab7a703, type: 3}
   type1: 18
   type2: 11
   maxHP: 70
@@ -29,7 +29,7 @@ MonoBehaviour:
   spAttack: 60
   spDefence: 72
   speed: 51
-  catchRate: 0
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
@@ -40,7 +40,10 @@ MonoBehaviour:
   tmMoves:
   - {fileID: 11400000, guid: 0c01e7a8bcbdd864f9a4036122869cf2, type: 2}
   - {fileID: 11400000, guid: fdecab307990d2b4e8d13d70f6d1710f, type: 2}
-  expYield: 0
-  growthRate: 0
-  evolutions: []
+  expYield: 142
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: f53f6e29503b6ce498edef8ae922e8ec, type: 2}
+    requiredLevel: 36
+    requiredItem: {fileID: 0}
   cry: {fileID: 8300000, guid: 8cd9ba5eff813404da0397de92ee1c5c, type: 3}

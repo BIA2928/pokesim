@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Shroomish
+  m_EditorClassIdentifier: 
+  name: Shroomish
+  description: It loves to eat damp, composted soil in forests. If you enter a forest
+    after a long rain, you can see many Shroomish feasting on composted soil.
+  pokeSize: 0
+  regionalDexNum: 35
+  nationalDexNum: 285
+  frontSprite: {fileID: 21300000, guid: f6575b6b32ec54845981cc04a6a85934, type: 3}
+  backSprite: {fileID: 21300000, guid: 87639c09f6eb6374fb54688c5339685c, type: 3}
+  boxSprite: {fileID: 21300000, guid: 958d88e0038f9f94c8724a454abaf39f, type: 3}
+  type1: 10
+  type2: 0
+  maxHP: 61
+  attack: 41
+  defence: 62
+  spAttack: 42
+  spDefence: 62
+  speed: 37
+  catchRate: 245
+  learnableMoves: []
+  tmMoves: []
+  expYield: 60
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 422c0d49f809de248abbc6df96902a39, type: 2}
+    requiredLevel: 25
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: d01d9822da7d1e843b784dedaebbcf38, type: 3}

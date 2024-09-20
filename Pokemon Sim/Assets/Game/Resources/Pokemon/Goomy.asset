@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Goomy
+  m_EditorClassIdentifier: 
+  name: Goomy
+  description: "The weakest Dragon-type Pok\xE9mon, it lives in damp, shady places,
+    so its body doesn\u2019t dry out."
+  pokeSize: 0
+  regionalDexNum: 42
+  nationalDexNum: 704
+  frontSprite: {fileID: -523600953840669288, guid: 74ae052755934694296b73eb1f5b62e7, type: 3}
+  backSprite: {fileID: -9199275604976426802, guid: 74ae052755934694296b73eb1f5b62e7, type: 3}
+  boxSprite: {fileID: 21300000, guid: 76146ef18008e694ca7b07bf54fb8084, type: 3}
+  type1: 3
+  type2: 18
+  maxHP: 45
+  attack: 50
+  defence: 35
+  spAttack: 58
+  spDefence: 78
+  speed: 40
+  catchRate: 65
+  learnableMoves: []
+  tmMoves: []
+  expYield: 60
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: db2f520c18e55a341972b65893935ea6, type: 2}
+    requiredLevel: 33
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 4953a4b87345962408530c6440056619, type: 3}

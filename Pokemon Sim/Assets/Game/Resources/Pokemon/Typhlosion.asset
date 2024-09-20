@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Typhlosion
   m_EditorClassIdentifier: 
   name: Typhlosion
-  description: 
+  description: If its rage peaks, it becomes so hot that anything that touches it
+    will instantly go up in flames.
   pokeSize: 2
-  regionalDexNum: 0
-  nationalDexNum: 0
+  regionalDexNum: 6
+  nationalDexNum: 157
   frontSprite: {fileID: 21300000, guid: 0c23524ca27a6a641a4a6c31effb7480, type: 3}
-  backSprite: {fileID: 21300000, guid: 9c5d3a64dd903054c9ea63d303ef8d3a, type: 3}
+  backSprite: {fileID: 21300000, guid: cb0b108268e783e4089b0e3946feb22e, type: 3}
+  boxSprite: {fileID: 21300000, guid: 4695530741160eb4eb6ee0aea5543be9, type: 3}
   type1: 7
   type2: 0
   maxHP: 78
@@ -27,4 +29,10 @@ MonoBehaviour:
   spAttack: 109
   spDefence: 84
   speed: 102
+  catchRate: 45
   learnableMoves: []
+  tmMoves: []
+  expYield: 267
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 5eb1f826bd068654682d31306be20efd, type: 3}

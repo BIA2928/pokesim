@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Cacnea
+  m_EditorClassIdentifier: 
+  name: Cacnea
+  description: It prefers harsh environments such as deserts. It can survive for
+    30 days on water stored in its body.
+  pokeSize: 0
+  regionalDexNum: 45
+  nationalDexNum: 331
+  frontSprite: {fileID: 0}
+  backSprite: {fileID: 0}
+  boxSprite: {fileID: 0}
+  type1: 10
+  type2: 0
+  maxHP: 50
+  attack: 80
+  defence: 44
+  spAttack: 80
+  spDefence: 47
+  speed: 35
+  catchRate: 178
+  learnableMoves: []
+  tmMoves: []
+  expYield: 76
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 3e924aff46439d74fb548bb7633e9750, type: 2}
+    requiredLevel: 32
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 70a0d86561628e94d917149179c9f4a7, type: 3}

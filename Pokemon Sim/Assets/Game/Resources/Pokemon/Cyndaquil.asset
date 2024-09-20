@@ -17,11 +17,11 @@ MonoBehaviour:
     flames are vigorous if the Pok\xE9mon is angry. However, if it is tired, the
     flames sputter fitfully with incomplete combustion."
   pokeSize: 0
-  regionalDexNum: 0
-  nationalDexNum: 0
+  regionalDexNum: 4
+  nationalDexNum: 155
   frontSprite: {fileID: 21300000, guid: f2ebd2f9418942f48a81ff00c3337916, type: 3}
-  backSprite: {fileID: 21300000, guid: 69f02c19286d33d48af5b588d04169e6, type: 3}
-  boxSprite: {fileID: 21300000, guid: 0c6c65df49d2419428c56ab78aa7be4a, type: 3}
+  backSprite: {fileID: 21300000, guid: 0dc95a772cceb7841b397597d0561074, type: 3}
+  boxSprite: {fileID: 21300000, guid: d7f94fdb9fca64b4498f224cb76b0fb1, type: 3}
   type1: 7
   type2: 0
   maxHP: 39
@@ -30,7 +30,7 @@ MonoBehaviour:
   spAttack: 39
   spDefence: 39
   speed: 43
-  catchRate: 0
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
     learnLevel: 1
@@ -41,7 +41,10 @@ MonoBehaviour:
   tmMoves:
   - {fileID: 11400000, guid: 5992798f378249f409848fbf7b9f5367, type: 2}
   - {fileID: 11400000, guid: 25f332d7924d85646a6aeaf303600f45, type: 2}
-  expYield: 0
-  growthRate: 0
-  evolutions: []
+  expYield: 62
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: e512bc46665691345adae8ea8e6258a9, type: 2}
+    requiredLevel: 15
+    requiredItem: {fileID: 0}
   cry: {fileID: 8300000, guid: 62da7fa437a729b4ea35dacf2395ec16, type: 3}

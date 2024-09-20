@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Impidimp
   m_EditorClassIdentifier: 
   name: Impidimp
-  description: 
+  description: "Through its nose, it sucks in the emanations produced by people and
+    Pok\xE9mon when they feel annoyed. It thrives off this negative energy."
   pokeSize: 0
-  regionalDexNum: 0
+  regionalDexNum: 14
   nationalDexNum: 859
-  frontSprite: {fileID: 1618407650250766717, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: -8978278114231746206, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: 77c99f49f53dec3409cfb52b5f249b79, type: 3}
+  frontSprite: {fileID: 6576215665330380904, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -6285894603165525803, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: b724b7e9b476e3f43899293da6b543d1, type: 3}
   type1: 2
   type2: 5
   maxHP: 45
@@ -28,6 +29,15 @@ MonoBehaviour:
   spAttack: 55
   spDefence: 40
   speed: 50
+  catchRate: 250
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: cf59f93b9caf5cf4994bc78fa2af3ec0, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 53
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: bcccb6fdde74a784786c1d995fab3650, type: 2}
+    requiredLevel: 28
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: ad09535949ee28e4c9f40e2173b3eee5, type: 3}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Grotle
+  m_EditorClassIdentifier: 
+  name: Grotle
+  description: "It knows where pure water wells up. It carries fellow Pok\xE9mon
+    there on its back."
+  pokeSize: 1
+  regionalDexNum: 2
+  nationalDexNum: 388
+  frontSprite: {fileID: 21300000, guid: c8dac7e8503aa694e98f9a9cba3989c7, type: 3}
+  backSprite: {fileID: 21300000, guid: b24f4a53703c0c84d9cae9167b5e9dda, type: 3}
+  boxSprite: {fileID: 21300000, guid: bdf35326d88e90841b08191eed32667a, type: 3}
+  type1: 10
+  type2: 0
+  maxHP: 75
+  attack: 89
+  defence: 85
+  spAttack: 55
+  spDefence: 65
+  speed: 40
+  catchRate: 45
+  learnableMoves: []
+  tmMoves: []
+  expYield: 142
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 8356a425244b9a24f8dd142051eb4771, type: 2}
+    requiredLevel: 32
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: b84aae9a5f8221a43b4fb475ccf8401b, type: 3}

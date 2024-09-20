@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Charmander
   m_EditorClassIdentifier: 
   name: Charmander
-  description: "\t"
+  description: The flame on its tail shows the strength of its life force. If it
+    is weak, the flame also burns weakly.
   pokeSize: 0
-  regionalDexNum: 0
+  regionalDexNum: 28
   nationalDexNum: 4
   frontSprite: {fileID: 21300000, guid: 56e818b762d0979469d0f7b477e0113d, type: 3}
-  backSprite: {fileID: 21300000, guid: 3accdea8ad9359a418261c6ff3790bdf, type: 3}
-  boxSprite: {fileID: 21300000, guid: 7666441ae5ce1994b9ab812aa7d03290, type: 3}
+  backSprite: {fileID: 21300000, guid: 9b1a7f37242edbb4f85f9aaa021d5f98, type: 3}
+  boxSprite: {fileID: 21300000, guid: 89418d1110843fc40a9a035b6bb6c5bf, type: 3}
   type1: 7
   type2: 0
   maxHP: 39
@@ -28,6 +29,15 @@ MonoBehaviour:
   spAttack: 60
   spDefence: 50
   speed: 65
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 8d858a8eea03f684b9a2b7c4001e1cfd, type: 2}
     learnLevel: 3
+  tmMoves: []
+  expYield: 62
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: e425b414f10de7246960da85988e5015, type: 2}
+    requiredLevel: 18
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 681fddbb17b4b1845b45f802c867db23, type: 3}

@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Rookidee
   m_EditorClassIdentifier: 
   name: Rookiedee
-  description: 
+  description: "It will bravely challenge any opponent, no matter how powerful. This
+    Pok\xE9mon benefits from every battle\u2014even a defeat increases its strength
+    a bit."
   pokeSize: 0
-  regionalDexNum: 20
+  regionalDexNum: 23
   nationalDexNum: 821
-  frontSprite: {fileID: -5808964947233862287, guid: 93c42a672e049a549b933e9afc541000, type: 3}
-  backSprite: {fileID: -1570068588904623581, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: a366ed813d2e96d49bcb6f103a22bad0, type: 3}
+  frontSprite: {fileID: 4735269943235326792, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 7202047751539234883, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 18ffacd7f31dfaf438a2e532abcfae74, type: 3}
   type1: 8
   type2: 0
   maxHP: 38
@@ -28,7 +30,7 @@ MonoBehaviour:
   spAttack: 33
   spDefence: 35
   speed: 57
-  catchRate: 0
+  catchRate: 235
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 99c6e21516a260a4995d16bec30d25f2, type: 2}
     learnLevel: 1
@@ -38,3 +40,11 @@ MonoBehaviour:
     learnLevel: 3
   - moveBase: {fileID: 11400000, guid: 7c77165597e200346b54663b6dfcdb98, type: 2}
     learnLevel: 4
+  tmMoves: []
+  expYield: 49
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 8914877858be3144f9896e1d09ffa347, type: 2}
+    requiredLevel: 18
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 421165da62a250e45ba1a6c6610f9e55, type: 3}

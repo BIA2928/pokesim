@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Sliggoo
+  m_EditorClassIdentifier: 
+  name: Sliggoo
+  description: "It drives away opponents by excreting a sticky liquid that can dissolve
+    anything. Its eyes devolved, so it can\u2019t see anything."
+  pokeSize: 0
+  regionalDexNum: 43
+  nationalDexNum: 705
+  frontSprite: {fileID: 2664481172670648603, guid: 0069b255d399ca847856fa4b84d9e328, type: 3}
+  backSprite: {fileID: 2454173919588968997, guid: 0069b255d399ca847856fa4b84d9e328, type: 3}
+  boxSprite: {fileID: 21300000, guid: 4f0b60aca034a234bb891bbf0fc2d55c, type: 3}
+  type1: 3
+  type2: 0
+  maxHP: 68
+  attack: 75
+  defence: 53
+  spAttack: 83
+  spDefence: 113
+  speed: 60
+  catchRate: 45
+  learnableMoves: []
+  tmMoves: []
+  expYield: 158
+  growthRate: 2
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: c3c528c1d2b882b4681ce7f1cf25f704, type: 2}
+    requiredLevel: 51
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: a7f5c9a53473e9d43a15735d8294faf3, type: 3}

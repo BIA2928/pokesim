@@ -16,11 +16,11 @@ MonoBehaviour:
   description: It loves iron ore. Groups of them fight for territory by bashing one
     another with their steel bodies.
   pokeSize: 1
-  regionalDexNum: 0
+  regionalDexNum: 18
   nationalDexNum: 305
   frontSprite: {fileID: 21300000, guid: 52d9ee6ab1b12a54f896a39900e126dc, type: 3}
-  backSprite: {fileID: 21300000, guid: 4fec0f509eeff6c468a7ea18f1ee1b59, type: 3}
-  boxSprite: {fileID: 21300000, guid: 849bf786481c8a9409d60453c0e58daf, type: 3}
+  backSprite: {fileID: 21300000, guid: 3bc79aa04234fe744a575b34147e7238, type: 3}
+  boxSprite: {fileID: 21300000, guid: 8436e0e8c6f45084f9a5b1db07e5ee06, type: 3}
   type1: 14
   type2: 17
   maxHP: 60
@@ -29,8 +29,17 @@ MonoBehaviour:
   spAttack: 50
   spDefence: 55
   speed: 41
+  catchRate: 90
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 751d816bb0063cb4989eca8aa55b9de4, type: 2}
     learnLevel: 10
+  tmMoves: []
+  expYield: 151
+  growthRate: 2
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: c38cac12cb5099e4c99eb4bdea0bc302, type: 2}
+    requiredLevel: 42
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 8b3fea4d464506a4982da64b54475168, type: 3}

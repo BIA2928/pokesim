@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Grimmsnarl
   m_EditorClassIdentifier: 
   name: Grimmsnarl
-  description: "\t"
+  description: "This Pok\xE9mon has complete control over its hair. Grimmsnarl normally
+    keeps its hair wrapped around its body to support its muscles."
   pokeSize: 2
-  regionalDexNum: 0
+  regionalDexNum: 16
   nationalDexNum: 861
-  frontSprite: {fileID: -8713154816766347449, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: -7580141840482837079, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: 7491336cae76c304c9a9e9e85c611d24, type: 3}
+  frontSprite: {fileID: -716103941456145764, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -3158111898533596863, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: bf5f42f32f1d4f547939d6521b8662ae, type: 3}
   type1: 2
   type2: 5
   maxHP: 95
@@ -28,6 +29,7 @@ MonoBehaviour:
   spAttack: 83
   spDefence: 75
   speed: 65
+  catchRate: 40
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: cf59f93b9caf5cf4994bc78fa2af3ec0, type: 2}
     learnLevel: 1
@@ -35,3 +37,8 @@ MonoBehaviour:
     learnLevel: 7
   - moveBase: {fileID: 11400000, guid: 2ab1feb9ee5272846b9b9089342a5edc, type: 2}
     learnLevel: 15
+  tmMoves: []
+  expYield: 255
+  growthRate: 0
+  evolutions: []
+  cry: {fileID: 8300000, guid: 69c6e15d4c4e63d43834a1a4964b2109, type: 3}

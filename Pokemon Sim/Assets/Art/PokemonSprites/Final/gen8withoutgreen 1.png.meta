@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: 59b6a005d75c7ff47a0fa553a44e9437
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5692524318794158346
+    second: morgrem-f
+  - first:
+      213: -7800365466799015621
+    second: dreepy-f
+  - first:
+      213: -9120010773505291619
+    second: dreepy-b
+  - first:
+      213: -5370593893324176642
+    second: gen8withoutgreen 1_3
+  - first:
+      213: -8252166740311889369
+    second: drakloak-f
+  - first:
+      213: -3633645477390013601
+    second: dragapult-f
+  - first:
+      213: -478375301404084808
+    second: drakloak-b
+  - first:
+      213: -7553790287030473632
+    second: dragapult-b
+  - first:
+      213: 3642194204453707205
+    second: rolycoly-f
+  - first:
+      213: -1367642844749092853
+    second: carkol-f
+  - first:
+      213: -256823828272012598
+    second: coalossal-f
+  - first:
+      213: 7133859650918134978
+    second: coalossal-b
+  - first:
+      213: 2552563323725578011
+    second: carkol-b
+  - first:
+      213: 4194982446022072516
+    second: rolycoly-b
+  - first:
+      213: 2539448151557259964
+    second: flapple-f
+  - first:
+      213: 7838855148207479526
+    second: applin-b
+  - first:
+      213: -3218759101210016539
+    second: applin-f
+  - first:
+      213: 2271865143245308612
+    second: appletun-b
+  - first:
+      213: 7661877669220548236
+    second: appletun-f
+  - first:
+      213: -1128340090916921478
+    second: flapple-b
+  - first:
+      213: 5630546640250397849
+    second: morgrem-f
+  - first:
+      213: -6285894603165525803
+    second: impidimp-b
+  - first:
+      213: 2154459140140789148
+    second: morgrem-b
+  - first:
+      213: -3158111898533596863
+    second: grimmsnarl-b
+  - first:
+      213: -716103941456145764
+    second: grimmsnarl-f
+  - first:
+      213: -7601980167951299710
+    second: glastrier-f
+  - first:
+      213: 7529830048826890763
+    second: glastrier-b
+  - first:
+      213: -1875836891626648704
+    second: snom-f
+  - first:
+      213: -6541697795449811289
+    second: snom-b
+  - first:
+      213: -6408480541379528972
+    second: frosmoth-f
+  - first:
+      213: -1954465742141648722
+    second: frosmoth-b
+  - first:
+      213: -7785515602748037539
+    second: toxtricity-f
+  - first:
+      213: 3045475961981839802
+    second: toxtricity-b
+  - first:
+      213: 4321362320592774242
+    second: toxel-f
+  - first:
+      213: -785459750485087211
+    second: toxel-b
+  - first:
+      213: 4735269943235326792
+    second: rookidee-f
+  - first:
+      213: 7202047751539234883
+    second: rookidee-b
+  - first:
+      213: -2734765407248099609
+    second: corvisquire-b
+  - first:
+      213: -7395218132954459240
+    second: corviknight-b
+  - first:
+      213: 1841444015812500949
+    second: corviknight-f
+  - first:
+      213: -1913650662103929300
+    second: corvisquire-f
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: morgrem-f
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2378
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a019ff825b8effe40800000000000000
+      internalID: 5692524318794158346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreepy-f
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 2379
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b397831afe88fb390800000000000000
+      internalID: -7800365466799015621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreepy-b
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 2377
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a4b7975863f6180800000000000000
+      internalID: -9120010773505291619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gen8withoutgreen 1_3
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 2377
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2c7830f41d775b0800000000000000
+      internalID: -5370593893324176642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drakloak-f
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 2313
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72aaa60521a6a7d80800000000000000
+      internalID: -8252166740311889369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragapult-f
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 2246
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ba670b0b2b29dc0800000000000000
+      internalID: -3633645477390013601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drakloak-b
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 2309
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b53d7aa2387c59f0800000000000000
+      internalID: -478375301404084808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragapult-b
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 2242
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ca0c171cb8b2790800000000000000
+      internalID: -7553790287030473632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolycoly-f
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd137fe45cab8230800000000000000
+      internalID: 3642194204453707205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carkol-f
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1060
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08202b2418250de0800000000000000
+      internalID: -1367642844749092853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coalossal-f
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 991
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2adf1c6149f6cf0800000000000000
+      internalID: -256823828272012598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coalossal-b
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 995
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4b7724e8f800360800000000000000
+      internalID: 7133859650918134978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carkol-b
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1064
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f7a51a1d68c6320800000000000000
+      internalID: 2552563323725578011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolycoly-b
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c815260f42973a30800000000000000
+      internalID: 4194982446022072516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flapple-f
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 858
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2c717a3aeed3320800000000000000
+      internalID: 2539448151557259964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applin-b
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 924
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea16aaa93539cc60800000000000000
+      internalID: 7838855148207479526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applin-f
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 924
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e442d2b6aba453d0800000000000000
+      internalID: -3218759101210016539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: appletun-b
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 796
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c28ab89f49478f10800000000000000
+      internalID: 2271865143245308612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: appletun-f
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e73625525745a60800000000000000
+      internalID: 7661877669220548236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flapple-b
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 860
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f901f5aa45750f0800000000000000
+      internalID: -1128340090916921478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: impidimp-f
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994e46f5658b32e40800000000000000
+      internalID: 5630546640250397849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: impidimp-b
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2445
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d816ca992404c8a0800000000000000
+      internalID: -6285894603165525803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: morgrem-b
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2377
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d6f235c2d26ed10800000000000000
+      internalID: 2154459140140789148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grimmsnarl-b
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 2316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14178fee5f12c24d0800000000000000
+      internalID: -3158111898533596863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grimmsnarl-f
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 2310
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92df336243ef06f0800000000000000
+      internalID: -716103941456145764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glastrier-f
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1255
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bc2b37057508690800000000000000
+      internalID: -7601980167951299710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glastrier-b
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1255
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a936fd8845f7860800000000000000
+      internalID: 7529830048826890763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snom-f
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 467
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b45022940b7f5e0800000000000000
+      internalID: -1875836891626648704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snom-b
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 470
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae0242b3883735a0800000000000000
+      internalID: -6541697795449811289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frosmoth-f
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 397
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6f115b6e08017a0800000000000000
+      internalID: -6408480541379528972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frosmoth-b
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea01af143c750e4e0800000000000000
+      internalID: -1954465742141648722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toxtricity-f
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5621f80fca44f390800000000000000
+      internalID: -7785515602748037539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toxtricity-b
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab92be57044b34a20800000000000000
+      internalID: 3045475961981839802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toxel-f
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 269
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264a0b0922098fb30800000000000000
+      internalID: 4321362320592774242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toxel-b
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c28fab48c7915f0800000000000000
+      internalID: -785459750485087211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rookidee-f
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2181
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8433022ccee07b140800000000000000
+      internalID: 4735269943235326792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rookidee-b
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2183
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34895ed9540d2f360800000000000000
+      internalID: 7202047751539234883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corvisquire-b
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 2112
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e653fcf9592c0ad0800000000000000
+      internalID: -2734765407248099609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corviknight-b
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 2045
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893d8b42a48ee5990800000000000000
+      internalID: -7395218132954459240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corviknight-f
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddd544739f1e8910800000000000000
+      internalID: 1841444015812500949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corvisquire-f
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2115
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2eaa1d9cd85175e0800000000000000
+      internalID: -1913650662103929300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

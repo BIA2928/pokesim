@@ -13,21 +13,28 @@ MonoBehaviour:
   m_Name: Charizard
   m_EditorClassIdentifier: 
   name: Charizard
-  description: 
+  description: Breathing intense, hot flames, it can melt almost anything. Its breath
+    inflicts terrible pain on enemies.
   pokeSize: 2
-  regionalDexNum: 0
+  regionalDexNum: 30
   nationalDexNum: 6
   frontSprite: {fileID: 21300000, guid: 5e71364068b4a7e4d962cd47238cf4d0, type: 3}
-  backSprite: {fileID: 21300000, guid: 510faba2c937a794a811314d1c232513, type: 3}
-  boxSprite: {fileID: 21300000, guid: b17a9f89f28a6074faa490dc8b7524eb, type: 3}
-  type1: 0
-  type2: 0
-  maxHP: 78
+  backSprite: {fileID: 21300000, guid: 6f6962b70d4f5b14e9e5fe4b5dac4523, type: 3}
+  boxSprite: {fileID: 21300000, guid: 6bac411f67464424dbbf486eae3ddfa0, type: 3}
+  type1: 7
+  type2: 8
+  maxHP: 80
   attack: 84
   defence: 78
   spAttack: 109
   spDefence: 85
   speed: 100
+  catchRate: 23
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 22e9b1a58e8dbdd41b7d3ac90fd50ec1, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 267
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: dc1be3de93f06584da99f965d835a8ee, type: 3}

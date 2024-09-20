@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Venusaur
   m_EditorClassIdentifier: 
   name: Venusaur
-  description: 
+  description: "Venusaur\u2019s flower is said to take on vivid colors if it gets
+    plenty of nutrition and sunlight. The flower\u2019s aroma soothes the emotions
+    of people."
   pokeSize: 3
-  regionalDexNum: 0
-  nationalDexNum: 0
+  regionalDexNum: 22
+  nationalDexNum: 3
   frontSprite: {fileID: 21300000, guid: f6ddf627fce0024478bb141cf505a616, type: 3}
   backSprite: {fileID: 21300000, guid: e751b5ab3bf7bab4f8b85e0016a69077, type: 3}
   boxSprite: {fileID: 21300000, guid: 4296274fc1e38e84995a758c00220c95, type: 3}
@@ -28,6 +30,7 @@ MonoBehaviour:
   spAttack: 100
   spDefence: 100
   speed: 78
+  catchRate: 40
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 6b54132578a6cc64eadd41d82ac5d5a1, type: 2}
     learnLevel: 2
@@ -37,3 +40,8 @@ MonoBehaviour:
     learnLevel: 4
   - moveBase: {fileID: 11400000, guid: 65983122c05ec3b489f7849d878fc5e7, type: 2}
     learnLevel: 5
+  tmMoves: []
+  expYield: 236
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 0be0cb4912bb52d43b2e43e753038b33, type: 3}

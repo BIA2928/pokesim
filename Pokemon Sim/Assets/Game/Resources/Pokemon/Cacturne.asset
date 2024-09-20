@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Cacturne
+  m_EditorClassIdentifier: 
+  name: Cacturne
+  description: "It lives in deserts. It becomes active at night when it hunts for
+    prey exhausted from the desert\u2019s heat."
+  pokeSize: 1
+  regionalDexNum: 46
+  nationalDexNum: 332
+  frontSprite: {fileID: 21300000, guid: 1e68ca91e328a7c4da276a28eb5e4b72, type: 3}
+  backSprite: {fileID: 21300000, guid: 0dc4223d27bdffb48b03f815f33aa91e, type: 3}
+  boxSprite: {fileID: 21300000, guid: 7a351a7cb36c85247a0fd85c61e278fa, type: 3}
+  type1: 2
+  type2: 10
+  maxHP: 75
+  attack: 115
+  defence: 63
+  spAttack: 112
+  spDefence: 64
+  speed: 56
+  catchRate: 39
+  learnableMoves: []
+  tmMoves: []
+  expYield: 166
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 0}
+    requiredLevel: 0
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: b905d1b33e957944fa64450955ae1f8f, type: 3}

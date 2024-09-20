@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Dreepy
+  m_EditorClassIdentifier: 
+  name: Dreepy
+  description: "After being reborn as a ghost Pok\xE9mon, Dreepy wanders the areas
+    it used to inhabit back when it was alive in prehistoric seas."
+  pokeSize: 0
+  regionalDexNum: 37
+  nationalDexNum: 885
+  frontSprite: {fileID: -7800365466799015621, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -9120010773505291619, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: f95f3a6c2f955474f9bc6601f81d0e48, type: 3}
+  type1: 3
+  type2: 9
+  maxHP: 30
+  attack: 60
+  defence: 32
+  spAttack: 41
+  spDefence: 30
+  speed: 83
+  catchRate: 60
+  learnableMoves: []
+  tmMoves: []
+  expYield: 54
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 0340e27c3dfd39b449aca54deec1eab8, type: 2}
+    requiredLevel: 43
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 7aa78ebf516c6ed429001393c4df633f, type: 3}

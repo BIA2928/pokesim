@@ -16,11 +16,11 @@ MonoBehaviour:
   description: Its knuckle claws secrete a toxin so vile that even a scratch could
     prove fatal.
   pokeSize: 1
-  regionalDexNum: 29
+  regionalDexNum: 32
   nationalDexNum: 454
   frontSprite: {fileID: 21300000, guid: f82647b6a43a1c847a0116ca8bda2777, type: 3}
-  backSprite: {fileID: 21300000, guid: 7d9bdf980ce372a43aee7973f788d953, type: 3}
-  boxSprite: {fileID: 21300000, guid: 6c15b201b6adb454ab01244dc20f840c, type: 3}
+  backSprite: {fileID: 21300000, guid: 36e4a6007d931cc42b8cebf31d958217, type: 3}
+  boxSprite: {fileID: 21300000, guid: ca9fd1bd0f59c5e49a418ebfa66310eb, type: 3}
   type1: 15
   type2: 6
   maxHP: 83

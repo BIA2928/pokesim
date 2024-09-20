@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Turtwig
+  m_EditorClassIdentifier: 
+  name: Turtwig
+  description: The shell on its back is made of soil. On a very healthy Turtwig,
+    the shell should feel moist.
+  pokeSize: 0
+  regionalDexNum: 1
+  nationalDexNum: 387
+  frontSprite: {fileID: 21300000, guid: 999074b626fb11b46a8da9d1ae0c4383, type: 3}
+  backSprite: {fileID: 21300000, guid: 7169559433f32464dae6d3594f270c08, type: 3}
+  boxSprite: {fileID: 21300000, guid: 29a1e7ab77009134c8e5f405cc9af9db, type: 3}
+  type1: 10
+  type2: 0
+  maxHP: 55
+  attack: 68
+  defence: 64
+  spAttack: 45
+  spDefence: 55
+  speed: 32
+  catchRate: 45
+  learnableMoves: []
+  tmMoves: []
+  expYield: 64
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 27fbf84d8418a7f4092ff71d5d85967d, type: 2}
+    requiredLevel: 18
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: cc0cd922450337f418234e01ebcf2a31, type: 3}

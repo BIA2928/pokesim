@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Mawile
   m_EditorClassIdentifier: 
   name: Mawile
-  description: 
+  description: Its giant jaws are actually steel horns that transformed. It fools
+    foes into complacency with its adorable gestures, then chomps them with its huge
+    jaws.
   pokeSize: 0
-  regionalDexNum: 0
+  regionalDexNum: 13
   nationalDexNum: 303
-  frontSprite: {fileID: 21300000, guid: c1b8fc54b5eaad54aa5a76a9ee7d2005, type: 3}
-  backSprite: {fileID: 21300000, guid: 2b4911bece1a1c94a9d048166685c237, type: 3}
-  boxSprite: {fileID: 21300000, guid: 6f3e0fe926ae7614bb99f275e35c2208, type: 3}
+  frontSprite: {fileID: 21300000, guid: dc5c567892a329f45ae915ce8b6734c3, type: 3}
+  backSprite: {fileID: 21300000, guid: a876359dd34092d43a82067e8a0b6d19, type: 3}
+  boxSprite: {fileID: 21300000, guid: 30bbcbb2fda38d144bf3da55bed7de19, type: 3}
   type1: 17
   type2: 5
   maxHP: 50
@@ -28,14 +30,14 @@ MonoBehaviour:
   spAttack: 55
   spDefence: 55
   speed: 55
-  catchRate: 219
+  catchRate: 50
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 4bcac37833de3c84e98b333589b4c33e, type: 2}
     learnLevel: 1
   - moveBase: {fileID: 11400000, guid: 57cd02eb784b0304ea5d315b91cb4080, type: 2}
     learnLevel: 4
   tmMoves: []
-  expYield: 15
+  expYield: 133
   growthRate: 0
   evolutions: []
   cry: {fileID: 8300000, guid: 4b81975d4b1776843abd6d8fd5e4abda, type: 3}

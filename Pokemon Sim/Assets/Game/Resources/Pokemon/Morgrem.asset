@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Morgrem
   m_EditorClassIdentifier: 
   name: Morgrem
-  description: 
+  description: "When it gets down on all fours as if to beg for forgiveness, it\u2019s
+    trying to lure opponents in so that it can stab them with its spear-like hair."
   pokeSize: 0
-  regionalDexNum: 0
+  regionalDexNum: 15
   nationalDexNum: 860
-  frontSprite: {fileID: -3306951127547270393, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: 6688632780250331752, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: 0c797b6202c010d4e81d3ecb0692c25a, type: 3}
+  frontSprite: {fileID: 5692524318794158346, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 2154459140140789148, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: f8d0846b307e9ce42925cf373f78c451, type: 3}
   type1: 2
   type2: 5
   maxHP: 65
@@ -28,6 +29,15 @@ MonoBehaviour:
   spAttack: 75
   spDefence: 55
   speed: 70
+  catchRate: 120
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: cf59f93b9caf5cf4994bc78fa2af3ec0, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 130
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 68bded3e04cfb2a4b83d9a71e6c3215f, type: 2}
+    requiredLevel: 40
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: da683a1ba892a7143991558c0494481a, type: 3}

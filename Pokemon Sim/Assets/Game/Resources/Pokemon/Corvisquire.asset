@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Corvisquire
   m_EditorClassIdentifier: 
   name: Corvisquire
-  description: 
+  description: "Smart enough to use tools in battle, these Pok\xE9mon have been seen
+    picking up rocks and flinging them or using ropes to wrap up enemies."
   pokeSize: 1
-  regionalDexNum: 0
+  regionalDexNum: 24
   nationalDexNum: 822
-  frontSprite: {fileID: -4298551172523267065, guid: 93c42a672e049a549b933e9afc541000, type: 3}
-  backSprite: {fileID: -4680473134637986459, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: f07ac5be6f38c0747aeabbd272dbb797, type: 3}
+  frontSprite: {fileID: -1913650662103929300, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -2734765407248099609, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: a72f4644027dda44790eaf02e89b7250, type: 3}
   type1: 8
   type2: 0
   maxHP: 68
@@ -28,6 +29,15 @@ MonoBehaviour:
   spAttack: 43
   spDefence: 55
   speed: 78
+  catchRate: 120
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 5992798f378249f409848fbf7b9f5367, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 128
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: b9289105be1622f45b63061645fdc140, type: 2}
+    requiredLevel: 37
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 55a534f198960e34e9583f96885a7492, type: 3}

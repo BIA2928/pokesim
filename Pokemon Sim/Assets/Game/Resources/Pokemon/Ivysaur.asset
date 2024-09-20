@@ -13,21 +13,31 @@ MonoBehaviour:
   m_Name: Ivysaur
   m_EditorClassIdentifier: 
   name: Ivysaur
-  description: 
-  pokeSize: 0
-  regionalDexNum: 0
-  nationalDexNum: 0
-  frontSprite: {fileID: 21300000, guid: 94e5d3ecde9c32a4f983a1bc0fab88f2, type: 3}
-  backSprite: {fileID: 21300000, guid: 9cbdb5f92449a7d48a319c004865e167, type: 3}
-  boxSprite: {fileID: 21300000, guid: 84218a80ce514de4da972544a2ecde4d, type: 3}
-  type1: 15
-  type2: 10
+  description: The bulb on its back grows by drawing energy. It gives off an aroma
+    when it is ready to bloom.
+  pokeSize: 1
+  regionalDexNum: 21
+  nationalDexNum: 2
+  frontSprite: {fileID: 21300000, guid: 2d185a81f9d465a468818dd648088742, type: 3}
+  backSprite: {fileID: 21300000, guid: 20f341b03f81a8f44993d2a2ddcb3bff, type: 3}
+  boxSprite: {fileID: 21300000, guid: 1fd439f7f931cc2478eb7ddfab609ec4, type: 3}
+  type1: 10
+  type2: 15
   maxHP: 60
   attack: 62
   defence: 65
   spAttack: 80
   spDefence: 80
   speed: 58
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 57cd02eb784b0304ea5d315b91cb4080, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 142
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: d6d4259a86e9ef84f9cd64352fa68313, type: 2}
+    requiredLevel: 33
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 0fbd23037a315d14db1ae23fcc5b9020, type: 3}

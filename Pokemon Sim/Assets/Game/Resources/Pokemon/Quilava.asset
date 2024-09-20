@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Quilava
   m_EditorClassIdentifier: 
   name: Quilava
-  description: 
+  description: "This Pok\xE9mon is fully covered by nonflammable fur. It can withstand
+    any kind of fire attack."
   pokeSize: 0
-  regionalDexNum: 0
-  nationalDexNum: 0
+  regionalDexNum: 5
+  nationalDexNum: 156
   frontSprite: {fileID: 21300000, guid: d4cc312f11679674f92f6f211315b390, type: 3}
-  backSprite: {fileID: 21300000, guid: 1e89228ebde2a6c41ad769badfa50571, type: 3}
+  backSprite: {fileID: 21300000, guid: 5385ccc22eb285b419ff4142a00c5ff9, type: 3}
+  boxSprite: {fileID: 21300000, guid: 363f1846ac95e8748b9bb00679038ed5, type: 3}
   type1: 7
   type2: 0
   maxHP: 58
@@ -27,4 +29,13 @@ MonoBehaviour:
   spAttack: 80
   spDefence: 65
   speed: 80
+  catchRate: 45
   learnableMoves: []
+  tmMoves: []
+  expYield: 142
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: f9a2d2ab4fe19a24cb2f27a7b31e9997, type: 2}
+    requiredLevel: 36
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: b0df4c2500b41eb429d153a118bf03fc, type: 3}
