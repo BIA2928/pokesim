@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Create new pokemon")]
 public class PokemonBase : ScriptableObject
 {
-    [SerializeField] new string name;
 
     [TextArea]
     [SerializeField] string description;
@@ -64,7 +63,7 @@ public class PokemonBase : ScriptableObject
     public static int MaxNMoves { get; set; } = 4;
     public string Name
     {
-        get { return name; }
+        get { return this.Name; }
     }
 
     public string Description

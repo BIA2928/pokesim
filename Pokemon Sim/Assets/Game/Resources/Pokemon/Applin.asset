@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Applin
   m_EditorClassIdentifier: 
-  name: Applin
   description: "It spends its entire life inside an apple. It hides from its natural
     enemies, bird Pok\xE9mon, by pretending it\u2019s just an apple and nothing more."
   pokeSize: 0
-  regionalDexNum: 53
+  regionalDexNum: 56
   nationalDexNum: 840
-  frontSprite: {fileID: -3905636849035484413, guid: 93c42a672e049a549b933e9afc541000, type: 3}
-  backSprite: {fileID: 4387754994054287996, guid: afcaa91b71f02114b99a7bbcbd2d89f4, type: 3}
-  boxSprite: {fileID: 21300000, guid: 6dcc19724d20e7f4faaccb951376589e, type: 3}
+  frontSprite: {fileID: -3218759101210016539, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 7838855148207479526, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 7838855148207479526, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
   type1: 10
   type2: 3
   maxHP: 40
@@ -29,9 +28,18 @@ MonoBehaviour:
   spAttack: 40
   spDefence: 50
   speed: 20
-  catchRate: 0
+  catchRate: 250
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 4b316457ce3dcd646bd2a27aa4bcaec3, type: 2}
     learnLevel: 1
-  expYield: 0
+  tmMoves: []
+  expYield: 52
   growthRate: 2
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: d0152af16fd42ce4eacbec7c23ccacda, type: 2}
+    requiredLevel: 100
+    requiredItem: {fileID: 11400000, guid: 349bda7771066414484409eeeb74010c, type: 2}
+  - evolvesInto: {fileID: 11400000, guid: 7852102c59659204fbdf1458090a838a, type: 2}
+    requiredLevel: 32
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 4d3e7ccbdcf63334195d2497ce48237e, type: 3}

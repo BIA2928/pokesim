@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Carvanha
+  m_EditorClassIdentifier: 
+  description: They form packs to attack boats and rip out their hulls to sink them.
+    They live in rivers in the jungle.
+  pokeSize: 0
+  regionalDexNum: 71
+  nationalDexNum: 318
+  frontSprite: {fileID: 21300000, guid: a11c4d4fbd75ded4da56d386909555db, type: 3}
+  backSprite: {fileID: 21300000, guid: 770f6df9e57f9804d80b81ef284e7f63, type: 3}
+  boxSprite: {fileID: 21300000, guid: 514c36916eb936549b1b8ea24bc3d4f9, type: 3}
+  type1: 18
+  type2: 2
+  maxHP: 45
+  attack: 90
+  defence: 20
+  spAttack: 65
+  spDefence: 20
+  speed: 67
+  catchRate: 193
+  learnableMoves: []
+  tmMoves: []
+  expYield: 61
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 5e0a1bd139463524aa76dd7db77a5b7d, type: 2}
+    requiredLevel: 30
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 00ef2bb2f6449a7499e11d10cd157a42, type: 3}

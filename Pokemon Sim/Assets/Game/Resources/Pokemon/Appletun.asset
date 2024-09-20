@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Appletun
   m_EditorClassIdentifier: 
-  name: Appletun
   description: "Eating a sweet apple caused its evolution. A nectarous scent wafts
     from its body, luring in the bug Pok\xE9mon it preys on."
   pokeSize: 2
-  regionalDexNum: 55
+  regionalDexNum: 58
   nationalDexNum: 842
-  frontSprite: {fileID: -4676007985934273454, guid: 93c42a672e049a549b933e9afc541000, type: 3}
-  backSprite: {fileID: -1548478781054169432, guid: afcaa91b71f02114b99a7bbcbd2d89f4, type: 3}
-  boxSprite: {fileID: -6790660968086593951, guid: c8ff41c8e2a83764abb9292cb4a3cbdb, type: 3}
+  frontSprite: {fileID: 7661877669220548236, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 2271865143245308612, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 179f66722d534d443b6ac36bccf59e0f, type: 3}
   type1: 10
   type2: 3
   maxHP: 110
@@ -29,9 +28,12 @@ MonoBehaviour:
   spAttack: 100
   spDefence: 80
   speed: 32
-  catchRate: 0
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
-  expYield: 0
-  growthRate: 2
+  tmMoves: []
+  expYield: 180
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 3b2f5491ef82a574e88fef4e6b512a1f, type: 3}

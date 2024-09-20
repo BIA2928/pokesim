@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Glastrier
+  m_EditorClassIdentifier: 
+  description: "Glastrier emits intense cold from its hooves. It\u2019s also a belligerent
+    Pok\xE9mon\u2014anything it wants, it takes by force."
+  pokeSize: 2
+  regionalDexNum: 66
+  nationalDexNum: 896
+  frontSprite: {fileID: -7601980167951299710, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 7529830048826890763, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: a6ac0914a4bbf4e4bb217740821b40fd, type: 3}
+  type1: 12
+  type2: 0
+  maxHP: 100
+  attack: 145
+  defence: 130
+  spAttack: 65
+  spDefence: 110
+  speed: 30
+  catchRate: 25
+  learnableMoves: []
+  tmMoves: []
+  expYield: 290
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: 781e22e0b55a02145a2902e3c985d107, type: 3}

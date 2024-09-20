@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Flapple
   m_EditorClassIdentifier: 
-  name: Flapple
   description: It ate a sour apple, and that induced its evolution. In its cheeks,
     it stores an acid capable of causing chemical burns.
   pokeSize: 1
-  regionalDexNum: 54
+  regionalDexNum: 57
   nationalDexNum: 841
-  frontSprite: {fileID: 7278769581294798803, guid: 93c42a672e049a549b933e9afc541000, type: 3}
-  backSprite: {fileID: 0}
-  boxSprite: {fileID: -4773400435626587314, guid: c8ff41c8e2a83764abb9292cb4a3cbdb, type: 3}
+  frontSprite: {fileID: 2539448151557259964, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: -1128340090916921478, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 3216493daa3eb2c4683776c911e6d293, type: 3}
   type1: 10
   type2: 3
   maxHP: 70
@@ -29,6 +28,12 @@ MonoBehaviour:
   spAttack: 95
   spDefence: 60
   speed: 70
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 4bcac37833de3c84e98b333589b4c33e, type: 2}
     learnLevel: 1
+  tmMoves: []
+  expYield: 170
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 3887275762d640d47ba30a420f993f88, type: 3}

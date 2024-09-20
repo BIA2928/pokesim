@@ -125,6 +125,18 @@ TextureImporter:
   - first:
       213: -1913650662103929300
     second: corvisquire-f
+  - first:
+      213: -6615086134413467437
+    second: farfetch'd-galar-f
+  - first:
+      213: 3283862493367247413
+    second: farfetch'd-galar-b
+  - first:
+      213: 89097120148571936
+    second: sir-farfetch'd-f
+  - first:
+      213: -4749431160531892077
+    second: sirfetch'd-b
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -188,7 +200,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -200,7 +212,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -957,7 +969,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -978,7 +990,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -999,7 +1011,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1070,6 +1082,90 @@ TextureImporter:
       bones: []
       spriteID: c2eaa1d9cd85175e0800000000000000
       internalID: -1913650662103929300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: farfetch'd-galar-f
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 599
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d06caf753e7234a0800000000000000
+      internalID: -6615086134413467437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: farfetch'd-galar-b
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 597
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53222600a8f929d20800000000000000
+      internalID: 3283862493367247413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sir-farfetch'd-f
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 2047
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02747f4db598c3100800000000000000
+      internalID: 89097120148571936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sirfetch'd-b
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 2046
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3984357e581a61eb0800000000000000
+      internalID: -4749431160531892077
       vertices: []
       indices: 
       edges: []

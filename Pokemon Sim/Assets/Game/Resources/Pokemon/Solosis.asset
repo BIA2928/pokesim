@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Solosis
+  m_EditorClassIdentifier: 
+  name: Solosis
+  description: They drive away attackers by unleashing psychic power. They can use
+    telepathy to talk with others.
+  pokeSize: 0
+  regionalDexNum: 50
+  nationalDexNum: 577
+  frontSprite: {fileID: 21300000, guid: debbe50835114f34db485548a6db7d3a, type: 3}
+  backSprite: {fileID: 21300000, guid: 899f0a296dc369946b04baa9ce158304, type: 3}
+  boxSprite: {fileID: 21300000, guid: c86c4a2aec9ff4448aa079632f22afe3, type: 3}
+  type1: 16
+  type2: 0
+  maxHP: 45
+  attack: 30
+  defence: 40
+  spAttack: 105
+  spDefence: 50
+  speed: 25
+  catchRate: 200
+  learnableMoves: []
+  tmMoves: []
+  expYield: 58
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: f2ff8c6c09cd07f47b0ef98d2490207a, type: 2}
+    requiredLevel: 32
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: cae86e17db12abe4889824307bd88575, type: 3}

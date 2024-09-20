@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Flabebe
+  m_EditorClassIdentifier: 
+  description: "It\u2019s not safe without the power of a flower, but it will keep
+    traveling around until it finds one with the color and shape it wants."
+  pokeSize: 0
+  regionalDexNum: 76
+  nationalDexNum: 669
+  frontSprite: {fileID: -5251006653889229597, guid: 5424922d0edc664438ec97c6783e0384, type: 3}
+  backSprite: {fileID: 7090394319381293478, guid: 5424922d0edc664438ec97c6783e0384, type: 3}
+  boxSprite: {fileID: 21300000, guid: 4c2d35c66746ba946acee976a025099b, type: 3}
+  type1: 5
+  type2: 0
+  maxHP: 44
+  attack: 38
+  defence: 39
+  spAttack: 61
+  spDefence: 79
+  speed: 42
+  catchRate: 225
+  learnableMoves: []
+  tmMoves: []
+  expYield: 61
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 4a74c9f37459a6a43a0b30281bce78a1, type: 2}
+    requiredLevel: 19
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: ebb34f38665f64d4b968772b8719bdc9, type: 3}

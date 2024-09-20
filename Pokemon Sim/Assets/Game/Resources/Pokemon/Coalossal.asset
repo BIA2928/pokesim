@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Coalossal
   m_EditorClassIdentifier: 
-  name: Coalossal
   description: "It\u2019s usually peaceful, but the vandalism of mines enrages it.
     Offenders will be incinerated with flames that reach 2,700 degrees Fahrenheit."
   pokeSize: 2
-  regionalDexNum: 52
+  regionalDexNum: 55
   nationalDexNum: 839
-  frontSprite: {fileID: -8452868059778606303, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: -8014550203343388356, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: -1292641788808169338, guid: c8ff41c8e2a83764abb9292cb4a3cbdb, type: 3}
+  frontSprite: {fileID: -256823828272012598, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 7133859650918134978, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: c5f180baae9716f41801643b6cd89349, type: 3}
   type1: 14
   type2: 7
   maxHP: 110
@@ -29,6 +28,12 @@ MonoBehaviour:
   spAttack: 80
   spDefence: 90
   speed: 35
+  catchRate: 45
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 8d858a8eea03f684b9a2b7c4001e1cfd, type: 2}
     learnLevel: 3
+  tmMoves: []
+  expYield: 255
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: 74b13bee4bf2c0a41badeebc5355036b, type: 3}

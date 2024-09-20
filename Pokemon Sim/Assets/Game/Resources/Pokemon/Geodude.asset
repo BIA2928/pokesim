@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Geodude
+  m_EditorClassIdentifier: 
+  description: Many live on mountain trails and remain half buried while keeping
+    an eye on climbers.
+  pokeSize: 0
+  regionalDexNum: 61
+  nationalDexNum: 74
+  frontSprite: {fileID: 21300000, guid: 7c3c65c71f0b77d4b8054a9029891478, type: 3}
+  backSprite: {fileID: 21300000, guid: 8b82583fc11a36949ae459e4e1f834fa, type: 3}
+  boxSprite: {fileID: 21300000, guid: 4f262ba419e04464ab0928a0d8d683eb, type: 3}
+  type1: 14
+  type2: 11
+  maxHP: 40
+  attack: 80
+  defence: 100
+  spAttack: 30
+  spDefence: 30
+  speed: 20
+  catchRate: 255
+  learnableMoves: []
+  tmMoves: []
+  expYield: 55
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 40fa4b52aabad724b84934a31d244a0a, type: 2}
+    requiredLevel: 25
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 0e52a688bd0b1584cb00ffd61288c601, type: 3}

@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Rolycoly
   m_EditorClassIdentifier: 
-  name: Rolycoly
   description: "Most of its body has the same composition as coal. Fittingly, this
     Pok\xE9mon was first discovered in coal mines about 400 years ago."
   pokeSize: 0
-  regionalDexNum: 50
+  regionalDexNum: 53
   nationalDexNum: 837
-  frontSprite: {fileID: 4625960824659868687, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: 900281814770628165, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: 21300000, guid: 3240b4dfb2793e845979d1147671f0a0, type: 3}
+  frontSprite: {fileID: 3642194204453707205, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 4194982446022072516, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: 9be6706dbbb9ee844a5ca4fa2a831437, type: 3}
   type1: 14
   type2: 0
   maxHP: 30
@@ -29,7 +28,7 @@ MonoBehaviour:
   spAttack: 40
   spDefence: 50
   speed: 30
-  catchRate: 0
+  catchRate: 230
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 81cc9cb34b3e6df438f5d8046f55f6ed, type: 2}
     learnLevel: 1
@@ -43,7 +42,7 @@ MonoBehaviour:
     learnLevel: 7
   tmMoves:
   - {fileID: 11400000, guid: 25f332d7924d85646a6aeaf303600f45, type: 2}
-  expYield: 0
+  expYield: 48
   growthRate: 0
   evolutions:
   - evolvesInto: {fileID: 11400000, guid: e91a0548d62896242927795fd3bb748b, type: 2}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Sandslash
+  m_EditorClassIdentifier: 
+  description: "Sandslash\u2019s body is covered by tough spikes, which are hardened
+    sections of its hide. Once a year, the old spikes fall out, to be replaced with
+    new spikes that grow out from beneath the old ones."
+  pokeSize: 1
+  regionalDexNum: 65
+  nationalDexNum: 28
+  frontSprite: {fileID: 21300000, guid: d1f809d646a57a44b90511adc005c38a, type: 3}
+  backSprite: {fileID: 21300000, guid: 4593dd1f5d3153344ba1bce9bdb123b1, type: 3}
+  boxSprite: {fileID: 21300000, guid: bda5b7e606f8a4f448cdeb7ee17f6083, type: 3}
+  type1: 11
+  type2: 0
+  maxHP: 75
+  attack: 100
+  defence: 110
+  spAttack: 43
+  spDefence: 60
+  speed: 67
+  catchRate: 55
+  learnableMoves: []
+  tmMoves: []
+  expYield: 175
+  growthRate: 0
+  evolutions: []
+  cry: {fileID: 8300000, guid: cabd5edfd5ff5a5429729f9c5cf73fa9, type: 3}

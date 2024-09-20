@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Graveler
+  m_EditorClassIdentifier: 
+  description: A slow walker, it rolls to move. It pays no attention to any object
+    that happens to be in its path.
+  pokeSize: 1
+  regionalDexNum: 62
+  nationalDexNum: 75
+  frontSprite: {fileID: 21300000, guid: 5e269fe9523ba334d8b24d91f3cf808c, type: 3}
+  backSprite: {fileID: 21300000, guid: bf272b1a9ce55d748aade7f52101bcda, type: 3}
+  boxSprite: {fileID: 21300000, guid: 5871e40433ee0524aa171c3b97ac9446, type: 3}
+  type1: 14
+  type2: 11
+  maxHP: 55
+  attack: 95
+  defence: 115
+  spAttack: 46
+  spDefence: 46
+  speed: 30
+  catchRate: 150
+  learnableMoves: []
+  tmMoves: []
+  expYield: 140
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: abb9d48b566536843a0f0efafd05a212, type: 2}
+    requiredLevel: 45
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: c8aa5e2d36372f84ca0c40078196e569, type: 3}

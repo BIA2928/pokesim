@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Carkoal
   m_EditorClassIdentifier: 
-  name: Carkoal
   description: "It forms coal inside its body. Coal dropped by this Pok\xE9mon once
     helped fuel the lives of people in the Galar region."
   pokeSize: 1
-  regionalDexNum: 51
+  regionalDexNum: 54
   nationalDexNum: 838
-  frontSprite: {fileID: -4050982060281756500, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  backSprite: {fileID: -6755297219226559693, guid: 5064e532ac9ac5842a8143eba02d86c8, type: 3}
-  boxSprite: {fileID: -1490203012058339763, guid: c8ff41c8e2a83764abb9292cb4a3cbdb, type: 3}
+  frontSprite: {fileID: -1367642844749092853, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  backSprite: {fileID: 2552563323725578011, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+  boxSprite: {fileID: 21300000, guid: ea2d9c9db0db8304d9cc81ebf793faad, type: 3}
   type1: 14
   type2: 7
   maxHP: 80
@@ -29,6 +28,15 @@ MonoBehaviour:
   spAttack: 60
   spDefence: 70
   speed: 50
+  catchRate: 120
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 8d858a8eea03f684b9a2b7c4001e1cfd, type: 2}
     learnLevel: 2
+  tmMoves: []
+  expYield: 144
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 4bd17859a0e45ff468b32bb974dfb9cf, type: 2}
+    requiredLevel: 34
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: fa867beecd9354b4f840b1f6684e7306, type: 3}
