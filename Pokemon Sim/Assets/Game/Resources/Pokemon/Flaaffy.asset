@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Flaaffy
+  m_EditorClassIdentifier: 
+  description: "As a result of storing too much electricity, it developed patches
+    where even downy wool won\u2019t grow."
+  pokeSize: 0
+  regionalDexNum: 97
+  nationalDexNum: 180
+  frontSprite: {fileID: 21300000, guid: dc260c83c4d4aaf46a2aaa529cc6190b, type: 3}
+  backSprite: {fileID: 21300000, guid: 1021f8b2f7c62654fad7dd11d71140a4, type: 3}
+  boxSprite: {fileID: 21300000, guid: e7ea74a6677f44843b4a020c583755b0, type: 3}
+  type1: 4
+  type2: 0
+  maxHP: 70
+  attack: 56
+  defence: 56
+  spAttack: 80
+  spDefence: 60
+  speed: 46
+  catchRate: 145
+  learnableMoves: []
+  tmMoves: []
+  expYield: 128
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 8a27ed6e6e1c9ed4bbb91319c7c27495, type: 2}
+    requiredLevel: 32
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 56c68ad8876b6194b9884b2e66c2e791, type: 3}

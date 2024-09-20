@@ -12,23 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Salamence
   m_EditorClassIdentifier: 
-  name: Salamence
   description: It becomes uncontrollable if it is enraged. It destroys everything
     with shredding claws and fire.
   pokeSize: 3
-  regionalDexNum: 85
+  regionalDexNum: 88
   nationalDexNum: 373
   frontSprite: {fileID: 21300000, guid: ddc3d8f092906d34692556f37fb9ba96, type: 3}
-  backSprite: {fileID: 21300000, guid: 7f86f302f9c344748a3b9f68a2aaec66, type: 3}
-  boxSprite: {fileID: 21300000, guid: dea9f4435b8ae40409a46e3d8bd31ea0, type: 3}
+  backSprite: {fileID: 21300000, guid: 84e15f7bf60daaa408be8e229ada78ee, type: 3}
+  boxSprite: {fileID: 21300000, guid: ab4c95bf92c969d4387a47675deaad02, type: 3}
   type1: 3
   type2: 8
   maxHP: 95
-  attack: 153
+  attack: 135
   defence: 80
-  spAttack: 11
-  spDefence: 80
+  spAttack: 110
+  spDefence: 81
   speed: 100
+  catchRate: 25
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 7c77165597e200346b54663b6dfcdb98, type: 2}
     learnLevel: 3
+  tmMoves: []
+  expYield: 250
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: cafa1ff797369e442bbe79eedea33681, type: 3}

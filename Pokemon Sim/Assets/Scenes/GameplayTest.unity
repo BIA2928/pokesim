@@ -1957,19 +1957,19 @@ PrefabInstance:
     - target: {fileID: 5280483200721233006, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4749431160531892077, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+      objectReference: {fileID: -2410194564451488484, guid: 8578d1be2cf6b4b4c8c36fab2c12a2ef, type: 3}
     - target: {fileID: 5280483200721233006, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200721233007, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -90
+      value: -86
       objectReference: {fileID: 0}
     - target: {fileID: 5280483200743164377, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 89097120148571936, guid: 59b6a005d75c7ff47a0fa553a44e9437, type: 3}
+      objectReference: {fileID: 21300000, guid: 23b7a123bb170f7479d32a8e30c514f0, type: 3}
     - target: {fileID: 5280483200743164377, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1982,6 +1982,10 @@ PrefabInstance:
       propertyPath: pokeballSprite
       value: 
       objectReference: {fileID: 7981288165962750317, guid: 72f4343eb7498bb49929add7a5bf6d52, type: 3}
+    - target: {fileID: 5280483200743164379, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 78
+      objectReference: {fileID: 0}
     - target: {fileID: 5280483200849929064, guid: 9c277797717dccf47a38a28362c7a427, type: 3}
       propertyPath: m_IsActive
       value: 0

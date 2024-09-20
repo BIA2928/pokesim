@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Giratina
+  m_EditorClassIdentifier: 
+  description: "This Pok\xE9mon is said to live in a world on the reverse side of
+    ours, where common knowledge is distorted and strange."
+  pokeSize: 3
+  regionalDexNum: 101
+  nationalDexNum: 487
+  frontSprite: {fileID: 21300000, guid: dc63743159f821a40aede5c57ecd1f29, type: 3}
+  backSprite: {fileID: 21300000, guid: 5e56ea21940cd714d89c5d9be178f054, type: 3}
+  boxSprite: {fileID: 21300000, guid: 91a96149c28252c46b9eb37779485e76, type: 3}
+  type1: 9
+  type2: 3
+  maxHP: 150
+  attack: 100
+  defence: 120
+  spAttack: 100
+  spDefence: 120
+  speed: 90
+  catchRate: 5
+  learnableMoves: []
+  tmMoves: []
+  expYield: 343
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: cbe03772ab333bf4db0d0bfd55a184e1, type: 3}

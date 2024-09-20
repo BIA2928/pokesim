@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Houndoom
+  m_EditorClassIdentifier: 
+  description: The flames it breathes when angry contain toxins. If they cause a
+    burn, it will hurt forever.
+  pokeSize: 2
+  regionalDexNum: 95
+  nationalDexNum: 229
+  frontSprite: {fileID: 21300000, guid: 3a0ca657d62efb04f849d3a75915a665, type: 3}
+  backSprite: {fileID: 21300000, guid: 05a00a32ac5c61e45ae50d282dff9412, type: 3}
+  boxSprite: {fileID: 21300000, guid: a02ae79bb749efe4e946477d11a8bebe, type: 3}
+  type1: 2
+  type2: 7
+  maxHP: 75
+  attack: 90
+  defence: 52
+  spAttack: 110
+  spDefence: 80
+  speed: 95
+  catchRate: 44
+  learnableMoves: []
+  tmMoves: []
+  expYield: 175
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: 349261a66bdef5644aeefeb010390095, type: 3}

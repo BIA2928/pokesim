@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Ampharos
+  m_EditorClassIdentifier: 
+  description: The bright light on its tail can be seen far away. It has been treasured
+    since ancient times as a beacon.
+  pokeSize: 2
+  regionalDexNum: 98
+  nationalDexNum: 181
+  frontSprite: {fileID: 21300000, guid: 5f20b114e2854ad4697708ed5549fbf8, type: 3}
+  backSprite: {fileID: 21300000, guid: 3054a64a531f8c144a5fe7a61a39a929, type: 3}
+  boxSprite: {fileID: 21300000, guid: c8fc93a7dd3f4174399b28abe848683a, type: 3}
+  type1: 4
+  type2: 0
+  maxHP: 90
+  attack: 76
+  defence: 85
+  spAttack: 115
+  spDefence: 91
+  speed: 57
+  catchRate: 24
+  learnableMoves: []
+  tmMoves: []
+  expYield: 255
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: c03bd13fed63b424da7823bd38283ba1, type: 3}

@@ -229,8 +229,8 @@ TextureImporter:
       name: morgrem-f
       rect:
         serializedVersion: 2
-        x: 258
-        y: 2378
+        x: 860
+        y: 1919
         width: 64
         height: 64
       alignment: 0
@@ -272,9 +272,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 905
-        y: 2377
+        y: 2386
         width: 64
-        height: 64
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,8 +355,8 @@ TextureImporter:
       name: drakloak-b
       rect:
         serializedVersion: 2
-        x: 905
-        y: 2309
+        x: 903
+        y: 2317
         width: 64
         height: 64
       alignment: 0
@@ -377,7 +377,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 903
-        y: 2242
+        y: 2246
         width: 64
         height: 64
       alignment: 0
@@ -503,9 +503,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 129
-        y: 1128
+        y: 1134
         width: 64
-        height: 64
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,7 +545,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 127
-        y: 924
+        y: 934
         width: 64
         height: 64
       alignment: 0
@@ -586,8 +586,8 @@ TextureImporter:
       name: appletun-b
       rect:
         serializedVersion: 2
-        x: 130
-        y: 796
+        x: 128
+        y: 800
         width: 64
         height: 64
       alignment: 0
@@ -629,7 +629,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 127
-        y: 860
+        y: 862
         width: 64
         height: 64
       alignment: 0
@@ -671,9 +671,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 386
-        y: 2445
+        y: 2449
         width: 64
-        height: 64
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,8 +691,8 @@ TextureImporter:
       name: morgrem-b
       rect:
         serializedVersion: 2
-        x: 386
-        y: 2377
+        x: 385
+        y: 2383
         width: 64
         height: 64
       alignment: 0
@@ -775,8 +775,8 @@ TextureImporter:
       name: glastrier-b
       rect:
         serializedVersion: 2
-        x: 902
-        y: 1255
+        x: 901
+        y: 1257
         width: 64
         height: 64
       alignment: 0
@@ -818,7 +818,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 645
-        y: 470
+        y: 476
         width: 64
         height: 64
       alignment: 0
@@ -860,7 +860,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 647
-        y: 396
+        y: 398
         width: 64
         height: 64
       alignment: 0
@@ -986,9 +986,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 129
-        y: 2183
+        y: 2190
         width: 64
-        height: 64
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1007,7 +1007,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 130
-        y: 2112
+        y: 2118
         width: 64
         height: 64
       alignment: 0
@@ -1028,7 +1028,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 131
-        y: 2045
+        y: 2047
         width: 64
         height: 64
       alignment: 0
@@ -1095,7 +1095,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1116,7 +1116,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1137,7 +1137,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1158,7 +1158,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

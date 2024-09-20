@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Larvitar
+  m_EditorClassIdentifier: 
+  description: "A Pok\xE9mon that eats soil. Once it has eaten a large mountain,
+    it goes to sleep so it can grow."
+  pokeSize: 0
+  regionalDexNum: 79
+  nationalDexNum: 246
+  frontSprite: {fileID: 21300000, guid: 62edb29ac959ce2409a56c81d4d7e91d, type: 3}
+  backSprite: {fileID: 21300000, guid: c72275fe5763bac488acb746d9517be8, type: 3}
+  boxSprite: {fileID: 21300000, guid: f69001a2f18a25c498dd247dbcb69a30, type: 3}
+  type1: 14
+  type2: 0
+  maxHP: 50
+  attack: 64
+  defence: 50
+  spAttack: 45
+  spDefence: 50
+  speed: 41
+  catchRate: 45
+  learnableMoves: []
+  tmMoves: []
+  expYield: 60
+  growthRate: 1
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: b66337d0b4dbddc4592b19747b7c4336, type: 2}
+    requiredLevel: 29
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 8a1dc01bb47af7346847d0877065f192, type: 3}

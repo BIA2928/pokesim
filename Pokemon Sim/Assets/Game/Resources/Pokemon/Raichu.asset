@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Raichu
   m_EditorClassIdentifier: 
-  name: Raichu
   description: It can loose 100,000-volt bursts of electricity, instantly downing
     foes several times its size
   pokeSize: 1
-  regionalDexNum: 0
-  nationalDexNum: 0
+  regionalDexNum: 85
+  nationalDexNum: 26
   frontSprite: {fileID: 21300000, guid: c9990bb5258aa0b479f7fe2201db150b, type: 3}
-  backSprite: {fileID: 21300000, guid: 2757425baf7d488409409176c3bef022, type: 3}
-  boxSprite: {fileID: 21300000, guid: 891346e11e2733041875dc8e7f0c14ec, type: 3}
+  backSprite: {fileID: 21300000, guid: 775a27a2762933048a0ec41f1f953fcf, type: 3}
+  boxSprite: {fileID: 21300000, guid: 9c76dd572e1c3944389015de6c9b066d, type: 3}
   type1: 4
   type2: 0
   maxHP: 60
   attack: 90
-  defence: 55
+  defence: 60
   spAttack: 94
   spDefence: 80
   speed: 110
-  catchRate: 0
+  catchRate: 55
   learnableMoves: []
   tmMoves: []
-  expYield: 0
+  expYield: 243
   growthRate: 0
   evolutions: []
+  cry: {fileID: 8300000, guid: 9a178169bf3983740885f2ef46f2c67f, type: 3}

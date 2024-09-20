@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Mewtwo
+  m_EditorClassIdentifier: 
+  description: "A Pok\xE9mon created by recombining Mew\u2019s genes. It\u2019s said
+    to have the most savage heart among Pok\xE9mon."
+  pokeSize: 1
+  regionalDexNum: 105
+  nationalDexNum: 150
+  frontSprite: {fileID: 21300000, guid: 162291babf05f2942a068bdecb017f59, type: 3}
+  backSprite: {fileID: 21300000, guid: 96d35c71675cbae4a986239a88e50a53, type: 3}
+  boxSprite: {fileID: 21300000, guid: 271198769ded7b841bc0982627976574, type: 3}
+  type1: 16
+  type2: 0
+  maxHP: 106
+  attack: 110
+  defence: 90
+  spAttack: 154
+  spDefence: 90
+  speed: 130
+  catchRate: 5
+  learnableMoves: []
+  tmMoves: []
+  expYield: 343
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: d19d95f9bed0fd040a1cd98d3b48fc5c, type: 3}

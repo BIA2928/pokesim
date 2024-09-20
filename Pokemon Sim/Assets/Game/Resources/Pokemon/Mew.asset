@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Mew
+  m_EditorClassIdentifier: 
+  description: "Because it can use all kinds of moves, many scientists believe Mew
+    to be the ancestor of all Pok\xE9mon."
+  pokeSize: 0
+  regionalDexNum: 104
+  nationalDexNum: 151
+  frontSprite: {fileID: 21300000, guid: ca4eac9afecea074eb1560aa5fc8945a, type: 3}
+  backSprite: {fileID: 21300000, guid: f7b7bee07d57c2d4e87ff8ada33a6143, type: 3}
+  boxSprite: {fileID: 21300000, guid: 7fbad6df86aa6304c99ecea88d754cee, type: 3}
+  type1: 16
+  type2: 0
+  maxHP: 100
+  attack: 100
+  defence: 100
+  spAttack: 100
+  spDefence: 100
+  speed: 100
+  catchRate: 24
+  learnableMoves: []
+  tmMoves: []
+  expYield: 300
+  growthRate: 1
+  evolutions: []
+  cry: {fileID: 8300000, guid: f01c047ebb491de42af8d0f2cc04acff, type: 3}

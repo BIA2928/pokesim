@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Mime Jr
+  m_EditorClassIdentifier: 
+  description: When this gifted mimic surprises an opponent, Mime Jr. feels so happy
+    that it ends up forgetting it was imitating something.
+  pokeSize: 0
+  regionalDexNum: 82
+  nationalDexNum: 439
+  frontSprite: {fileID: 21300000, guid: b7a49702252bb58488b64bcf96cc302b, type: 3}
+  backSprite: {fileID: 21300000, guid: df5f01a859940c7439810ebc66c47020, type: 3}
+  boxSprite: {fileID: 21300000, guid: 7840ff344a34de34f9f20525cb535725, type: 3}
+  type1: 16
+  type2: 5
+  maxHP: 20
+  attack: 25
+  defence: 45
+  spAttack: 70
+  spDefence: 90
+  speed: 60
+  catchRate: 145
+  learnableMoves: []
+  tmMoves: []
+  expYield: 62
+  growthRate: 0
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: a4a81ad80540eae4b90f20207da7909b, type: 2}
+    requiredLevel: 31
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: 943cece4f8caffd41844866c9b6de49e, type: 3}

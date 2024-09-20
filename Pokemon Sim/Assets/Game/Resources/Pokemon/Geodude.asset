@@ -18,7 +18,7 @@ MonoBehaviour:
   regionalDexNum: 61
   nationalDexNum: 74
   frontSprite: {fileID: 21300000, guid: 7c3c65c71f0b77d4b8054a9029891478, type: 3}
-  backSprite: {fileID: 21300000, guid: 8b82583fc11a36949ae459e4e1f834fa, type: 3}
+  backSprite: {fileID: -5422241131617141161, guid: 8b82583fc11a36949ae459e4e1f834fa, type: 3}
   boxSprite: {fileID: 21300000, guid: 4f262ba419e04464ab0928a0d8d683eb, type: 3}
   type1: 14
   type2: 11

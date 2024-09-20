@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
+  m_Name: Arcanine
+  m_EditorClassIdentifier: 
+  description: Its proud and regal appearance has captured the hearts of people since
+    long ago.
+  pokeSize: 2
+  regionalDexNum: 93
+  nationalDexNum: 59
+  frontSprite: {fileID: 21300000, guid: f6c743a8c82519448b591d6d4d788225, type: 3}
+  backSprite: {fileID: 21300000, guid: 084f0b9dce4605b4c84cb596612f1732, type: 3}
+  boxSprite: {fileID: 21300000, guid: 0eb639231da5d27499108c0ef4d662c2, type: 3}
+  type1: 7
+  type2: 0
+  maxHP: 90
+  attack: 110
+  defence: 80
+  spAttack: 100
+  spDefence: 80
+  speed: 95
+  catchRate: 40
+  learnableMoves: []
+  tmMoves: []
+  expYield: 194
+  growthRate: 2
+  evolutions: []
+  cry: {fileID: 8300000, guid: f2f73524cd6f5f24597c9e6eb0b46040, type: 3}

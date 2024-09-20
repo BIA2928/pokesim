@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006df1ebe37c64f4e9944740734acf8e, type: 3}
   m_Name: Metang
   m_EditorClassIdentifier: 
-  name: Metang
   description: "When two Beldum fuse together, Metang is formed. The brains of the
     Beldum are joined by a magnetic nervous system. This Pok\xE9mon turns its arms
     to the rear for traveling at high speed."
   pokeSize: 1
-  regionalDexNum: 86
+  regionalDexNum: 90
   nationalDexNum: 374
   frontSprite: {fileID: 21300000, guid: 1bfbc9978f01da5459a429b67a40e458, type: 3}
-  backSprite: {fileID: 21300000, guid: f4ae87a353175a44db72b90eeb8dadb9, type: 3}
-  boxSprite: {fileID: 21300000, guid: 0834820693157294eb30a29a1347ca37, type: 3}
+  backSprite: {fileID: 2563960425497449344, guid: 941cf4c522d6c454caf0b4ed1d142b97, type: 3}
+  boxSprite: {fileID: 21300000, guid: 18245a6c7515eeb41b4d337c2cf68b67, type: 3}
   type1: 17
   type2: 16
   maxHP: 60
@@ -30,6 +29,15 @@ MonoBehaviour:
   spAttack: 55
   spDefence: 80
   speed: 50
+  catchRate: 35
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 5992798f378249f409848fbf7b9f5367, type: 2}
     learnLevel: 2
+  tmMoves: []
+  expYield: 146
+  growthRate: 2
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: a442215a2aa038747b0c0932bd04c8d2, type: 2}
+    requiredLevel: 47
+    requiredItem: {fileID: 0}
+  cry: {fileID: 8300000, guid: ce0f301e9306c4f4c93dd9319c4a1a89, type: 3}
